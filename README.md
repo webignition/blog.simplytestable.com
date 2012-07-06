@@ -1,4 +1,4 @@
-blog.simplytestable.com
-=======================
+webignition.net
+==============
 
-Source for http://blog.simplytestable.com
+Source for http://webignition.net

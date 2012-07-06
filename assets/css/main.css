@@ -1,0 +1,229 @@
+[class^="icon-"], [class*=" icon-"] {
+    background-image: none;
+}  
+
+blockquote {
+    border-color: #ddd;
+    opacity:0.8;
+    font-style: italic;
+}
+
+.addthis_toolbox {
+    position:absolute;
+    margin-top:70px;
+}
+
+body {
+    margin-bottom: 60px;
+    padding-top:60px;
+}
+
+.container {
+    position:relative;
+}
+
+#logo {
+    position:absolute;
+    background: url('http://simplytestable.com/bundles/simplytestableapplication/images/logo100-bold-bordered.png') transparent no-repeat top left;
+    width:100px;
+    height:100px;
+    top: 60px;
+    left:-50px;
+}
+
+.hero-unit h1 {
+    font-size: 50px;
+    margin-bottom:20px;
+}
+
+.hero-unit h1 a {    
+    color:#555;
+}
+
+.hero-unit h1 a:hover {
+    color:#333;
+    text-decoration: none;
+}
+
+.hero-unit #twitter-status {
+    height:80px;
+}
+
+.hero-unit #tweet {
+    opacity:0;
+    height:60px;
+}
+
+.hero-unit #twitter-status .icon-twitter {
+    color: #08C;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    width: auto;
+    height: 70px;
+    float: left;
+    font-size: 58px;
+    display: inline-block;
+    margin: 0 10px 0 0;    
+}
+
+.hero-unit #tweet .time {
+    opacity:0.4;
+}
+
+.post .section {
+    font-size: 120%;
+    line-height: 160%;
+}
+
+body.home .post {
+    
+}
+
+.post .section {
+    padding-left: 60px;
+    padding-right: 60px;    
+}
+
+.sidebar h2 {
+    background-color: #08C;
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    padding: 0px 10px;
+    margin-bottom: 10px;  
+    
+    font-size:16px;
+}
+
+.sidebar h2 i {
+    width: auto;
+    height: auto;  
+    
+    font-size:16px;
+    line-height: 16px;
+    
+    margin-right:4px;
+}
+
+.newsletter form label {
+    display:none;
+}
+
+.newsletter #email {
+    width: 70%;
+    margin: 0;    
+}
+
+.post {
+    position:relative;
+}
+
+.indicator-icon {
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: -40px;
+    font-size: 80px; 
+}
+
+.comment-icon {
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: -40px;
+    font-size: 80px;
+    color:#08C;
+}
+
+.post h2 a {
+    display:block;
+}
+
+.post h2 a:hover i {
+    text-decoration: none;
+}
+
+.section-post-meta .meta {
+    opacity:0.4;     
+}
+
+.newer-older {
+    margin-top: 20px;
+    margin-bottom: -20px;    
+}
+
+.newer-older a:hover i {
+    text-decoration: none;
+}
+
+.newer-older a i {
+    font-size: 40px;
+    width: 30px;    
+}
+
+.newer-older a {
+    position:absolute;
+    opacity:0.6;
+    width:40%;
+}
+
+.newer-older a:hover {    
+    opacity:1;
+}
+
+.newer-older .newer {
+    left:60px;
+    text-align: left;
+}
+
+.newer-older .older {
+    right:60px;
+    text-align: right;
+}
+
+.newer-older .newer i {
+    margin-right:10px;
+}
+
+.newer-older .older i {
+    margin-left:10px;
+}
+
+ul.listless {
+    list-style: none;
+    margin:0;
+}
+
+ul.listless li {
+    margin:16px 0;
+}
+
+.comments {
+    margin-top:80px;
+}
+
+.post p {
+    margin: 0 0 18px;
+}
+
+#page-archive ol {
+    margin-left:120px;
+}
+
+#page-archive ol li {
+    font-size:40px;
+    color:#ddd;
+    margin-bottom:40px;
+}
+
+#page-archive ol li:hover {    
+    color:#ccc;
+}
+
+#page-archive ol li h2 a {
+    display:block;
+}
+
+#page-archive ol li p {
+    font-size:16px;
+    color:#555;
+}

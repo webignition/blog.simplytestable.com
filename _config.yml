@@ -1,0 +1,7 @@
+# Jekyll
+exclude: nbproject, README.md, manifest.yml, rakefile.rb
+permalink: /:title/
+
+# Site
+simplytestable:
+  title: Simply Testable Blog

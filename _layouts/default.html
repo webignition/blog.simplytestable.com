@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ page.title }}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        {% include assets/css/default.html %}
+        {% include assets/js/default.html %}
+    </head>
+    <body id="{% include page/id %}">
+        {% include header/navigation.html %}
+
+        <div class="container">
+            {% include header/introduction.html %}
+
+            <div class="row">
+                <div class="span8">
+                    {% case page.url %}
+                        {% when '/index.html' %}
+                            {% include posts/latest.html %}
+                        {% when '/archive/index.html' %}
+                            {% include posts/archive.html %}
+                        {% else %}
+                            {% include posts/post.html %}
+                    {% endcase %}                                      
+                </div>
+                <div class="span4 sidebar">
+                    <!--                    {% include sidebar/recent.html %}-->
+                    {% include sidebar/newsletter.html %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
