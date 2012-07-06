@@ -1,6 +1,13 @@
 require 'yaml'
 require 'fileutils'
-require '/var/lib/gems/1.8/gems/grit-2.5.0/lib/grit'
+
+File.exists?('/var/lib/gems/1.8/gems/grit-2.5.0/lib/grit') {
+  require '/var/lib/gems/1.8/gems/grit-2.5.0/lib/grit'
+}
+
+File.exists?('/var/lib/ruby/gems/1.8/gems/grit-2.5.0/lib/grit') {
+  require '/var/lib/ruby/gems/1.8/gems/grit-2.5.0/lib/grit'
+}
 
 VENDOR_DIRECTORY = "vendor"
 VENDOR_MANIFEST = "manifest.yml"
