@@ -2,66 +2,71 @@ require 'yaml'
 require 'fileutils'
 
 VENDOR_DIRECTORY = "vendor"
-VENDOR_MANIFEST = "manifest.yml"
+DEPENDENCY_MANIFEST = "manifest.yml"
+PLUGIN_DIRECTORY = "_plugins"
 
 task :default do  
   puts 'Building ...'
-  fetch_vendors
+  fetch_dependencies
   system("jekyll")
 end
 
 task :rebuild do
-  remove_vendors
-  fetch_vendors
+  remove_dependencies
+  fetch_dependencies
   system("jekyll")
 end
 
-def remove_vendors
-  puts "Removing vendors ..."
-  
+def remove_dependencies  
   config = YAML.load_file("manifest.yml")
   
-  config['vendors'].each do |vendor|
-    vendor.each { |key,value|
-      puts "Removing " + key + " ..."
-
-      vendor_directory = VENDOR_DIRECTORY + '/' + key
-      if File.directory?(vendor_directory)
-        FileUtils.rm_rf vendor_directory        
-      end     
-    }
+  config.each do |dependency_group,dependency_group_values|    
+    dependency_group_values.each do |dependency|
+      dependency.each do |name,url|
+        dependency_directory =  dependency_group + "/" + name
+        
+        puts "Removing " + dependency_directory
+        if File.directory?(dependency_directory)
+          FileUtils.rm_rf dependency_directory     
+        end
+      end
+    end
   end  
 end
 
-def fetch_vendors
-  puts 'Updating vendors ...'
-  
-  if !File.directory?(VENDOR_DIRECTORY)
-    Dir::mkdir(VENDOR_DIRECTORY);
-  end
-  
+
+def fetch_dependencies
   config = YAML.load_file("manifest.yml")
   
-  config['vendors'].each do |vendor|
-    vendor.each { |vendor_name,vendor_url|
-      puts "Fetching " + vendor_name + " ..."
+  config.each do |dependency_group,dependency_group_values|
+    if !File.directory?(dependency_group)
+      Dir::mkdir(dependency_group);
+    end
+    
+    dependency_group_values.each do |name,url|
+      dependency_directory = dependency_group + "/" + name
+      puts "Fetching " + dependency_directory + " from " + url
+      
+      if !File.directory?(dependency_directory)
+        Dir::mkdir(dependency_directory)
+        
+        if vendor_is_repository(url)
+          system("cd " + dependency_directory + " && git clone " + url)
+        else
+          system("cd " + dependency_directory + " && wget " + url)
+          
+          if vendor_is_archive(url)
+            system("cd " + dependency_directory + " && unzip -q " + get_filename_from_url(url))
+            system("cd " + dependency_directory + " && rm -Rf " + get_filename_from_url(url))
+          end
 
-      vendor_directory = VENDOR_DIRECTORY + '/' + vendor_name
-      if !File.directory?(vendor_directory)
-        Dir::mkdir(vendor_directory)
-        
-        system("cd " + vendor_directory + " && wget " + vendor_url)
-        
-        if vendor_is_archive(vendor_url)
-          system("cd " + vendor_directory + " && unzip -q " + get_filename_from_url(vendor_url))
-          system("cd " + vendor_directory + " && rm -Rf " + get_filename_from_url(vendor_url))
-        end
-        
-        if vendor_is_github_master(vendor_url)
-          system("cd " + vendor_directory + " && mv *-* latest ")
+          if vendor_is_github_master(url)
+            system("cd " + dependency_directory + " && mv *-* latest ")
+          end
         end
       end
-    }
+     
+    end
   end
 end
 
@@ -75,6 +80,10 @@ end
 
 def vendor_is_github_master(url)
   return get_filename_from_url(url) == "master"
+end
+
+def vendor_is_repository(url)
+  get_extension_from_filename_from_url(url) == "git"
 end
 
 def vendor_is_archive(url)  

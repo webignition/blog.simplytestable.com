@@ -1,3 +1,6 @@
-vendors:
-  - twitter-bootstrap: http://twitter.github.com/bootstrap/assets/bootstrap.zip
-  - font-awesome: https://github.com/FortAwesome/Font-Awesome/zipball/master
+vendor:
+  twitter-bootstrap: http://twitter.github.com/bootstrap/assets/bootstrap.zip
+  font-awesome: https://github.com/FortAwesome/Font-Awesome/zipball/master
+  
+_plugins:
+  sitemap-generator: https://github.com/kinnetica/jekyll-plugins.git
