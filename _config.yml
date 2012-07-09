@@ -1,6 +1,7 @@
 # Jekyll
 exclude: nbproject, README.md, manifest.yml, rakefile.rb
 permalink: /:title/
+url: http://blog.simplytestable.com
 
 # Site
 simplytestable:
