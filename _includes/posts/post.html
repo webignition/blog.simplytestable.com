@@ -18,7 +18,7 @@
             {% if content_item.author %}
                 by 
                 {% if content_item.author.url %}
-                <a href="{{ post.author.url }}">{{ content_item.author.name }}</a>
+                <a href="{{ content_item.author.url }}">{{ content_item.author.name }}</a>
                 {% else %}
                 {{ content_item.author.name }}
                 {% endif %}             
