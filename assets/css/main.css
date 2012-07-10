@@ -245,3 +245,43 @@ ul.listless li {
 .sidebar .repositories ul li {
     margin: 10px 0;
 }
+
+body.illustration {
+    
+}
+
+body.illustration .image {
+    width:100%;
+    display:block;    
+}
+
+.post .illustration {
+    width:100%;
+    margin-bottom:40px;
+}
+
+.post .illustration a {
+    height:300px;
+    display:block;
+    background-color:transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+}
+
+.post .illustration a i {
+    width: auto;
+    height: auto;
+    font-size: 100px;
+    line-height: 100px;
+    margin: 100px 0 0 286px;
+    color: white;
+    opacity: 0.4;    
+}
+
+.post .illustration a:hover {
+    text-decoration: none;
+}
+
+.post .illustration a:hover i {
+    opacity:0.8;
+}

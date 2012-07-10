@@ -25,6 +25,16 @@
             {% endif %}       
         </p>
     </div>
+    {% if content_item.illustration %}
+    <div class="section">
+        <div class="illustration illustration-{{ content_item.illustration.id }}">
+            <a href="/illustrations/{{ content_item.illustration.id }}" style="background-image: url('{{ content_item.illustration.url }}');">
+                <i class="icon-zoom-in"></i>
+            </a>
+        </div>
+    </div>
+    {% endif %}
+    
     {{ content_item.content }}
     
     {% if page.url != '/index.html' %}
