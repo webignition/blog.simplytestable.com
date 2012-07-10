@@ -8,13 +8,23 @@ PLUGIN_DIRECTORY = "_plugins"
 task :default do  
   puts 'Building ...'
   fetch_dependencies
-  system("jekyll")
+  jekyll
 end
 
 task :rebuild do
   remove_dependencies
   fetch_dependencies
-  system("jekyll")
+  jekyll
+end
+
+def jekyll
+  command = "jekyll"
+  
+  if File.file?("is_production")
+    command = command + " --no-future"
+  end
+  
+  system(command)
 end
 
 def remove_dependencies  
