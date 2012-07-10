@@ -2,6 +2,15 @@
     background-image: none;
 }  
 
+.btn-small [class^="icon-"] {
+margin-top: -1px;
+}
+
+.btn [class^="icon-"] {
+    margin-top:2px;
+}
+    
+
 blockquote {
     border-color: #ddd;
     opacity:0.8;
@@ -226,4 +235,13 @@ ul.listless li {
 #page-archive ol li p {
     font-size:16px;
     color:#555;
+}
+
+.sidebar .repositories ul {
+    list-style: none;
+    margin: 0;
+}
+
+.sidebar .repositories ul li {
+    margin: 10px 0;
 }
