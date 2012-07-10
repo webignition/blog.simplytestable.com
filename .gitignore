@@ -2,6 +2,7 @@
 /nbproject
 /vendor
 /_plugins
+/is_production
 
 # cPanel environment
 /.bash*
