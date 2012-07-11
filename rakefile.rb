@@ -65,12 +65,20 @@ def fetch_dependencies
         else
           system("cd " + dependency_directory + " && wget " + url)
           
-          if vendor_is_archive(url)
+          if vendor_is_zip_archive(url)
             system("cd " + dependency_directory + " && unzip -q " + get_filename_from_url(url))
             system("cd " + dependency_directory + " && rm -Rf " + get_filename_from_url(url))
           end
+          
+          if vendor_is_bz2_archive(url)
+            system("cd " + dependency_directory + " && tar -jxvf " + get_filename_from_url(url))
+            system("cd " + dependency_directory + " && chmod -R 0755 *")
+            system("cd " + dependency_directory + " && rm -Rf " + get_filename_from_url(url))            
+          end
 
           if vendor_is_github_master(url)
+            system("cd " + dependency_directory + " && unzip -q " + get_filename_from_url(url))
+            system("cd " + dependency_directory + " && rm -Rf " + get_filename_from_url(url))
             system("cd " + dependency_directory + " && mv *-* latest ")
           end
         end
@@ -96,10 +104,22 @@ def vendor_is_repository(url)
   get_extension_from_filename_from_url(url) == "git"
 end
 
-def vendor_is_archive(url)  
-  if get_extension_from_filename_from_url(url) == "zip"
+def vendor_is_zip_archive(url)
+  get_extension_from_filename_from_url(url) == "zip"
+end
+
+def vendor_is_bz2_archive(url)
+  get_extension_from_filename_from_url(url) == "bz2"
+end
+
+def vendor_is_archive(url)
+  if vendor_is_zip_archive(url)
     return true
   end
+  
+  if vendor_is_bz2_archive(url)
+    return true
+  end  
   
   return vendor_is_github_master(url)
 end
