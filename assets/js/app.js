@@ -1,4 +1,6 @@
 $(document).ready(function() {    
+    prettyPrint();
+    
     getTwitters('tweet', { 
         id: 'simplytestable', 
         count: 1, 
@@ -15,5 +17,5 @@ $(document).ready(function() {
                 'opacity':1
             });
         }
-    });    
+    });
 });
