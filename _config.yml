@@ -5,4 +5,8 @@ url: http://blog.simplytestable.com
 
 # Site
 simplytestable:
-  title: Simply Testable Blog
+    title: Simply Testable Blog
+  
+# Only First P Plugin
+only_first_p:
+    show_read_more_link: false
