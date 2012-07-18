@@ -237,12 +237,12 @@ ul.listless li {
     color:#555;
 }
 
-.sidebar .repositories ul {
+ul.repository-list {
     list-style: none;
     margin: 0;
 }
 
-.sidebar .repositories ul li {
+ul.repository-list li {
     margin: 10px 0;
 }
 
