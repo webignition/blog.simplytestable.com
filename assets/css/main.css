@@ -246,6 +246,11 @@ ul.repository-list li {
     margin: 10px 0;
 }
 
+ul.repository-list li a.build-status {
+    display:inline-block;
+    margin-left:6px;
+}
+
 body.illustration {
     
 }
