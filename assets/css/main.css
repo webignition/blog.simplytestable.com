@@ -290,3 +290,27 @@ body.illustration .image {
 .post .illustration a:hover i {
     opacity:0.8;
 }
+
+#page-index .post {
+    margin-bottom:60px;
+}
+
+#page-index .post .post {
+    margin-bottom: 0;
+}
+
+#page-index .archive-link {
+    font-size: 24px;
+    line-height: 36px;  
+    margin-left:60px;
+    display:block;
+    border-top:5px solid #eee;
+    padding: 20px 0;
+}
+
+#page-index .archive-link i {
+    text-decoration: none;
+    width: auto;
+    height: auto;
+    line-height: 28px;   
+}
