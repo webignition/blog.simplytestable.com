@@ -314,3 +314,7 @@ body.illustration .image {
     height: auto;
     line-height: 28px;   
 }
+
+.sidebar h3 {
+    font-size:14px;
+}
