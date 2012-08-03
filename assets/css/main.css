@@ -166,13 +166,14 @@ body.home .post {
 
 .newer-older a i {
     font-size: 40px;
-    width: 30px;    
+    width: 30px;
+    height:40px;
 }
 
 .newer-older a {
     position:absolute;
     opacity:0.6;
-    width:40%;
+    width:42%;
 }
 
 .newer-older a:hover {    
@@ -191,10 +192,12 @@ body.home .post {
 
 .newer-older .newer i {
     margin-right:10px;
+    float:left;
 }
 
 .newer-older .older i {
     margin-left:10px;
+    float:right;
 }
 
 ul.listless {
