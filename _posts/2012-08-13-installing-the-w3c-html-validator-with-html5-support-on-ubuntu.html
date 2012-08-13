@@ -1,0 +1,146 @@
+---
+layout: default
+title: "Installing The W3C HTML Validator With HTML5 Support (On Ubuntu)"
+author:
+    name: Jon Cram
+    url: http://webignition.net
+---
+
+<div class="section">
+    <p>
+        We use the <a href="http://validator.w3.org/">W3C HTML validator</a> for
+        driving HTML validation tests.
+    </p>
+    <p>
+        We don't use the W3C public service at <a href="http://validator.w3.org/"><code>http://validator.w3.org/</code></a>;
+        the usage limits imposed (quite fairly) by the W3C are too restrictive for our needs,
+        and the latency involved in sending HTML out to the Internet to be validated
+        increases by orders of magnitude the time it takes to complete an HTML
+        validation test.
+    </p>
+    <p>
+        We install a local copy of the W3C HTML validator and a local
+        copy of the <a href="http://html5.validator.nu/">Validator.ru HTML5 validator</a>.
+    </p>
+    <p>
+        If you want to frequently validate many HTML documents quickly, here's how
+        you can do the same.
+    </p>
+    <h2>Installing the W3C HTML Validator</h2>
+    <p>
+        Installing from the Debian package is a breeze: <code>sudo apt-get install w3c-markup-validator</code>
+    </p>   
+    <p>
+        That'll get you the basic installation. The W3C HTML validator will now work
+        for <em>any</em> local virtual host via <code>http://{hostname}/w3c-validator/</code>.
+    </p>   
+    <h2>Configuring the W3C HTML Validator</h2>
+    <p>
+        The W3C HTML validator, by default, only accepts URLs of pages that
+        exist on the public Internet. I have no idea why; if you're installing
+        the validator locally, might you be wanting to validate locally-hosted
+        HTML?
+    </p>
+    <code>GET http://local.simplytestable.com/w3c-validator/check?uri=local.blog.simplytestable.com</code>
+    <blockquote>
+        <p>
+            Sorry, the IP address of local.blog.simplytestable.com is not public. 
+            For security reasons, validating resources located at non-public IP 
+            addresses has been disabled in this service.
+        </p>
+    </blockquote>
+    <p>
+        You need to tell the validator to allow local IPs. Edit <code>nano /etc/w3c/validator.conf</code>
+        and change <code>Allow Private IPs = no</code> to <code>Allow Private IPs = yes</code>.
+    </p>
+    <h2>Installing the HTML5 Validator</h2>
+    <p>
+        The HTML5 spec is still under development and as such support is not provided
+        out the box. Let's try anyway:
+    </p>
+    <code>GET http://local.simplytestable.com/w3c-validator/check?uri=local.blog.simplytestable.com</code>
+    <blockquote>
+        <p>
+            Checking the Document Type of this document requires the help of an 
+            external tool which was either not enabled in this validator, or is 
+            currently unavailable. Check in the validator's system configuration 
+            that HTML5 Validator is enabled and functional.    
+        </p>
+    </blockquote>    
+    <p>
+        Looks like we need to install the <a href="http://html5.validator.nu/">Validator.ru HTML5 validator</a>.
+    </p>
+    <p>
+        The HTML5 validator uses a bit of an ad-hoc build system dependent on Python,
+        Mercurial and Subversion. Make sure these are installed:
+    </p>
+    <p>
+        <code>sudo apt-get install mercurial subversion python</code>
+    </p>    
+    <p>
+        The validator is Java-based, so check first that that you have a JDK available and check the 
+        location. It's probably to be found at <code>/usr/lib/jvm/java-6-openjdk</code>. Once you're ready, follow the <a href="http://about.validator.nu/#src">installation instructions</a>.
+    </p>
+    <p>
+        You'll need to make a directory into which to install the HTML5 validator.
+        Anywhere will do, I opted for <code>/usr/share/html5-validator</code>.
+    </p>
+    <p>
+        Running the following as root worked for me:
+    </p>
+    <pre class="prettyprint lang-bash">mkdir /usr/share/html5-validator && cd /usr/share/html5-validator
+export JAVA_HOME=/usr/lib/jvm/java-6-openjdk
+hg clone https://bitbucket.org/validator/build build
+python build/build.py all
+python build/build.py all</pre>
+    <p>
+        You'll end up with the HTML5 validator running in a standalone web server
+        on port 8888:
+    </p>
+        
+    <pre>2012-08-13 14:28:19.514:INFO::jetty-6.1.26
+2012-08-13 14:28:19.549:INFO::Started SocketConnector@0.0.0.0:8888</pre>
+    <h2>Running the HTML5 Validator as a Service</h2>
+    <p>
+        I want the HTML5 validator available all the time without having to keep
+        a terminal window open and without needing to manually start up the
+        validator every time a worker server starts up.       
+    </p>
+    <p>
+        To do this, you need an init script to start up a daemon. I created
+        <code>/etc/init/html5-validator.conf</code> containing:
+    </p>
+    <pre>description "Validator.nu HTML5 Validator"
+
+start on runlevel [234]
+stop on runlevel [0156]
+
+chdir /usr/share/html5-validator
+exec python build/build.py --control-port=8889 run
+respawn</pre>    
+    <p>
+        I can now start/stop the HTML5 validator using: <code>sudo service html5-validator start/stop</code>
+    </p>
+    <h2>Configuring the W3C HTML Validator for HTML5</h2>
+    <p>
+        One last step: we need to enable HTML5 validation for the W3C validator.
+    </p>
+    <p>
+        Simply edit <code>/etc/w3c/validator.conf</code> and uncomment the line <code>HTML5 = http://localhost:8888/html5/HTML</code>. That's it.
+    </p>
+    <p>
+        Let's give things a go again:
+    </p>
+    <code>GET http://local.simplytestable.com/w3c-validator/check?uri=local.blog.simplytestable.com</code>
+    <blockquote>
+        <p>
+             Line 619, Column 172: An img element must have an alt attribute, 
+             except under certain conditions. For details, consult guidance on 
+             providing text alternatives for images.   
+        </p>
+    </blockquote>               
+    <p>
+        Excellent. The W3C HTML validator is running locally and is handling HTML5
+        documents. Now I just need to make sure the markup I'm making is valid.
+    </p>
+</div>
