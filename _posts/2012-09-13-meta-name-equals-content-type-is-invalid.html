@@ -1,0 +1,62 @@
+---
+layout: default
+title: "&lt;meta name=&quot;Content-Type&quot; ... &gt; is invalid"
+date: 2012-09-12 14:00:00
+author:
+    name: Jon Cram
+    url: http://webignition.net
+---
+
+<div class="section">
+    
+    <p>
+        In investigating <a href="/production-bug-001-fixed/">production bug #001</a>
+        I noticed some web pages were trying to specify the character encoding
+        used but were doing so incorrectly.
+    </p>
+    
+    <p>
+        The character encoding for any resource retrieved over HTTP can be specified
+        through the HTTP <code>Content-Type</code> header. This tells whatever
+        retrieves a resource, such as a web browser, how to understand and
+        interpet what it has received.
+    </p>        
+    
+    <p>
+        You can choose to override what character encoding information may be present
+        in the headers of an HTTP response by setting one of two <code>&lt;meta&gt;</code>
+        elements in the <code>&lt;head&gt;</code>. This is useful if you have
+        no control over the HTTP headers being returned and where those headers
+        are incorrect.
+    </p>
+    
+    <p>
+        If you want to state that you are using <code>utf-8</code> as the character
+        encoding, you can opt for either <code>&lt;meta charset="utf-8" /&gt;</code>
+        or <code>&lt;meta http-equiv='Content-Type' content='Type=text/html; charset=utf-8'&gt;</code>
+    </p>
+    
+    <p>
+        Some web pages choose instead to go for <code>&lt;meta name='Content-Type' content='Type=text/html; charset=utf-8'&gt;</code>
+    </p>
+    
+    <p>
+        It's quite an easy mistake to make but one that could badly impact how
+        your page renders in browsers.
+    </p>
+    
+    <p>
+        Specify the character encoding incorrectly and it could be entirely up to a
+        browser to choose how to understand what any fancy characters mean.
+        Currency symbols such as &pound; and &euro; as well as accented characters
+        such as &acirc; could be rendered correctly or instead could be rendered
+        as a pair of out-of-place accented characters. You will control how such
+        characters appear.
+    </p>
+    
+    <p>
+        Watch out for close-but-not-quite-right <code>meta</code> elements
+        in your HTML documents. It's an easy one to get wrong.
+    </p>
+    
+</div>
