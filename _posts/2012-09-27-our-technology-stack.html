@@ -1,0 +1,248 @@
+---
+layout: default
+title: "Our Technology Stack"
+author:
+    name: Jon Cram
+    url: http://webignition.net
+---
+
+<div class="section">
+    <p>
+        I've been asked a few times, most recently by the guys at <a href="http://www.matchalabs.com/">Matcha Labs</a>,
+        what tech <a href="http://simplytestable.com">simplytestable.com</a> uses and how it all works together.
+    </p>
+    <p>
+        Here's a quick rundown of the hardware and software our systems run on, the applications we make
+        and how they work together.
+    </p>
+    <h3>
+        Production Server
+    </h3>
+    <p>
+        Our production environment runs on an <a href="http://www.hetzner.de/en/hosting/produkte_rootserver/ex4">EX4</a>
+        server from <a href="http://www.hetzner.de/en/">Hetzner</a> featuring a <a href="http://ark.intel.com/products/52213">quadcore core I7 2600 3.4GHz cpu</a> and 16GB of RAM.
+        That's plenty of power to get us started.
+    </p>
+    <p>
+        We're running <a href="https://wiki.ubuntu.com/PrecisePangolin/ReleaseNotes/UbuntuServer">Ubuntu Server 12.04</a>.
+        That's the same OS used locally for development; keeping the production environment on the same OS simplifies
+        production environment preparation and deployment.
+    </p>
+    <h3>
+        Simply Testable Applications
+    </h3>
+    <p>
+        I wrote about our <a href="/architecture-overview/">system architecture</a>
+        some months ago; have a quick read of that to get up to speed.
+    </p>
+    <p>
+        Four applications make up the Simply Testable system. They're all PHP-based using the <a href="http://symfony.com/">Symfony2 framework</a>
+        and all code is held in git repositories available on GitHub.
+    </p>
+    <ul class="application-list">
+        <li>
+            <div>
+                <h4>Core Application</h4>                
+                <div class="application-meta">
+                    <ul>
+                        <li>
+                            <i class="icon-link"></i> <a href="http://app.simplytestable.com/">app.simplytestable.com</a><br />
+                        </li>
+                        <li>
+                            <i class="icon-github"></i> <a href="https://github.com/webignition/app.simplytestable.com">github.com/webignition/app.simplytestable.com</a>
+                        </li>                            
+                    </ul>
+                </div>
+            </div>
+            <p>
+                The core application is a job queuing and task management system. It takes requests for new full-site
+                test jobs, breaks down each job into a collection of tasks, assigns tasks out to workers, receives
+                results from workers and makes the results available to the web client.
+            </p>
+        </li>
+        <li>
+            <div>
+                <h4>Workers</h4>                
+                <div class="application-meta">
+                    <ul>
+                        <li>
+                            <i class="icon-link"></i> <a href="http://hydrogen.worker.simplytestable.com/status/">hydrogen.worker.simplytestable.com</a><br />
+                        </li>
+                        <li>
+                            <i class="icon-link"></i> <a href="http://helium.worker.simplytestable.com/status/">helium.worker.simplytestable.com</a><br />
+                        </li>
+                        <li>
+                            <i class="icon-link"></i> <a href="http://beryllium.worker.simplytestable.com/status/">beryllium.worker.simplytestable.com</a><br />
+                        </li>
+                        <li>
+                            <i class="icon-link"></i> <a href="http://lithium.worker.simplytestable.com/status/">lithium.worker.simplytestable.com</a><br />
+                        </li>                        
+                        <li>
+                            <i class="icon-github"></i> <a href="https://github.com/webignition/worker.simplytestable.com">github.com/webignition/worker.simplytestable.com</a>
+                        </li>                            
+                    </ul>
+                </div>
+            </div>
+            <p>
+                Workers carry out the actual tasks, such as an HTML validation task. They accept tasks from
+                the core application, carry them out and report back the results.
+            </p>
+            <p>
+                As you can see from the list above, we have four workers at present. Although
+                they currently all run on the same box, they can be deployed anywhere allowing us
+                to distribute the workload and provide a spot of redundancy.
+            </p>                
+            <p>
+                Scalability, cloud computing and related buzzwords spring to mind.
+            </p>
+        </li> 
+        <li>
+            <div>
+                <h4>Web Client</h4>                
+                <div class="application-meta">
+                    <ul>
+                        <li>
+                            <i class="icon-link"></i> <a href="http://gears.simplytestable.com/">gears.simplytestable.com</a><br />
+                        </li>
+                        <li>
+                            <i class="icon-github"></i> <a href="https://github.com/webignition/web.client.simplytestable.com">github.com/webignition/web.client.simplytestable.com</a>
+                        </li>                            
+                    </ul>
+                </div>
+            </div>
+            <p>
+                The web client is a human-friendly interface to the core application. You can start new full-site
+                tests, watch the progress and view the results.
+            </p>
+            <p>
+                The web client merely reports back what is going on at any given moment. What is going on in
+                the core application keeps on going on whether you're watching or not. If you start a test
+                and then close your browser, the test keeps running and you can come back at any time.
+            </p>
+        </li>    
+        <li>
+            <div>
+                <h4>Marketing Site</h4>                
+                <div class="application-meta">
+                    <ul>
+                        <li>
+                            <i class="icon-link"></i> <a href="http://simplytestable.com/">simplytestable.com</a><br />
+                        </li>
+                        <li>
+                            <i class="icon-github"></i> <a href="https://github.com/webignition/simplytestable.com">github.com/webignition/simplytestable.com</a>
+                        </li>                            
+                    </ul>
+                </div>
+            </div>
+            <p>
+                This is what you see when you to to <a href="http://simplytestable.com/">simplytestable.com</a>.
+            </p>
+        </li>         
+    </ul>   
+    <h3>
+        Carrying out actual tests
+    </h3>    
+    <p>
+        Each worker runs a local copy of the <a href="http://validator.w3.org/">W3C HTML validator</a>, backed by a local copy of the <a href="http://html5.validator.nu/">validator.nu HTML5 validator</a>
+    </p>
+    <p>
+        The W3C HTML validator is basically <a href="http://dvcs.w3.org/hg/markup-validator/file/tip/httpd/cgi-bin/check">one epic Perl script</a>.
+        The validator.nu HTML validator is a Java application.
+    </p>
+    <p>
+        Later I'll be adding local installations of the W3C CSS validator and JSLint.
+    </p>
+    <p>
+        The applications that actually carry out the tests are all quite different. Each worker
+        has a collection of drivers to interact with the testing applications. The HTML validation
+        driver, for example, tells a worker how to talk to the HTML validator and how to
+        understand what comes back.
+    </p>
+    <h3>
+        Workflow Management
+    </h3>
+    <p>
+        If you were to take the code for the core application and the workers and deploy them somewhere
+        and start up a new full-site test you might be surprised to notice that absolutely nothing useful happens.
+    </p>
+    <p>
+        The workflow of each application comprises a number of steps either initialised by an HTTP request
+        or via issuing a command line command.
+    </p>
+    <p>
+        Let's quickly look at the workflow for a new test job as an example:
+    </p>
+    <ol>
+        <li>
+            <code>http://app.simplytestable.com/job/http://example.com/start/</code>
+        </li>
+        <li>
+            <code>php app/console simplytestable:job:prepare 1</code>
+        </li>        
+        <li>
+            <code>php app/console simplytestable:task:assign 1</code>
+        </li>        
+        <li>
+            <code>php app/console simplytestable:task:assign 2</code>
+        </li>        
+        <li>
+            <code>php app/console simplytestable:task:assign N</code>
+        </li>                
+    </ol>
+    
+    <p>
+        Once a request to start a new job is receive, it must be prepared (URLs to test discovered
+        and a collection of tasks created) and then each task must be assigned out to a worker.
+    </p>
+    
+    <p>
+        The whole process is a collection of distinct steps. Each step carries out a small unit of work and changes the state
+        of the job. Most are initialised via command line commands.
+    </p>
+    
+    <p>
+        Distinct steps are easy to test. Distinct step failure is easy to handle. Distinct steps can happen later.
+        Distinct steps can (often) be run in parallel.
+    </p>
+    
+    <p>
+        Distinct steps do not, however, run themselves. When one is done, that's it. Something else has to kick
+        off the next step and the one after that and so on.
+    </p>
+    
+    <p>
+        Once every step is done, it pops a job in a queue to kick off the next step. When developing, we can
+        ignore this queue and manually kick off steps as needed to make things initially work and to investigate
+        bugs. The integration system can also ignore the queue and can instead sequentially kick off all steps
+        and verify that everything works bit by bit as a full-site test progresses.
+    </p>
+    
+    <p>
+        The production system uses <a href="https://github.com/defunkt/resque#readme">Resque</a> to manage the workflow queue:        
+    </p>
+    <blockquote>
+        &hellip; a Redis-backed library for creating background jobs, placing those jobs on multiple queues, and processing them later.
+    </blockquote>
+    
+    <p>
+        Smashing, just what we need. It'd be awfully tedious to manually kick off each step in the production
+        environment.
+    </p>
+    
+    <p>
+        This automates the workflow for both the core application and the workers. The core application
+        uses about 10 workflow job queues, all being serviced by about 100 Resque processes in total.
+        Each worker uses about 3 workflow job queues, all being serviced by about 15 Resque processes in total.
+    </p> 
+    <h3>
+        That's it
+    </h3>
+    <p>
+        I'm done with my quick rundown of what we used, what it's made from and how it
+        manages to do what it does without constantly failing.
+    </p>        
+    <p>
+        Send a message to <a href="http://twitter.com/simplytestable/">@simplytestable</a>
+        if you want to know more.
+    </p>
+</div>

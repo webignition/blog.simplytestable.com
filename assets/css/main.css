@@ -80,6 +80,10 @@ body {
 
 .post .section {
     font-size: 120%;
+}
+
+.post .section,
+.post .section ul li p {
     line-height: 160%;
 }
 
@@ -320,4 +324,13 @@ body.illustration .image {
 
 .sidebar h3 {
     font-size:14px;
+}
+
+.application-list .application-meta ul {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.application-list .application-meta li {
+    padding: 3px 0;
 }
