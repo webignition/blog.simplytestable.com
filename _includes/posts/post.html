@@ -9,7 +9,12 @@
     <div class="section section-post-meta post">    
         <h2>            
             <a href="{{ content_item.url }}">
+                {% if content_item.icon %} 
+                <i class="indicator-icon {{ content_item.icon }}"></i>
+                {% else %}
                 <i class="indicator-icon icon-bullhorn"></i>
+                {% endif %}                
+                
                 {{ content_item.title }}
             </a>
         </h2>
