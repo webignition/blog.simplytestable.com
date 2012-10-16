@@ -334,3 +334,8 @@ body.illustration .image {
 .application-list .application-meta li {
     padding: 3px 0;
 }
+
+.post table.stats th {
+    font-size:14px;
+    opacity:0.8;
+}
