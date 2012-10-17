@@ -31,13 +31,21 @@
         </p>
     </div>
     {% if content_item.illustration %}
-    <div class="section">
-        <div class="illustration illustration-{{ content_item.illustration.id }}">
-            <a href="/illustrations/{{ content_item.illustration.id }}" style="background-image: url('{{ content_item.illustration.url }}');">
-                <i class="icon-zoom-in"></i>
-            </a>
-        </div>
-    </div>
+        {% if content_item.illustration.id %}
+            <div class="section">
+                <div class="illustration illustration-{{ content_item.illustration.id }}">
+                    <a href="/illustrations/{{ content_item.illustration.id }}" style="background-image: url('{{ content_item.illustration.url }}');">
+                        <i class="icon-zoom-in"></i>
+                    </a>
+                </div>
+            </div>        
+        {% else %}
+            <div class="section">
+                <div class="illustration illustration-{{ content_item.illustration.id }}" style="{% if content_item.illustration.height %} height: {{content_item.illustration.height}} {% endif %}">
+                    <span style="background-image: url('{{ content_item.illustration.url }}');"></span>
+                </div>
+            </div>        
+        {% endif %}
     {% endif %}
     
     {{ content_item.content }}

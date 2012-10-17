@@ -272,6 +272,7 @@ body.illustration .image {
     margin-bottom:40px;
 }
 
+.post .illustration span,
 .post .illustration a {
     height:300px;
     display:block;
