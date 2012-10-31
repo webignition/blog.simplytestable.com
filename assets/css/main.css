@@ -340,3 +340,23 @@ body.illustration .image {
     font-size:14px;
     opacity:0.8;
 }
+
+.question-answer h3 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 24px;    
+    margin-bottom:8px;
+    margin-top:20px;
+    border-left: 5px solid #DDD;
+    margin-left: -20px;
+    padding-left: 10px;
+}
+
+.question-answer ul {
+    margin-top: -10px;
+}
+
+.question-answer ul p {
+    margin-bottom:8px;
+}
