@@ -360,3 +360,8 @@ body.illustration .image {
 .question-answer ul p {
     margin-bottom:8px;
 }
+
+.accented-charater-comparison i {
+    font-size:60px;
+    font-style: normal;
+}
