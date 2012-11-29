@@ -365,3 +365,7 @@ body.illustration .image {
     font-size:60px;
     font-style: normal;
 }
+
+div.post h3 {
+    margin-bottom:6px;
+}
