@@ -1,0 +1,175 @@
+---
+layout: default
+title: "Improving CSS Validation: New CSS Validation Option Choices"
+date: 2012-12-14 14:00
+author:
+    name: Jon Cram
+    url: http://webignition.net
+illustration:
+    id: css-validation-options
+    url: http://i.imgur.com/K4TB7.png    
+---
+
+<div class="section">
+    <h3>Discovering and deciding on CSS validation options</h3>
+    <p>
+        I've recently been adding some options to CSS validation tests to make the
+        tests more useful. Or, depending on your perspective, to make CSS validation
+        useful where it previously was not.
+    </p>
+    <p>
+        In a related previous post, I detailed the need for having <a href="/improving-css-validation-the-need-for-control-over-css-validation/">control over CSS
+        validation</a>.
+    </p>
+    <p>
+        This time I shall look at the range of  options I considered, where I 
+        got the options from and how I decided on which of these to implement.
+    </p>
+    <p>
+        In the next post, to be written when these changes are deployed live,
+        I'll explain the new CSS validation options and how they help.
+    </p>
+    
+    <h3>W3C CSS validator options</h3>
+    <p>
+        The <a href="http://jigsaw.w3.org/css-validator/">W3C CSS validator</a>
+        presents a set of options to choose from. If, like me, you're looking to
+        introduce some CSS validation options this seems like a good place
+        to start.
+    </p>
+    <p>
+        The W3C CSS validator presents four options:
+    </p>
+    <ul>
+        <li><p>
+            <strong>Profile</strong>: the CSS profile (colloquially <em>version</em>)
+            to validate against</p>
+        </li>
+        <li><p>
+            <strong>Medium</strong>: the medium (think <em>@media</em>) for which
+            the CSS is intended to be used</p>
+        </li>
+        <li><p>
+            <strong>Warnings</strong>: an option dealing with the extent by 
+            which warnings are reported</p>
+        </li>
+        <li><p>
+            <strong>Vendor Extensions</strong>: whether vendor extension issues
+            are to be reported as warnings or errors</p>
+        </li>        
+    </ul>
+    <p>
+        These options seem a good starting point.
+    <p>
+        Given that we're looking to add more value to CSS validation results,
+        let's see which of these options are essential, which can be discarded
+        and which can be improved upon.
+    </p>
+    <p>
+        <em>Profile</em> can be discarded. We're testing the web, so we don't
+        need to concern ourselves with SVG, mobile or TV profiles.
+    </p>
+    <p>
+        <em>Medium</em> can be discarded. We're testing the web, that's the 'screen'
+        medium.
+    </p>
+    <p>
+        <em>Warnings</em> presents options of 'All', 'Normal report', 'Most important'
+        and 'no warnings'.
+    </p>
+    <p>
+        This is too confusing. All warnings or no warnings make sense. Normal warnings
+        or most important warnings? There's no documentation to cover these choices
+        and even if there were the names of these options are still vague enough to
+        confuse when supported by documentation.
+    </p>
+    <p>
+        I'd rather stick to an option to include or exclude warnings and stop there.
+        This makes sense, this I can understand and this I can explain. It's simple.        
+    </p>
+    <p>
+        <em>Vendor extensions</em>, or more specifically how to treat vendor
+        extension issues, is a good idea. You might not care too much about
+        these and as such it's a good idea to be able to de-prioritise these
+        to warnings instead of errors.
+    </p>
+    <p>
+        Sometimes you might not care at all about vendor extension issues, leading
+        me to add a third option to ignore vendor extension issues.
+    </p>
+    <p>
+        Out of the four options the W3C validator offers, we've selected variants
+        of two.
+    </p>
+    <h3>
+        Handling third-party CSS resources
+    </h3>
+    <p>
+        Run http://webignition.net through the W3C CSS validator and marvel at the
+        689 errors from a minified version of Twitter Bootstrap 2.2.1.
+    </p>
+    <p>
+        I can't even easily see if there are errors in any CSS I've created myself
+        as the errors present in third-party CSS resource overwhelm the output.
+    </p>
+    <p>
+        There's lots of information I need to ignore. I trust that any invalid
+        rules in the Twitter Bootstrap framework are non-breaking.
+    </p>
+    <p>
+        But them perhaps sometimes I want to be sure I'm checking absolutely
+        everything just to be in the safe side.
+    </p>
+    <p>
+        It's common to include popular third-party CSS resources provided by
+        fast-responding content delivery networks.
+    </p>
+    <p>
+        It then makes sense to provide an option to ignore the CSS supplied from
+        common CDNs, specifically ajax.aspnetcdn.com, ajax.googleapis.com, 
+        cdnjs.cloudflare.com, netdna.bootstrapcdn.com and static.nrelate.com.
+    </p>
+    <p>
+        You might also be linking to third-party CSS resources on other domains.
+        Providing a text area into which to list domains to ignore covers this.
+    </p>
+    <h3>
+        Finalised CSS Options
+    </h3>
+    <p>
+        In trying to make CSS validation more useful, by means of making the 
+        validator output more relevant to what you need to discover, I've
+        come up with four options to help you control the CSS validator more
+        effectively:
+    </p>
+    <ul>
+        <li>
+            <p>
+                <strong>Handling warnings</strong>: checkbox to ignore warnings
+            </p>
+        </li>        
+        <li>
+            <p>
+                <strong>Vendor extension issues</strong>: ignore, treat as
+                warnings or treat as errors
+            </p>
+        </li>
+        <li>
+            <p>
+                <strong>Common CDN domains</strong>: checkbox to ignore CSS
+                from common CDN domains
+            </p>
+        </li>        
+        <li>
+            <p>
+                <strong>Linked CSS domains to ignore</strong>: text area into 
+                which you can list CSS-serving domains to ignore
+            </p>
+        </li>
+    </ul>
+    <p>
+        You can see the current set of options that you will soon be able to choose
+        from when starting a new full-site test in the <a href="/illustrations/css-validation-options/">associated illustration</a> for
+        this post.
+    </p>
+</div>
