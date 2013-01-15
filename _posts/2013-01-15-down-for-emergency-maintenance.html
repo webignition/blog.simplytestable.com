@@ -1,0 +1,54 @@
+---
+layout: default
+title: "Down For Emergency Maintenance"
+author:
+    name: Jon Cram
+    url: http://webignition.net
+---
+
+<div class="section">
+    <p>
+        I've had to take the service down for emergency maintenance.
+    </p>
+    
+    <p>
+        I noticed a couple of hours ago that the MySQL server was stuck trying
+        to read data from the disk. This is never a good sign.
+    </p>
+    <p>
+        After stopping all Simply Testable services and trying to restart MySQL
+        I saw that MySQL was failing to start due to it being unable to read
+        its data files. This is never a good sign.
+    </p>
+    
+    <p>
+        A reboot of the production server followed by some quick hard disk tests
+        allowed the data files to be read once again. This was a bit promising.
+    </p>
+    
+    <p>
+        I'm currently in the process of compressing (zipping) the MySQL data files
+        so that I can easily retrieve a backup.
+    </p>
+    
+    <p>
+        Once the MySQL data file backup has been safely retrieved I'll run some
+        in-depth hard disk tests to identify whether the hard disk is in immediate
+        risk of failing. If so it will need replacing.
+    </p>
+    
+    <p>
+        I'll keep the service down until I can determine if a hard disk replacement
+        is needed.
+    </p>
+    
+    <p>
+        I expect the database download to take some hours with the resulting
+        full hard disk test taking a few hours longer still.
+    </p>
+    
+    <p>
+        I'll update this post when more is known.
+    </p>
+    
+</div>
