@@ -1,7 +1,5 @@
 /_site
 /nbproject
-/vendor
-/_plugins
 /is_production
 
 # cPanel environment

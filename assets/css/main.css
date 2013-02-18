@@ -136,6 +136,7 @@ body.home .post {
     position: absolute;
     left: -40px;
     font-size: 80px; 
+    margin-top: -17px;
 }
 
 .comment-icon {
@@ -202,6 +203,7 @@ body.home .post {
 .newer-older .older i {
     margin-left:10px;
     float:right;
+    margin-top: -12px;
 }
 
 ul.listless {
