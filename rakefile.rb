@@ -10,7 +10,10 @@ task :default do
   fetch_dependencies
   jekyll
   system("cp _site/sitemap.xml sitemap.xml")
-  system("cp -R _site/archive_source archive")
+  system("rm -Rf archive && mkdir archive")
+  system("cat archive_source/index.html _site/archive_source/index.html > archive/index.html")
+  #system("cp -R _site/archive_source archive")
+  #system("mv _site/archive_source _site/archive")
 end
 
 task :rebuild do
