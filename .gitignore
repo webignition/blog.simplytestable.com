@@ -1,6 +1,7 @@
 /_site
 /nbproject
 /is_production
+/_plugins/
 
 # cPanel environment
 /.bash*
