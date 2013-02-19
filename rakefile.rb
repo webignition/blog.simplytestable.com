@@ -12,6 +12,7 @@ task :default do
   system("cp _site/sitemap.xml sitemap.xml")
   system("rm -Rf archive && mkdir archive")  
   system("cat archive_source/index.html _site/archive_source/index.html > archive/index.html")
+  system("sed -i 's/archive_source/default/g' archive/index.html")
   #system("cat _site/archive_source/index.html > archive/index.html")
   jekyll
 end

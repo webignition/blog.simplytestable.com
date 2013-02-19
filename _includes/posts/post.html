@@ -6,6 +6,8 @@
 {% endif %}
 
 <div class="post">
+    {% if content_item.is_archive %}
+    {% else %}
     <div class="section section-post-meta post">    
         <h2>            
             <a href="{{ content_item.url }}">
@@ -29,7 +31,9 @@
                 {% endif %}             
             {% endif %}       
         </p>
-    </div>
+    </div>    
+    {% endif %}    
+
     {% if content_item.illustration %}
         {% if content_item.illustration.id %}
             <div class="section">
