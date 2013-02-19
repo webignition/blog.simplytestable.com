@@ -13,7 +13,6 @@ task :default do
   system("rm -Rf archive && mkdir archive")  
   system("cat archive_source/index.html _site/archive_source/index.html > archive/index.html")
   system("sed -i 's/archive_source/default/g' archive/index.html")
-  #system("cat _site/archive_source/index.html > archive/index.html")
   jekyll
 end
 
