@@ -1,0 +1,3 @@
+_plugins:
+  sitemap-generator: https://github.com/kinnetica/jekyll-plugins.git
+  only-first-p: https://github.com/sebcioz/jekyll-only_first_p.git
