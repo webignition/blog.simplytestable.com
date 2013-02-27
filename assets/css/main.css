@@ -380,3 +380,10 @@ div.post h3 {
 .inline-illustration-floated {
     float:left;
 }
+
+body#page-improved-viewing-of-results-for-large-tests- #illustration-inline {
+    background-image: url('http://i.imgur.com/zsUjiqv.png');
+    width: 650px;
+    height: 280px;
+    background-position: -180px 0px;
+}
