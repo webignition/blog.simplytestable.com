@@ -387,3 +387,7 @@ body#page-improved-viewing-of-results-for-large-tests- #illustration-inline {
     height: 280px;
     background-position: -180px 0px;
 }
+
+div.post h4 {
+    margin: 10px 0px;
+}

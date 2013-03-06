@@ -1,0 +1,29 @@
+{{ title }}
+{{ date }}
+
+You're receiving this email because you joined Simply Testable's updates list.
+
+This is the Nth of weekly progress updates on the development of
+http://simplytestable.com, a brand new automated web frontend testing service
+providing one-click testing for your entire site.
+
+{{ content }}
+
+As always, if you'd like to see web testing you find boring handled automatically 
+for you, add a suggestion or vote up those that interest you
+(https://simplytestable.uservoice.com/forums/175588-tell-us-what-to-make-/filters/top).
+This really helps.
+
+Feedback, thoughts or ideas: email jon@simplytestable.com, follow
+http://twitter.com/simplytestable or keep an eye on http://blog.simplytestable.com.
+
+Cheers!
+
+Our mailing address is:
+*|LIST_ADDRESS|*
+
+Unsubscribe from this list:
+*|UNSUB|*
+
+Update subscription preferences:
+*|UPDATE_PROFILE|*
