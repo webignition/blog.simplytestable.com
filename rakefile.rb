@@ -8,6 +8,7 @@ PLUGIN_DIRECTORY = "_plugins"
 task :default do  
   puts 'Building ...'
   fetch_dependencies
+  system("rm sitemap.xml")
   jekyll
   system("cp _site/sitemap.xml sitemap.xml")
   system("rm -Rf archive && mkdir archive")  
