@@ -1,0 +1,142 @@
+---
+layout: default
+title: "Data Recovery Decisions"
+author:
+    name: Jon Cram
+    url: http://webignition.net
+---
+
+<div class="section">
+    <h3>Overview</h3>
+    <p>
+        I wrote last week an outline of our <a href="/data-recovery-strategy/">data recovery strategy</a>
+        and mentioned at the time that I'll go into some detail on the choices that were made and how
+        I ended up with the plan as it currently is.
+    </p>
+    <p>
+        This is that.
+    </p>    
+    <p>
+        This might also be of use to others who make software and are unsure of how
+        create backups for an application with a constantly-changing very large
+        dataset
+    </p>
+    <p>
+        Here we go.
+    </p>
+    <h3>What to back up (hint: configuration as well as data)</h3>
+    <p>
+        My first thoughts were to ensure that all data collected for all tests
+        run must be backed up. After all, it was only the data we collect and store
+        when running full-site tests that was totally unrecoverable when our production
+        server's hard drives died.
+    </p>
+    <p>
+        Just back up the data I thought. Everything else is recoverable one way
+        or another.
+    </p>
+    <p>
+        No! This turns out not to be true.
+    </p>
+    <p>
+        Some data we store is quite useless on its own. User passwords, for example,
+        are salted and hashed with the salt derived from a security token.
+    </p>    
+    <p>
+        Without the security token also being stored, all users, once we had 
+        restored from a back up of the data, would have to reset their passwords
+        to be able to log in.
+    </p>    
+    <p>
+        This is not the worst problem in the world, but following the inconvenience
+        to your users of having to restore from a back up you'd rather avoid any
+        further inconvenience such as requiring users to reset their passwords
+        before they can log in.
+    </p>
+    <p>
+        You might not be as lucky. If you're encrypting any data, such data will
+        definitely be useless if you don't also back up the decryption key.
+    </p>
+    <p>
+        The plan at this stage was to back up relevant application configuration
+        and all the data.
+    </p>
+    <h3>Attempt 001: Back up all the data</h3>
+    <p>
+        My initial plan was to back up all data. That way nothing is lost.
+    </p>
+    <p>
+        Backup up all data is trivially easy. Database backup tools exist, they're
+        stable and clever and reliable and work as a means of both backing up data and 
+        re-populating a database from a backup.
+    </p>
+    <p>
+        We use MySQL and so I turned to the <code>mysqldump</code> utility
+        and created a backup of all the relevant data on the production server.
+    </p>
+    <p>
+        <code>mysqldump -uroot app_simplytestable_com > app.simplytestable.com.sql</code>  
+    </p>
+    <p>
+        &hellip;
+    </p>
+    <p>
+        Now is a good time to make yourself a cup of coffee. And drink it. And 
+        make another.
+    </p>
+    <p>
+        &hellip;
+    </p>    
+    <p>
+        Dumping out the contents of a large dataset on a loaded production
+        server is not a quick affair.
+    </p>
+    <p>
+        I'd only previously used the <code>mysqldump</code> utility to back up
+        relatively small databases for content-managed web sites. I'd issue the
+        relevant command and seconds later a backup was ready for me to store
+        safely away.
+    </p>
+    <p>
+        &hellip;
+    </p>
+    <p>
+        There we go, all done.
+    </p>
+    <p>
+        It takes about 5 minutes to create a backup for the main database for
+        Simply Testable.
+    </p>    
+    <p>
+        Reading through an entire large database and writing out to disk all the 
+        queries required to import the data is a hefty task. It uses a fair amount
+        of CPU and is quite a disk I/O bottleneck.
+    </p>
+    <p>
+        I was left with a 25GB database dump. A file this large is a spot
+        inconvenient to store. I noticed that re-populating a local database
+        from the back up took close to 2 hours.
+    </p>
+    <p>
+        A full database backup adversely affects the quality of service when it's
+        being made, it inconveniently large and takes a very long time to import.
+    </p>
+    <p>
+        This wasn't looking like a feasible option if I'd want to run regular
+        backups.
+    </p>
+    <h3>Attempt 002: Back up only some of the data</h3>
+    <p>
+        I examined the databases needing to be backed up and considered
+        what database tables I could do without or what data in those tables
+        I could do without.
+    </p>
+    <p>
+        This is not easy.
+    </p>
+    <p>
+        Choosing what data to include in, or exclude from, an application
+    </p>
+        
+
+</div>

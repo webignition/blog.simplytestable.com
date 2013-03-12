@@ -1,5 +1,5 @@
 # Jekyll
-exclude: nbproject, README.md, manifest.yml, rakefile.rb
+exclude: nbproject, README.md, manifest.yml, rakefile.rb, _drafts
 permalink: /:title/
 url: http://blog.simplytestable.com
 
