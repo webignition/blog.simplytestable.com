@@ -66,7 +66,22 @@ author:
         <code>
             curl -u 'githubuser' -d '{"note":"Travis Composer 2"}' https://api.github.com/authorizations
         </code>
+    </p>    
+    <p>
+        Update: thanks to Lee Davis for adding a tip for Windows users:
     </p>
+    <blockquote>
+        <p>If using the windows curl client be sure to escape the json you send, else you get the following error from github.</p>
+<pre>
+{
+"message": "Problems parsing JSON"
+}
+</pre>
+
+<code>
+curl -u 'githubuser' -d '{\"note\":\"Travis Composer 2\"}'        
+</code>
+    </blockquote>
     <p>
         Replace <em>githubuser</em> with your own GitHub username, enter your
         password when prompted and you should get a response similar to this:
