@@ -198,6 +198,7 @@ body.home .post {
 .newer-older .newer i {
     margin-right:10px;
     float:left;
+    margin-top:-10px;
 }
 
 .newer-older .older i {
@@ -390,4 +391,26 @@ body#page-improved-viewing-of-results-for-large-tests- #illustration-inline {
 
 div.post h4 {
     margin: 10px 0px;
+}
+
+#start-new-test-form a  {
+    position: relative;
+    padding-right: 40px;
+    text-align: left;
+    display:block;
+}
+
+#start-new-test-form a .icon {
+    position: absolute;
+    right: 10px;
+    font-size:30px;
+    top:11px;
+}
+
+#start-new-test-form a .byline {
+    display: block;
+    font-size: 13px;
+    text-align: left;
+    font-style: normal; 
+    opacity: 0.8;
 }

@@ -39,11 +39,23 @@
         {% endfor %}
 
         {% if newer != false %}
-        <a href="{{ newer.url}}" class="newer"><i class="icon-arrow-left"></i> {{ newer.title }}</a>
+        <a href="{{ newer.url}}" class="newer"><i class="icon-arrow-left"></i>
+            {% if newer.short_title %}
+            {{ newer.short_title }} &hellip;
+            {% else %}
+            {{ newer.title }}
+            {% endif  %}        
+        </a>
         {% endif %}                
 
         {% if older != false %}
-        <a href="{{ older.url}}" class="older"><i class="icon-arrow-right"></i> {{ older.title }}</a>
+        <a href="{{ older.url}}" class="older"><i class="icon-arrow-right"></i> 
+            {% if older.short_title %}
+            {{ older.short_title }} &hellip;
+            {% else %}
+            {{ older.title }}
+            {% endif  %}
+        </a>
         {% endif %}
     </div>
     {% endif %}
