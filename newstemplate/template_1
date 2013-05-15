@@ -1,83 +1,67 @@
-Simply Testable Updates #38: Stripe Integration Investigation, Account Plans, Your Account Page
-May 1, 2013
+Simply Testable Updates #39: Your Account Page Mostly Complete
+May 15, 2013
 
 You're receiving this email because you joined Simply Testable's updates list.
 
-This is the 38th of weekly progress updates on the development of
+This is the 39th of weekly progress updates on the development of
 http://simplytestable.com, a brand new automated web frontend testing service
 providing one-click testing for your entire site.
 
+I returned late last week from a week-long vacation in the Scottish Highlands.
+
 Highlights from this week:
-* Stripe (payment handling) integration investigation
-* Initial account plans created
-* Your account page progress
-* Account plan limits not yet implemented
+* Your account page mostly complete
+* Invalid in-markup content type bug fixed
 
+## Your account page mostly done
+Work is complete on the 'your account' page. I say that it is mostly done as the 
+changes have not yet been deployed live as the changes were completed just a few 
+minutes ago.
 
-## Stripe (payment handling) integration investigation
-I planned from the outset to use Stripe (https://stripe.com/) for handling payments 
-and was lucky enough to get accepted to the UK beta of the service.
+Before long you'll be able to click on your email address that you see at the 
+top-right when signed in (just next to the sign out button) to take you to your 
+account page.
 
-I've spent many hours this week reading through the Stripe API documentation to 
-understand what is needed of Simply Testable to associate your account with a paid 
-subscription.
+From there you can change your account email address and password and see the 
+details of your account plan.
 
-As I'd hoped, integrating with Stripe is amazingly straightforward.
+Once paid plans are in place you will also be able to subscribe to a paid plan as 
+well as upgrade or downgrade between the plans.
 
-## Initial account plans created
-The majority of this past week was spent investigating what types of account plan 
-could be created and how these could be implemented.
+## Invalid in-markup content type bug fixed
+Your web server can (and really should) return a Content-Type header along with the 
+content it is serving. This tells web clients how to interpret the content they're 
+being given.
 
-Yesterday and today I deployed to the production server the changes required to 
-support account plans. I then created two initial plans (public and basic) and 
-added all existing users to the basic plan.
+If you can't have the correct HTTP headers set, you can instead use a
+http-equiv (http://www.w3.org/TR/html-markup/meta.http-equiv.content-type.html) 
+element in the of your HTML document. Such meta elements are, for a set of defined 
+values, interpreted as being equivalent to HTTP headers.
 
-The public plan is not one you'll ever see mentioned on the site. This is a special 
-plan for the totally free tests you can currently run without being signed in. This 
-limits the number of URLs that can be tested for a site, limits the number of times 
-a site can be tested per month and limits the number of types of test you can run 
-at one time.
+In short, a <meta> http-equiv element can be used to override a specific HTTP 
+header, telling a browser (or other web client) to pay attention to the value 
+provided by your element and to ignore that provided in the HTTP headers.
 
-All registered users are currently subscribed to the basic plan. This is a free plan 
-and always will be. Currently there are no limits but this will change once paid 
-plans are introduced.
+If you can't change your web server to return the correct Content-Type header, 
+you can instead set a element to define the content type.
 
-For the first X days after the introduction of paid plans, all existing and new 
-users will have the option to upgrade for free to a year-long paid subscription. 
-I'm not yet sure what 'X' will be but am currently thinking somewhere around 30.
+Some people or machines do this but do it wrongly.
 
-## Your account page progress
-As far as your account goes you can sign in, sign out and reset your password if 
-you've lost it.
+One specific product that appears to be an enterprise content management system 
+does it wrongly and produces an invalid element denoting the content type. Instead 
+of providing a "text/html" content type it prefers to instead to use simply 
+"textml". This is invalid and was causing the odd HTML validation test to fail.
 
-Account creation (http://blog.simplytestable.com/account-creation-live/) was 
-launched back on 9 November 2012 with a minimal set of features as there wasn't 
-really anything you could do with your account.
-
-That will be changing over the coming weeks with the addition of paid plans.
-
-In preparation for this, the 'your account' page is under development to initially 
-introduce some basic features such as changing your email address and password.
-
-When paid plans are introduced, additional features will be added to allow you to 
-change the plan you subscribe to.
-
-## Account plan limits not yet implemented
-Account plans can have limits, such as restricting you to checking only the first 
-10 URLs of a site instead of the entire site.
-
-These limits exist and are defined for the current account plans but nothing has 
-yet been put in place to enforce them.
-
-I expect this to be the case until the 'your account' page is ready.
+You can now safely use an invalid content-type element if you like and we'll simply 
+ignore it.
 
 ## Upcoming development
-On Friday I'm off on vacation to Scotland for a week. I don't expect to make much 
-more progress for the rest of this week and certainly won't be making any progress 
-until I return back to work on Monday 13 May.
+As soon as the 'your account' page changes have been deployed live I'm going to 
+start enforcing limits on the totally-free full-site tests that can be run. If you 
+are signed in this will have no effect on you.
 
-Work will then continue on the 'your account' page followed by implementing the 
-enforcement of account limits.
+I'll then move on to implementing paid plans and integrating with the Stripe 
+payment handling service.
 
 As always, if you'd like to see web testing you find boring handled automatically 
 for you, add a suggestion or vote up those that interest you
