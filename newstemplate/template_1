@@ -1,67 +1,13 @@
-Simply Testable Updates #39: Your Account Page Mostly Complete
-May 15, 2013
+{{ title }}
+{{ date }}
 
 You're receiving this email because you joined Simply Testable's updates list.
 
-This is the 39th of weekly progress updates on the development of
+This is the Nth of weekly progress updates on the development of
 http://simplytestable.com, a brand new automated web frontend testing service
 providing one-click testing for your entire site.
 
-I returned late last week from a week-long vacation in the Scottish Highlands.
-
-Highlights from this week:
-* Your account page mostly complete
-* Invalid in-markup content type bug fixed
-
-## Your account page mostly done
-Work is complete on the 'your account' page. I say that it is mostly done as the 
-changes have not yet been deployed live as the changes were completed just a few 
-minutes ago.
-
-Before long you'll be able to click on your email address that you see at the 
-top-right when signed in (just next to the sign out button) to take you to your 
-account page.
-
-From there you can change your account email address and password and see the 
-details of your account plan.
-
-Once paid plans are in place you will also be able to subscribe to a paid plan as 
-well as upgrade or downgrade between the plans.
-
-## Invalid in-markup content type bug fixed
-Your web server can (and really should) return a Content-Type header along with the 
-content it is serving. This tells web clients how to interpret the content they're 
-being given.
-
-If you can't have the correct HTTP headers set, you can instead use a
-http-equiv (http://www.w3.org/TR/html-markup/meta.http-equiv.content-type.html) 
-element in the of your HTML document. Such meta elements are, for a set of defined 
-values, interpreted as being equivalent to HTTP headers.
-
-In short, a <meta> http-equiv element can be used to override a specific HTTP 
-header, telling a browser (or other web client) to pay attention to the value 
-provided by your element and to ignore that provided in the HTTP headers.
-
-If you can't change your web server to return the correct Content-Type header, 
-you can instead set a element to define the content type.
-
-Some people or machines do this but do it wrongly.
-
-One specific product that appears to be an enterprise content management system 
-does it wrongly and produces an invalid element denoting the content type. Instead 
-of providing a "text/html" content type it prefers to instead to use simply 
-"textml". This is invalid and was causing the odd HTML validation test to fail.
-
-You can now safely use an invalid content-type element if you like and we'll simply 
-ignore it.
-
-## Upcoming development
-As soon as the 'your account' page changes have been deployed live I'm going to 
-start enforcing limits on the totally-free full-site tests that can be run. If you 
-are signed in this will have no effect on you.
-
-I'll then move on to implementing paid plans and integrating with the Stripe 
-payment handling service.
+{{ content }}
 
 As always, if you'd like to see web testing you find boring handled automatically 
 for you, add a suggestion or vote up those that interest you
