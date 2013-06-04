@@ -83,7 +83,7 @@ body {
 }
 
 .post .section,
-.post .section ul li p {
+.post .section li p {  
     line-height: 160%;
 }
 
@@ -371,6 +371,7 @@ body.illustration .image {
 
 div.post h3 {
     margin-bottom:6px;
+    margin-top:30px;
 }
 
 .inline-illustration {
@@ -413,4 +414,17 @@ div.post h4 {
     text-align: left;
     font-style: normal; 
     opacity: 0.8;
+}
+
+.post ul {
+    margin-bottom: 18px;
+    margin-top: -6px;
+}
+
+.post .linklist li {
+    padding:2px;
+}
+
+.post ul p {
+    margin-bottom: 6px;
 }
