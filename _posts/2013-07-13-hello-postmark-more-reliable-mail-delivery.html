@@ -1,0 +1,95 @@
+---
+layout: default
+title: "Hello Postmark, More Reliable Mail Delivery"
+author:
+    name: Jon Cram
+    url: http://webignition.net    
+illustration:
+    url: http://i.imgur.com/dWwJmHF.png
+    height: 280px    
+---
+
+<div class="section">
+    <h3>
+        Moving to More Reliable Mail Delivery
+    </h3>    
+    <p>
+        The Simply Testable applications send a few commonplace transactional
+        emails such as password reset reminders and account creation confirmations.
+    </p>
+    
+    <p>
+        I initially sent such mail through the SMTP services of a shared hosting service I run.
+    </p>
+    
+    <p>
+        To begin with, this was fine. It took all of a few minutes to set up,
+        I knew it worked and it gave me server-level access to mail logs that
+        allowed me to verify that mail was going where it should when it should.
+    </p>
+    
+    <p>
+        This worked fine until it didn't.
+    </p>
+
+    
+</div>
+
+<div class="section">
+    <h3>
+        550 IP &lt;removed&gt; listed in DNSBL bb.barracudacentral.org
+    </h3>
+    <p>
+        Well crap.
+    </p>   
+    <p>
+        Some people maintain lists of mail server IP addresses they think are 
+        naughty and other people who run mail services might use such lists to 
+        decide whether or not to accept mail from SMTP servers on such lists.
+    </p>
+    <p>
+        No matter how good your intentions, if you run a shared hosting service
+        you will periodically run into bad people who use your services to send spam.
+        You catch such matters, clear up the mess and continue on your way.
+    </p>
+    <p>
+        Except in this case there is one blacklist that continues to list my
+        SMTP server's IP no matter what I do.
+    </p>
+    <p>
+        This might be right, this might be wrong. I can do nothing either way.
+    </p>
+    <p>
+        If you've failed to receive an account creation confirmation email or a 
+        password reset email this may well be why.
+    </p>
+    <p>
+        What I can do is move to sending Simply Testable transactional emails
+        through a more reliable service.
+    </p>
+</div>
+
+<div class="section">
+    <h3>
+        Hello <a href="https://postmarkapp.com/">Postmark</a>
+    </h3>
+    <p>
+        As of a few minutes ago, all Simply Testable transactional emails
+        are being sent using <a href="https://postmarkapp.com/">Postmark</a>.
+    </p>
+    <p>
+        I had to jump through some hoops to verify the sender's address. This
+        makes me confident that people are highly unlikely to use Postmark to
+        send spam and as such it should be a highly reliable delivery mechanism.
+    </p>
+    <p>
+        And with premium plans just round the corner, we'll also be sending
+        emails telling you if a subscription payment failed and that's too
+        important to risk getting lost.
+    </p>
+    <p>
+        Most of you won't notice anything different but overall I'm glad to have
+        increased by just a little the quality of service. That can't be a bad
+        thing.
+    </p>
+</div>
