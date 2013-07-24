@@ -428,3 +428,20 @@ div.post h4 {
 .post ul p {
     margin-bottom: 6px;
 }
+
+.table-pre pre {
+    
+}
+
+table.top-html-validation-errors th,
+table.top-html-validation-errors td {
+    font-size: 80%;
+}
+
+.table-pre td pre {
+    font-size: 100%;
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;    
+}
