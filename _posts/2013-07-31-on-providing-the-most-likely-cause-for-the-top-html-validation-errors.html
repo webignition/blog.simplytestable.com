@@ -1,0 +1,143 @@
+---
+layout: default
+title: "On Providing the Most Likely Cause For the Top HTML Validation Errors"
+author:
+    name: Jon Cram
+    url: http://webignition.net   
+---
+
+<div class="section">
+    <h3>
+        Introduction
+    </h3>    
+    <p>
+        I <a href="/finding-the-top-html-validation-errors/">wrote recently</a> about how I'm scouring our databases to build
+        a collection of top HTML validation errors.
+    </p>
+    
+    <p>
+        Now that <a href="http://help.simplytestable.com/errors/html-validation/index/">I have these to hand</a>, 
+        I'm preparing an ever-growing collection of support documents to explain the various HTML validation errors
+        you'll encounter and to provide likely fixes.
+    </p>
+    
+    <p>
+        I began this effort by carefully researching the common causes
+        for various errors, finding examples of occurrences of errors on
+        <a href="http://stackoverflow.com/">Stack Overflow</a> and various
+        forums, and writing up likely fixes to these errors.
+    </p>    
+    
+    <p>
+        I soon realised I have the necessary data available
+        to me to follow a more scientific approach that is based less on
+        just experience, speculation or mystic beliefs regarding the whims of the
+        DOM and based more on good old evidence.
+    </p>
+    
+</div>
+
+<div class="section">
+    <h3>
+        Science to the Rescue
+    </h3>
+    
+    <p>
+        I have a collection of about 1.8 million HTML validation errors
+        found by testing about 110,000 URLs across about 2,600 distinct web sites.
+    </p>
+    
+    <p>
+        This seems a sufficient set of data such that the question "What is the
+        most common cause for 'Document type does not allow element "li" here'?"
+        can be answered by finding all occurrences of this error and looking to see
+        what the actual cause was in each case.
+    </p>
+    
+    <p>
+        This results in more accurate solutions than could otherwise be derived.
+    </p>
+</div>
+
+
+<div class="section">
+    <h3>
+        An example: Document type does not allow element "li" here
+    </h3>
+    
+    <p>
+        Let's look at an example error: 'Document type does not allow element "li" here'.
+    </p>
+    
+    <p>
+        This meaning of this error is quite clear if you are suitably familiar with
+        HTML. It is saying that a <code>&lt;li&gt;</code> element has been used
+        in a place it is not allowed.
+    </p>
+    
+    <p>
+        We could generalise the solution to the error 'Document type does not allow element "X" here'
+        by saying that the given element has been used in a place it is not allowed.
+    </p>
+    
+    <p>
+        Does knowing in what ways a <code>&lt;li&gt;</code> element is commonly
+        misplaced help in fixing such a problem?
+    </p>
+    
+    <p>
+        I've just examined 20 occurrences of this specific error. In the majority
+        of cases, the <code>&lt;li&gt;</code> elements were correctly within
+        list elements but were wrapped by other elements that are not allowed
+        within list elements.
+    </p>
+    
+    <p>
+        I can now say (assuming a large enough sample size) that the most common
+        misplacement of a <code>&lt;li&gt;</code> element is such as this:        
+    </p>
+    
+    <pre>&lt;ul&gt;
+  &lt;a href="http://example.com"&gt;&lt;li&gt;Example&lt;/li?&gt;&lt;/a&gt;
+&lt;/ul&gt;</pre>
+    
+    <p>
+        and that the correct form should be:
+    </p>
+    <pre>&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://example.com"&gt;Example&lt;/a&gt;&lt;/li?&gt;
+&lt;/ul&gt;</pre>
+    
+    <p>
+        This is more beneficial and useful than simply knowning that your markup
+        has a <code>&lt;li&gt;</code> element in a place that it does not belong.
+    </p>
+</div>
+
+<div class="section">
+    <h3>
+        Providing the Most Comprehensive Set of Solutions
+    </h3>
+    
+    <p>
+        With a collection of 1.8 million HTML validation error messages to draw from,
+        I have at my disposal all the information needed to build evidence-based
+        solutions to the most commonly-occurring HTML validation errors.
+    </p>
+    
+    <p>
+        Instead of seeking popular opinion on the solutions to these errors,
+        or even asking the educated opinion of a expert in such matters,
+        I can rely on a straightforward, scientific, evidence-based approach.
+    </p>
+
+    
+    <p>
+        Through this I'm able to build the most comprehensive set of solutions
+        to the HTML validation errors you encounter.
+    </p>    
+    
+    <p>
+        This is a nice situation to be in.
+    </p>
+</div>
