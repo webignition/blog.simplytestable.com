@@ -6,22 +6,6 @@
         <link href="{{ site.url }}/feed.xml" rel="alternate" type="application/rss+xml" title="Simply Testable Blog Feed" />
         {% include assets/css/default.html %}
         {% include assets/js/default.html %}
-    </head>
-    <body id="{% include page/id %}" class="illustration">
-        {% include header/navigation.html %}
-
-        <div class="container">
-            {% include header/introduction.html %}
-
-            <div class="row">
-                <div class="span12">
-                    <a class="image" href="{{ page.illustration.url }}">
-                        <img src="{{ page.illustration.url }}" />
-                    </a>
-                </div>
-            </div>
-        </div>
-
         <script>
             (function(i, s, o, g, r, a, m) {
                 i['GoogleAnalyticsObject'] = r;
@@ -38,6 +22,21 @@
             ga('create', 'UA-33218043-2', 'simplytestable.com');
             ga('send', 'pageview');
 
-        </script>        
+        </script>         
+    </head>
+    <body id="{% include page/id %}" class="illustration">
+        {% include header/navigation.html %}
+
+        <div class="container">
+            {% include header/introduction.html %}
+
+            <div class="row">
+                <div class="span12">
+                    <a class="image" href="{{ page.illustration.url }}">
+                        <img src="{{ page.illustration.url }}" />
+                    </a>
+                </div>
+            </div>
+        </div>       
     </body>
 </html>
