@@ -14,3 +14,8 @@ only_first_p:
 # Added for RSS feed
 name: Simply Testable Blog
 description: Figuring out how to automate away the pain of routine front-end web testing; the story behind simplytestable.com.
+
+# Sitemap plugin
+sitemap:
+  exclude:
+    - "/archive_source/index.html"
