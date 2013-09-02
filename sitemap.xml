@@ -548,11 +548,17 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-54/</loc>
-        <lastmod>2013-08-28T18:23:39+01:00</lastmod>
+        <lastmod>2013-09-02T11:54:49+01:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://blog.simplytestable.com/html-validation-it-doesnt-matter-except-when-it-does/
+        </loc>
+        <lastmod>2013-09-02T14:16:01+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/archive/</loc>
-        <lastmod>2013-08-28T18:23:37+01:00</lastmod>
+        <lastmod>2013-09-02T11:54:52+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/illustrations/redirect-loops-detected/</loc>
@@ -604,6 +610,6 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/</loc>
-        <lastmod>2013-08-28T18:23:39+01:00</lastmod>
+        <lastmod>2013-09-02T14:16:01+01:00</lastmod>
     </url>
 </urlset>
