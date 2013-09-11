@@ -562,11 +562,15 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/jslint-config-options-available/</loc>
-        <lastmod>2013-09-10T14:52:20+01:00</lastmod>
+        <lastmod>2013-09-10T14:53:02+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.simplytestable.com/simply-testable-updates-56/</loc>
+        <lastmod>2013-09-11T15:47:45+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/archive/</loc>
-        <lastmod>2013-09-10T14:50:10+01:00</lastmod>
+        <lastmod>2013-09-10T14:53:02+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/illustrations/redirect-loops-detected/</loc>
@@ -618,6 +622,6 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/</loc>
-        <lastmod>2013-09-10T14:52:20+01:00</lastmod>
+        <lastmod>2013-09-11T15:47:45+01:00</lastmod>
     </url>
 </urlset>
