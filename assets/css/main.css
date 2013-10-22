@@ -93,7 +93,7 @@ body.home .post {
 
 .post .section {
     padding-left: 60px;
-    padding-right: 60px;    
+    padding-right: 60px;  
 }
 
 .sidebar h2 {
@@ -444,4 +444,21 @@ table.top-html-validation-errors td {
     background: none;
     margin: 0;
     padding: 0;    
+}
+
+.illustration-inline {
+    position:relative;
+    margin-bottom: 20px;
+}
+
+.illustration-highlight {
+    position:absolute;
+    border: 2px solid #ff0000;
+}
+
+.illustration-inline-test-locked .illustration-highlight {
+    top: 65px;
+    right: 8px;
+    width: 109px;
+    height: 51px;    
 }

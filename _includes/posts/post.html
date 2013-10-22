@@ -46,7 +46,7 @@
         {% else %}
             <div class="section">
                 <div class="illustration illustration-{{ content_item.illustration.id }}" style="{% if content_item.illustration.height %} height: {{content_item.illustration.height}} {% endif %}">
-                    <span style="background-image: url('{{ content_item.illustration.url }}');"></span>
+                    <span style="background-image: url('{{ content_item.illustration.url }}'); {% if content_item.illustration.offset-x %}background-position-x: {{content_item.illustration.offset-x}};{% endif %}"></span>
                 </div>
             </div>        
         {% endif %}
