@@ -1,5 +1,7 @@
-{% for post in site.posts offset: 0 limit: 3 %}
+{% for post in site.posts offset: 0 limit: 5 %}
     {% include posts/post.html %}
 {% endfor %}
 
-<a href="/archive" class="archive-link">All posts <i class="icon-arrow-right"></i></a>
+<div id="all-posts">
+    <a href="/archive" class="btn btn-primary">All posts <i class="fa fa-caret-right"></i></a>
+</div>

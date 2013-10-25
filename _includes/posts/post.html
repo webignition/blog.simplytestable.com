@@ -12,9 +12,9 @@
         <h2>            
             <a href="{{ content_item.url }}">
                 {% if content_item.icon %} 
-                <i class="indicator-icon {{ content_item.icon }}"></i>
+                <i class="indicator-icon fa {{ content_item.icon }}"></i>
                 {% else %}
-                <i class="indicator-icon icon-bullhorn"></i>
+                <i class="indicator-icon fa fa-bullhorn"></i>
                 {% endif %}                
                 
                 {{ content_item.title }}
@@ -54,9 +54,16 @@
     
     {{ content_item.content }}
     
-    {% if page.url != '/index.html' %}
+    {% if page.url == '/index.html' %}
+        {% if content_item.continue_reading != false %}
+    <div class="section section-continue-reading">
+            <a href="{{ content_item.url }}" class="btn btn-default">Continue reading <i class="fa fa-caret-right"></i></a>
+    </div>        
+        {% endif %}    
+    {% else %}
+        {% if page.is_archive != true %}
     <div class="section comments">
-        <i class="comment-icon icon-comment-alt"></i>
+        <i class="comment-icon fa fa-comments-o"></i>
         <div id="disqus_thread">
         </div>
         <script type="text/javascript">
@@ -70,6 +77,7 @@
                 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
             })();
         </script>        
-    </div>        
+    </div>     
+        {% endif %}       
     {% endif %}
 </div>
