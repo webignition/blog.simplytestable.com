@@ -227,6 +227,44 @@ div.post h4 {
     color:#555;
 }
 
+.newer-older {
+    margin: 20px 0 0 0;
+}
+
+.newer-older .content {
+    display: inline-block;
+}
+
+.newer-older a {
+    position: relative;
+    opacity: 0.6;
+}
+
+.newer-older a:hover {
+    opacity: 1;
+}
+
+.newer-older i {
+    position: absolute;
+    top: 3px;
+}
+
+.newer-older .newer {
+    text-align: left;
+}
+
+.newer-older .older {
+    text-align: right;
+}
+
+.newer-older .newer i {
+    left:0;
+}
+
+.newer-older .older i {
+    right:0;
+}
+
 @media (max-width: 990px) {   
     #header-tweet {
         display:none;

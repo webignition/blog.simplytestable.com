@@ -71,53 +71,6 @@ body {
 }*/
 
 
-.newer-older {
-    margin-top: 20px;
-    margin-bottom: -20px;    
-}
-
-.newer-older a:hover i {
-    text-decoration: none;
-}
-
-.newer-older a i {
-    font-size: 40px;
-    width: 30px;
-    height:40px;
-}
-
-.newer-older a {
-    position:absolute;
-    opacity:0.6;
-    width:42%;
-}
-
-.newer-older a:hover {    
-    opacity:1;
-}
-
-.newer-older .newer {
-    left:60px;
-    text-align: left;
-}
-
-.newer-older .older {
-    right:60px;
-    text-align: right;
-}
-
-.newer-older .newer i {
-    margin-right:10px;
-    float:left;
-    margin-top:-10px;
-}
-
-.newer-older .older i {
-    margin-left:10px;
-    float:right;
-    margin-top: -12px;
-}
-
 
 
 
