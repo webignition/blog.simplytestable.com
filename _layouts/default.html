@@ -26,12 +26,12 @@
     </head>
     <body id="{% include page/id %}">
         {% include header/navigation.html %}
+        
+        {% include header/introduction.html %}
 
         <div class="container">
-            {% include header/introduction.html %}
-
             <div class="row">
-                <div class="span8">
+                <div class="col-md-8">
                     {% case page.url %}
                     {% when '/index.html' %}
                     {% include posts/latest.html %}
@@ -41,10 +41,9 @@
                     {% include posts/post.html %}
                     {% endcase %}                                      
                 </div>
-                <div class="span4 sidebar">                    
+                <div class="col-md-4 sidebar">                    
                     {% include sidebar/about.html %}
                     {% include sidebar/newsletter.html %}
-                    {% include sidebar/roadmap.html %}
                     {% include sidebar/recent.html %}
                     {% include sidebar/repositories.html %}
                 </div>
