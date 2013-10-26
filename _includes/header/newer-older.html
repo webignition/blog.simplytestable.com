@@ -5,7 +5,10 @@
         {% for post in site.posts %}
             {% if post.illustration %}
                 {% if post.illustration.id == page.illustration.id or page.source and post.title == page.source %}
-                <a href="{{ post.url }}" class="newer"><i class="icon-arrow-left"></i>Back to &ldquo;{{ post.title }}&rdquo;</a> 
+                <a href="{{ post.url }}" class="newer col-md-6">
+                    <i class="fa fa-caret-left"></i>
+                    <span class="content">Back to &ldquo;{{ post.title }}&rdquo;</span>
+                </a>
                 {% endif %}             
             {% endif %}
         {% endfor %}            

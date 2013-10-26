@@ -26,12 +26,14 @@
     </head>
     <body id="{% include page/id %}" class="illustration">
         {% include header/navigation.html %}
+        
+        {% include header/introduction.html %}
 
         <div class="container">
-            {% include header/introduction.html %}
+            
 
             <div class="row">
-                <div class="span12">
+                <div class="col-md-12">
                     <a class="image" href="{{ page.illustration.url }}">
                         <img src="{{ page.illustration.url }}" />
                     </a>
