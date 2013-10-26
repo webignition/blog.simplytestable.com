@@ -1,30 +1,27 @@
 <div class="header">
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 primary">
                 <a href="//simplytestable.com" id="logo"></a>
                 <a href="/" id="name">                                
                     Simply Testable Blog
                 </a>
                 
                 <div class="leader">
-                    <p>
+                    <p class="intro">
                         Figuring out how to automate away the pain of routine front-end web testing; the
-                        story behind <a href="http://simplytestable.com">simplytestable.com</a>.
+                        story behind <a href="http://simplytestable.com">SimplyTestable.com</a>.
+                    </p>
+                    <p class="purpose">
+                        {{ site.posts.size }} posts covering the initial idea, growth of the service, features, advances,
+                        failures and successes.
                     </p>
                 </div>
             </div>            
-            <div class="col-md-4" id="header-tweet">
-                <a class="twitter-timeline" href="https://twitter.com/simplytestable" data-widget-id="355821684017745920" data-tweet-limit="1" data-chrome="noheader nofooter noborders transparent">Tweets by @simplytestable</a>
-                <script>!function(d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                        if (!d.getElementById(id)) {
-                            js = d.createElement(s);
-                            js.id = id;
-                            js.src = p + "://platform.twitter.com/widgets.js";
-                            fjs.parentNode.insertBefore(js, fjs);
-                        }
-                    }(document, "script", "twitter-wjs");</script>
+            <div class="col-md-4 sidebar">
+                {% include sidebar/about.html %}
+                {% include sidebar/start-new-test-form.html %}
+                {% include sidebar/areas.html %}
             </div>
         </div>
         

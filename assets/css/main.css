@@ -14,6 +14,7 @@ blockquote {
 .header {
     background-color: #eee;
     margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
 }
 
 #logo {
@@ -42,7 +43,7 @@ blockquote {
     text-decoration: none;
 }
 
-.header  p {
+.header .primary  p {
     font-size: 18px;
     line-height: 27px;    
 }
@@ -80,6 +81,20 @@ a:hover {
     padding-bottom: 40px;
     margin-left:20px;
     border-bottom: 1px solid #ddd;
+}
+
+.sidebar div.twitter-latest {
+    padding-bottom:0;    
+}
+
+.header .sidebar div.section {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.header .sidebar {
+/*    margin-top: -10px;*/
 }
 
 .sidebar h3 {
@@ -394,17 +409,87 @@ table.top-html-validation-errors td {
     margin-bottom: 18px;
 }
 
-@media (max-width: 990px) {   
-    #header-tweet {
-        display:none;
+.start-new-test-form a {
+    position: relative;
+    padding-right: 40px;
+    text-align: left;
+}
+
+.start-new-test-form a .byline {
+    display: block;
+    font-size: 13px;
+    text-align: left;
+    font-style: normal;
+    opacity: 0.8;
+}
+
+.start-new-test-form a .fa {
+    position: absolute;
+    right: 10px;
+    font-size: 30px;
+    top: 15px;    
+}
+
+.header .sidebar .areas {
+    list-style: none;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+.header .sidebar .areas a {
+    display:inline-block;
+    margin: 0;
+    padding: 3px;    
+}
+
+.header .sidebar .areas li {
+    display:inline;
+    margin: 0;
+    padding: 0;    
+}
+
+.header .sidebar div.start-new-test-form {
+    margin-top: 20px;
+    margin-bottom: 6px;
+}
+
+@media (max-width: 990px) {       
+    .header .sidebar {
+
     }
+    
+    .header .sidebar .about .tagline,
+    .header .sidebar .about h2 {
+        display:none;
+    }    
+    
+    
+    .header .sidebar .section {
+        float:right;
+        width: 40%;
+        margin-left:0;
+    }    
+    
+    .header .sidebar .about {
+        float:left;
+        width:49%;
+    }
+    
+    .header .sidebar .about p {
+        font-size: 18px;
+        line-height: 27px;        
+    }
+    
+    .header .sidebar div.start-new-test-form {
+        margin-top: auto;
+    }    
     
     .header #name {
         text-indent: 0;
     }    
     
     .header .leader p {
-        margin-left:inherit;
+/*        margin-left: inherit;*/
     }      
     
     .indicator-icon {      
