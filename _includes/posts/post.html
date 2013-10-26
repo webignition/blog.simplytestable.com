@@ -52,7 +52,11 @@
         {% endif %}
     {% endif %}
     
+    {% if page.layout == 'newsletter' %}    
+        {% include posts/newsletter/content.html %}
+    {% else %}
     {{ content_item.content }}
+    {% endif %}    
     
     {% if page.url == '/index.html' %}
         {% if content_item.continue_reading != false %}

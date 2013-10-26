@@ -9,7 +9,7 @@ task :default do
   puts 'Building ...'
   fetch_dependencies
   system("rm sitemap.xml")
-  system("node _build/fix-html-validation-issues.js")
+  #system("node _build/fix-html-validation-issues.js")
   jekyll  
   system("cp _site/sitemap.xml sitemap.xml")  
   system("rm -Rf archive && mkdir archive")  

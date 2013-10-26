@@ -7,7 +7,7 @@ author:
     url: http://webignition.net
 ---
 
-<div class="section">
+<div class="section section-first">
     <p>
         I created some libraries for dealing with certain matters that would be common
         across the Simply Testable service.
@@ -32,17 +32,20 @@ author:
         In part one of a series of posts, I'll look at what we've
         created and use for handling URLs.
     </p>
-    <h2>
+</div>
+
+<div class="section">
+    <h3>
         URL Handling
-    </h2>
+    </h3>
     <ul class="repository-list">
         <li>
-            <i class="icon-github"></i>
+            <i class="fa fa-github"></i>
             <a href="https://github.com/webignition/url">webignition/url</a>
             <a class="build-status" href="http://travis-ci.org/webignition/url"><img src="https://secure.travis-ci.org/webignition/url.png?branch=master" /></a>            
         </li>
         <li>
-            <i class="icon-github"></i>
+            <i class="fa fa-github"></i>
             <a href="https://github.com/webignition/absolute-url-deriver">webignition/absolute-url-deriver</a>
             <a class="build-status" href="http://travis-ci.org/webignition/absolute-url-deriver"><img src="https://secure.travis-ci.org/webignition/absolute-url-deriver.png?branch=master" /></a> 
         </li>        
@@ -56,7 +59,10 @@ author:
         Our <a href="https://github.com/webignition/url">URL library</a> handles the modelling, parsing
         and normalisation of URLs.
     </p>
-    <h2>Parsing</h2>
+</div>
+
+<div class="section">
+    <h3>Parsing</h3>
     <p>
         Parsing a URL into its component parts is essential for the processes of 
         both normalising a URL and forming a full, absolute URL from a given 
@@ -103,9 +109,12 @@ $url->setHost('github.com');
 $url->setPath('/webignition/url/');
 (string)$url;      // returns '//github.com/webignition/url'
     </pre>
-    <h2>
+</div>
+
+<div class="section">
+    <h3>
         Normalisation
-    </h2>
+    </h3>
     <p>
         Normalisation is a crucial feature for us. We often need to see if two URLs 
         are equivalent without the expense of an HTTP request to compare resources
@@ -133,9 +142,13 @@ $url = new NormalisedUrl('http://example.com:80');
 $url = new NormalisedUrl('http://example.com/?a=1&amp;c=3&amp;b=2'); 
 (string)$url;  // returns 'http://example.com/?a=1&amp;b=2&amp;c=3'; 
     </pre>    
-    <h2>
+</div>
+
+
+<div class="section">   
+    <h3>
         Absolute URL Deriving
-    </h2>
+    </h3>
     <p>
         Absolute URL deriving is another task we do all the time.
     </p>    

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ page.title }}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="{{ site.url }}/feed.xml" rel="alternate" type="application/rss+xml" title="Simply Testable Blog Feed" />
+        {% include assets/css/default.html %}
+        {% include assets/js/default.html %}
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-33218043-2', 'simplytestable.com');
+            ga('send', 'pageview');
+
+        </script>        
+    </head>
+    <body id="{% include page/id %}">
+        {% include header/navigation.html %}
+        
+        {% include header/introduction.html %}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% case page.url %}
+                    {% when '/index.html' %}
+                    {% include posts/latest.html %}
+                    {% when '/archive_source/index.html' %}
+                    {% include posts/archive.html %}
+                    {% else %}
+                    {% include posts/post.html %}
+                    {% endcase %}                                      
+                </div>
+                <div class="col-md-4 sidebar">    
+                    {% include sidebar/newsletter.html %}
+                    {% include sidebar/about.html %}                    
+                    {% include sidebar/recent.html %}
+                    {% include sidebar/repositories.html %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

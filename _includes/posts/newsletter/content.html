@@ -1,0 +1,25 @@
+{% assign content_item = false %}
+{% if post %}
+{% assign content_item = post %}
+{% else %}
+{% assign content_item = page %}
+{% endif %}
+
+<div class="section section-first">
+    {% include posts/newsletter/intro.html %}    
+    {% include posts/newsletter/highlights.html %}
+    
+    {% if content_item.newsletter.pre_closing_sentence %}
+    <p>
+        {{ content_item.newsletter.pre_closing_sentence }}
+    </p>     
+    {% endif %}
+    
+    <p>
+        {{ content_item.newsletter.closing_sentence }}
+    </p>    
+</div>
+
+<div class="section section-continue-reading">
+    <a href="{{ content_item.newsletter.url }}" class="btn btn-default">Read full newsletter <i class="fa fa-caret-right"></i></a>
+</div>

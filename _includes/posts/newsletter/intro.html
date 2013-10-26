@@ -1,0 +1,11 @@
+{% assign content_item = false %}
+{% if post %}
+{% assign content_item = post %}
+{% else %}
+{% assign content_item = page %}
+{% endif %}
+
+
+    <p>
+        Our <a href="{{ content_item.newsletter.url }}">{{ content_item.newsletter.issue_number }} updates newsletter</a> went out today.
+    </p>
