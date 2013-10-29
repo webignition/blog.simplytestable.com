@@ -2,31 +2,31 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://blog.simplytestable.com/the-beginning/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/high-level-plan/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/allowing-slashes-in-url-path-with-apache/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/architecture-overview/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.simplytestable.com/opensource-libraries-weve-created-and-how-we-use-them-part-one-url-handling/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.simplytestable.com/tasks-and-how-they-can-combine-into-series-and-sequences/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-july-2012/</loc>
@@ -36,7 +36,7 @@
         <loc>
             http://blog.simplytestable.com/opensource-libraries-weve-created-and-how-we-use-them-part-two-point-one-http-reliability/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-august-2012-1/</loc>
@@ -46,19 +46,19 @@
         <loc>
             http://blog.simplytestable.com/http-failures-and-what-to-test-for-in-http-applications/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.simplytestable.com/opensource-libraries-weve-created-and-how-we-use-them-part-two-point-two-http-testability/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.simplytestable.com/integrating-with-resque-into-a-symfony-application/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-august-2012-2/</loc>
@@ -68,7 +68,7 @@
         <loc>
             http://blog.simplytestable.com/installing-the-w3c-html-validator-with-html5-support-on-ubuntu/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-august-2012-3/</loc>
@@ -76,7 +76,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/first-test-results/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-august-2012-4/</loc>
@@ -84,15 +84,15 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/working-prototype-in-action/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/working-prototype-in-action-002/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/working-prototype-in-action-003/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-august-2012-5/</loc>
@@ -100,7 +100,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/working-prototype-in-action-004/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-september-2012-1/</loc>
@@ -108,7 +108,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/private-alpha-release-available/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-september-2012-2/</loc>
@@ -116,19 +116,19 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/production-bug-001-fixed/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/meta-name-equals-content-type-is-invalid/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/test-failures-now-supported/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/production-bug-002-spotted/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-september-2012-3/</loc>
@@ -136,17 +136,17 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/urls-now-collected-from-news-feeds/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.simplytestable.com/redirect-loops-and-long-redirect-chains-detected/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/compressed-sitemaps-now-supported/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-september-2012-4/</loc>
@@ -154,7 +154,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/our-technology-stack/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-october-2012-1/</loc>
@@ -162,21 +162,21 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/test-timeouts-now-supported/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.simplytestable.com/gracefully-handling-test-failure-without-blocking-test-progress/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/showing-us-some-love/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/multiple-sitemaps-indexed-sitemaps-supported/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-october-2012-2/</loc>
@@ -186,19 +186,19 @@
         <loc>
             http://blog.simplytestable.com/limited-task-assignment-for-better-parallel-test-performance/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/capacity-problems-all-over-the-place/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/post-launch-post-mortem/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/switching-from-apache-to-nginx/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-october-2012-3/</loc>
@@ -206,7 +206,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/w3c-html-validator-on-ubuntu-12-10/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-october-2012-4/</loc>
@@ -214,7 +214,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/how-to-test-a-local-site/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-october-2012-5/</loc>
@@ -226,7 +226,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/account-creation-live/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-november-2012-2/</loc>
@@ -234,7 +234,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/choose-html-validation-css-validation-or-both/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-november-2012-3/</loc>
@@ -242,13 +242,13 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/november-20th-downtime-post-mortem/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.simplytestable.com/installing-jslint-for-command-line-use-on-ubuntu/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-19/</loc>
@@ -262,17 +262,17 @@
         <loc>
             http://blog.simplytestable.com/improving-css-validation-the-need-for-control-over-css-validation/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.simplytestable.com/improving-css-validation-new-css-validation-option-choices/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/new-CSS-validation-options-explained/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-21/</loc>
@@ -284,7 +284,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/internationalised-domain-name-support-improved/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-23/</loc>
@@ -294,19 +294,19 @@
         <loc>
             http://blog.simplytestable.com/creating-and-using-a-github-oauth-token-with-travis-and-composer/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.simplytestable.com/css-validation-for-non-relevant-content-now-skipped/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.simplytestable.com/js-static-analysis-against-404ing-js-urls-no-longer-failing/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-24/</loc>
@@ -316,11 +316,11 @@
         <loc>
             http://blog.simplytestable.com/3-non-code-production-performance-tips-for-developers-from-unified-diff-Jan-2013/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/down-for-emergency-maintenance/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-25/</loc>
@@ -328,7 +328,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/service-restored/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-26/</loc>
@@ -348,11 +348,11 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/improved-viewing-of-results-for-large-tests/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/data-recovery-strategy/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-30/</loc>
@@ -360,13 +360,13 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/staying-signed-in/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.simplytestable.com/choosing-data-to-exclude-from-an-application-backup/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-31/</loc>
@@ -374,7 +374,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/batch-of-content-retrieval-bugs-fixed/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-32/</loc>
@@ -384,7 +384,7 @@
         <loc>
             http://blog.simplytestable.com/ignoring-false-css-background-image-data-url-errors/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-33/</loc>
@@ -392,7 +392,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/estimated-time-remaining-now-available/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-34/</loc>
@@ -408,7 +408,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/the-switch-to-guzzle-is-complete/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-37/</loc>
@@ -424,23 +424,23 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/your-account-page-now-available/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/css-validation-local-path-reference-bug-fixed/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/limits-on-free-full-site-and-single-url-tests/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/faster-single-URL-tests/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/free-demo-test-url-limits/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-40/</loc>
@@ -454,7 +454,7 @@
         <loc>
             http://blog.simplytestable.com/using-a-multiple-domain-ucc-secure-certificate-with-nginx/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-42/</loc>
@@ -466,7 +466,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/setting-the-php-memory-limit-for-travis-ci/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-44/</loc>
@@ -486,23 +486,23 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/hello-postmark-more-reliable-mail-delivery/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/premium-plans-launched-and-why-they-exist/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/premium-plan-credits/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/365-day-free-trial/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/get-an-unlimited-free-trial/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-48/</loc>
@@ -510,7 +510,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/finding-the-top-html-validation-errors/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-49/</loc>
@@ -520,7 +520,7 @@
         <loc>
             http://blog.simplytestable.com/on-providing-the-most-likely-cause-for-the-top-html-validation-errors/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-50/</loc>
@@ -528,7 +528,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/solving-element-variable-undefined/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-51/</loc>
@@ -544,7 +544,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/site-crawler-released/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-54/</loc>
@@ -554,7 +554,7 @@
         <loc>
             http://blog.simplytestable.com/html-validation-it-doesnt-matter-except-when-it-does/
         </loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-55/</loc>
@@ -562,7 +562,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/jslint-config-options-available/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-56/</loc>
@@ -586,7 +586,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/awesome-link-integrity-testing-now-available/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-61/</loc>
@@ -594,11 +594,11 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/you-can-now-filter-results-by-test-type/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/allowing-public-access-to-private-test-results/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-28T16:39:13+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-62/</loc>
@@ -606,11 +606,15 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/you-can-now-test-any-website/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-26T16:10:31+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.simplytestable.com/interview-with-tom-batey-of-webdepend/</loc>
+        <lastmod>2013-10-29T10:37:56+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/archive/</loc>
-        <lastmod>2013-10-26T16:08:29+01:00</lastmod>
+        <lastmod>2013-10-29T12:54:04+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/illustrations/redirect-loops-detected/</loc>
@@ -662,6 +666,6 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/</loc>
-        <lastmod>2013-10-26T15:10:04+01:00</lastmod>
+        <lastmod>2013-10-29T10:37:56+00:00</lastmod>
     </url>
 </urlset>

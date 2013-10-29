@@ -1,7 +1,7 @@
 blockquote {
     border-color: #ddd;
     opacity:0.8;
-    font-style: italic;
+/*    font-style: italic;*/
 }
 
 #all-posts {
@@ -170,14 +170,22 @@ ul.listless li {
 }
 
 .post .section {
-    font-size: 120%;
     padding-right:60px;
 }
 
 .post .section,
-.post .section li p {  
+.post .section li p,
+.post .section blockquote p,
+div.post .question-answer .question h4 {  
     line-height: 160%;
+    font-size: 120%;    
 }
+
+div.post .question-answer .question h4,
+.post .section blockquote p {  
+    font-size: 100%;    
+}
+
 
 .post p {
     margin: 0 0 18px;
@@ -537,16 +545,24 @@ table.top-html-validation-errors td {
     }
 }
 
-/*.question-answer h3 {
+div.post .question-answer .question h4 {
     font-weight: normal;
-    font-style: italic;
-    font-size: 16px;
-    line-height: 24px;    
     margin-bottom:8px;
-    margin-top:20px;
-    border-left: 5px solid #DDD;
-    margin-left: -20px;
-    padding-left: 10px;
+    margin-top:40px;
+    position:relative;
+}
+
+div.post .question-answer .question h4 span {
+    display:block;
+    margin-top:8px;
+}
+
+div.post .question-answer .fa {
+    color: #08c;
+    font-size: 24px;
+    position:absolute;
+    left: -28px;
+    top: -2px;
 }
 
 .question-answer ul {
@@ -555,4 +571,22 @@ table.top-html-validation-errors td {
 
 .question-answer ul p {
     margin-bottom:8px;
-}*/
+}
+
+.question-answer blockquote {
+/*    opacity: inherit;*/
+    position: relative;
+}
+
+blockquote  .avatar {
+    position:absolute;
+    background-color: #f00;
+    width:24px;
+    height:24px;
+    left: -36px;
+}
+
+blockquote  .avatar-tom-batey {
+    background-color: transparent;
+    background-image: url(https://pbs.twimg.com/profile_images/642579437/Picture_8_mini.png);
+}
