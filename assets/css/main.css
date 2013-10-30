@@ -182,7 +182,8 @@ div.post .question-answer .question h4 {
 }
 
 div.post .question-answer .question h4,
-.post .section blockquote p {  
+.post .section blockquote p,
+.post .section li p {  
     font-size: 100%;    
 }
 

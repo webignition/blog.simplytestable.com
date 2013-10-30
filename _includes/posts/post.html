@@ -52,7 +52,7 @@
         {% endif %}
     {% endif %}
     
-    {% if post.layout == 'newsletter' %}        
+    {% if content_item.layout == 'newsletter' %}            
         {% include posts/newsletter/content.html %}
     {% else %}
     {{ content_item.content }}
