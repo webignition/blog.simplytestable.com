@@ -408,10 +408,10 @@ table.top-html-validation-errors td {
 }
 
 .illustration-inline-test-locked .illustration-highlight {
-    top: 65px;
-    right: 8px;
-    width: 109px;
-    height: 51px;    
+    top: 72px;
+    right: 10px;
+    width: 120px;
+    height: 61px; 
 }
 
 .post ol.archive p {
@@ -590,4 +590,10 @@ blockquote  .avatar {
 blockquote  .avatar-tom-batey {
     background-color: transparent;
     background-image: url(https://pbs.twimg.com/profile_images/642579437/Picture_8_mini.png);
+}
+
+.post .footnote {
+    opacity: 0.7;
+    font-size: 100%;
+    margin-top: 60px;    
 }
