@@ -598,7 +598,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/allowing-public-access-to-private-test-results/</loc>
-        <lastmod>2013-11-13T23:15:35+00:00</lastmod>
+        <lastmod>2013-11-14T14:11:21+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-62/</loc>
@@ -626,11 +626,15 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/new-test-dashboard-and-test-history/</loc>
-        <lastmod>2013-11-14T14:10:46+00:00</lastmod>
+        <lastmod>2013-11-14T14:11:21+00:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.simplytestable.com/simply-testable-updates-66/</loc>
+        <lastmod>2013-11-20T15:27:38+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/archive/</loc>
-        <lastmod>2013-11-14T14:01:54+00:00</lastmod>
+        <lastmod>2013-11-14T14:11:21+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/illustrations/redirect-loops-detected/</loc>
@@ -682,6 +686,6 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/</loc>
-        <lastmod>2013-11-14T14:10:46+00:00</lastmod>
+        <lastmod>2013-11-20T15:27:38+00:00</lastmod>
     </url>
 </urlset>

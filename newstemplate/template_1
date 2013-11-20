@@ -1,13 +1,65 @@
-{{ title }}
-{{ date }}
+Simply Testable Updates #66: New Dashboard Was Released, HTML Validator Improvements On The Way
+November 20, 2013
 
 You're receiving this email because you joined Simply Testable's updates list.
 
-This is the Nth of weekly progress updates on the development of
+This is the 66th of weekly progress updates on the development of
 http://simplytestable.com, your professional new automated web frontend testing 
 service providing one-click testing for your entire site.
 
-{{ content }}
+Over the past week I launched the new test dashboard and test history pages and 
+started work on improvements to the HTML validator.
+
+## New Test Dashboard Went Live
+I mentioned in last week's newsletter that the new test dashboard and test 
+history would be released not long after the newsletter was sent out.
+
+This didn't quite come to be but the release was made last Thursday.  Take a 
+look at:
+* the announcement blog post:
+  http://blog.simplytestable.com/new-test-dashboard-and-test-history/
+* a sample video of the dashboard:
+  https://www.youtube.com/watch?v=DYzOzzkwEC4
+* a screenshot of the test history page:
+  http://i.imgur.com/pj0M3O8.png
+
+## HTML Validator Improvements On The Way
+I've been re-writing how Simply Testable interacts with our copy of the W3C HTML
+ validator to make it easier to independently update the validator and to 
+facilitate the testing of password-protected pages.
+
+Keeping our copy of the W3C HTML validator up to date is not as straightforward 
+as it could be for reasons I won't go into as they're oh so very, very technical. 
+Ok, I will go in to some detail but not much.
+
+Our copy of the W3C HTML validator came from an official Ubuntu package. At the 
+time this made sense - sudo apt-get install w3c-markup-validator - as it's dead 
+easy; a one-liner. I subsequently noticed that the official package wasn't 
+particularly well kept up-to-date with changes to the source code. Not good. 
+If the people behind the W3C HTML validator fix a bug I want to be able to make
+ use of such changes as soon as is practical.
+
+I've been working on a installation/update script for the W3C HTML validator to 
+install and/or update from just a single command. On a test machine this works 
+well.
+
+I've also bypassed the need to run the HTML validator as a web service, instead 
+accessing it solely from the command line. This took a bit of poking around and 
+trial and error to see what did and what didn't work. At many times I was 
+utterly convinced it couldn't be done and many times I proved myself wrong.
+
+By not having to send a request through Apache to the validator and then the 
+response out of the validator and back to Apache, we remove the overhead 
+involved in Apache processing the both the request and response. Yay! Faster 
+HTML validation and less server resource intensive.
+
+By calling the validator from the command line and passing it the content to 
+validate we move one step nearer to being able to test password-protected pages.
+
+## Upcoming Development
+I don't see much in the way of new development over the next week as I'm 
+somewhat busy with a different project. Nevertheless, there will be some time 
+to work on finishing off the HTML validator improvements.
 
 As always, if you'd like to see web testing you find boring handled automatically 
 for you, add a suggestion or vote up those that interest you
