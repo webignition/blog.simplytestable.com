@@ -597,3 +597,11 @@ blockquote  .avatar-tom-batey {
     font-size: 100%;
     margin-top: 60px;    
 }
+
+img.img-responsive {
+    margin-bottom:20px;
+}
+
+iframe.video {
+    margin-bottom:30px;
+}
