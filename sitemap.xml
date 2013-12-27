@@ -84,15 +84,15 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/working-prototype-in-action/</loc>
-        <lastmod>2013-12-20T16:32:49+00:00</lastmod>
+        <lastmod>2013-12-20T18:14:33+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/working-prototype-in-action-002/</loc>
-        <lastmod>2013-12-20T16:32:49+00:00</lastmod>
+        <lastmod>2013-12-20T18:14:33+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/working-prototype-in-action-003/</loc>
-        <lastmod>2013-12-20T16:32:49+00:00</lastmod>
+        <lastmod>2013-12-20T18:14:33+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-august-2012-5/</loc>
@@ -100,7 +100,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/working-prototype-in-action-004/</loc>
-        <lastmod>2013-12-20T16:32:49+00:00</lastmod>
+        <lastmod>2013-12-20T18:14:33+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-september-2012-1/</loc>
@@ -626,7 +626,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/new-test-dashboard-and-test-history/</loc>
-        <lastmod>2013-12-20T16:32:49+00:00</lastmod>
+        <lastmod>2013-12-20T18:14:33+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-66/</loc>
@@ -650,11 +650,15 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/html-validation-for-password-protected-sites/</loc>
-        <lastmod>2013-12-20T18:12:54+00:00</lastmod>
+        <lastmod>2013-12-20T18:15:36+00:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.simplytestable.com/simply-testable-updates-71/</loc>
+        <lastmod>2013-12-27T09:22:03+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/archive/</loc>
-        <lastmod>2013-12-20T18:11:32+00:00</lastmod>
+        <lastmod>2013-12-20T18:14:33+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/illustrations/redirect-loops-detected/</loc>
@@ -706,6 +710,6 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/</loc>
-        <lastmod>2013-12-20T18:12:54+00:00</lastmod>
+        <lastmod>2013-12-27T09:22:03+00:00</lastmod>
     </url>
 </urlset>
