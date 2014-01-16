@@ -1,7 +1,10 @@
 blockquote {
     border-color: #ddd;
     opacity:0.8;
-/*    font-style: italic;*/
+}
+
+pre {
+    font-size: 12px;
 }
 
 #all-posts {
@@ -193,7 +196,7 @@ div.post .question-answer .question h4,
 }
 
 .post h3 {
-    margin-bottom:6px;
+    margin-bottom:12px;
     margin-top:40px;
 }
 
