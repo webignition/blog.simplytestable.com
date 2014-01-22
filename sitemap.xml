@@ -666,11 +666,15 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/css-validation-for-password-protected-sites/</loc>
-        <lastmod>2014-01-16T17:24:10+00:00</lastmod>
+        <lastmod>2014-01-16T17:24:37+00:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.simplytestable.com/simply-testable-updates-74/</loc>
+        <lastmod>2014-01-22T16:40:27+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/archive/</loc>
-        <lastmod>2014-01-16T17:23:03+00:00</lastmod>
+        <lastmod>2014-01-16T17:24:37+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/illustrations/redirect-loops-detected/</loc>
@@ -722,6 +726,6 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/</loc>
-        <lastmod>2014-01-16T17:24:10+00:00</lastmod>
+        <lastmod>2014-01-22T16:40:27+00:00</lastmod>
     </url>
 </urlset>
