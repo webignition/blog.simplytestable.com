@@ -608,3 +608,19 @@ img.img-responsive {
 iframe.video {
     margin-bottom:30px;
 }
+
+ul.doctypelist {
+    margin-left: 0;
+    padding-left: 0;    
+}
+
+ul.doctypelist li {
+    margin:0;
+    line-height: 18px;
+    font-size: 14px;
+}
+
+ul.doctypelist li code {
+    margin:0;
+    padding:0;
+}
