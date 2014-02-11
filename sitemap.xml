@@ -682,11 +682,15 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-76/</loc>
-        <lastmod>2014-02-05T17:12:52+00:00</lastmod>
+        <lastmod>2014-02-05T17:13:28+00:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.simplytestable.com/testing-password-protected-sites/</loc>
+        <lastmod>2014-02-11T12:26:17+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/archive/</loc>
-        <lastmod>2014-01-29T16:27:32+00:00</lastmod>
+        <lastmod>2014-02-11T12:26:25+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/illustrations/redirect-loops-detected/</loc>
@@ -738,6 +742,6 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/</loc>
-        <lastmod>2014-02-05T17:12:52+00:00</lastmod>
+        <lastmod>2014-02-11T12:26:17+00:00</lastmod>
     </url>
 </urlset>
