@@ -690,15 +690,19 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-77/</loc>
-        <lastmod>2014-02-12T16:00:32+00:00</lastmod>
+        <lastmod>2014-02-19T17:16:03+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-78/</loc>
-        <lastmod>2014-02-19T17:15:28+00:00</lastmod>
+        <lastmod>2014-02-19T17:16:03+00:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.simplytestable.com/simply-testable-updates-79/</loc>
+        <lastmod>2014-02-26T16:18:45+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/archive/</loc>
-        <lastmod>2014-02-19T17:15:09+00:00</lastmod>
+        <lastmod>2014-02-19T17:16:03+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/illustrations/redirect-loops-detected/</loc>
@@ -750,6 +754,6 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/</loc>
-        <lastmod>2014-02-19T17:15:28+00:00</lastmod>
+        <lastmod>2014-02-26T16:18:45+00:00</lastmod>
     </url>
 </urlset>
