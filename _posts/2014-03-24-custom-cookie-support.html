@@ -1,0 +1,170 @@
+---
+layout: default
+title: "Custom Cookie Support (Testing User-Specific Content and Features)"
+author:
+    name: Jon Cram
+    url: http://webignition.net
+---
+
+<div class="section section-first">        
+    <p>
+        You can now specify cookies to be set on all HTTP requests made whilst
+        running your tests.
+    </p>
+    
+    <p>
+        If the cookie information you specify identifies a given user, the site
+        or page you are testing will be tested as if you are signed in as that user. 
+
+        If the cookie information you specify enables a feature not available
+        to everyone, the site or page you are testing will be tested with that
+        feature enabled.
+    </p>    
+    
+    <p>
+        This post explains <a href="#specifying">how you can do that</a>, 
+        <a href="#uses">when this is useful</a> (hint: cookie-based authentication 
+        and user-specific content/features) and <a href="#when">when the cookies you 
+        specify will be used</a> (hint 1: not for every request, hint 2: security).
+    </p>    
+    
+    
+</div>
+
+<div class="section" id="specifying">
+    <h3>Specifying Custom Cookies</h3>
+    
+    <img class="img-responsive" src="http://i.imgur.com/ADXGtDZ.png">
+    
+    <p>
+        Immediately below the form to start a new test is a new option named
+        'custom cookies' (in grey in the centre below the large input field).        
+    </p>
+    
+    <p>
+        You'll see that this option is shown as being not enabled as no cookies
+        have yet been set.
+    </p>
+    
+    <p>
+        Select 'change' next to the custom cookies option to open the custom
+        cookies dialog box. For each cookie to be set, you will need to know 
+        the name of the cookie and the value you need it to take.        
+    </p>
+    
+    <img class="img-responsive" src="http://i.imgur.com/YYEYy7C.png">    
+    
+    <p>
+        Enter however many cookies are needed for the site being tested and
+        select the done button. That's it.
+    </p>    
+    
+</div>
+
+<div class="section" id="uses">
+    <h3>Uses: Cookie-Based Authentication, User-Specific Content, &hellip;</h3>        
+    
+    <p>
+        Cookies are commonly used as a means of user identification for sites
+        that offer user-specific content or features.
+
+        You visit a site, sign in and an identification cookie is set. This 
+        identification cookie is sent on subsequent requests to tell the site 
+        who you are.
+    </p>    
+    
+    <p>
+        This covers the majority of sites where you first have to sign in before
+        being able to carry out certain tasks or where you first have to sign in
+        before seeing content specific to you. Facebook, Twitter, Amazon, Stack 
+        Overflow, almost any Internet forum or discussion site.
+    </p>
+    
+    <p>
+        Setting custom cookies on HTTP requests made whilst running your tests
+        allows you to:
+    </p>
+    
+    <ul>
+        <li>
+            <p>
+                test pages when signed in as different users (or as no-one)
+            </p>
+        </li>        
+        <li>
+            <p>
+                test pages with "hidden" features enabled (before enabling
+                such feature for everyone)
+            </p>
+        </li>        
+        <li>
+            <p>
+                test how your site handles cases where identification cookies
+                are not set or are intentionally modified
+            </p>
+        </li>
+    </ul>
+</div>
+
+<div class="section" id="when">
+    <h3>When Custom Cookies Are Set</h3>
+
+    <p>
+        The custom cookies you specify are not set for every single request.
+    </p>    
+    
+    <p>
+        This is ok as that's how the web works - cookies set on your computer
+        by Facebook are not sent to Twitter and vice-versa. Setting all cookies
+        on all requests would be very insecure.
+    </p>
+    
+    <p>
+        Custom cookies are set on requests where the domain in the request URL matches
+        the domain of the cookie (as set out in <a href="http://tools.ietf.org/html/rfc6265#section-5.1.3">RFC6265 section 5.1.3</a>).
+
+        This leads to the question of what value the cookie domain takes, as you'll
+        see from the above screenshots that you can set the cookie name and value
+        only.
+    </p>
+    
+    <p>
+        We set the cookie domain automatically as the full <em>registerable domain</em>
+        of the site being tested, that is the domain one level down from the 
+        <a href="http://publicsuffix.org/">public suffix</a>.        
+    </p>
+    
+    <p>
+        An example: the domains <em>blog.simplytestable.com</em>, <em>gears.simplytestable.com</em>,
+        <em>www.simplytestable.com</em> and <em>simplytestable.com</em> all have the same
+        registerable domain of <em>simplytestable.com</em> and would result in the cookie
+        domain being set to <em>.simplytestable.com</em> (note the leading dot).
+    </p>
+    
+    <p>
+        You might be wondering why this really matters. After all, if you're
+        running a test against <em>blog.simplytestable.com</em>, aren't
+        all requests going to be against that domain? The short answer is no.
+    </p>
+    
+    <p>
+        CSS validation tests will retrieve and test linked CSS resources. Such
+        resources may come from CDNs or other external sources to which you don't want to expose your
+        custom cookies.
+    </p>        
+    
+    <p>
+        Similar concepts apply to JavaScript static analysis tests.
+    </p>
+    
+    <p>
+        A link integrity test will test all links in a given page. That covers
+        links in text to other pages and other sites and links to external resources
+        such as images, CSS and JavaScript. Many of these requests may be to
+        domains that don't match the page being tested.
+    </p>
+        
+        
+
+</div>
+
