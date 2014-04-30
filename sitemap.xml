@@ -736,11 +736,15 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-86/</loc>
-        <lastmod>2014-04-23T15:09:22+01:00</lastmod>
+        <lastmod>2014-04-23T15:10:30+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.simplytestable.com/simply-testable-updates-87/</loc>
+        <lastmod>2014-04-30T14:25:52+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/archive/</loc>
-        <lastmod>2014-04-23T15:09:27+01:00</lastmod>
+        <lastmod>2014-04-23T15:10:30+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/illustrations/redirect-loops-detected/</loc>
@@ -792,6 +796,6 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/</loc>
-        <lastmod>2014-04-23T15:09:22+01:00</lastmod>
+        <lastmod>2014-04-30T14:25:52+01:00</lastmod>
     </url>
 </urlset>
