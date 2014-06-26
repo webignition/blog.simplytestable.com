@@ -37,8 +37,17 @@
     {% if content_item.illustration %}
         {% if content_item.illustration.id %}
             <div class="section">
+                {% if content_item.illustration.style %}
+                    {% capture illustration_style %}{% endcapture %}
+
+                    {% for style in content_item.illustration.style %}
+                        {% capture illustration_style %}{{illustration_style}}{{style[0]}}: {{style[1]}};{% endcapture %}
+                    {% endfor %}
+                {% endif %}
+
                 <div class="illustration illustration-{{ content_item.illustration.id }}">
-                    <a href="/illustrations/{{ content_item.illustration.id }}" style="background-image: url('{{ content_item.illustration.url }}');">
+                    <a href="/illustrations/{{ content_item.illustration.id }}"
+                       style="background-image: url('{{ content_item.illustration.url }}');{{ illustration_style }}">
                         <i class="fa fa-search-plus"></i>
                     </a>
                 </div>

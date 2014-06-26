@@ -76,11 +76,11 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/first-test-results/</loc>
-        <lastmod>2014-04-04T10:56:30+01:00</lastmod>
+        <lastmod>2014-06-26T09:53:24+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-august-2012-4/</loc>
-        <lastmod>2014-04-04T10:56:30+01:00</lastmod>
+        <lastmod>2014-06-26T09:53:24+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/working-prototype-in-action/</loc>
@@ -268,7 +268,7 @@
         <loc>
             http://blog.simplytestable.com/improving-css-validation-new-css-validation-option-choices/
         </loc>
-        <lastmod>2014-04-04T10:56:30+01:00</lastmod>
+        <lastmod>2014-06-26T09:53:24+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/new-CSS-validation-options-explained/</loc>
@@ -772,15 +772,25 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-95/</loc>
-        <lastmod>2014-06-25T15:53:59+01:00</lastmod>
+        <lastmod>2014-06-25T15:55:21+01:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://blog.simplytestable.com/from-a-service-to-a-product-product-specs-for-developers/
+        </loc>
+        <lastmod>2014-06-26T17:43:49+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/archive/</loc>
-        <lastmod>2014-06-25T15:53:45+01:00</lastmod>
+        <lastmod>2014-06-26T17:43:50+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/illustrations/redirect-loops-detected/</loc>
         <lastmod>2013-10-26T15:03:37+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.simplytestable.com/illustrations/product-spec/</loc>
+        <lastmod>2014-06-26T17:15:39+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/illustrations/google-analytics-post-launch/</loc>
@@ -828,6 +838,6 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/</loc>
-        <lastmod>2014-06-25T15:53:59+01:00</lastmod>
+        <lastmod>2014-06-26T17:43:49+01:00</lastmod>
     </url>
 </urlset>
