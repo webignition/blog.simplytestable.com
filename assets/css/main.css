@@ -624,3 +624,7 @@ ul.doctypelist li code {
     margin:0;
     padding:0;
 }
+
+.post #long-list img {
+    margin-right: 30px;
+}
