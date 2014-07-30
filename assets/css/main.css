@@ -195,6 +195,11 @@ div.post .question-answer .question h4,
     margin: 0 0 18px;
 }
 
+.post h2 {
+    margin-bottom:20px;
+    margin-top:60px;
+}
+
 .post h3 {
     margin-bottom:12px;
     margin-top:40px;

@@ -5,21 +5,39 @@
 {% assign content_item = page %}
 {% endif %}
 
+{% if page.url == '/index.html' %}
+{% assign is_index = true %}
+{% else %}
+{% assign is_index = false %}
+{% endif %}
+
 <div class="post">
     {% if content_item.is_archive %}
     {% else %}
-    <div class="section section-post-meta post">    
-        <h2>            
-            <a href="{{ content_item.url }}">
-                {% if content_item.icon %} 
-                <i class="indicator-icon fa {{ content_item.icon }}"></i>
-                {% else %}
-                <i class="indicator-icon fa fa-bullhorn"></i>
-                {% endif %}                
-                
-                {{ content_item.title }}
-            </a>
-        </h2>
+    <div class="section section-post-meta post">
+        {% if is_index %}
+        <h2>
+        {% else %}
+        <h1>
+        {% endif %}
+
+        <a href="{{ content_item.url }}">
+            {% if content_item.icon %}
+            <i class="indicator-icon fa {{ content_item.icon }}"></i>
+            {% else %}
+            <i class="indicator-icon fa fa-bullhorn"></i>
+            {% endif %}
+
+            {{ content_item.title }}
+        </a>
+
+        {% comment %} Using a falsey comparison first allows for better IDE tag matching {% endcomment %}
+        {% if is_index == false %}
+            </h1>
+        {% else %}
+            </h2>
+        {% endif %}
+
         <p class="meta">
             {{ content_item.date | date: "%B %e, %Y" }}
             {% if content_item.author %}
