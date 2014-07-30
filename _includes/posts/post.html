@@ -16,9 +16,9 @@
     {% else %}
     <div class="section section-post-meta post">
         {% if is_index %}
-        <h2>
+        <h2 {% if is_index == false %}id="main-heading"{% endif %}>
         {% else %}
-        <h1>
+        <h1 {% if is_index == false %}id="main-heading"{% endif %}>
         {% endif %}
 
         <a href="{{ content_item.url }}">
