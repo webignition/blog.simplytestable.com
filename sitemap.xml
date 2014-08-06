@@ -76,11 +76,11 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/first-test-results/</loc>
-        <lastmod>2014-07-30T10:07:26+01:00</lastmod>
+        <lastmod>2014-07-31T15:26:34+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-august-2012-4/</loc>
-        <lastmod>2014-07-30T10:07:34+01:00</lastmod>
+        <lastmod>2014-07-31T15:26:34+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/working-prototype-in-action/</loc>
@@ -268,7 +268,7 @@
         <loc>
             http://blog.simplytestable.com/improving-css-validation-new-css-validation-option-choices/
         </loc>
-        <lastmod>2014-07-30T10:07:42+01:00</lastmod>
+        <lastmod>2014-07-31T15:26:34+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/new-CSS-validation-options-explained/</loc>
@@ -794,7 +794,7 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-99/</loc>
-        <lastmod>2014-07-30T14:21:18+01:00</lastmod>
+        <lastmod>2014-07-30T14:28:42+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/new-account-page/</loc>
@@ -806,11 +806,15 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/simply-testable-updates-100/</loc>
-        <lastmod>2014-07-30T14:27:59+01:00</lastmod>
+        <lastmod>2014-07-30T14:28:42+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.simplytestable.com/simply-testable-updates-101/</loc>
+        <lastmod>2014-08-06T12:39:59+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/archive/</loc>
-        <lastmod>2014-07-30T14:22:39+01:00</lastmod>
+        <lastmod>2014-08-06T12:40:11+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.simplytestable.com/illustrations/redirect-loops-detected/</loc>
@@ -866,6 +870,6 @@
     </url>
     <url>
         <loc>http://blog.simplytestable.com/</loc>
-        <lastmod>2014-07-30T14:27:59+01:00</lastmod>
+        <lastmod>2014-08-06T12:39:59+01:00</lastmod>
     </url>
 </urlset>
