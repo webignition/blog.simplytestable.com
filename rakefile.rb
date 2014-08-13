@@ -8,11 +8,8 @@ PLUGIN_DIRECTORY = "_plugins"
 task :default do  
   puts 'Building ...'
   fetch_dependencies
-  system("rm sitemap.xml")
-  #system("node _build/fix-html-validation-issues.js")
-  jekyll  
-  system("cp _site/sitemap.xml sitemap.xml")  
-  system("rm -Rf archive && mkdir archive")  
+  jekyll
+  system("rm -Rf archive && mkdir archive")
   system("cat archive_source/index.html _site/archive_source/index.html > archive/index.html")
   system("sed -i 's/archive_source/default/g' archive/index.html")
   jekyll
@@ -25,8 +22,7 @@ task :rebuild do
 end
 
 def jekyll
-  command = "jekyll build"  
-  system(command)
+  system("jekyll build")
 end
 
 def remove_dependencies  
