@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Accepting Discount Codes Without Distraction or Disappointment"
+date: 2014-08-20 14:30:00
 author:
     name: Jon Cram
     url: http://webignition.net
@@ -41,7 +42,7 @@ author:
     <img src="http://i.imgur.com/RBsZF9a.png" class="img-responsive">
 
     <p>
-        People hear your ad on a podcast. The jot down the discount code, rush to your site and enter the discount code
+        Someone hears your ad on a podcast, jots down the discount code, rushes to your site and enters the discount code
         when creating an account.
     </p>
 
@@ -61,7 +62,7 @@ author:
     </p>
 
     <p>
-        Except that this is one more field for the user to have to fill in. Adding a third user-fillable field to a form
+        Except that this is one more field for the user to fill in. Adding a third user-fillable field to a form
         having only two user-fillable fields is a big increase. A bump in cognitive load is not unexpected.
     </p>
 
@@ -79,7 +80,7 @@ author:
 </div>
 
 <div class="section">
-    <h3>I'll just hunt down a discount code, how hard can that be?</h3>
+    <h3>Distraction (I'll just hunt down a discount code, how hard can that be?)</h3>
 
     <p>
         I'll go to Google, enter [Simply Testable discount code] and I'll be on my way.
@@ -87,11 +88,165 @@ author:
 
     <p>
         Oh, here we go. First result looks promising, let's see what that is. Nope, no discount code, just a
+        blog post about <a href="">accepting discount codes without distraction or disappointment</a>. Too meta.
     </p>
+
+    <p>
+        Ok, the second result should surely do it. Nope, that's a page in simplified Chinese that happens
+        to mention both [Simply Testable] and [discount code] but not in a related context. Surprising
+        amounts of blinking text but not what I was looking for.
+    </p>
+
+    <p>
+        Hmm, how about I change my search terms a bit. That'll work better with a cup of tea, let me sort
+        that out first.
+    </p>
+
+    <p>
+        &hellip; 10 minutes pass &hellip;
+    </p>
+
+    <p>
+        Off to the afternoon project planning meeting. I've still got half a cup of coffee left which is nice.
+    </p>
+
+    <p>
+        &hellip;
+    </p>
+
+    <p>
+        Distraction. The user is no longer focused on creating an account. Add to a form in any way that encourages
+        the user to leave your site and you reduce the chance of converting that user into a paying customer.
+    </p>
+
+</div>
+
+
+<div class="section">
+    <h3>Disappointment (I guess I'll have to pay the full price)</h3>
+
+    <p>
+        You've been using a SaaS product for free, perhaps a limited demo, and you've decided that the value provided
+        by the service is worth exchanging for some of your cash.
+    </p>
+
+    <p>
+        You're at the sign up page and you're sure that &pound;19 per month is a fair exchange for what the service
+        can do for you. You're happy to pay.
+    </p>
+
+    <p>
+        Ooh, I can enter a discount code? I'll go to Google, enter [Simply Testable discount code] and I'll be on my way.
+    </p>
+
+    <p>
+        &hellip;
+    </p>
+
+    <p>
+        You can't find a discount code. You mentally block out the discount code field and begrudgingly decide to
+        pay the full price.
+    </p>
+
+    <p>
+        Just minutes ago you were happy to pay. The price asked for the value provided seemed fair. You still need
+        to pay but you're not as happy to do so.
+    </p>
+
+    <p>
+        You now feel that the service could have been bought at a lower monthly price. You're being charged more than
+        you should be. Regardless of the fact that just minutes ago you were happy to pay the price being asked.
+    </p>
+
+    <p>
+        Some people, on not being able to find a discount code, will change their mind. Others will continue but
+        reluctantly. Some will continue with as much enthusiasm as before.
+    </p>
+
+    <p>
+        What you don't get is all new users proceeding to create an account and of the ones that do, not all are as
+        happy to do so.
+    </p>
+
 </div>
 
 <div class="section">
-    <h3>Bar</h3>
+    <h3>Accepting discount codes with no discount code field</h3>
 
+    <p>
+        The addition of a discount field is non-ideal. It leads to increased cognitive load, distraction and disappointment.
+    </p>
 
+    <p>
+        We need a way of accepting discount codes without having a discount code field.
+    </p>
+
+    <p>
+        Thankfully there is a simple way to achieve this: don't promote discount codes and instead promote landing page
+        URLs.
+    </p>
+
+    <p>
+        Don't encourage users to go to example.com and enter discount code "foo" for 20% off their order. Encourage
+        users to go to example.com/foo for 20% off their order.
+    </p>
+
+    <p>
+        After all, every good promotion deserves a good (or at least unique) landing page, so why not take advantage of
+        what you can do when users reach your landing page?
+    </p>
+
+    <p>
+        The landing page can set a cookie that holds the discount code. The page that would otherwise include a discount code
+        field reads the cookie and clearly informs the user of the discount they are getting.
+    </p>
+
+    <p>
+        The bad process (using a discount code field):
+    </p>
+
+    <ul>
+        <li>
+            <p>
+                Encourage user to visit example.com and use discount code "foo" for 20% off
+            </p>
+        </li>
+        <li>
+            <p>
+                User visits example.com and, in time, proceeds to the checkout or sign up page
+            </p>
+        </li>
+        <li>
+            <p>
+                User enters discount code "foo"
+            </p>
+        </li>
+        <li>
+            <p>
+                User is informed that they now get 20% off their order
+            </p>
+        </li>
+    </ul>
+
+    <p>
+        The good process (using a discount code cookie):
+    </p>
+
+    <ul>
+        <li>
+            <p>
+                Encourage user to visit example.com/foo for 20% off
+            </p>
+        </li>
+        <li>
+            <p>
+                User visits example.com/foo and, in time, proceeds to the checkout or sign up page
+            </p>
+        </li>
+        <li>
+            <p>
+                User is informed that they now get 20% off their order
+            </p>
+        </li>
+    </ul>
 </div>
