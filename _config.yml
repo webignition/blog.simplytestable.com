@@ -1,7 +1,7 @@
 # Jekyll
 exclude: [README.md, manifest.yml, rakefile.rb, _drafts, Gemfile, GemFile.lock]
 permalink: /:title/
-url: http://blog.simplytestable.com
+url: https://blog.simplytestable.com
 
 # Site
 simplytestable:
