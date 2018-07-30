@@ -1,6 +1,6 @@
-{% if page.url != '/archive/index.html' and page.url != '/index.html' %}
+{% if page.url != '/archive/' and page.url != '/' %}
     {% if page.url contains '/illustrations/' %}
-    <div class="row newer-older">        
+    <div class="row newer-older">
         <div class="col-md-12">
         {% for post in site.posts %}
             {% if post.illustration %}
@@ -9,16 +9,16 @@
                     <i class="fa fa-caret-left"></i>
                     <span class="content">Back to &ldquo;{{ post.title }}&rdquo;</span>
                 </a>
-                {% endif %}             
+                {% endif %}
             {% endif %}
-        {% endfor %}            
+        {% endfor %}
         </div>
     </div>
     {% else %}
-    <div class="row newer-older">                
+    <div class="row newer-older">
         <div class="col-md-12">
         {% assign content_item = page %}
-        {% if page.url == '/index.html' %}
+        {% if page.url == '/' %}
         {% for post in site.posts offset: 0 limit: 1 %}
         {% assign content_item = post %}
         {% endfor %}
@@ -28,7 +28,7 @@
         {% assign older = false %}
         {% assign has_found_current = false %}
         {% assign has_found_older = false %}
-        {% for post in site.posts %}                
+        {% for post in site.posts %}
         {% if post.url == content_item.url %}
         {% assign has_found_current = true %}
         {% endif %}
@@ -40,10 +40,10 @@
         {% if has_found_current == true and has_found_older == false and post.url != content_item.url %}
         {% assign older = post %}
         {% assign has_found_older = true %}
-        {% endif %}                 
+        {% endif %}
 
         {% endfor %}
-        
+
         {% if newer == false %}
         <span class="newer col-md-6"></span>
         {% else %}
@@ -53,25 +53,25 @@
             {{ newer.short_title }} &hellip;
             {% else %}
             {{ newer.title }}
-            {% endif  %}                 
+            {% endif  %}
             </span>
-       
+
         </a>
-        {% endif %}                
+        {% endif %}
 
         {% if older == false %}
-        <span class="older col-md-6"></span>        
+        <span class="older col-md-6"></span>
         {% else %}
-        <a href="{{ older.url}}" class="older col-md-6"><i class="fa fa-caret-right"></i> 
+        <a href="{{ older.url}}" class="older col-md-6"><i class="fa fa-caret-right"></i>
             <span class="content">
             {% if older.short_title %}
             {{ older.short_title }} &hellip;
             {% else %}
             {{ older.title }}
-            {% endif  %}                
+            {% endif  %}
             </span>
         </a>
-        {% endif %}            
+        {% endif %}
         </div>
     </div>
     {% endif %}

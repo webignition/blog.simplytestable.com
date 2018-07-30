@@ -5,7 +5,7 @@
 {% assign content_item = page %}
 {% endif %}
 
-{% if page.url == '/index.html' %}
+{% if page.url == '/' %}
 {% assign is_index = true %}
 {% else %}
 {% assign is_index = false %}
@@ -41,16 +41,16 @@
         <p class="meta">
             {{ content_item.date | date: "%B %e, %Y" }}
             {% if content_item.author %}
-                by 
+                by
                 {% if content_item.author.url %}
                 <a href="{{ content_item.author.url }}">{{ content_item.author.name }}</a>
                 {% else %}
                 {{ content_item.author.name }}
-                {% endif %}             
-            {% endif %}       
+                {% endif %}
+            {% endif %}
         </p>
-    </div>    
-    {% endif %}    
+    </div>
+    {% endif %}
 
     {% if content_item.illustration %}
         {% if content_item.illustration.id %}
@@ -69,28 +69,28 @@
                         <i class="fa fa-search-plus"></i>
                     </a>
                 </div>
-            </div>        
+            </div>
         {% else %}
             <div class="section">
                 <div class="illustration illustration-{{ content_item.illustration.id }}" style="{% if content_item.illustration.height %} height: {{content_item.illustration.height}} {% endif %}">
                     <span style="background-image: url('{{ content_item.illustration.url }}'); {% if content_item.illustration.offset-x %}background-position-x: {{content_item.illustration.offset-x}};{% endif %}"></span>
                 </div>
-            </div>        
+            </div>
         {% endif %}
     {% endif %}
-    
-    {% if content_item.layout == 'newsletter' %}            
+
+    {% if content_item.layout == 'newsletter' %}
         {% include posts/newsletter/content.html %}
     {% else %}
     {{ content_item.content }}
-    {% endif %}    
-    
-    {% if page.url == '/index.html' %}
+    {% endif %}
+
+    {% if page.url == '/' %}
         {% if content_item.continue_reading != false %}
     <div class="section section-continue-reading">
             <a href="{{ content_item.url }}" class="btn btn-default">Continue reading <i class="fa fa-caret-right"></i></a>
-    </div>        
-        {% endif %}    
+    </div>
+        {% endif %}
     {% else %}
         {% if page.is_archive != true %}
     <div class="section comments">
@@ -107,8 +107,8 @@
                 dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
                 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
             })();
-        </script>        
-    </div>     
-        {% endif %}       
+        </script>
+    </div>
+        {% endif %}
     {% endif %}
 </div>
