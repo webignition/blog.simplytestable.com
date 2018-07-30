@@ -4,18 +4,13 @@
     <li value="{{ reverse_index }}">
         <h2><a href="{{ post.url }}">{{ post.title }} {{ post_index }}</a></h2>
         <p class="post-date">{{ post.date | date: "%B %e, %Y" }}</p>
-        
+
         {% if post.layout == 'newsletter' %}
-        
         {% include posts/newsletter/intro.html %}
-        
         {% else %}
-        
         {{ post | only_first_p }}
-        
         {% endif %}
-        
-        
+
     </li>
-    {% endfor %}    
+    {% endfor %}
 </ol>

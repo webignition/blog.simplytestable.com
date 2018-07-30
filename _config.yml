@@ -1,23 +1,18 @@
 # Jekyll
-exclude: [nbproject, README.md, manifest.yml, rakefile.rb, _drafts]
+exclude: [README.md, manifest.yml, rakefile.rb, _drafts, Gemfile, GemFile.lock]
 permalink: /:title/
-url: http://blog.simplytestable.com
+url: https://blog.simplytestable.com
 
 # Site
 simplytestable:
     title: Simply Testable Blog
-  
+
 # Only First P Plugin
 only_first_p:
     show_read_more_link: false
-    
+
 # Added for RSS feed
 name: Simply Testable Blog
 description: Figuring out how to automate away the pain of routine front-end web testing; the story behind simplytestable.com.
 
-# Sitemap plugin
-sitemap:
-  exclude:
-    - "/archive_source/index.html"
-    
-markdown: kramdown    
+markdown: kramdown
