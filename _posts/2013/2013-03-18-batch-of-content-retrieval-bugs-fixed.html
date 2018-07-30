@@ -3,21 +3,21 @@ layout: default
 title: "Batch of Content-Retrieval Bugs Fixed"
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
 <div class="section">
     <p>
         Today has been focused on fixing bugs that just so happen to all relate
-        to content retrieval.        
+        to content retrieval.
     </p>
     <p>
         With the volumes of web pages retrieved and tested daily by Simply Testable,
-        I always think I've seen all the ways in which people produce HTML incorrectly.        
+        I always think I've seen all the ways in which people produce HTML incorrectly.
     </p>
     <p>
         With the volumes of code I write daily for Simply Testable I always think
-        I've covered (nearly) all the ways in which content retrieval can go wrong.        
+        I've covered (nearly) all the ways in which content retrieval can go wrong.
     </p>
     <p>
         I'm still amazed by what I find.
@@ -51,12 +51,12 @@ author:
     </p>
     <p>
         Here's a bad example: <code>Content-Type: application/javascript; charset: UTF-8</code>.
-    </p>    
+    </p>
     <p>
         That example is invalid. It tells us, quite probably, that the content
         we're getting is JavaScript and it tells us that the &hellip; ahh, wait &hellip;
         what? &hellip; it contains nonsense from then onwards.
-    </p>    
+    </p>
     <p>
         Our <a href="https://github.com/webignition/internet-media-type">library for making sense of this</a>
         wasn't prepared for things being quite as invalid as the above bad example is.
@@ -86,7 +86,7 @@ author:
     </p>
     <p>
         This specifically covers two cases of uncaught cURL errors that we were seeing.
-    </p>    
+    </p>
     <p>
         Firstly there is
         the quite-likely-to-occur error 6 which more or less translates to the fact
@@ -96,11 +96,11 @@ author:
         Secondly there is
         the blimey-did-that-happen error 37 which occurs if you try to use a <code>file://</code>
         URL on the Internet.
-    </p>    
+    </p>
     <p>
         Feel free now to make such mistakes, I don't mind at all.
     </p>
     <p>
         Fixed.
-    </p>    
+    </p>
 </div>

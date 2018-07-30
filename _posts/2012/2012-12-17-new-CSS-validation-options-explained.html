@@ -3,159 +3,159 @@ layout: default
 title: "CSS Validation Options Explained"
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 illustration:
     id: css-validation-options
-    url: http://i.imgur.com/K4TB7.png      
+    url: https://i.imgur.com/K4TB7.png
 ---
 
 <div class="section">
     <h3>New options for validating CSS</h3>
-    
+
     <p>
         I recently wrote about how CSS validation needs to be <a href="/improving-css-validation-the-need-for-control-over-css-validation/">improved to
         make it relevant</a> to your work and <a href="/improving-css-validation-new-css-validation-option-choices/">explained what options
         were to be introduced</a>.
     </p>
-    
+
     <p>
         Now that these changes are live, I'd like to go over the options you now
         have so that you can get the most benefit from validating your CSS
         with Simply Testable.
     </p>
-    
+
     <h3>Summary of new CSS validation options</h3>
     <p>
         As you might now have read the previous posts on this subject, here are the
         four new CSS validation options:
     </p>
-    
+
     <ul>
         <li>
             <p>
                 <strong>Ignore warnings</strong>: whether to ignore CSS validator
                 warnings, reporting only errors
-            </p>           
-        </li>        
+            </p>
+        </li>
         <li>
             <p>
                 <strong>Vendor extension issues</strong>: whether to ignore validator
                 issues regarding vendor extensions, report these as warnings or report
                 these as errors
-            </p>           
-        </li>        
+            </p>
+        </li>
         <li>
             <p>
                 <strong>Ignore common CDN domains</strong>: whether to ignore
                 linked CSS resources from common content delivery networks
-            </p>           
-        </li>        
+            </p>
+        </li>
         <li>
             <p>
                 <strong>Ignore CSS from custom linked domains</strong>: specify
                 domains of linked CSS to ignore
-            </p>            
+            </p>
         </li>
     </ul>
-    
+
     <h3>
         Ignoring Warnings
     </h3>
-    
-    <img class="inline-illustration pull-left" src="http://i.imgur.com/PhSZ3.png" />
-    
+
+    <img class="inline-illustration pull-left" src="https://i.imgur.com/PhSZ3.png" />
+
     <p>
         The CSS validator can report not only errors relating to invalid CSS but
-        also warnings regarding CSS that is not invalid but which may indicate 
+        also warnings regarding CSS that is not invalid but which may indicate
         that some attention is required.
     </p>
-    
+
     <p>
         For example, you may encounter a warning telling you that you have
         defined the same background and text colour or you may encounter a warning
         stating that a given rule has been defined more than once.
     </p>
-    
+
     <p>
         You might not want to see these warnings all the time, or you might be
         happy with the CSS rules to which warnings relate and don't want these
         warnings distracting you from finding errors about which you actually care.
     </p>
-    
+
     <p>
         Choosing to ignore warnings can help you focus on more important matters.
     </p>
-    
+
     <h3>
         Handling vendor extension issues
     </h3>
-    
-    <img class="inline-illustration pull-left" src="http://i.imgur.com/sT6eS.png?1" />
-    
+
+    <img class="inline-illustration pull-left" src="https://i.imgur.com/sT6eS.png?1" />
+
     <p>
         CSS specifications define a collection of properties (such as <em>background-color</em>
         or <em>height</em>) that can be used.
     </p>
-    
+
     <p>
         Browser creators (or, more specifically, CSS processor creators) can make
         use of properties specific to a given CSS processor allowing non-specified
         properties to exist and be used.
     </p>
-    
+
     <p>
         This is useful in cases where draft specifications strongly hint at new
         properties and vendors want to implement incomplete specifications to see
         how they're handled in the real world.
     </p>
-       
+
     <p>
         A good example is the <em>border-radius</em> property. This is a property
         introduced in CSS level 3 and first featured in a <a href="http://www.w3.org/TR/2002/WD-css3-border-20021107/#the-border-radius">working draft of the CSS 3
         border module in 2002</a>. It currently features in a candidate recommendation
-        of the CSS3 backgrounds and borders module and is yet to be formally 
+        of the CSS3 backgrounds and borders module and is yet to be formally
         specified.
     </p>
-    
+
     <p>
         Nonetheless, you can make use of this CSS3 feature using <em>-moz-border-radius</em>
         in FireFox and <em>-webkit-border-radius</em> in Chrome (or Safari).
     </p>
-    
+
     <p>
         Although the CSS specifications allow for vendor extensions, the CSS validator
         is not happy with them and will report them as warnings or errors.
     </p>
-    
+
     <p>
         In addition to choosing whether to report such issues as warnings or errors,
         we've added the option to ignore them entirely.
     </p>
-    
+
     <p>
         As before, being able to ignore vendor extension issues can help you focus
         on errors and warnings that are likely much more relevant to you.
     </p>
-    
+
     <h3>
         Ignoring common CDN domains
     </h3>
-    
-    <img class="inline-illustration pull-left" src="http://i.imgur.com/5FpQq.png" />
-    
+
+    <img class="inline-illustration pull-left" src="https://i.imgur.com/5FpQq.png" />
+
     <p>
         If you link to Twitter Bootstrap or jQuery UI CSS resources, among other
-        popular third-party frameworks and libraries, you're likely linking to a 
-        CSS resource supplied by a content delivery network (CDN) such as 
-        <a href="https://developers.google.com/speed/libraries/">Google's Hosted Libraries</a> or 
+        popular third-party frameworks and libraries, you're likely linking to a
+        CSS resource supplied by a content delivery network (CDN) such as
+        <a href="https://developers.google.com/speed/libraries/">Google's Hosted Libraries</a> or
         <a href="http://cdnjs.com/">cdnjs</a>.
     </p>
-    
+
     <p>
         You probably trust common third-party CSS resources to know what they're
         doing. If they contain invalid CSS it probably won't break anything.
     </p>
-    
+
     <p>
         You can choose to ignore CSS from common CDNs. This helps you focus on
         errors present in your own CSS.
@@ -163,17 +163,17 @@ illustration:
     <h3>
         Ignoring CSS from custom linked domains
     </h3>
-    
-    <img class="inline-illustration" src="http://i.imgur.com/ETI9w.png" />
+
+    <img class="inline-illustration" src="https://i.imgur.com/ETI9w.png" />
     <p>
         This option works in partnership with ignoring CSS from common CDNs.
     </p>
-    
+
     <p>
         What if you're linking to third-party CSS resources that are not served
         from common CDNs?
     </p>
-    
+
     <p>
         This option lets you list domains serving CSS that you want the validator
         to ignore.

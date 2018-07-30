@@ -4,7 +4,7 @@ title: "W3C HTML Validator On Ubuntu 12.10"
 date: 2012-10-17 16:30
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
 <div class="section">
@@ -24,7 +24,7 @@ author:
         definitions.
     </p>
     <p>
-        It gets a bit worse: the above directory isremoved when installing the <code>w3c-markup-validator</code> package.        
+        It gets a bit worse: the above directory isremoved when installing the <code>w3c-markup-validator</code> package.
     </p>
     <h2>The Solution</h2>
     <p>
@@ -40,22 +40,22 @@ author:
         <li>
             <p>Copy the files we need somewhere safe:</p>
             <p><code>cp -R /usr/share/xml/xhtml /usr/share/xml/xhtml.bak</code></p>
-        </li>        
+        </li>
         <li>
             <p>Reinstall the W3C HTML validator:</p>
             <p><code>sudo apt-get remove w3c-markup-validator</code></p>
             <p><code>sudo apt-get install w3c-markup-validator</code></p>
             <p>This will cause <code>/usr/share/xml/xhtml</code> to be removed!</p>
-        </li>        
+        </li>
         <li>
             <p>Copy the files we need back to where they should be:</p>
             <p><code>cp -R /usr/share/xml/xhtml.bak /usr/share/xml/xhtml</code></p>
-        </li>         
+        </li>
     </ol>
-        
+
     <p>
         You should find your local installation of the W3C HTML validator now works
         under Ubuntu 12.10.
     </p>
-        
+
 </div>

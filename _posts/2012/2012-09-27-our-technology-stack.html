@@ -3,13 +3,13 @@ layout: default
 title: "Our Technology Stack"
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
 <div class="section">
     <p>
         I've been asked a few times, most recently by the guys at <a href="http://www.matchalabs.com/">Matcha Labs</a>,
-        what tech <a href="http://simplytestable.com">simplytestable.com</a> uses and how it all works together.
+        what tech <a href="https://simplytestable.com">simplytestable.com</a> uses and how it all works together.
     </p>
     <p>
         Here's a quick rundown of the hardware and software our systems run on, the applications we make
@@ -48,7 +48,7 @@ author:
     <ul class="application-list">
         <li>
             <div>
-                <h4>Core Application</h4>                
+                <h4>Core Application</h4>
                 <div class="application-meta">
                     <ul>
                         <li>
@@ -56,7 +56,7 @@ author:
                         </li>
                         <li>
                             <i class="fa fa-github"></i> <a href="https://github.com/webignition/app.simplytestable.com">github.com/webignition/app.simplytestable.com</a>
-                        </li>                            
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -68,7 +68,7 @@ author:
         </li>
         <li>
             <div>
-                <h4>Workers</h4>                
+                <h4>Workers</h4>
                 <div class="application-meta">
                     <ul>
                         <li>
@@ -82,10 +82,10 @@ author:
                         </li>
                         <li>
                             <i class="fa fa-link"></i> <a href="http://lithium.worker.simplytestable.com/status/">lithium.worker.simplytestable.com</a><br />
-                        </li>                        
+                        </li>
                         <li>
                             <i class="fa fa-github"></i> <a href="https://github.com/webignition/worker.simplytestable.com">github.com/webignition/worker.simplytestable.com</a>
-                        </li>                            
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -97,22 +97,22 @@ author:
                 As you can see from the list above, we have four workers at present. Although
                 they currently all run on the same box, they can be deployed anywhere allowing us
                 to distribute the workload and provide a spot of redundancy.
-            </p>                
+            </p>
             <p>
                 Scalability, cloud computing and related buzzwords spring to mind.
             </p>
-        </li> 
+        </li>
         <li>
             <div>
-                <h4>Web Client</h4>                
+                <h4>Web Client</h4>
                 <div class="application-meta">
                     <ul>
                         <li>
-                            <i class="fa fa-link"></i> <a href="http://gears.simplytestable.com/">gears.simplytestable.com</a><br />
+                            <i class="fa fa-link"></i> <a href="https://gears.simplytestable.com/">gears.simplytestable.com</a><br />
                         </li>
                         <li>
                             <i class="fa fa-github"></i> <a href="https://github.com/webignition/web.client.simplytestable.com">github.com/webignition/web.client.simplytestable.com</a>
-                        </li>                            
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -125,32 +125,32 @@ author:
                 the core application keeps on going on whether you're watching or not. If you start a test
                 and then close your browser, the test keeps running and you can come back at any time.
             </p>
-        </li>    
+        </li>
         <li>
             <div>
-                <h4>Marketing Site</h4>                
+                <h4>Marketing Site</h4>
                 <div class="application-meta">
                     <ul>
                         <li>
-                            <i class="fa fa-link"></i> <a href="http://simplytestable.com/">simplytestable.com</a><br />
+                            <i class="fa fa-link"></i> <a href="https://simplytestable.com/">simplytestable.com</a><br />
                         </li>
                         <li>
                             <i class="fa fa-github"></i> <a href="https://github.com/webignition/simplytestable.com">github.com/webignition/simplytestable.com</a>
-                        </li>                            
+                        </li>
                     </ul>
                 </div>
             </div>
             <p>
-                This is what you see when you to to <a href="http://simplytestable.com/">simplytestable.com</a>.
+                This is what you see when you to to <a href="https://simplytestable.com/">simplytestable.com</a>.
             </p>
-        </li>         
+        </li>
     </ul>
 </div>
 
 <div class="section">
     <h3>
         Carrying out actual tests
-    </h3>    
+    </h3>
     <p>
         Each worker runs a local copy of the <a href="http://validator.w3.org/">W3C HTML validator</a>, backed by a local copy of the <a href="http://html5.validator.nu/">validator.nu HTML5 validator</a>
     </p>
@@ -190,71 +190,71 @@ author:
         </li>
         <li>
             <code>php app/console simplytestable:job:prepare 1</code>
-        </li>        
+        </li>
         <li>
             <code>php app/console simplytestable:task:assign 1</code>
-        </li>        
+        </li>
         <li>
             <code>php app/console simplytestable:task:assign 2</code>
-        </li>        
+        </li>
         <li>
             <code>php app/console simplytestable:task:assign N</code>
-        </li>                
+        </li>
     </ol>
-    
+
     <p>
         Once a request to start a new job is receive, it must be prepared (URLs to test discovered
         and a collection of tasks created) and then each task must be assigned out to a worker.
     </p>
-    
+
     <p>
         The whole process is a collection of distinct steps. Each step carries out a small unit of work and changes the state
         of the job. Most are initialised via command line commands.
     </p>
-    
+
     <p>
         Distinct steps are easy to test. Distinct step failure is easy to handle. Distinct steps can happen later.
         Distinct steps can (often) be run in parallel.
     </p>
-    
+
     <p>
         Distinct steps do not, however, run themselves. When one is done, that's it. Something else has to kick
         off the next step and the one after that and so on.
     </p>
-    
+
     <p>
         Once every step is done, it pops a job in a queue to kick off the next step. When developing, we can
         ignore this queue and manually kick off steps as needed to make things initially work and to investigate
         bugs. The integration system can also ignore the queue and can instead sequentially kick off all steps
         and verify that everything works bit by bit as a full-site test progresses.
     </p>
-    
+
     <p>
-        The production system uses <a href="https://github.com/defunkt/resque#readme">Resque</a> to manage the workflow queue:        
+        The production system uses <a href="https://github.com/defunkt/resque#readme">Resque</a> to manage the workflow queue:
     </p>
     <blockquote>
         &hellip; a Redis-backed library for creating background jobs, placing those jobs on multiple queues, and processing them later.
     </blockquote>
-    
+
     <p>
         Smashing, just what we need. It'd be awfully tedious to manually kick off each step in the production
         environment.
     </p>
-    
+
     <p>
         This automates the workflow for both the core application and the workers. The core application
         uses about 10 workflow job queues, all being serviced by about 100 Resque processes in total.
         Each worker uses about 3 workflow job queues, all being serviced by about 15 Resque processes in total.
-    </p> 
+    </p>
     <h3>
         That's it
     </h3>
     <p>
         I'm done with my quick rundown of what we used, what it's made from and how it
         manages to do what it does without constantly failing.
-    </p>        
+    </p>
     <p>
-        Send a message to <a href="http://twitter.com/simplytestable/">@simplytestable</a>
+        Send a message to <a href="https://twitter.com/simplytestable/">@simplytestable</a>
         if you want to know more.
     </p>
 </div>

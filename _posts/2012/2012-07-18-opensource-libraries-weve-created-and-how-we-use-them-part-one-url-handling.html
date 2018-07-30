@@ -4,7 +4,7 @@ title: "Opensource Libraries We've Created and How We Use Them (Part One: URL Ha
 short_title: "Opensource Libs We've Created and How We Use Them (URL Handling)"
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
 <div class="section section-first">
@@ -15,15 +15,15 @@ author:
     <p>
         Such libraries address generic matters that should be useful to others. They
         have been opensource under an MIT license from day one.
-    </p>        
+    </p>
     <p>
-        As well as being opensource, those featured here are (fairly well) covered 
+        As well as being opensource, those featured here are (fairly well) covered
         by unit tests, are registered with the <a href="http://travis-ci.org/">Travis CI build platform</a>
         - so you can see that they work (or are broken!) - and are available
         in the <a href="http://packagist.org/">Packagist</a> PHP package archive
         for straightforward inclusion in projects using the <a href="http://getcomposer.org/">Composer</a>
         dependency manager.
-    </p>         
+    </p>
     <p>
         I've been using and improving many of these libraries on a daily basis and
         thought I'd cover some of the most useful ones.
@@ -42,13 +42,13 @@ author:
         <li>
             <i class="fa fa-github"></i>
             <a href="https://github.com/webignition/url">webignition/url</a>
-            <a class="build-status" href="http://travis-ci.org/webignition/url"><img src="https://secure.travis-ci.org/webignition/url.png?branch=master" /></a>            
+            <a class="build-status" href="http://travis-ci.org/webignition/url"><img src="https://secure.travis-ci.org/webignition/url.png?branch=master" /></a>
         </li>
         <li>
             <i class="fa fa-github"></i>
             <a href="https://github.com/webignition/absolute-url-deriver">webignition/absolute-url-deriver</a>
-            <a class="build-status" href="http://travis-ci.org/webignition/absolute-url-deriver"><img src="https://secure.travis-ci.org/webignition/absolute-url-deriver.png?branch=master" /></a> 
-        </li>        
+            <a class="build-status" href="http://travis-ci.org/webignition/absolute-url-deriver"><img src="https://secure.travis-ci.org/webignition/absolute-url-deriver.png?branch=master" /></a>
+        </li>
     </ul>
     <p>
         A lot of URL handling goes on here. We need to find unique collections of URLs
@@ -64,8 +64,8 @@ author:
 <div class="section">
     <h3>Parsing</h3>
     <p>
-        Parsing a URL into its component parts is essential for the processes of 
-        both normalising a URL and forming a full, absolute URL from a given 
+        Parsing a URL into its component parts is essential for the processes of
+        both normalising a URL and forming a full, absolute URL from a given
         relative URL.
     </p>
     <p>
@@ -75,14 +75,14 @@ author:
     <blockquote>
         <p>
            This function parses a URL and returns an associative array containing any of
-           the various components of the URL that are present. 
+           the various components of the URL that are present.
         </p>
         <p>
             This function is not meant to validate the given URL, it only breaks it
             up into the above listed parts. Partial URLs are also accepted, parse_url()
             tries its best to parse them correctly.
         </p>
-    </blockquote>    
+    </blockquote>
     <p>
         Try parsing some common classes of URL, such as relative (<code>path/to/index.html</code>), root-relative
         (<code>/path/to/index.html</code>) and protocol-relative (<code>//example.com/path/to/index.html</code>);
@@ -94,7 +94,7 @@ author:
     <pre class="prettyprint lang-php">&lt;?php
 use webignition\Url\Url;
 
-$url = new Url('https://github.com/webignition/url/');    
+$url = new Url('https://github.com/webignition/url/');
 $url->getScheme(); // returns 'https'
 $url->getHost();   // returns 'github'
 $url->getPath();   // returns '/webignition/url/'
@@ -116,7 +116,7 @@ $url->setPath('/webignition/url/');
         Normalisation
     </h3>
     <p>
-        Normalisation is a crucial feature for us. We often need to see if two URLs 
+        Normalisation is a crucial feature for us. We often need to see if two URLs
         are equivalent without the expense of an HTTP request to compare resources
         themselves.
     </p>
@@ -133,25 +133,25 @@ $url->setPath('/webignition/url/');
     <pre class="prettyprint lang-php">&lt;?php
 use webignition\NormalisedUrl\NormalisedUrl;
 
-$url = new NormalisedUrl('https://githUB.com/webignition/../webignition/./url/');    
+$url = new NormalisedUrl('https://githUB.com/webignition/../webignition/./url/');
 (string)$url; // returns 'https://github.com/webignition/url/'
 
-$url = new NormalisedUrl('http://example.com:80');    
+$url = new NormalisedUrl('http://example.com:80');
 (string)$url; // returns 'http://example.com/'
 
-$url = new NormalisedUrl('http://example.com/?a=1&amp;c=3&amp;b=2'); 
-(string)$url;  // returns 'http://example.com/?a=1&amp;b=2&amp;c=3'; 
-    </pre>    
+$url = new NormalisedUrl('http://example.com/?a=1&amp;c=3&amp;b=2');
+(string)$url;  // returns 'http://example.com/?a=1&amp;b=2&amp;c=3';
+    </pre>
 </div>
 
 
-<div class="section">   
+<div class="section">
     <h3>
         Absolute URL Deriving
     </h3>
     <p>
         Absolute URL deriving is another task we do all the time.
-    </p>    
+    </p>
     <p>
         The URL of a link in a web page does not need to be totally complete, it
         can be presented either relative to where you are at the moment or relative
@@ -173,14 +173,14 @@ $url = new NormalisedUrl('http://example.com/?a=1&amp;c=3&amp;b=2');
     <p>
         The 'look elsewhere' part is determined by the <code>Location</code> header
         in the HTTP response.
-    </p>    
+    </p>
     <p>
         The <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.30">relevant HTTP specification</a>
         clearly states that the redirect location is an absolute URL. Nevertheless,
         some applications return relative URLs in 301 and 302 <code>Location</code>
         header values, so we need to be able to transform these also into absolute
         URLs.
-    </p>     
+    </p>
     <p>
         Our simple <a href="https://github.com/webignition/absolute-url-deriver">absolute URL deriving</a>
         library handles these tasks:
@@ -191,14 +191,14 @@ use webignition\AbsoluteUrlDeriver\AbsoluteUrlDeriver;
 $deriver = new AbsoluteUrlDeriver(
     '/index.html',
     'http://example.com'
-);  
+);
 (string)$deriver->getAbsoluteUrl(); // returns 'http://example.com/index.html'
 
 
 $deriver = new AbsoluteUrlDeriver(
     '/server.php?param1=value1',
     'http://www.example.com/pathOne/pathTwo'
-); 
+);
 (string)$deriver->getAbsoluteUrl(); // returns 'http://www.example.com/server.php?param1=value1'
     </pre>
 </div>

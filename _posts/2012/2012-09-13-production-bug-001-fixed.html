@@ -4,27 +4,27 @@ title: "Production Bug #001 Fixed"
 date: 2012-09-12 13:00:00
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
-<div class="section">    
+<div class="section">
     <p>
-        Following yesterday's private alpha release, I was trying to figure out 
+        Following yesterday's private alpha release, I was trying to figure out
         why some HTML validation tests were failing.
     </p>
-    
+
     <p>
         In some cases I was seeing not a JSON response from the validator but
         an HTML response. This was odd; we ask the HTML validator to return JSON so
         that it can be parsed more easily (where 'more easily' means 'at all, really').
-    </p> 
-    
-    <p>        
+    </p>
+
+    <p>
         Asking the W3C HTML validator to give you a JSON response, it turns out, only
         has an effect on HTML validation tests that actually work.
         Pass the validator nonsense values it can't understand and you don't get
         back the JSON you asked for. That's fair.
-    </p>    
+    </p>
     <p>
         Something we were passing to the HTML validator when trying to validate
         a web page was being interpretted as nonsense.
@@ -33,18 +33,18 @@ author:
         When validating, we pass the validator the HTML content to validate and
         tell it the character encoding that the HTML content uses. One of these
         was confusing the validator.
-    </p>    
+    </p>
     <p>
         It's pretty hard to confuse the HTML validator with invalid HTML, being
-        able to spot that is a lot of what it does for a living. So I looked at 
+        able to spot that is a lot of what it does for a living. So I looked at
         the character encoding.
-    </p>    
+    </p>
     <p>
         We have to figure out the character encoding after retrieiving a web page
         so that we can pass this useful detail along to the validator. our
         <a href="https://github.com/webignition/web-page-model">web page model</a>
         library does this for us.
-    </p>    
+    </p>
     <p>
         For some web pages, we were asking the web page model for the character
         encoding it reckons was being used. In response it was saying <code>null</code>.
@@ -54,9 +54,9 @@ author:
         Odd. I paid attention to how one can choose to specify the character encoding
         of a web page when making the web page model. There are three ways. I won't
         go in to them here. But three ways there are and three ways I had covered.
-    </p>    
+    </p>
     <p>
-        What I hadn't considered were cases where the character encoding for a 
+        What I hadn't considered were cases where the character encoding for a
         web page could not be determined. Some times the character encoding is
         not specified at all. Some times it is specified incorrectly, which really
         means it is not specified at all.

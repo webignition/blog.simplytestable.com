@@ -3,7 +3,7 @@ layout: default
 title: "Tasks and How They Combine Into Series and Sequences"
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
 <div class="section section-first">
@@ -17,8 +17,8 @@ author:
         I mentioned how we use <em>jobs</em> and <em>tasks</em> to help run collections
         of tests. A job might equate to "Test everything for http://example.com". This
         is expanded into a collection of tasks, with each task focussed on a specific
-        quality factor for a specific URL, such as "Verify the HTML validity for http://example.com/foo/bar".        
-    </p> 
+        quality factor for a specific URL, such as "Verify the HTML validity for http://example.com/foo/bar".
+    </p>
     <p>
         <strong>Tasks are stateless</strong> in so far as they are unaware of other tasks. This is a good thing.
         If a test job was for verifying the HTML validity of a 100-page web site, the corresponding set of
@@ -28,12 +28,12 @@ author:
         We can optimise for speed by deploying a set of N tasks to N concurrent workers, giving the fastest possible test job
         completion time. We can optimise for concurrent test jobs, selecting evenly from two different
         users' test job tasks to allow both to run at the same time and preventing one test job
-        from blocking the other - this is for tasks what <a href="http://en.wikipedia.org/wiki/Packet_switching">packet
+        from blocking the other - this is for tasks what <a href="https://en.wikipedia.org/wiki/Packet_switching">packet
         switching</a> is for the Internet.
     </p>
     <p>
         <strong>Stateful task collections</strong> offer benefits unavailable to stateless tasks.
-        
+
     </p>
     <p>
         <strong>A series of tasks</strong> is a collection of tasks to be performed in a given order,
@@ -41,7 +41,7 @@ author:
     </p>
     <p>
         You might have a series of tests that focuses on the business impact of potential failures
-        and which is prioritised with respect to such risks.        
+        and which is prioritised with respect to such risks.
     </p>
     <p>
         A simple series may be:
@@ -62,8 +62,8 @@ author:
         user cannot log in, you don't care about the validity of the main homepage image URL
         or the contents of the footer copyright notice as the inabilty to log in is impacting
         your ability to make money. You want to focus your team on that issue and you don't
-        want other possible test failures to be a distraction.        
-    </p>    
+        want other possible test failures to be a distraction.
+    </p>
     <p>
         <strong>A sequence of tasks</strong> is a series of tasks that is more stateful still. Sequences of tasks
         exist at the functional testing level where you would be testing sequences of interactions
@@ -72,7 +72,7 @@ author:
     </p>
     <p>
         A simple sequence may be:
-    </p>    
+    </p>
     <ol>
         <li>Go to http://example.com and log in as 'example:password', then</li>
         <li>Open order 5634</li>

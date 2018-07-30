@@ -4,28 +4,28 @@ title: "Test Timeouts Now Supported"
 date: 2012-10-03 17:00
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 illustration:
     id: test-timeouts-now-supported
-    url: http://i.imgur.com/Y4KE3.png  
+    url: https://i.imgur.com/Y4KE3.png
 ---
 
-<div class="section">    
+<div class="section">
     <p>
         Timeouts. Sometimes they just happen.
     </p>
-    
+
     <p>
         Up until very recently, a timeout when trying to perform a HTML validation
         test for a URL would leave the test stuck as being in progress. This
         prevented the full site-wide test from ever showing as 100% complete, often
         getting stuck at 90-something percent.
     </p>
-    
+
     <p>
         Timeouts join a collection of three new test failure situations supported:
     </p>
-    
+
     <ul>
         <li>
             <p>
@@ -38,15 +38,15 @@ illustration:
                 DNS lookup timeouts: a timeout when trying to resolve the domain
                 of a URL
             </p>
-        </li>        
+        </li>
         <li>
             <p>
                 Malformed URLs: sometimes a URL can't work as it is just not
                 quite made correctly
             </p>
-        </li>        
+        </li>
     </ul>
-    
+
     <p>
         In any of the above three cases a test will be marked as failed and when
         viewing the results of a test you'll get a brief description of why

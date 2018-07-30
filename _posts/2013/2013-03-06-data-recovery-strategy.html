@@ -1,33 +1,33 @@
 ---
 layout: default
 title: "Data Recovery Strategy"
-date: 2013-03-06 13:00 
+date: 2013-03-06 13:00
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
 <div class="section">
     <h3>Overview</h3>
     <p>
         In the middle of January we experienced <a href="/down-for-emergency-maintenance/">major downtime and data loss</a>
-        due to the failure of both hard drives in our production server.        
+        due to the failure of both hard drives in our production server.
     </p>
     <p>
-        Although this was about as bad as it gets, I'm glad it happened now whilst 
-        we're still somewhere between the alpha and beta stages and before we 
+        Although this was about as bad as it gets, I'm glad it happened now whilst
+        we're still somewhere between the alpha and beta stages and before we
         introduced any paid plans.
     </p>
     <p>
         At the time, the backup plan was &hellip; non-existent. There was no such
         thing. My thinking at the time was that the risk of losing all
-        our data before I had a chance to put a backup plan in place was minimal 
-        and that there'd be plenty of time to work on a recover strategy once the 
+        our data before I had a chance to put a backup plan in place was minimal
+        and that there'd be plenty of time to work on a recover strategy once the
         service was generating revenue.
     </p>
     <p>
         Clearly my thinking could not have been more wrong.
-    </p>        
+    </p>
     <p>
         Since then I've been working on a strategy for recovering from total
         data loss. Taking backups and restoring from such backups turned out to be
@@ -52,10 +52,10 @@ author:
             <p>
                 The Simply Testable applications are configured with details
                 such as database credentials and encryption keys. Critical application
-                configuration files are stored as without these much of the backed-up 
+                configuration files are stored as without these much of the backed-up
                 data would be useless.
             </p>
-        </li>        
+        </li>
         <li>
             <p><strong>Stop or defer all operations that might change database contents</strong></p>
             <p>
@@ -88,8 +88,8 @@ author:
                 Test processing is resumed.
             </p>
         </li>
-    </ol>    
-    
+    </ol>
+
     <h3>Safely storing backups</h3>
 
     <p>
@@ -99,11 +99,11 @@ author:
     </p>
 
     <h3>Restoring backups</h3>
-    
+
     <p>
         A suitable backup archive is placed on the production server and extracted.
         A backup restore tool created for the purpose will recover the backed-up
         application configuration and import the backed up application data.
-    </p>    
+    </p>
 
 </div>

@@ -4,36 +4,36 @@ title: "Production Bug #002 Spotted - Redirect Loops"
 date: 2012-09-19 10:30:00
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
-<div class="section">    
+<div class="section">
     <p>
         Today I spotted a second case where an HTML validation test doesn't
         complete properly - redirect loops.
     </p>
-    
+
     <p>
-        A redirect loop occurs when a URL that issues a <code>301</code>, 
+        A redirect loop occurs when a URL that issues a <code>301</code>,
         <code>302</code> or <code>303</code>
         redirect to another URL (perhaps back to the previous URL) in such a way
-        that an unending loop of redirects is created.        
+        that an unending loop of redirects is created.
     </p>
-    
+
     <p>
         This can never be intended for any meaningful website; a redirect loop
         is a problem that should be addressed.
     </p>
-    
+
     <p>
         Our HTTP client library happily follows redirects and has a redirect limit.
     </p>
-    
+
     <p>
         What we don't yet have in the testing system is a means of spotting
         that the HTTP client has reached its redirect limit and marking the test
         as failed as a result.
-    </p>   
+    </p>
 
     <p>
         Production bug #002 spotted.

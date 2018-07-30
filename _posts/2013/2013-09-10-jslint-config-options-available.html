@@ -3,53 +3,53 @@ layout: default
 title: "JSLint Config Options Available"
 author:
     name: Jon Cram
-    url: http://webignition.net   
+    url: https://github.com/webignition
 illustration:
-    #url: http://i.imgur.com/gMzW5nM.png
-    #url: http://i.imgur.com/yE83qWW.png
-    #url: http://i.imgur.com/Y6HPPie.png
-    url: http://i.imgur.com/Doiq5uA.png
-    height: 280px     
+    #url: https://i.imgur.com/gMzW5nM.png
+    #url: https://i.imgur.com/yE83qWW.png
+    #url: https://i.imgur.com/Y6HPPie.png
+    url: https://i.imgur.com/Doiq5uA.png
+    height: 280px
 ---
 
-<div class="section">    
+<div class="section">
     <h3>Preamble</h3>
     <p>
         This wins the prize for being a long time coming.
     </p>
     <p>
-        I revealed in <a href="http://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=678610272a">newsletter #21</a>, 
-        back in mid-December last year, that the option to run site-wide 
+        I revealed in <a href="https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=678610272a">newsletter #21</a>,
+        back in mid-December last year, that the option to run site-wide
         JavaScript static analysis tests with JSLint had been released to all.
     </p>
     <p>
-        I mentioned at the time that I'd be adding relevant features to allow 
+        I mentioned at the time that I'd be adding relevant features to allow
         you to control how pedantic JSLint behaves for you.
-    </p>    
+    </p>
     <p>
-        The last mention I can find of me saying that this would be added is in 
-        <a href="http://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=58dd65f9c4">newsletter #25</a> 
+        The last mention I can find of me saying that this would be added is in
+        <a href="https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=58dd65f9c4">newsletter #25</a>
         back in the middle of January, about 17 Internet years ago.
     </p>
     <p>
-        Since then I had to deal with a <a href="http://blog.simplytestable.com/down-for-emergency-maintenance/">data apocalypse</a>, 
-        the need to put in a <a href="http://blog.simplytestable.com/data-recovery-strategy/">workable data recovery strategy</a>, 
-        a range of minor bug fixes and the <a href="http://blog.simplytestable.com/premium-plans-launched-and-why-they-exist/">addition of premium plans</a> and amidst all 
-        this the changes to let you control JSLint configuration options settled 
+        Since then I had to deal with a <a href="https://blog.simplytestable.com/down-for-emergency-maintenance/">data apocalypse</a>,
+        the need to put in a <a href="https://blog.simplytestable.com/data-recovery-strategy/">workable data recovery strategy</a>,
+        a range of minor bug fixes and the <a href="https://blog.simplytestable.com/premium-plans-launched-and-why-they-exist/">addition of premium plans</a> and amidst all
+        this the changes to let you control JSLint configuration options settled
         under a layer or two of dust.
     </p>
     <p>
-        Last week I dusted off the relevant development branch and set to 
+        Last week I dusted off the relevant development branch and set to
         completing the work. And completed it. And recently released it.
     </p>
 </div>
 
-<div class="section">    
+<div class="section">
     <h3>JSLint's Default Level of Precision Is Not For Everyone</h3>
     <p>
         JSLint checks given JavaScript against
         a set of coding conventions and best practices as set down by
-        <a href="http://en.wikipedia.org/wiki/Douglas_Crockford">Douglas Crockford</a>.
+        <a href="https://en.wikipedia.org/wiki/Douglas_Crockford">Douglas Crockford</a>.
     </p>
     <p>
         Some quality factors for which it checks will help you, such as warning
@@ -81,7 +81,7 @@ illustration:
         JSLint's default level of precision is not for everyone, and that's
         why we've just introduced options to configure JSLint to suit your
         needs.
-    </p>    
+    </p>
 </div>
 
 <div class="section">
@@ -96,9 +96,9 @@ illustration:
         When starting a new <a href="https://gears.simplytestable.com/">full-site or single-url test</a>,
         you can now expand  the JavaScript static analysis options to reveal the JSLint config
         options available to you.
-    </p> 
+    </p>
     <p>
-        You'll find an option to warn you about the use of <code>eval</code> and 
+        You'll find an option to warn you about the use of <code>eval</code> and
         this is enabled by default due to strong security concerns surrounding
         the execution of arbitrary code.
     </p>
@@ -111,7 +111,7 @@ illustration:
         There are 21 on/off options to choose from. We've disabled about half
         by default which results in more approachable test results than was
         previously the case when none of the options were disabled.
-    </p>           
+    </p>
     <p>
         You can enable or disable warnings for a range of issues as you see fit,
         set the maximum number of errors to tolerate (the default is 50), set the maximum allowed

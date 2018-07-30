@@ -3,10 +3,10 @@ layout: default
 title: "Redirect Loops and Long Redirect Chains Detected"
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 illustration:
     id: redirect-loops-detected
-    url: http://i.imgur.com/oQj0c.png     
+    url: https://i.imgur.com/oQj0c.png
 ---
 
 <div class="section">
@@ -20,37 +20,37 @@ illustration:
         you just get redirected indefinitely.
     </p>
     <p>
-       Long redirect chains are no fun. 
+       Long redirect chains are no fun.
         You visit a URL and it 301 redirects you to another URL
         which 301 redirects you to another URL which 301 redirects you to another
         URL &hellip; and so on.
-    </p>    
+    </p>
     <p>
         You don't get redirected back to a URL you have already visited whilst
-        riding this redirectercoaster so it's not a redirect loop. 
-    </p>        
+        riding this redirectercoaster so it's not a redirect loop.
+    </p>
     <p>
         You might eventually get redirected to a URL that doesn't redirect you any
         longer. Or you might not. One cannot in advance tell.
     </p>
-    
+
     <p>
-        Redirect loops and long redirect chains are now detected when running a 
+        Redirect loops and long redirect chains are now detected when running a
         full-site HTML validation test.
     </p>
-    
+
     <p>
         Redirect loops are spotted by looking at the URLs previously visited when
         following a redirect chain. A redirect trying to take us to a URL we've
         already visited is a clear sign of a redirect loop.
     </p>
-    
+
     <p>
         Any more than 10 redirects in a row will cause the test of a given URL to fail.
         It's possible that the 11th direct is the one that takes us to a URL that no
         longer redirects. Or maybe it won't. Maybe we'll get to some content after
         102 redirects. Or maybe we won't.
-    </p>    
+    </p>
     <p>
         You just can't tell in advance. At some point you have to give up. Stopping
         after 10 redirects seems reasonable; you probably didn't intend for this
@@ -58,12 +58,12 @@ illustration:
     </p>
     <p>
         You now get a more clear error page for the results of a HTML validation
-        test that could not be performed due to a redirect issue. This also means 
+        test that could not be performed due to a redirect issue. This also means
         that some full-site HTML validation tests that were getting stuck will now finish.
-    </p> 
-    
+    </p>
+
     <p>
         <a href="/production-bug-002-spotted/">Production bug #002</a> fixed.
     </p>
-        
+
 </div>

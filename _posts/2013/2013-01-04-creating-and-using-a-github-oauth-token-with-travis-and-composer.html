@@ -3,7 +3,7 @@ layout: default
 title: "Creating and Using a Github OAuth Token With Travis And Composer"
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
 <div class="section">
@@ -12,7 +12,7 @@ author:
     </h3>
     <p>
         I use <a href="https://github.com/">GitHub</a> to host the opensource
-        code repositories for the Simply Testable applications and a collection of 
+        code repositories for the Simply Testable applications and a collection of
         self-contained libraries created for the applications.
     </p>
     <p>
@@ -36,29 +36,29 @@ author:
         dependencies. Only 60 such anonymous API calls are allowed per IP address
         per hour.
     </p>
-    
+
     <p>
         I recently read about how you can <a href="http://drafts.easybib.com/post/38230669404/composer-github-travisci">configure Composer to use a GitHub OAuth
         token</a> so that authenticated, and non anonymous, API calls are made. This
         increases the per-hour API limit from 60 to 5000.
     </p>
-    
+
     <p>
         What the article didn't cover, at least in enough detail for me, was the
         exact steps needed. Although it didn't take me long to figure it out, I
         thought I'd cover it all as this might be useful to others.
     </p>
-    
+
     <p>
-        Here's a step-by-step guide to creating a GitHub OAuth token, using the 
+        Here's a step-by-step guide to creating a GitHub OAuth token, using the
         token with Composer and getting this all to work within the Travis build
         environment.
     </p>
-    
+
     <h3>
         1. Create a GitHub OAuth Token
     </h3>
-    
+
     <p>
         Make a POST request to https://api.github.com/authorizations:
     </p>
@@ -66,7 +66,7 @@ author:
         <code>
             curl -u 'githubuser' -d '{"note":"Travis Composer 2"}' https://api.github.com/authorizations
         </code>
-    </p>    
+    </p>
     <p>
         Update: thanks to Lee Davis for adding a tip for Windows users:
     </p>
@@ -79,7 +79,7 @@ author:
 </pre>
 
 <code>
-curl -u 'githubuser' -d '{\"note\":\"Travis Composer 2\"}'        
+curl -u 'githubuser' -d '{\"note\":\"Travis Composer 2\"}'
 </code>
     </blockquote>
     <p>
@@ -102,74 +102,74 @@ curl -u 'githubuser' -d '{\"note\":\"Travis Composer 2\"}'
   "id": 1047183,
   "note_url": null
 }</pre>
-    
+
     <p>
         The generated token is the 40-character hash in bold. The above is an example
         only; yours will be different. Make a note of it.
     </p>
-    
+
     <p>
-        Note that in the request to generate a new token we didn't specify any 
+        Note that in the request to generate a new token we didn't specify any
         permissions. This means the token will have public (read-only) access
         by default which is just what we want.
     </p>
-    
+
     <h3>
         2. Test Your New Token
     </h3>
-    
+
     <p>
         It could take an annoying amount of investigation work to spot that your
         token was copied incorrectly or otherwise doesn't work. Test it out now,
         it won't take 2 seconds.
     </p>
-    
+
     <p>
         <code>
             curl -I -H "Authorization: token <em>put your token here</em>" https://api.github.com/repos/githubuser/repo-name/zipball/master
         </code>
     </p>
-    
+
     <p>
         This will output the HTTP headers returned in response to your request.
-        
+
     </p>
-    
+
     <pre>HTTP/1.1 302 Found
 X-RateLimit-Limit: 5000
 X-RateLimit-Remaining: 4985
 Location: https://nodeload.github.com/githubuser/repo-name/legacy.zip/master
 </pre>
-    
+
     <p>
         If all went well, you'll notice you have an API rate limit of 5000 (instead
         of the standard 60).
     </p>
-    
+
     <h3>
         3. Configure Travis (Update your .travis.yml build file)
     </h3>
-    
+
     <p>
         You need to update the Composer configuation in the Travis build
-        environment to use your new token.        
+        environment to use your new token.
     </p>
-    
+
     <p>
         It should be possible to do this solely by updating your .travis.yml build
         file, however I found the syntax required to echo the required json string
         into the Composer config file didn't work nicely within Yaml.
     </p>
-    
+
     <p>
         I instead opted for the easier option of storing the Composer config in
         a file and copying this file to the location expected by Composer.
     </p>
-    
+
     <p>
         Create a file in your repository named .travis.composer.config.json containing:
     </p>
-    
+
     <pre>{
    "config":{
       "github-oauth":{
@@ -177,28 +177,28 @@ Location: https://nodeload.github.com/githubuser/repo-name/legacy.zip/master
       }
    }
 }</pre>
-    
+
     <p>
         Replace <em>your token</em> with your actual GitHub OAuth token.
     </p>
-    
+
     <p>
         Now just add, or update, the <em>before_script</em> section of your
         Travis build file to copy the Composer config to where it is needed:
     </p>
-    
-    <pre>before_script:  
+
+    <pre>before_script:
   # Set the GitHub OAuth token to make use of the 6000 per hour rate limit
   - "mkdir -p ~/.composer"
   - cp .travis.composer.config.json ~/.composer/config.json</pre>
-    
+
     <h3>
         That's it!
     </h3>
-    
+
     <p>
         You will have to update the Travis build file for every project with
         which you use Travis, but that's not too much effort to go to.
     </p>
-    
+
 </div>
