@@ -85,7 +85,7 @@ author:
     <pre class="prettyprint lang-php">&lt;?php
 use webignition\Http\Mock\Client\Client as HttpClient;
 
-$request = new \HttpRequest('http://blog.simplytestable.com/');
+$request = new \HttpRequest('https://blog.simplytestable.com/');
 
 $httpClient = new HttpClient();
 
@@ -100,7 +100,7 @@ print $response->getResponseCode(); // 404
     <pre class="prettyprint lang-php">&lt;?php
 use webignition\Http\Mock\Client\Client as HttpClient;
 
-$request = new \HttpRequest('http://blog.simplytestable.com/');
+$request = new \HttpRequest('https://blog.simplytestable.com/');
 
 $httpClient = new HttpClient();
 $httpClient->getRequestReponseList()->set(
@@ -125,16 +125,16 @@ print $response->getBody(); // Hello World!
     <pre class="prettyprint lang-php">&lt;?php
 use webignition\Http\Mock\Client\Client as HttpClient;
 
-$request = new \HttpRequest('http://blog.simplytestable.com/gets-301-response');
+$request = new \HttpRequest('https://blog.simplytestable.com/gets-301-response');
 
 $httpClient = new HttpClient();
 $httpClient->getCommandReponseList()->set(
     $request,
     new \HttpMessage("HTTP/1.1 301 Moved Permanently
-                      Location: http://blog.simplytestable.com/destination")
+                      Location: https://blog.simplytestable.com/destination")
 );
 $httpClient->getCommandResponseList()->set(
-    "GET http://blog.simplytestable.com/destination",
+    "GET https://blog.simplytestable.com/destination",
     new \HttpMessage("HTTP/1.1 200 Ok\n\nHello Again!")
 );
 
@@ -175,7 +175,7 @@ print $response->getBody(); // Hello Again!
     <pre class="prettyprint lang-php">&lt;?php
 use webignition\Http\Mock\Client\Client as HttpClient;
 
-$request = new \HttpRequest('http://blog.simplytestable.com/');
+$request = new \HttpRequest('https://blog.simplytestable.com/');
 
 $httpClient = new HttpClient();
 $httpClient->getStoredResponseList()->setFixturesPath(
@@ -201,7 +201,7 @@ Hello World!</pre>
     <pre class="prettyprint lang-php">&lt;?php
 use webignition\Http\Mock\Client\Client as HttpClient;
 
-$request = new \HttpRequest('http://blog.simplytestable.com/');
+$request = new \HttpRequest('https://blog.simplytestable.com/');
 
 $httpClient = new HttpClient();
 $httpClient->getStoredResponseList()->setFixturePath('/home/example/HttpResponses');
@@ -241,7 +241,7 @@ print $httpClient->getStoredResponseList()->getRequestFixturePath($request);
     <pre class="prettyprint lang-php">&lt;?php
 use webignition\Http\Mock\Client\Client as HttpClient;
 
-$request = new \HttpRequest('http://blog.simplytestable.com/');
+$request = new \HttpRequest('https://blog.simplytestable.com/');
 
 $httpClient = new HttpClient();
 $httpClient->setKnowsSpecifiedHostsOnly();
