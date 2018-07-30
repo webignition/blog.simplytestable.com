@@ -32,14 +32,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    {% case page.url %}
-                    {% when '/' %}
-                    {% include posts/latest.html %}
-                    {% when '/archive_source/index.html' %}
-                    {% include posts/archive.html %}
-                    {% else %}
                     {% include posts/post.html %}
-                    {% endcase %}
                 </div>
                 <div class="col-md-4 sidebar">
                     {% include sidebar/newsletter.html %}
