@@ -3,7 +3,7 @@ blog.simplytestable.com
 
 ## Overview
 
-This is the source for [http://blog.simplytestable.com][1], which itself is the blog for [http://simplytestable.com][2].
+This is the source for [http://blog.simplytestable.com][1], which itself is the blog for [https://simplytestable.com][2].
 
 ## Building
 
@@ -24,7 +24,7 @@ Content for this blog is open-source. Posts on the subject of automated frontend
 Fork, create your post in the [_posts directory][8], commit and create a new pull request.
 
 [1]: http://blog.simplytestable.com
-[2]: http://simplytestable.com
+[2]: https://simplytestable.com
 [3]: https://github.com/mojombo/jekyll/
 [4]: http://twitter.github.com/bootstrap/
 [5]: http://fortawesome.github.com/Font-Awesome/
