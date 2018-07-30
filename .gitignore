@@ -2,12 +2,4 @@
 /.idea
 /is_production
 /_plugins/
-
-# cPanel environment
-/.bash*
-/.contactemail
-/.cpanel
-/.dns
-/.gemrc
-/access-logs
-/www
+node_modules
