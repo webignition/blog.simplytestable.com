@@ -22,7 +22,7 @@ pre {
 
 #logo {
     position:absolute;
-    background: url('http://simplytestable.com/bundles/simplytestablewebsite/images/logo100-bold-bordered.png') transparent no-repeat top left;
+    background: url('/assets/images/logo.png') transparent no-repeat top left;
     width:100px;
     height:100px;
     left:-100px;
@@ -35,7 +35,7 @@ pre {
 
 .header #name {
     font-size: 50px;
-    margin-bottom:20px;   
+    margin-bottom:20px;
     color:#555;
     font-weight: bold;
     display:block;
@@ -48,7 +48,7 @@ pre {
 
 .header .primary  p {
     font-size: 18px;
-    line-height: 27px;    
+    line-height: 27px;
 }
 
 a,
@@ -67,15 +67,15 @@ a:hover {
 
 
 .sidebar h2 {
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);    
-    font-size:16px;  
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    font-size:16px;
 }
 
 .sidebar h2 i {
     width: auto;
-    height: auto;    
+    height: auto;
     font-size:16px;
-    line-height: 16px;    
+    line-height: 16px;
     margin-right:4px;
 }
 
@@ -87,7 +87,7 @@ a:hover {
 }
 
 .sidebar div.twitter-latest {
-    padding-bottom:0;    
+    padding-bottom:0;
 }
 
 .header .sidebar div.section {
@@ -179,15 +179,15 @@ ul.listless li {
 .post .section,
 .post .section li p,
 .post .section blockquote p,
-div.post .question-answer .question h4 {  
+div.post .question-answer .question h4 {
     line-height: 160%;
-    font-size: 120%;    
+    font-size: 120%;
 }
 
 div.post .question-answer .question h4,
 .post .section blockquote p,
-.post .section li p {  
-    font-size: 100%;    
+.post .section li p {
+    font-size: 100%;
 }
 
 
@@ -213,7 +213,7 @@ div.post h4 {
 
 
 .section-post-meta .meta {
-    opacity:0.4;     
+    opacity:0.4;
 }
 
 .indicator-icon {
@@ -221,7 +221,7 @@ div.post h4 {
     height: auto;
     position: absolute;
     left: -100px;
-    font-size: 80px; 
+    font-size: 80px;
     margin-top: -17px;
 }
 
@@ -249,7 +249,7 @@ div.post h4 {
     padding-right: 60px;
 }
 
-#page-archive ol li:hover {    
+#page-archive ol li:hover {
     color:#ccc;
 }
 
@@ -301,12 +301,12 @@ div.post h4 {
 }
 
 body.illustration {
-    
+
 }
 
 body.illustration .image {
     width:100%;
-    display:block;    
+    display:block;
 }
 
 .post .illustration {
@@ -330,7 +330,7 @@ body.illustration .image {
     line-height: 100px;
     margin: 100px 0 0 286px;
     color: white;
-    opacity: 0.4;    
+    opacity: 0.4;
 }
 
 .post .illustration a:hover {
@@ -402,7 +402,7 @@ table.top-html-validation-errors td {
     border: none;
     background: none;
     margin: 0;
-    padding: 0;    
+    padding: 0;
 }
 
 .illustration-inline {
@@ -419,7 +419,7 @@ table.top-html-validation-errors td {
     top: 72px;
     right: 10px;
     width: 120px;
-    height: 61px; 
+    height: 61px;
 }
 
 .post ol.archive p {
@@ -444,7 +444,7 @@ table.top-html-validation-errors td {
     position: absolute;
     right: 10px;
     font-size: 30px;
-    top: 15px;    
+    top: 15px;
 }
 
 .header .sidebar .areas {
@@ -456,13 +456,13 @@ table.top-html-validation-errors td {
 .header .sidebar .areas a {
     display:inline-block;
     margin: 0;
-    padding: 3px;    
+    padding: 3px;
 }
 
 .header .sidebar .areas li {
     display:inline;
     margin: 0;
-    padding: 0;    
+    padding: 0;
 }
 
 .header .sidebar div.start-new-test-form {
@@ -470,84 +470,84 @@ table.top-html-validation-errors td {
     margin-bottom: 6px;
 }
 
-@media (max-width: 990px) {       
+@media (max-width: 990px) {
     .header .sidebar {
 
     }
-    
+
     .header .sidebar .about .tagline,
     .header .sidebar .about h2 {
         display:none;
-    }    
-    
-    
+    }
+
+
     .header .sidebar .section {
         float:right;
         width: 40%;
         margin-left:0;
-    }    
-    
+    }
+
     .header .sidebar .about {
         float:left;
         width:49%;
     }
-    
+
     .header .sidebar .about p {
         font-size: 18px;
-        line-height: 27px;        
+        line-height: 27px;
     }
-    
+
     .header .sidebar div.start-new-test-form {
         margin-top: auto;
-    }    
-    
+    }
+
     .header #name {
         text-indent: 0;
-    }    
-    
+    }
+
     .header .leader p {
 /*        margin-left: inherit;*/
-    }      
-    
-    .indicator-icon {      
+    }
+
+    .indicator-icon {
         display:none;
     }
-    
+
     .post h2 {
         line-height: 48px;
     }
-    
+
     .post h2,
     p.meta {
         text-indent: 0px;
-    }    
-    
+    }
+
     .section-post-meta .meta {
         margin-bottom: 40px;
     }
-    
+
     .section-continue-reading a.btn {
         font-size: 26px;
     }
 }
 
-@media (min-width: 991px) and (max-width: 1200px) {    
+@media (min-width: 991px) and (max-width: 1200px) {
     .header #logo {
         left:0;
     }
-    
+
     .header #name {
         text-indent: 100px;
-    }    
-    
+    }
+
     .header .leader p {
-        margin-left:100px;        
-    }    
-    
+        margin-left:100px;
+    }
+
     .header #name {
         font-size:36px;
     }
-    
+
     .post h2,
     p.meta {
         text-indent: 100px;
@@ -603,7 +603,7 @@ blockquote  .avatar-tom-batey {
 .post .footnote {
     opacity: 0.7;
     font-size: 100%;
-    margin-top: 60px;    
+    margin-top: 60px;
 }
 
 img.img-responsive {
@@ -616,7 +616,7 @@ iframe.video {
 
 ul.doctypelist {
     margin-left: 0;
-    padding-left: 0;    
+    padding-left: 0;
 }
 
 ul.doctypelist li {
