@@ -3,128 +3,128 @@ layout: default
 title: "Solving 'Element &quot;Variable&quot;' Undefined'"
 author:
     name: Jon Cram
-    url: http://webignition.net   
+    url: https://github.com/webignition
 ---
 
-<div class="section">  
+<div class="section">
     <p>
         When preparing a documentation page to cover the generic
         HTML validation error <i>Element &quot;X&quot; undefined</i>
         I started researching the causes for some specific instances of this
         type of error.
     </p>
-    
+
     <p>
         I looked in to the causes of <i>Element &quot;Variable&quot; Undefined</i>
         as of all the HTML validation errors of this type this is the most commonly-occurring
         specific instance.
     </p>
-    
+
     <p>
-        My initial thoughts were to treat such errors literally: 
+        My initial thoughts were to treat such errors literally:
         the error message is telling me that the element "Variable" doesn't exist and
         from experience I know that there is no HTML element named "Variable". Therefore
         someone has used <code>&lt;Variable &hellip; &gt;</code>
         in some markup. Case closed.
     </p>
-    
+
     <p>
         Your initial reaction may well be the same.
-    </p>    
-    
+    </p>
+
     <p>
         Hands up if you answered
         "It's because there is no element 'Variable' in HTML. Even W3Schools
         will teach you that!".
     </p>
-    
+
     <p>
         You can lower your hands now. If you answered as above you answered
         wrongly. Well, partly wrongly. You're right, there is no element
-        named "Variable". 
+        named "Variable".
 
         You're wrong in that the use of <code>&lt;Variable &hellip; &gt;</code>
         directly in markup is the cause of this error. Well, sort of.
     </p>
-    
+
     <p>
         It's nothing to be ashamed of. With no further evidence on which to base
         your answer, it's the obvious conclusion to draw.
     </p>
-    
+
     <p>
         I've got more than 1.8 million HTML validation errors to examine. With this
         volume of data, I've got a few more insights.
     </p>
-    
+
     <p>
         What if I told you that <em>every single occurrence</em> of this error
         relates to the string <code>&lt;Variable &hellip; &gt;</code>
         inside a HTML comment in a XHTML document?
     </p>
-    
+
     <p>
         And what if I told you that this HTML comment is inside a <code>&lt;style&gt;</code>
         element?
     </p>
-    
+
     <p>
         Hands up if you answered "CDATA!" but weren't sure why.
     </p>
-    
+
     <p>
         The content of <code>&lt;style&gt;</code> elements within XHTML documents
         should be treated literally and should not be parsed as markup.
     </p>
-    
+
     <p>
         Pop some content in a <code>&lt;style&gt;</code> element in a XHTML
         document that looks pretty much like markup and you're at the mercy
-        of the parser of your document when it comes to how that content will 
+        of the parser of your document when it comes to how that content will
         be handled.
     </p>
-    
+
     <p>
         And that's exactly what's going on with <i>Element &quot;Variable&quot; Undefined</i>
         errors.
     </p>
-    
+
     <p>
         This all stems from the <a href="http://www.deluxetemplates.net/2009/08/typography-blogger.html">Typography Blogger</a>
         template for the <a href="http://en.wikipedia.org/wiki/Blogger_(service)">Blogger</a> blogging service
         which happens to include the following markup:
     </p>
-    
+
     <pre>&lt;style id='page-skin-1' type='text/css'&gt;&lt;!--
 &hellip;
 &lt;Variable name="bgcolor" description="Page Background Color"
 type="color" default="#fff"&gt;
 &hellip;
 --&gt;&lt;/style&gt;</pre>
-    
+
     <p>
         That's just a summary. There are 17 uses of <code>&lt;Variable</code> in the
         full document.
     </p>
-    
+
     <p>
         It's in a HTML comment so you'd think it'd be safe. But this is in a
         XHTML document and if you correctly parse this as XML you
         parse the content of the <code>&lt;style&gt;</code> element unless
         something tells you otherwise.
     </p>
-    
+
     <p>
         And as nothing tells you otherwise you, putting on your XHTML parser hat,
         will parse the above as markup and complain that the element "Variable"
         does not exist.
     </p>
-    
+
     <p>
         Wrapping this up correctly as CDATA wrapped up safely as a HTML comment
         so as not to confuse parsers that treat the above as HTML and all is good:
     </p>
-    
+
     <pre>&lt;style id='page-skin-1' type='text/css'&gt;
 /*&lt;![CDATA[*/
 &lt;!--
@@ -137,10 +137,10 @@ type="color" default="#fff"&gt;
 --&gt;
 /*]]&gt;*/
 &lt;/style&gt;</pre>
-    
+
     <p>
         Chances are the same root cause applies to the majority of <i>Element "X" undefined</i>
         errors too.
-    </p>   
-    
+    </p>
+
 </div>

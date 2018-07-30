@@ -4,10 +4,10 @@ title: "Gracefully Handling Test Failure Without Blocking Test Progress"
 date: 2012-10-03 21:00
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
-<div class="section">    
+<div class="section">
     <h2>A Significant Problem Resolved</h2>
     <p>
         Sitting at the bottom of the list of improvements on the homepage
@@ -23,7 +23,7 @@ author:
         It's the last big problem that was preventing a smooth running service. Now that
         it's resolved, I'll look a little at what the problem was and how
         the solution was put together.
-    </p>    
+    </p>
 
     <h2>A Quick Recap</h2>
     <p>
@@ -62,7 +62,7 @@ author:
     <p>
         If a decent error occurs whilst a task is being performed by a worker, the
         task never ends up being completed. If it's not in the right state, the
-        results (which may or may not have been collected depending on where and 
+        results (which may or may not have been collected depending on where and
         when the error occurred) will never get reported back to the core
         application.
     </p>
@@ -100,7 +100,7 @@ author:
     <p>
          At the time, only content encoding failures were recognised. One down,
          many to go.
-    </p>    
+    </p>
     <h2>Redirect Loops and Redirect Limits</h2>
     <p>
         Just under two weeks ago in <a href="/redirect-loops-and-long-redirect-chains-detected/"><em>Redirect Loops and Long Redirect Chains Detected</em></a>
@@ -137,5 +137,5 @@ author:
     <p>
         I can now tick off the improvement item on the homepage
         and feel much better about the quality of the service as a whole.
-    </p>    
+    </p>
 </div>

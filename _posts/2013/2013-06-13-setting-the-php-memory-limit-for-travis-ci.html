@@ -3,7 +3,7 @@ layout: default
 title: "Setting the PHP Memory Limit for Travis CI"
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
 <div class="section">
@@ -18,7 +18,7 @@ author:
     <p>
         Following some <a href="https://github.com/webignition/app.simplytestable.com/commit/adcb90035b2863c03f273fd150d9d5e8382d6b48">recent changes</a>
         I noticed that the <a href="https://travis-ci.org/webignition/app.simplytestable.com/jobs/8047559">PHP 5.3 build failed</a>
-        due to it hitting a memory limit running unit tests.        
+        due to it hitting a memory limit running unit tests.
     </p>
     <p>
         The most straightforward course of action: increase the PHP memory limit
@@ -32,7 +32,7 @@ author:
     <p>
         Despite that, making the change is really easy. Here's what you do.
     </p>
-    
+
 </div>
 
 <div class="section">
@@ -43,10 +43,10 @@ author:
         Thankfully the Travis CI documentation is awesome and it provides
         a clear means of <a href="http://about.travis-ci.org/docs/user/languages/php/#Custom-PHP-configuration">appending the standard PHP configuration</a>
         with your own custom settings.
-    </p>   
+    </p>
     <p>
         We can use this to set the PHP memory limit.
-    </p>    
+    </p>
 </div>
 
 <div class="section">
@@ -89,12 +89,12 @@ php:
   - 5.3
   - 5.4
   - 5.5
-  
+
 before_script:
   # Additional PHP config
   - phpenv config-add travis.php.ini
-  
-  # ... additional script lines  
+
+  # ... additional script lines
 
 script:
   - phpunit -c app</pre>
@@ -102,6 +102,6 @@ script:
                 So long as yours looks similar to the above but retains the ini
                 file naming you chose you should be fine.
             </p>
-        </li>        
+        </li>
     </ol>
 </div>

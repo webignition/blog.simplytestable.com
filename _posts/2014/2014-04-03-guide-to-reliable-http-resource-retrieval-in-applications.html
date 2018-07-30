@@ -3,68 +3,68 @@ layout: default
 title: "Guide To Reliable HTTP Resource Retrieval In Applications"
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
 <div class="section section-first">
     <p>
-        You might think that coding up the <em>reliable</em> retrieval of a 
+        You might think that coding up the <em>reliable</em> retrieval of a
         resource at a given URL over HTTP is easy. You'd be wrong but quite
         forgivably so.
-    </p>       
-    
+    </p>
+
     <p>
         Higher-level HTTP libraries can abstract away some issues
         such that you forget they may occur, and some issues occur so infrequently
         that you may never run into them.
-    </p>   
-    
+    </p>
+
     <p>
         Over the past year and a bit, <a href="https://simplytestable.com/">Simply Testable</a> has processed the content
         of a suitably large number of URLs that I've encountered many a rare
         issue.
     </p>
-    
+
     <p>
         This post covers, in a language-agnostic way, the issues you may
         encounter when retrieving a resource over HTTP and what can be done
         to increase the chance of retrieving the resource you're after.
     </p>
-    
+
 </div>
 
 <div class="section">
     <h3>What We're Trying To Achieve And How</h3>
-    
+
     <p>
         You're coding an application that needs to retrieve a resource located
-        at an arbitrary URL. Maybe it is a web page, a CSS file or an image. 
+        at an arbitrary URL. Maybe it is a web page, a CSS file or an image.
         What is being retrieved doesn't matter.
     </p>
-    
+
     <p>
         You start out with code along the lines of: <code>$resource = $request->send();</code>.
         That's a PHP-ish example. The language doesn't matter.
     </p>
-    
+
     <p>
         What does matter is how you will deal with problems that the Internet
         will throw at you when you run your code such that the code has
         the greatest chance possible of getting you your resource in a way that
         your application can use.
     </p>
-    
+
     <p>
-        All topics focus around two main ideas:       
+        All topics focus around two main ideas:
     </p>
-    
+
     <ul>
         <li>
             <p>
                 directly retrying a HTTP request in cases where it is possible that a retry
                 may work
             </p>
-        </li>        
+        </li>
         <li>
             <p>
                 modifying your request in ways that may yield more promising
@@ -72,17 +72,17 @@ author:
             </p>
         </li>
     </ul>
-    
+
     <p>
         Topics we will look at include:
     </p>
-    
+
     <ul>
         <li>
             <p>
                 <a href="#recoverable-network-level-errors">Recoverable network-level errors</a>
             </p>
-        </li>        
+        </li>
         <li>
             <p>
                 <a href="#recoverable-http-level-errors">Recoverable HTTP-level errors</a>
@@ -92,7 +92,7 @@ author:
             <p>
                 <a href="#setting-a-good-user-agent">Setting a good user agent</a>
             </p>
-        </li>        
+        </li>
         <li>
             <p>
                 <a href="#user-agent-cycling">User agent cycling</a>
@@ -102,7 +102,7 @@ author:
             <p>
                 <a href="#accept-encoding-precision">Accept-Encoding precision</a>
             </p>
-        </li>        
+        </li>
         <li>
             <p>
                 <a href="#content-compression-mismatches">Content compression mismatches</a>
@@ -112,12 +112,12 @@ author:
             <p>
                 <a href="#url-encoding-toggling">URL encoding toggling</a>
             </p>
-        </li>        
+        </li>
         <li>
             <p>
                 <a href="#http-method-toggling">HTTP method toggling</a>
             </p>
-        </li>        
+        </li>
     </ul>
 </div>
 
@@ -125,31 +125,31 @@ author:
     <h3>
         Recoverable network-level errors
     </h3>
-    
+
     <p>
         Network-level errors are those raised by an underlying HTTP library
         such as <a href="http://curl.haxx.se/libcurl/">libcurl</a> and relate to
-        issues that arise when establishing, or reading from, 
+        issues that arise when establishing, or reading from,
         a <a href="http://en.wikipedia.org/wiki/Stream_socket">stream socket</a>.
     </p>
-    
+
     <p>
         Many network-level errors are a deal breaker, such as <code>CURLE_URL_MALFORMAT</code>
         or <code>CURLE_COULDNT_RESOLVE_HOST</code>. These types of error will
         be raised before a TCP connection has even been attempted and may be
         due to nonsense data (a malformed URL) or a non-existent domain name.
     </p>
-    
+
     <p>
         Some network-level errors are indicative of potentially-temporary issues
         that may be avoided if you simply try again.
     </p>
-    
+
     <p>
         This includes errors such as <code>CURLE_COULDNT_CONNECT</code> [<i>Failed to connect() to host or proxy</i>] or
         <code>CURLE_OPERATION_TIMEDOUT</code> [<i>Operation timeout</i>].
     </p>
-    
+
     <p>
         The inability for a packet to route through to a given host may well
         be a very temporary matter. Network-level routing issues come and go in
@@ -157,33 +157,33 @@ author:
         only purpose before once again finding a reliable path. Logical network connections
         are broken due to incorrectly-configured prioritisation.
     </p>
-    
+
     <p>
         You have nothing to lose in trying again and as long as you are considerate
         in your approach you shouldn't significantly worsen any major problems.
-    </p>  
-    
+    </p>
+
     <p id="network-level-error-steps">
         To deal with potentially-temporary network-level issues:
     </p>
-    
+
     <ol>
         <li>
             <p>
                 Wrap request-sending code in a <code>try { ... } catch (CurlException $e) { ...}</code>
                 style construct
             </p>
-        </li>        
+        </li>
         <li>
             <p>
                 Identify cases where a retry has a chance of working. You may at first
                 have no idea. That's ok. Start out with retrying for     no network-level
                 exceptions and work up from there.
             </p>
-        </li>        
+        </li>
         <li>
             <p>
-                Retry in cases that you have determined are appropriate. 
+                Retry in cases that you have determined are appropriate.
             </p>
         </li>
         <li>
@@ -191,35 +191,35 @@ author:
                 Log every single case where a retry was deemed inappropriate.
                 At first this will be for all cases.
             </p>
-        </li>        
+        </li>
         <li>
             <p>
                 Periodically review all logged network-level error cases,
                 understand each and every one and consider which are appropriate
                 for retrying.
             </p>
-        </li>        
+        </li>
         <li>
             <p>
                 Ensure you can mock network-level errors in your unit tests
                 and verify that your application handles such errors correctly.
             </p>
-        </li>         
+        </li>
     </ol>
-    
+
     <p>
         Retries must be handled in a way that increases the chance of success
         without being overly inconsiderate. Limit the number of retries.
         Up to 3 retries may be sensible; dozens may not. Pause between retries;
         consider an <a href="http://en.wikipedia.org/wiki/Exponential_backoff">exponential backoff</a> approach.
     </p>
-    
+
     <p>
         Over time you will encounter network-level error cases that you thought
         couldn't happen, some of which you can deal with not by retrying but
         with approaches further on in this guide.
     </p>
-        
+
 
 </div>
 
@@ -228,27 +228,27 @@ author:
     <h3>
         Recoverable HTTP-level errors
     </h3>
-    
+
     <p>
         HTTP-based applications can be fragile and can return HTTP client and
         server errors in cases where a request could have succeeded.
     </p>
-    
+
     <p>
         Consider a familiar client error response: <code>HTTP/1.1 404 Not Found</code>.
     </p>
-    
+
     <p>
         This can occur for one of two reasons: either the requested resource
         could not be found, or a bug in the application serving the request
         returned a 404 instead of returning the relevant resource.
     </p>
-    
+
     <p>
         On more than one occasion I've investigated issues through using the curl
         command line client and encountered something along the lines of:
     </p>
-    
+
     <pre class="prettyprint">curl -I http://example.com/
 HTTP/1.1 404 Not Found
 ...
@@ -256,11 +256,11 @@ HTTP/1.1 404 Not Found
 curl -I http://example.com/
 HTTP/1.1 200 OK
 ...</pre>
-    
+
     <p>
         You might think this doesn't happen. It happens. Maybe not often, but it does.
     </p>
-    
+
     <p>
         If the code for the application serving your request is being updated
         as your request hits it is anyone's guess as to what will happen. If
@@ -268,17 +268,17 @@ HTTP/1.1 200 OK
         to satisfy the conditions for an infrequently-occurring bug you could
         get a very odd response.
     </p>
-    
+
     <p>
         As with network-level errors, a considerate retry strategy can be employed
         to increase the chance of success.
     </p>
-    
+
     <p>
         Follow the same steps as for <a href="#network-level-error-steps">handling network-level errors</a>, replacing 'network-level error' with 'HTTP-level error'
         as you go.
     </p>
-    
+
     <p>
         There will be some HTTP-level errors that cannot deal with by retrying.
         Some of these will be covered below.
@@ -290,183 +290,183 @@ HTTP/1.1 200 OK
     <h3>
         Setting a good user agent
     </h3>
-    
+
     <p>
         A HTTP application may vary the response based on the <a href="http://en.wikipedia.org/wiki/User_agent">user agent header</a>
         of the request.
     </p>
-    
+
     <p>
-        Some HTTP applications vary the response through (possibly overly) broad 
+        Some HTTP applications vary the response through (possibly overly) broad
         checks of the user agent string and with quite restrictive consequences.
     </p>
-    
+
     <p>
-        I've encountered applications that return a HTTP client or server error response, 
+        I've encountered applications that return a HTTP client or server error response,
         or which return nothing (resulting in curl error 52), in cases where the user agent
-        string contains "php" (or "test", more on that in the next section) or 
+        string contains "php" (or "test", more on that in the next section) or
         when no user agent is set.
     </p>
-    
+
     <p>
         From my experience, it is not uncommon for HTTP applications to deny
         access in cases where the user agent string contains the name of a widely-used
         programming language (such as "php") or of a widely-used library (such
         as "curl").
     </p>
-    
+
     <p>
         Avoid such pitfalls by setting a setting a good user agent.
     </p>
-    
+
     <p>
         A good user agent string is brief, constant with respect to the application
         sending the request and informative.
     </p>
-    
+
     <p>
         You can't go too wrong following the example set by <a href="https://support.google.com/webmasters/answer/1061943?hl=en">Google's various
             crawlers</a> and opt for: <code>Product Name/&lt;version number&gt; (http:/example.com/moreinfo)</code>.
     </p>
-    
+
 </div>
 
 <div class="section" id="user-agent-cycling">
     <h3>
         User agent cycling
     </h3>
-    
+
     <p>
         You may not always receive the expected response when using a good
         user agent string.
     </p>
-    
+
     <p>
-        I've encountered applications that return a HTTP client or server error response, 
+        I've encountered applications that return a HTTP client or server error response,
         or which return nothing (resulting in curl error 52), in cases where the user agent
         string contains "test".
     </p>
-    
+
     <p>
         This proved problematic when I was using a user agent sting of:
         <code>Simply Testable/1.0 (http://simplytestable.com/)</code>.
     </p>
-    
+
     <p>
         I've chosen to assume that the majority of cases where Simply Testable-initiated
         requests encounter a HTTP error due to the user agent header
-        are false positives and that the circumvention of false positive filtering 
+        are false positives and that the circumvention of false positive filtering
         is not morally wrong (not all filtering, just false positive filtering).
-    </p>    
-    
+    </p>
+
     <p>
         This assumption is based on investigating such incidents
         and not finding a single case where the user agent filtering is in any
         way precisely targeted.
     </p>
-    
+
     <p>
         You could opt for a nearly-good user agent string that doesn't include
         broadly-filtered terms. I changed the default Simply Testable
         user agent to <code>ST/1.0 (http://bit.ly/RlhKCL)</code> to remove
         the word "test".
     </p>
-    
+
     <p>
         You can increase the chance of retrieving the expected resource through
         modifying the user agent header and trying again in cases where a request
         does not receive the expected response.
     </p>
-    
+
     <p>
         I call this <i>user agent cycling</i> as I will often cycle through
         a set of user agent strings in cases where it is really worth the effort
         to do so.
     </p>
-    
+
     <p>
         This can be implemented in a straightforward manner:
-    </p> 
-    
+    </p>
+
     <ol>
         <li>
             <p>
                 Choose a list of user agent strings that you want to use.
-            </p>          
-        </li>         
+            </p>
+        </li>
         <li>
             <p>
                 Be considerate and start out with the user agent string by which
                 you wish your application to be identified.
-            </p>                
-        </li>        
+            </p>
+        </li>
         <li>
             <p>
                 When catching a HTTP error exception (you do catch these, don't you?),
                 change the user agent header to the next in your list
                 and retry.
             </p>
-        </li>                
-    </ol>    
-    
+        </li>
+    </ol>
+
     <p>
-        This could be used to circumvent instances where a HTTP application really 
+        This could be used to circumvent instances where a HTTP application really
         doesn't want to respond nicely to your request.
     </p>
-    
+
     <p>
         Before implementing user agent cycling, start out with using only your
         preferred good user agent string. Don't leave the user agent header unset.
-        Don't default to using the user agent string set by the HTTP client 
+        Don't default to using the user agent string set by the HTTP client
         library you're using. Don't impersonate a known user agent.
     </p>
-    
+
     <p>
         If you do encounter cases where your application's requests are being
-        denied due to the user agent, try to determine if you are being 
+        denied due to the user agent, try to determine if you are being
         precisely targeted before modifying or cycling. An application may
         genuinely not want to speak to you.
-    </p>    
+    </p>
 </div>
 
 <div class="section" id="accept-encoding-precision">
     <h3>Accept-Encoding precision</h3>
-    
+
     <p>
         The <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.3">Accept-Encoding</a> request header informs the HTTP application
         handling the request of the types of content encoding that your application is
         able to understand.
     </p>
-    
+
     <p>
         For example, if you were to use <code>Accept-Encoding: gzip, deflate</code>
-        in your request, the responding application may opt to return a gzipped 
+        in your request, the responding application may opt to return a gzipped
         response instead of a plain text response.
     </p>
-    
+
     <p>
         You might assume that when a request lacks the Accept-Encoding header
         the responding application will default to a plain text response.
 
         On this matter, <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.3">RFC2616 section 14.3</a> says:
     </p>
-    
+
     <blockquote>If no Accept-Encoding field is present in a request, the server MAY assume that the client will accept any content coding.</blockquote>
-    
+
     <p>
         This means that if your request lacks a Accept-Encoding header, the responding
         server can opt to encode the response however it chooses.
     </p>
-    
+
     <p>
         For the best chance of receiving a response that your application is able
         to decode, set a precise Accept-Encoding header.
     </p>
-    
+
     <p>
         Better still, use <code>Accept-Encoding: gzip, deflate</code>:
     </p>
-    
+
     <ul>
         <li>
             <p>
@@ -474,7 +474,7 @@ HTTP/1.1 200 OK
                 to prepare yourself for it and make sure you're equipped
                 to decode compressed content.
             </p>
-        </li>        
+        </li>
         <li>
             <p>
                 This may inform other developers working on your application of
@@ -482,7 +482,7 @@ HTTP/1.1 200 OK
 
                 Consider this like type hinting. It will help with the identification of,
                 and fixing of, bugs.
-            </p>            
+            </p>
         </li>
         <li>
             <p>
@@ -491,61 +491,61 @@ HTTP/1.1 200 OK
             </p>
         </li>
     </ul>
-    
+
     <p>
         If you're not ready for decoding the content of the response you
         receive such that your application raises an exception or throws
         an error, you can't really call that a reliable means of retrieving
         a resource over HTTP.
-    </p>    
+    </p>
 </div>
 
 <div class="section" id="content-compression-mismatches">
     <h3>Content compression mismatches</h3>
-    
+
     <p>
         The <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11">Content-Encoding</a>
         response header informs your application of any additional encoding
         that has been applied to the response body.
     </p>
-    
+
     <p>
         Or, in other words, it tells you how to decode the response body if it
         can't be understood as-is.
     </p>
-    
+
     <p>
         If you were to send a request with the header <code>Accept-Encoding: gzip, deflate</code>,
         you might get a response with a header <code>Content-Encoding: gzip</code>.
         This tells your application that it needs to ungzip the response body
         to get the content of the requested resource.
     </p>
-    
+
     <p>
         On the matter of the Content-Encoding header
         <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11">RFC2616 section 14.11</a> says:
     </p>
-    
+
     <blockquote>When present, its value indicates what additional content codings have been applied to the entity-body, and thus what decoding mechanisms must be applied in order to obtain the media-type referenced by the Content-Type header field.</blockquote>
-    
+
     <p>
         You'd be forgiven for assuming that the response content has been encoded
         as stated by the Content-Encoding header. You'd also be
         forgiven for assuming no additional encoding if there is no Content-Encoding
         header.
     </p>
-    
+
     <p>
         You may find that:
-    </p>    
-    
+    </p>
+
     <ul>
         <li>
             <p>
                 the response content has been encoded but lacks a Content-Encoding
                 header to tell you how to decode
             </p>
-        </li>        
+        </li>
         <li>
             <p>
                 the response has a Content-Encoding header but the response
@@ -553,24 +553,24 @@ HTTP/1.1 200 OK
             </p>
         </li>
     </ul>
-    
+
     <p>
         You can't always trust the Content-Encoding header, and you can't always
         trust that the response content has not been encoded beyond what is
         expected given the content type.
     </p>
-    
+
     <p>
         For binary content types, such as images, audio or video, there's nothing
         you can do.
     </p>
-    
+
     <p>
         For text-based content types, such as HTML or CSS, you can assume
         the content is either <a href="http://en.wikipedia.org/wiki/Gzip">gzip-encoded</a>, <a href="http://en.wikipedia.org/wiki/DEFLATE">delfate-encoded</a> or unencoded
         and extract the resource from the response body as follows:
     </p>
-    
+
     <ol>
         <li>
             <p>
@@ -578,14 +578,14 @@ HTTP/1.1 200 OK
                 Gzdecode() will raise an error if the content is not gzip-encoded.
                 No error? Return the decoded content, otherwise &hellip;
             </p>
-        </li>        
+        </li>
         <li>
             <p>
                 Assume deflate encoding and use a method such as PHP's <a href="http://www.php.net/manual/en/function.gzdeflate.php">gzdeflate()</a>.
                 GZdeflate() will raise an error if the content is not delfate-encoded.
                 No error? Return the decoded content, otherwise &hellip;
             </p>
-        </li>        
+        </li>
         <li>
             <p>
                 Return the response body as-is.
@@ -598,75 +598,75 @@ HTTP/1.1 200 OK
     <h3>
         Url encoding toggling
     </h3>
-    
+
     <p>
         Some URL characters have special meanings. One such special character is
-        the question mark (?) which is used to denote the start of the query 
+        the question mark (?) which is used to denote the start of the query
         portion of a URL.
-    </p>    
-    
+    </p>
+
     <p>
         <a href="http://en.wikipedia.org/wiki/Percent-encoding">Percent-encoding</a>
         is used to convey such characters literally in cases where the special
         meaning is not what you want.
     </p>
-    
+
     <p>
-        Percent-encoding a question mark as <code>%3F</code> allows it to be 
+        Percent-encoding a question mark as <code>%3F</code> allows it to be
         treated literally. It won't be treated as being a special character that
         denotes that start of the query portion of a URL.
     </p>
-    
+
     <p>
         If I wanted to send a query pair to example.com with a key of "?foo" and
         a value of "bar" I could use the URL <code>http://example.com/?%3Ffoo=bar</code>.
         The question mark at the start of the query pair key is percent-encoded
         and won't be treated as having a special meaning.
     </p>
-    
+
     <p>
         This example URL will be presented in the Chrome address bar
         as <code>http://example.com/??foo=bar</code> as this makes more sense
         to people. The second question mark will be percent-encoded behind the
         scenes.
     </p>
-    
+
     <p>
         The <a href="https://github.com/guzzle/guzzle">Guzzle HTTP client library</a>
         applies similar behind-the-scenes percent-encoding such that you don't
         need to correctly-encode URLs in your application when making requests.
     </p>
-    
+
     <p>
-        Here's the fun part: some HTTP applications are weird and will not 
+        Here's the fun part: some HTTP applications are weird and will not
         respond as expected if some special characters that you really thought
         should be percent-encoded are percent-encoded.
     </p>
-    
+
     <p>
         You will encounter cases where <code>http://example.com/??foo=bar</code>
         always returns 200 OK and <code>http://example.com/?%3Ffoo=bar</code> always
         returns 404 Not Found.
     </p>
-    
+
     <p>
         You will encounter cases where <code>http://example.com/??foo=bar</code>
         returns 200 OK and <code>http://example.com/?%3Ffoo=bar</code> does
         not <em>right now</em> due to a bug but may work again at a later time.
-    </p>    
-    
+    </p>
+
     <p>
         You will encounter cases where the HTTP application handling your request
         doesn't conform to the relevant RFCs and does not understand a request
         when special characters are percent-encoded.
     </p>
-    
+
     <p>
         The solution: retry, modifying the request URL to decode any percent-encoded
         characters. There will be some cases where a correct percent-encoded
         URL returns 404 Not Found and the equivalent decoded URL returns 200 OK.
     </p>
-    
+
     <p>
         I would not believe this had I not encountered it.
     </p>
@@ -674,54 +674,54 @@ HTTP/1.1 200 OK
 
 <div class="section" id="http-method-toggling">
     <h3>HTTP method toggling</h3>
-    
+
     <p>
         In most cases you need to perform a specific HTTP method against
         a specific URL to get a specific response.
     </p>
-    
+
     <p>
         A GET request against a given
         URL will retrieve a resource. A POST request against the same URL is not
         guaranteed to retrieve any resource let alone the same resource.
     </p>
-    
+
     <p>
         In some cases the HTTP application handling your request will not
         respond well for the HTTP method you chose as being the most appropriate
         but will respond well for an equivalent method.
     </p>
-    
+
     <p>
         If the purpose of your request can be satisfied with an equivalent HTTP
         method, retrying with a different method may work.
     </p>
-    
+
     <p>
         The only methods I can think of that could be considered equivalent
         with respect to what you are trying to achieve are HEAD and GET.
     </p>
-    
+
     <p>
         In the words of <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.4">RFC2616 section 9.4</a>:
     </p>
-    
+
     <blockquote>The HEAD method is identical to GET except that the server MUST NOT return a message-body in the response.</blockquote>
-    
+
     <p>
         If you only want the headers associated with a resource
         and not the full resource, a HEAD request seems the most sensible option.
         After all, if the HEAD request isn't supported by the application to which
-        your request is sent, it will return a <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.6">405 Method Not Allowed</a> 
+        your request is sent, it will return a <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.6">405 Method Not Allowed</a>
         or <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.5.2">501 Not Implemented</a> response
         and you can try again with a GET request.
     </p>
-    
+
     <p>
-        Sadly not all HTTP applications respond to a HEAD request in a manner 
+        Sadly not all HTTP applications respond to a HEAD request in a manner
         equivalent to how they might respond to a GET request:
     </p>
-    
+
     <ul>
         <li>
             <p>
@@ -729,7 +729,7 @@ HTTP/1.1 200 OK
                 (<a href="http://stackoverflow.com/">Stack Overflow</a> did so
                 around 9 October 2013, it doesn't at the time of writing)
             </p>
-        </li>        
+        </li>
         <li>
             <p>
                 some applications respond with nothing, eventually resulting
@@ -738,29 +738,29 @@ HTTP/1.1 200 OK
             </p>
         </li>
     </ul>
-    
+
     <p>
         If you need to perform HEAD requests against <em>arbitrary</em> URLs
         and you want to be able to reliably retrieve resource headers, don't.
         Alway use a GET request. Responses to HEAD requests on arbitrary URLs are neither
         reliable nor predictable.
     </p>
-    
+
 </div>
 
 <div class="section">
     <h3>Anything to add?</h3>
-    
+
     <p>
         The original title I prepared for this post was <em>The Complete Guide
         To Reliable HTTP Resource Retrieval In Applications</em>.
     </p>
-    
+
     <p>
         I realised that despite it being the most complete guide I have, it
         will surely be lacking in some way.
     </p>
-    
+
     <p>
         What other approaches are you aware of that can be used to increase
         the reliability of HTTP resource retrieval?

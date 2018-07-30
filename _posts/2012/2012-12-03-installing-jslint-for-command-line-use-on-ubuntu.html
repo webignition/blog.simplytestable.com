@@ -3,7 +3,7 @@ layout: default
 title: "Installing JSLint For Command Line Use On Ubuntu"
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
 <div class="section">
@@ -22,7 +22,7 @@ author:
     <p>
         We're going to use the <a href="https://npmjs.org/package/jslint">jslint package for Node.js</a>
         because:
-    </p>    
+    </p>
     <ul>
         <li>
             <p>
@@ -46,7 +46,7 @@ author:
                 node-jslint is available through the <a href="https://npmjs.org/">Node Package Manager</a>, making
                 it easy to install
             </p>
-        </li>        
+        </li>
     </ul>
     <h3>
         Prerequisites: Installing Node.js and npm
@@ -71,7 +71,7 @@ author:
     <p>
         It's most common to use NPM to install dependencies for a specific application
         and any packages will be installed relative to the directory you are in
-        when running NPM.        
+        when running NPM.
     </p>
     <p>
         We need to pick a common location to install the node-jslint package so
@@ -82,7 +82,7 @@ author:
     </p>
     <p>
         <code>cd /usr/share/node-jslint &amp;&amp; sudo npm install jslint</code>
-    </p>    
+    </p>
     <p>
         That's everything installed. Let's now see how to use it.
     </p>
@@ -112,15 +112,15 @@ author:
  #6 Unexpected '(space)'.
      // Line 9, Pos 1
  #7 Stopping.  (4% scanned).
-    // Line 52, Pos 14        
+    // Line 52, Pos 14
     </pre>
 
     <p>
         There we go, the output from linting a local JS file.
-    </p>    
-    
+    </p>
+
     <p>
-        If the output is not quite as you expect, call node-jslint without passing the path to a 
+        If the output is not quite as you expect, call node-jslint without passing the path to a
         JavaScript file to see the options you can use.
     </p>
     <p>

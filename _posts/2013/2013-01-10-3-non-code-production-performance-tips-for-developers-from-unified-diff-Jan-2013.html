@@ -3,7 +3,7 @@ layout: default
 title: "3 Non-Code Production Performance Improvements For Developers"
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
 <div class="section">
@@ -35,15 +35,15 @@ author:
         I added this to highlight that it is the environment under
         which your applications run that can determine, more than the application
         code itself, how well a service will perform.
-    </p>    
+    </p>
     <p>
         Following the public launch of Simply Testable in mid-October, I was
         facing <a href="/post-launch-post-mortem/">major capacity problems</a>
         that continually broke the service day after day.
     </p>
     <p>
-        I fixed these problems without touching a line of code and the results were 
-        orders of magnitude greater than any code change. I should also have added 
+        I fixed these problems without touching a line of code and the results were
+        orders of magnitude greater than any code change. I should also have added
         that no hardware changed.
     </p>
     <h3>The Developer Problem-Solving Mindset</h3>
@@ -53,10 +53,10 @@ author:
     </p>
     <p>
         You write code to build solutions to problems.
-    </p>       
+    </p>
     <p>
         You modify code to fix problems with your solutions to problems.
-    </p>    
+    </p>
     <p>
         You use code to solve your problems.
     </p>
@@ -64,47 +64,47 @@ author:
         Particularly as a developer who normally works within an organisation,
         you tend to think only in terms of code when looking to fix problems
         with a system.
-    </p>        
+    </p>
     <p>
         You may not consider looking beyond the code as a means of addressing
         problems.
-    </p>    
+    </p>
     <h3>And Then It Was All Broken (The Problems I Faced)</h3>
     <p>
         Simply Testable was failing massively on a daily basis:
-    </p>        
-        
+    </p>
+
     <ul>
         <li>
             <p>
-                As few as 12 concurrent full-site tests caused CPU bottlenecks              
+                As few as 12 concurrent full-site tests caused CPU bottlenecks
             </p>
         </li>
         <li>
             <p>
-                DB queries were 2 orders of magnitude slower          
+                DB queries were 2 orders of magnitude slower
             </p>
         </li>
         <li>
             <p>
-                MySQL reading/writing caused disk I/O bottlenecks            
+                MySQL reading/writing caused disk I/O bottlenecks
             </p>
         </li>
         <li>
             <p>
-                Full-site tests took 10x as long to complete           
+                Full-site tests took 10x as long to complete
             </p>
         </li>
         <li>
             <p>
-                Apache timeouts caused arbitrary failures               
+                Apache timeouts caused arbitrary failures
             </p>
         </li>
         <li>
             <p>
-                <a href="http://en.wikipedia.org/wiki/List_of_military_slang_terms#FUBAR">FUBAR</a> situations were frequent                
+                <a href="http://en.wikipedia.org/wiki/List_of_military_slang_terms#FUBAR">FUBAR</a> situations were frequent
             </p>
-        </li>        
+        </li>
     </ul>
     <p>
         I wasn't convinced that a move to more powerful hardware would resolve
@@ -149,14 +149,14 @@ author:
         Average continuous CPU usage under <strong>Apache + mod_php: 50%</strong>
     </p>
     <p>
-        Average continuous CPU usage under <strong>Nginx + php-fpm: 4%</strong>        
+        Average continuous CPU usage under <strong>Nginx + php-fpm: 4%</strong>
     </p>
-    
+
     <p>
         After making this change, I wrote in detail about <a href="/switching-from-apache-to-nginx/">switching from Apache to Nginx</a>
         for Ubuntu servers.
     </p>
-      
+
     <h3>2. MySQL loves RAM, give it lots lots</h3>
     <p>
         MySQL was using about 20% of CPU resource (prior to the above change)
@@ -171,30 +171,30 @@ author:
         reduce amount of CPU resource required for turning data into information.
     </p>
     <p>
-        The default out-the-box MySQL configuration in this respect is awful. 
-        It makes no reasonable use of abundant RAM resources, will under any 
-        significant usage patterns spend far too much time reading and 
+        The default out-the-box MySQL configuration in this respect is awful.
+        It makes no reasonable use of abundant RAM resources, will under any
+        significant usage patterns spend far too much time reading and
         re-reading data from disk and will not bother to remember the results
         of common operations on data.
     </p>
     <p>
-        If you're using MySQL and dealing with a non-trivial volume of data you 
+        If you're using MySQL and dealing with a non-trivial volume of data you
         should be using InnoDB tables. Let's just assume you are and not go off on
         a tangent.
     </p>
     <p>
         By far the single most important consideration for InnoDB performance is
-        the size of the InnoDB buffer pool, the memory area where InnoDB caches 
+        the size of the InnoDB buffer pool, the memory area where InnoDB caches
         table and index data.
     </p>
     <p>
-        Unfortunately all relevant configuration options surrounding this fail to 
+        Unfortunately all relevant configuration options surrounding this fail to
         refer to the word 'memory' in any way making it far less obvious that this
         is where you should be looking if you want to use as much memory as possible
         to cache your data.
     </p>
     <p>
-        The MySQL performance blog has a great article on 
+        The MySQL performance blog has a great article on
         <a href="http://www.mysqlperformanceblog.com/2007/11/03/choosing-innodb_buffer_pool_size/">choosing the correct InnoDB buffer pool size</a>.
         I chose 8GB which should result in MySQL using between 8GB and 16GB in which
         to cache table data and indexes.
@@ -206,8 +206,8 @@ author:
         MySQL <strong>out-the-box configuration: 20%</strong>
     </p>
     <p>
-        MySQL <strong>'lots of ram' configuration: 4%</strong>      
-    </p>  
+        MySQL <strong>'lots of ram' configuration: 4%</strong>
+    </p>
     <h3>
         3. Use /run/shm for impermanent file storage
     </h3>
@@ -217,7 +217,7 @@ author:
     </p>
     <p>
         This acts like a ramdisk but without the downside of pre-allocating a
-        portion of RAM to be used, instead scaling up or down the size of RAM used 
+        portion of RAM to be used, instead scaling up or down the size of RAM used
         as needed.
     </p>
     <p>
@@ -245,7 +245,7 @@ author:
     <p>
         An approximate before and after in numbers:
     </p>
-    
+
     <table class="table table-striped">
         <tr>
             <td>
@@ -258,65 +258,65 @@ author:
         <tr>
             <th>Concurrent tests</th>
             <td>12</td>
-            <td>40</td>    
+            <td>40</td>
             <td>3x</td>
         </tr>
         <tr>
             <th>Average CPU load</th>
             <td>30</td>
-            <td>4</td>    
+            <td>4</td>
             <td>7x</td>
         </tr>
         <tr>
             <th>Typical query time</th>
             <td>0.2 seconds</td>
-            <td>0.004 seconds</td>    
+            <td>0.004 seconds</td>
             <td>500x</td>
         </tr>
         <tr>
             <th>Complex query time</th>
             <td>1 second</td>
-            <td>0.02 seconds</td>    
+            <td>0.02 seconds</td>
             <td>50x</td>
         </tr>
         <tr>
             <th>FUBAR frequency</th>
             <td>daily</td>
-            <td>infrequent</td>    
+            <td>infrequent</td>
             <td>brilliant</td>
-        </tr>        
+        </tr>
     </table>
-    
+
     <h3>Important Bits To Remember</h3>
-    
+
     <h4>Do Not Use Apache In Production</h4>
-    
+
     <p>
         Nginx performance will not be worse than that of Apache out the box. You
         have nothing to lose going with Nginx and lots to gain.
-    </p>  
-    
+    </p>
+
     <p>
         As a side bonus, the "native" reverse proxying of Nginx is phenominal
         and the configuration language is a delight to work with.
     </p>
-    
+
     <h4>
         Default MySQL configuration is attrocious
     </h4>
-    
+
     <p>
         Set the innodb_buffer_pool_size configuration option to half your total RAM
         size and that's it. Don't waste time trying to configure the query cache,
         it's useless.
     </p>
-    
+
     <h4>
        Use /run/shm
     </h4>
-    
+
     <p>
         It makes impermanent disk I/O performance a non-issue.
     </p>
-    
+
 </div>

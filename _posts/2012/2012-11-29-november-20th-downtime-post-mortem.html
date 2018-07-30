@@ -3,7 +3,7 @@ layout: default
 title: "November 20th Downtime Post-Mortem"
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
 <div class="section">
@@ -25,38 +25,38 @@ author:
         Let me set the scene to explain what went wrong.
     </h3>
     <p>
-        The <a href="https://github.com/webignition/app.simplytestable.com">core application</a> 
-        is the brains behind the service, accepting requests to start new full-site tests, 
+        The <a href="https://github.com/webignition/app.simplytestable.com">core application</a>
+        is the brains behind the service, accepting requests to start new full-site tests,
         figuring out the URLs to test and farming out test tasks to a collection of 5 workers.
     </p>
     <p>
-        Transactions between the core application and the workers are stateless: 
-        each time the core  application talks to a worker, or each time a worker 
+        Transactions between the core application and the workers are stateless:
+        each time the core  application talks to a worker, or each time a worker
         talks to the core application, it's as if they've never met. No session data
         or cookies are used or needed.
     </p>
     <p>
-         The Symfony2 framework (on top of which all the Simply Testable applications 
-         are built) will, by default, persist the data for each session to a file 
-         on disk. It takes a bit of effort to stop this from happening and so to 
-         begin with I left the default session storage options in place and 
+         The Symfony2 framework (on top of which all the Simply Testable applications
+         are built) will, by default, persist the data for each session to a file
+         on disk. It takes a bit of effort to stop this from happening and so to
+         begin with I left the default session storage options in place and
          happily ignored the session data files.
     </p>
     <p>
-        About three weeks ago I put in place <a href="https://github.com/webignition/app.simplytestable.com/commit/cf4a718ea77f7e1c2657ce33b6cd792453ebe84b">a change</a> 
-        to prevent the core application and the workers from needlessly storing 
-        session data in files and decided to delete old, needless session data files.        
+        About three weeks ago I put in place <a href="https://github.com/webignition/app.simplytestable.com/commit/cf4a718ea77f7e1c2657ce33b6cd792453ebe84b">a change</a>
+        to prevent the core application and the workers from needlessly storing
+        session data in files and decided to delete old, needless session data files.
     </p>
     <h3>
         Spotting a very large collection of session data files
     </h3>
-    <p>       
-        I noticed that the core application's cache directory contained many session 
+    <p>
+        I noticed that the core application's cache directory contained many session
         data files.
     </p>
-    <p>       
+    <p>
         Many, many.
-    </p>    
+    </p>
     <p>
         Very many many.
     </p>
@@ -73,25 +73,25 @@ author:
         which is intended to truncate output.
     </p>
     <p>
-        <code>du -a | head -1 | awk '{print $2}'</code> will get you the 
+        <code>du -a | head -1 | awk '{print $2}'</code> will get you the
         name of the first file in a directory when nothing else will seem to work.
         Piping the output of this to the <code>rm</code> command lets you
         delete the first file in a directory.
     </p>
     <p>
-        The whole process took about a minute to complete and I didn't want to 
+        The whole process took about a minute to complete and I didn't want to
         repeat the process manually millions of times.
     </p>
     <p>
-        I set up a cron job to run every 5 minutes to delete the first 1000 of the core application's old 
-        session data files and this ran happily for a couple of weeks. It ran happily until 
+        I set up a cron job to run every 5 minutes to delete the first 1000 of the core application's old
+        session data files and this ran happily for a couple of weeks. It ran happily until
         November 20 when it stopped working in quite a horrible way.
-    </p>  
+    </p>
     <h3>
         Uninterruptible I/O processes are bad
     </h3>
     <p>
-        The process seeking a file to delete got stuck in an uninterruptible 
+        The process seeking a file to delete got stuck in an uninterruptible
         state. It got stuck in such a way that it could not be stopped.
     </p>
     <p>
@@ -100,8 +100,8 @@ author:
     </p>
     <p>
         With 1707 processes trying to list and then delete some files being
-        stuck in an uninterruptable state, all disk read and write operations ended 
-        up getting stuck in an uninterruptable state waiting for previously-started 
+        stuck in an uninterruptable state, all disk read and write operations ended
+        up getting stuck in an uninterruptable state waiting for previously-started
         operations to complete.
     </p>
     <p>
@@ -109,14 +109,14 @@ author:
         to log files, database servers read from and write to data files, the applications
         we wrote ourselves log various pieces of information to help us figure
         out when things go wrong.
-    </p>    
+    </p>
     <p>
-        All applications on which Simply Testable depends got stuck waiting for logging 
+        All applications on which Simply Testable depends got stuck waiting for logging
         processes to write to disk.
     </p>
     <p>
         Uninterruptible processes cannot, by definition, by interrupted.
-    </p>    
+    </p>
     <p>
         No <code>kill -9 &lt;pid&gt;</code> here, no matter if you're the owner
         of the process or root or any other super or magic user.
@@ -152,7 +152,7 @@ author:
     </p>
     <p>
         This was the only option. I had no choice.
-    </p>    
+    </p>
     <p>
         This still didn't stop me
         hesitating over the button I had to click that would send a request
@@ -169,7 +169,7 @@ author:
     </p>
     <p>
         &hellip;
-    </p>    
+    </p>
     <p>
         Open terminal, <code>ping 5.9.84.201</code>. Wait. <i>Destination host unreachable</i>.
     </p>
@@ -178,7 +178,7 @@ author:
     </p>
     <p>
         Ever waited for a production server to restart after being powered off in
-        the most potentially-damaging way?        
+        the most potentially-damaging way?
     </p>
     <p>
         It's a long wait. The server may not start up again. How long do you wait?
@@ -196,22 +196,22 @@ author:
     </p>
     <p>
         Time to send an email to the data center to explain in detail what had
-        gone wrong and what I'd done to try and fix it? It'll at least pass the 
+        gone wrong and what I'd done to try and fix it? It'll at least pass the
         time.
     </p>
     <p>
         About another 5 minutes passed whilst I wrote out the basics of the email
-        to send to the data center. I checked it clearly covered what state the 
+        to send to the data center. I checked it clearly covered what state the
         server was in at the point I issued the hard power off request, what I'd
         like them to do (see if the disk was dead) and what timescales I'd be
         looking at to get any hardware replaced if needs be.
     </p>
     <p>
         One last check before sending &hellip;
-    </p>    
-    <p>        
+    </p>
+    <p>
         <code>ping 5.9.84.201</code>. <i>64 bytes from 5.9.84.201: icmp_req=1 ttl=54 time=37.5 ms</i>.
-    </p> 
+    </p>
     <p>
         Brilliant, looks like everything is fine after all. It's been over ten minutes,
         the server is responding to ping requests, let's verify that some basic
@@ -226,8 +226,8 @@ author:
         SSH is dead simple, isn't it?
     </p>
     <p>
-        <code>telnet simplytestable.com 22</code>. Wait. <i>Connection refused</i>.        
-    </p>    
+        <code>telnet simplytestable.com 22</code>. Wait. <i>Connection refused</i>.
+    </p>
     <p>
         Ah. Oh dear. More than 10 minutes and even then the SSH server is not
         up and running. Maybe the hard disk is dead after all.
@@ -238,8 +238,8 @@ author:
         go away.
     </p>
     <p>
-        I'll take a grumpy server over a silent server any day. A connection timeout 
-        would be bad. Having a connection refused is almost worth celebrating.        
+        I'll take a grumpy server over a silent server any day. A connection timeout
+        would be bad. Having a connection refused is almost worth celebrating.
     </p>
     <h3>
         Epilogue
@@ -250,7 +250,7 @@ author:
     <ul>
         <li>
             <p>
-                Never leave any non-essential cron job in place if you're not going 
+                Never leave any non-essential cron job in place if you're not going
                 to be around to pick up the pieces when it goes wrong.
             </p>
         </li>
@@ -259,7 +259,7 @@ author:
                 Put in place a monitoring system so that I recieve SMS alerts
                 when something bad goes wrong.
             </p>
-        </li>        
+        </li>
     </ul>
     <p>
         For now all is ok, everything is working just as well as it ever has. And

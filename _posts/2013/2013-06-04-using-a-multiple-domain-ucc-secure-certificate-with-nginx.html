@@ -3,7 +3,7 @@ layout: default
 title: "Using a Multiple-Domain (UCC) Secure Certificate With Nginx"
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
 <div class="section">
@@ -15,7 +15,7 @@ author:
         to use SSL (or HTTPS if you prefer).
     </p>
     <p>
-        This means that the following domains are now all being served over SSL:        
+        This means that the following domains are now all being served over SSL:
     </p>
     <ul class="linklist">
         <li><a href="https://simplytestable.com/">https://simplytestable.com/</a></li>
@@ -27,7 +27,7 @@ author:
         Sidenote1: I haven't yet set up SSL for app.simplytestable.com as I didn't
         quite set up the correct subject alternative names for the secure certificate
         and at present my secure certificate doesn't cover app.simplytestable.com.
-    </p>    
+    </p>
     <p>
         Sidenote2: I couldn't secure help.simplytestable.com and blog.simplytestable.com
         as these static sites are hosted on <a href="http://pages.github.com/">GitHub Pages</a>
@@ -37,7 +37,7 @@ author:
         Here's a quick run through of how I went about choosing the correct type of secure certificate
         and then setting up Nginx to use a single certificate to for multiple related domains on the same host.
     </p>
-    
+
 </div>
 
 <div class="section">
@@ -52,7 +52,7 @@ author:
     <ul>
         <li>
             <p>for N hostnames, get N single-domain secure certificates</p>
-        </li>        
+        </li>
         <li>
             <p>
                 get a single wildcard secure certificate covering *.example.com
@@ -62,7 +62,7 @@ author:
     <p>
         There's now a third option thanks to the the <a href="http://en.wikipedia.org/wiki/SubjectAltName">subject alternative name</a> extension
         to X.509.
-    </p>    
+    </p>
     <p>
         This extension allows us to opt for a single secure certifcate that
         is valid for a collection of listed hostnames. This is called a unified
@@ -78,19 +78,19 @@ author:
         As I have just one primary domain and three subdomains to cover (that's
         four in total), I opted for a multiple-domain (UCC) secure certificate
         from GoDaddy as it supports up to five related domains.
-    </p>    
+    </p>
 </div>
 
 <div class="section">
     <h3>
         Installing
     </h3>
-    
+
     <ol>
         <li>
             <h4>Pop your secure certificate on your server</h4>
             <p>
-                You will have received a <code>.crt</code> file from your 
+                You will have received a <code>.crt</code> file from your
                 signing authority. This is your secure certificate.
             </p>
             <p>
@@ -104,7 +104,7 @@ author:
             <p>
                 You'll also need to pop your secure certificate's <code>.key</code>
                 file on your server too (this would have been created
-                at the time you generated a certificate signing request). This 
+                at the time you generated a certificate signing request). This
                 also can go anywhere but popping it in the same location
                 as your <code>.crt</code> file will make life easier.
             </p>
@@ -116,23 +116,23 @@ author:
             </h4>
             <p>
                 You may have to create your certificate chain.
-            </p>             
+            </p>
             <p>
                 Whether you need to depends on whether the signing authority from which
                 you purchased your secure certificate has used an intermediate
-                certificate that is not present in the certificate base of well-known 
+                certificate that is not present in the certificate base of well-known
                 trusted certificate authorities which is distributed with a particular browser.
             </p>
             <p>
                 There's no harm in chaining your own secure certificate with an
                 intermediate certificate. If you were given an intermediate
-                certificate you should probably chain it with yours:               
+                certificate you should probably chain it with yours:
             </p>
             <p>
                 Here's how I did that:
             </p>
             <pre>cat simplytestable.com.crt gd_bundle.crt > simplytestable.com.chained.crt</pre>
-        </li>        
+        </li>
 
         <li>
             <h4>
@@ -154,11 +154,11 @@ author:
             </p>
             <p>
                 I added the following in <code>/etc/nginx/conf.d/ssl.conf</code>:
-            </p>            
+            </p>
             <pre>ssl_certificate     /home/simplytestable/ssl/simplytestable.com.chained.crt;
 ssl_certificate_key /home/simplytestable/ssl/simplytestable.com.key;</pre>
-        </li>        
-        
+        </li>
+
         <li>
             <h4>
                 Update your <em>server</em> (vhost) to turn on SSL
@@ -175,17 +175,17 @@ ssl_certificate_key /home/simplytestable/ssl/simplytestable.com.key;</pre>
 # ..
 }</pre>
         </li>
-        
+
     </ol>
 
-    
+
 </div>
 
 <div class="section">
     <h3>
         Additional bonus configuration
     </h3>
-    
+
     <p>
         The above will get your single UCC secure certificate working with multiple
         domains on the same host on the same IP.
@@ -193,14 +193,14 @@ ssl_certificate_key /home/simplytestable/ssl/simplytestable.com.key;</pre>
 
     <p>
         There are a handful of additional configuration changes I made.
-    </p>    
-    
+    </p>
+
     <p>
         These are not absolutely essential or are specific to running a PHP
         application under Nginx and php-fpm and so they live here in the bonus
         additional configuration section.
     </p>
-    
+
     <ol>
         <li>
             <h4>Going full SSL (HTTPS only and no HTTP)</h4>
@@ -220,7 +220,7 @@ ssl_certificate_key /home/simplytestable/ssl/simplytestable.com.key;</pre>
                 redirect HTTP traffic to HTTPS.
             </p>
             <p>
-                You can probably achieve the same with just one <em>server</em> 
+                You can probably achieve the same with just one <em>server</em>
                 record but the resulting configuration will likely be overly complex.
             </p>
             <p>
@@ -247,7 +247,7 @@ server {
     server_name example.com;
 
     # ...
-}</pre>            
+}</pre>
         </li>
 
         <li>
@@ -258,13 +258,13 @@ server {
                 If you're running a PHP application under php-fpm you're probably
                 using <em>fastcgi_param</em> directives to pass environment
                 variables to PHP.
-            </p>             
+            </p>
             <p>
                 Here's a cut-down <em>server</em> record I was previously
-                using for a Symfony2-based application:                
+                using for a Symfony2-based application:
             </p>
             <pre>server {
-    # ... 
+    # ...
 
     # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
     location ~ ^/(app|app_dev)\.php(/|$) {
@@ -275,14 +275,14 @@ server {
         fastcgi_param  HTTPS off;
     }
 
-    # ... 
+    # ...
 }</pre>
             <p>
                 Notice the <code>fastcgi_param  HTTPS off</code> line?
                 This sets the <code>_$SERVER['HTTPS']</code> environment variable
                 in PHP.
-            </p>       
-            
+            </p>
+
             <p>
                 If you're serving your site over HTTPS and have the above (incorrect) configuration,
                 you're likely to encounter your HTTPS traffic being interpretted
@@ -291,18 +291,18 @@ server {
             </p>
 
             <p>
-                This can cause some interesting problems, such as HTTP to HTTPS 
+                This can cause some interesting problems, such as HTTP to HTTPS
                 to HTTP to HTTPs redirect loops or Nginx refusing to
                 handle a plain HTTP request being sent to a HTTPS url. Neither is a good thing.
             </p>
-            
+
             <p>
                 This is the more correct (i.e. doesn't break the entire application)
                 configuration as based on the above example:
             </p>
-            
+
             <pre>server {
-    # ... 
+    # ...
 
     # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
     location ~ ^/(app|app_dev)\.php(/|$) {
@@ -313,10 +313,10 @@ server {
         fastcgi_param  HTTPS on;
     }
 
-    # ... 
+    # ...
 }</pre>
         </li>
-    </ol>    
+    </ol>
 </div>
 
 <div class="section">
@@ -346,15 +346,15 @@ server {
         </li>
         <li>
             <p>
-                Set your <em>server</em> record to list on port 443 and turn 
+                Set your <em>server</em> record to list on port 443 and turn
                 on SSL.
             </p>
-        </li>        
+        </li>
         <li>
             <p>
                 Reload the nginx configuration: <code>sudo service nginx reload</code>
             </p>
         </li>
     </ol>
-    
+
 </div>

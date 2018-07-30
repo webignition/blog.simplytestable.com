@@ -4,7 +4,7 @@ title: "Internationalised Domain Name (IDN) Support Improved"
 date: 2012-12-27 15:30
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
 <div class="section">
@@ -12,40 +12,40 @@ author:
         Thanks to the feedback from <a href="https://twitter.com/igll">@igll</a>,
         internationalised domain name (IDN) support has been improved.
     </p>
-    
+
     <p>
         I'll explain now what the problem was and how it has been fixed.
     </p>
-    
+
     <p>
         When discovering the URLs to test for a given site, the URLs that are discovered
         are compared against the site that was submitted for testing so that we
         only try to test URLs that are relevant.
     </p>
-    
+
     <p>
         Let's say you submit <code>http://example.com</code> for testing and we
         find in the sitemap the two URLs <code>http://example.com/foo/</code> and
         <code>http://foobar.com/bar/</code>. We'll compare the domain of the site
         submitted for testing with the domain name in the URLs we find and discard
         those that don't match. In this case, the second URL would be discarded.
-    </p> 
-    
+    </p>
+
     <p>
         We weren't correctly taking into consideration the two ways you can represent
-        an IDN. 
+        an IDN.
     </p>
-    
+
     <p>
         Consider <code>http://econom.ía.com</code>. The character following
         <code>econom.</code> is not the lowercase English vowel <code>i</code>,
         it's a character that looks similar but which has an accent instead of a dot.
     </p>
-    
+
     <p class="accented-charater-comparison">
         <i>í</i> vs <i>i</i>. See? Good, back to the point.
     </p>
-    
+
     <p>
         You can present the above URL as <code>http://econom.ía.com</code>
         or <code>http://econom.xn--a-iga.com</code>. In the latter, the character
@@ -56,26 +56,26 @@ author:
         In fact, if you submit <code>http://econom.ía.com</code> for testing,
         our system see this as you submitting <code>http://econom.xn--a-iga.com</code>
         for testing as, behind the scenes, this is what computers really see.
-    </p>    
-    
+    </p>
+
     <p>
         When comparing discovered URLs with the site that was submitted for testing,
         we weren't comparing things quite right. In some cases, we were asking: Does
-        <code>http://econom.ía.com/example</code> match the domain name 
+        <code>http://econom.ía.com/example</code> match the domain name
         <code>http://econom.xn--a-iga.com</code>? If you compare them literally,
         the answer is no. That's what we were doing.
-    </p>   
+    </p>
 
-    
+
     <p>
         If you were to submit <code>http://econom.xn--a-iga.com</code> for testing
         and the sitemap contained a URL of <code>http://econom.ía.com/example</code>,
         we would previously have discarded it as the domain names didn't match.
     </p>
-    
+
     <p>
         We now compare the domain names in URLs in an IDN-aware manner so that
         such URLs are not discarded.
     </p>
-    
+
 </div>

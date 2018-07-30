@@ -4,7 +4,7 @@ title: "Opensource Libraries We've Created and How We Use Them (Part Two Point O
 short_title: "Opensource Libraries We've Created and How We Use Them (Part 2.1)"
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
 <div class="section">
@@ -15,7 +15,7 @@ author:
     <p>
         Such libraries address generic matters that should be useful to others. They
         have been opensource under an MIT license from day one.
-    </p>     
+    </p>
     <p>
         In <a href="/opensource-libraries-weve-created-and-how-we-use-them-part-one-url-handling/">part one of this series</a>, I talked about what we use for handling URLs.
     </p>
@@ -31,8 +31,8 @@ author:
         <li>
             <i class="fa fa-github"></i>
             <a href="https://github.com/webignition/http-client">webignition/http-client</a>
-            <a class="build-status" href="http://travis-ci.org/webignition/http-client"><img src="https://secure.travis-ci.org/webignition/http-client.png?branch=master" /></a>            
-        </li>      
+            <a class="build-status" href="http://travis-ci.org/webignition/http-client"><img src="https://secure.travis-ci.org/webignition/http-client.png?branch=master" /></a>
+        </li>
     </ul>
     <p>
         We need to query robots.txt and sitemap.xml or sitemap.txt files to get
@@ -41,7 +41,7 @@ author:
     </p>
     <p>
         In short, we test the web. The web uses HTTP. We deal with a ton of HTTP requests.
-    </p>    
+    </p>
     <p>
         Our <a href="https://github.com/webignition/http-client">HTTP client library</a>
         handles getting responses to HTTP requests in a way upon which we can rely.
@@ -49,9 +49,9 @@ author:
     <h2>The need for an HTTP client</h2>
     <p>
         In PHP, you can handle HTTP messaging in variety of ways. You can create
-        your own HTTP layer on top of bare socket connections, you can use the 
+        your own HTTP layer on top of bare socket connections, you can use the
         PECL HTTP extension or you can just take advantage of HTTP wrappers for
-        file-based operations and pretend you're just reading a file.       
+        file-based operations and pretend you're just reading a file.
     </p>
     <p>
         We use the PECL HTTP extension which provides <a href="http://php.net/manual/en/class.httprequest.php">HTTPRequest</a>,
@@ -67,14 +67,14 @@ author:
         <p>
            It also provides means for client negotiation of preferred language and
            charset, as well as a convenient way to exchange arbitrary data with
-           caching and resuming capabilities. 
-        </p>        
-    </blockquote>    
+           caching and resuming capabilities.
+        </p>
+    </blockquote>
     <p>
         Sounds like we can use the HTTP extension for all our HTTP needs. But try
         regularly handling many, many HTTP requests and you'll start to appreciate
         the brittleness of bare HTTP messaging.
-    </p>   
+    </p>
     <p>
         An HTTP request is sent and an HTTP response containing what you expected
         is retrieved. This happens for the majority of requests.
@@ -89,11 +89,11 @@ author:
         Some responses (quite validly) don't contain the resource you requested
         but instead contain a pointer to the resource you requested, with 301
         and 302 responses being most common.
-    </p>      
+    </p>
     <p>
         You'll also notice that requests fail <em>all the time</em>.
-    </p>    
-    <p>       
+    </p>
+    <p>
         An HTTP conversation in isolation is subject to a range of failure modes.
         One of many DNS systems may be in a huff and the request to resolve a
         domain to an IP may timeout. An HTTP server may be busy and may take
@@ -129,7 +129,7 @@ author:
     </p>
     <p>
         Our <a href="https://github.com/webignition/http-client">HTTP client library</a>
-        handles all this for us. 
+        handles all this for us.
     </p>
     <p>
         You give it an HTTP request and it then gives back an HTTP message in
@@ -160,7 +160,7 @@ author:
     </p>
     <p>
         For larger sites with 10,000+ unique URLs, you might get away with it once
-        in a lifetime if you're particularly lucky. The entire crawling process will 
+        in a lifetime if you're particularly lucky. The entire crawling process will
         fail every single time as far as you can tell.
     </p>
     <p>
@@ -183,5 +183,5 @@ author:
         That crawl was carried out over a 3G wireless  Internet service, purely to
         throw in a few more failure modes than you'd more commonly encounter for
         a wired server.
-    </p>    
+    </p>
 </div>

@@ -4,7 +4,7 @@ title: "Opensource Libraries We've Created and How We Use Them (Part Two Point T
 short_title: "Opensource Libraries We've Created and How We Use Them (Part 2.2)"
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
 <div class="section">
@@ -15,7 +15,7 @@ author:
     <p>
         Such libraries address generic matters that should be useful to others. They
         have been opensource under an MIT license from day one.
-    </p>     
+    </p>
     <p>
         In <a href="/opensource-libraries-weve-created-and-how-we-use-them-part-one-url-handling/">part one of this series</a>,
         I talked about what we use for handling URLs.
@@ -31,14 +31,14 @@ author:
         <li>
             <i class="fa fa-github"></i>
             <a href="https://github.com/webignition/http-client">webignition/http-client</a>
-            <a class="build-status" href="http://travis-ci.org/webignition/http-client"><img src="https://secure.travis-ci.org/webignition/http-client.png?branch=master" /></a>            
-        </li>      
-    </ul>    
+            <a class="build-status" href="http://travis-ci.org/webignition/http-client"><img src="https://secure.travis-ci.org/webignition/http-client.png?branch=master" /></a>
+        </li>
+    </ul>
     <p>
         In <a href="/http-failures-and-what-to-test-for-in-http-applications/">&ldquo;HTTP Failures And What To Test For In HTTP Applications&rdquo;</a>
-        I introduced the means by which HTTP conversations can fail and the common 
+        I introduced the means by which HTTP conversations can fail and the common
         cases you need to cover to ensure your application is resilient:
-    </p>    
+    </p>
     <ul>
         <li>
             <p>Invalid URL format</p>
@@ -48,21 +48,21 @@ author:
         </li>
         <li>
             <p>Connection or transfer timeout</p>
-        </li>        
+        </li>
     </ul>
     <p>
-        To be sure you deal correctly with these failure conditions, as well as 
+        To be sure you deal correctly with these failure conditions, as well as
         ensuring that you avoid such conditions when you're expecting code to
         behave predictably during unit tests, you need a means of receiving
         consistent responses or generating expected failure scenarios.
-    </p>     
+    </p>
     <h2>Achieving Consistency in HTTP Conversations</h2>
-   
+
     <p>
-        If you want to consistently receive an expected successful HTTP response 
+        If you want to consistently receive an expected successful HTTP response
         for a given HTTP request you need to hard-code the desired response.
         Similarly if you want to consistently encounter a predictable HTTP failure
-        condition for an HTTP request you need to hard-code the conditions for the 
+        condition for an HTTP request you need to hard-code the conditions for the
         required failure to occur.
     </p>
     <p>
@@ -71,7 +71,7 @@ author:
         responses to known requests. Indeed you can't even depend on there being
         any other hosts at all.
     </p>
-    <h2>Mocking HTTP Conversations</h2>       
+    <h2>Mocking HTTP Conversations</h2>
     <p>
         We use the mocking feature of our <a href="https://github.com/webignition/http-client">HTTP client library</a>
         to ensure that code executing under unit tests receives consistent HTTP responses or
@@ -113,10 +113,10 @@ print $response->getResponseCode(); // 200
 print $response->getBody(); // Hello World!
     </pre>
     <p>
-        This is great if you have a request object to hand and a response object 
+        This is great if you have a request object to hand and a response object
         to match. If you're expecting a chain of <code>301</code> responses to be followed,
-        you're unable to control the automatic generation of requests to follow 
-        such redirects.        
+        you're unable to control the automatic generation of requests to follow
+        such redirects.
     </p>
     <p>
         If you know the essence of the request that will be made, you can tie in a
@@ -141,12 +141,12 @@ $httpClient->getCommandResponseList()->set(
 $response = $httpClient->getResponse($request);
 print $response->getResponseCode(); // 200
 print $response->getBody(); // Hello Again!
-    </pre> 
+    </pre>
     <p>
         The <a href="https://github.com/webignition/http-client/blob/master/src/webignition/Http/Mock/ResponseList/RequestResponseList.php">RequestResponseList</a>
         lets you specify directly responses for <code>\HttpRequest</code> objects
         that just so happen to be lying around. The <a href="https://github.com/webignition/http-client/blob/master/src/webignition/Http/Mock/ResponseList/CommandResponseList.php">CommandResponseList</a>
-        lets you specify directly responses for HTTP commands you know are to be 
+        lets you specify directly responses for HTTP commands you know are to be
         issued.
     </p>
     <p>
@@ -154,11 +154,11 @@ print $response->getBody(); // Hello Again!
         which you can feed responses for requests or HTTP commands known to happen.
     </p>
     <p>
-        When running unit tests you know the test data that is to be sent in 
+        When running unit tests you know the test data that is to be sent in
         requests and you know the responses you want to receive back but without being
         able to modify the application logic you can't tell the HttpClient
         directly the responses to use.
-    </p>  
+    </p>
     <p>
         The <a href="https://github.com/webignition/http-client/blob/master/src/webignition/Http/Mock/ResponseList/StoredResponseList.php">StoredResponseList</a>
         solves this.
@@ -185,7 +185,7 @@ $httpClient->getStoredResponseList()->setFixturesPath(
 $response = $httpClient->getResponse($request);
 print $response->getResponseCode(); // 200
 print $response->getBody(); // Hello World!
-    </pre> 
+    </pre>
     <p>
         The file <code>/home/example/fixtures/cda711beab03b2677abd1b15ed4d1114</code>
         contains:
@@ -207,7 +207,7 @@ $httpClient = new HttpClient();
 $httpClient->getStoredResponseList()->setFixturePath('/home/example/HttpResponses');
 print $httpClient->getStoredResponseList()->getRequestFixturePath($request);
 // /home/example/HttpResponses/cda711beab03b2677abd1b15ed4d1114
-    </pre>     
+    </pre>
     <h2>Mocking Failure Conditions</h2>
     <p>
         We can return known responses to known requests but we also need things
@@ -229,7 +229,7 @@ print $httpClient->getStoredResponseList()->getRequestFixturePath($request);
     </p>
     <p>
         The mock HTTP client defaults to knowing all hosts and will never
-        encouter a DNS lookup failure. This is what you want for the 
+        encouter a DNS lookup failure. This is what you want for the
         majority of your unit tests.
     </p>
     <p>
@@ -243,13 +243,13 @@ use webignition\Http\Mock\Client\Client as HttpClient;
 
 $request = new \HttpRequest('http://blog.simplytestable.com/');
 
-$httpClient = new HttpClient();        
+$httpClient = new HttpClient();
 $httpClient->setKnowsSpecifiedHostsOnly();
-$httpClient->setKnownHost('example.com');     
+$httpClient->setKnownHost('example.com');
 
 try {
     $response = $httpClient->getResponse($request);
-} catch (CurlException $curlException) {            
+} catch (CurlException $curlException) {
     // We'll end up here as the client can't lookup blog.simplytestable.com
 }
     </pre>
@@ -269,7 +269,7 @@ try {
     <p>
         <a href="http://symfony.com/">Symfony</a> services make this very easy. A
         <code>httpClient</code> service is defined and is injected into whichever
-        other services require it when they are instantiated. The test environment 
+        other services require it when they are instantiated. The test environment
         uses <a href="https://github.com/webignition/app.simplytestable.com/blob/master/src/SimplyTestable/ApiBundle/Resources/config/services_test.yml">a test-specific service definition</a>
         which simply specifies that the <code>httpClient</code> service use the mock HTTP client
         class.

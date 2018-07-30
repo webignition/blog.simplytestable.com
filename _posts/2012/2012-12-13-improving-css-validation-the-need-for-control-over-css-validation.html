@@ -4,7 +4,7 @@ title: "Improving CSS Validation: The Need for Control Over The CSS Validator"
 date: 2012-12-14 11:00
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
 <div class="section">
@@ -15,8 +15,8 @@ author:
         useful where it previously was not.
     </p>
     <p>
-        Across a short series of blog posts, I'd like to look now at why CSS 
-        validation options are needed, the range of  options I considered, where I 
+        Across a short series of blog posts, I'd like to look now at why CSS
+        validation options are needed, the range of  options I considered, where I
         got the options from and how I decided on which of these to implement.
     </p>
     <p>
@@ -24,8 +24,8 @@ author:
         CSS validation output into something that's of much greater value.
     </p>
     <p>
-        CSS validation options are essential. Not  merely useful or a nice-to-have 
-        feature. They're essential. Without any control over the CSS validator, 
+        CSS validation options are essential. Not  merely useful or a nice-to-have
+        feature. They're essential. Without any control over the CSS validator,
         the default output has very little value.
     </p>
     <p>
@@ -42,7 +42,7 @@ author:
         You're likely to link to third-party CSS resources such as <a href="http://jqueryui.com/">jQuery UI</a> themes
         or the <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap framework</a>. Perhaps you'll host copies of these
         yourself, however many of you will link to those provided by common content
-        delivery networks such as <a href="https://developers.google.com/speed/libraries/">Google's Hosted Libraries</a> or 
+        delivery networks such as <a href="https://developers.google.com/speed/libraries/">Google's Hosted Libraries</a> or
         <a href="http://cdnjs.com/">cdnjs</a>.
     </p>
     <p>
@@ -50,11 +50,11 @@ author:
         third-party libraries.
     </p>
     <p>
-        Invalid rules in Twitter Bootstrap's CSS are probably present for a very good 
-        reason. You can have invalid CSS that does not break anything. 
+        Invalid rules in Twitter Bootstrap's CSS are probably present for a very good
+        reason. You can have invalid CSS that does not break anything.
     </p>
     <p>
-        You could be using vendor extensions to take advantage in specific browsers 
+        You could be using vendor extensions to take advantage in specific browsers
         of upcoming CSS features yet to be formally specified. CSS allows for
         vendor extensions in this manner, however the CSS validator raises such issues as either
         warnings or errors.
@@ -68,15 +68,15 @@ author:
     <p>
         CSS validity is not an absolute requirement. Invalid CSS does not
         implicitly mean that there is an error that must be addressed.
-    </p>    
+    </p>
     <p>
         CSS rules that are not understood by a CSS processor will be ignored.
-        If some CSS is invalid the world will not end but you might find some 
+        If some CSS is invalid the world will not end but you might find some
         presentational aspects are not as you expect.
     </p>
     <p>
         The importance of examining CSS validity lies in being able to ensure
-        that the CSS you write yourself is correct as far as you intended and to 
+        that the CSS you write yourself is correct as far as you intended and to
         ensure that any unusual behaviour in a given browser is due to that browser
         being odd and not due to your potentially invalid CSS making the browser
         appear to behave oddly.
@@ -89,5 +89,5 @@ author:
     <p>
         In the next in this series I'll look at the validation options I considered
         and what I chose to implement.
-    </p>  
+    </p>
 </div>

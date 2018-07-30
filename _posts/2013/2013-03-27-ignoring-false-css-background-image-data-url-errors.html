@@ -1,15 +1,15 @@
 ---
 layout: default
 title: "Ignoring False CSS Background Image Data Url Errors"
-date: 2013-03-27 10:40 
+date: 2013-03-27 10:40
 author:
     name: Jon Cram
-    url: http://webignition.net
+    url: https://github.com/webignition
 ---
 
 <div class="section">
     <p>
-        I learned yesterday from <a href="https://twitter.com/johnholtripley">@johnholtripley</a>        
+        I learned yesterday from <a href="https://twitter.com/johnholtripley">@johnholtripley</a>
         that CSS background image data URLs were presenting CSS validation errors incorrectly.
     </p>
     <p>
@@ -58,7 +58,7 @@ P9/AFGGFyjOXZtQAAAAAElFTkSuQmCC);
         without quotes?
     </p>
     <p>
-        You're allowed to use both <code>url("quoted");</code> and <code>url(unquoted);</code> 
+        You're allowed to use both <code>url("quoted");</code> and <code>url(unquoted);</code>
         values (so long as you properly escape quote characters).
     </p>
     <p>
@@ -73,5 +73,5 @@ P9/AFGGFyjOXZtQAAAAAElFTkSuQmCC);
         If you now <a href="http://gears.simplytestable.com/?html-validation=0&css-validation=1&css-validation-ignore-warnings=1&css-validation-ignore-common-cdns=1&css-validation-vendor-extensions=warn&js-static-analysis=0&website=blog.simplytestable.com">run a full-site CSS validation test</a>
         and happen to be using valid unquoted data URLs you'll no longer be bothered
         by such false errors.
-    </p>    
+    </p>
 </div>
