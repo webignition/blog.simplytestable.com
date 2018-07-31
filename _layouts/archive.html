@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include element/head.html %}
+    <body id="{% include page/id %}">
+        {% include header/navigation.html %}
+        {% include header/introduction.html %}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% include posts/archive.html %}
+                </div>
+                <div class="col-md-4 sidebar">
+                    {% include sidebar/newsletter.html %}
+                    {% include sidebar/twitter-latest.html %}
+                    {% include sidebar/recent.html %}
+                    {% include sidebar/repositories.html %}
+                </div>
+            </div>
+        </div>
+
+        {% include element/script_twitter.html %}
+    </body>
+</html>
