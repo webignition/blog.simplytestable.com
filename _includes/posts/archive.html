@@ -8,7 +8,7 @@
         {% if post.newsletter %}
         {% include posts/newsletter/intro.html %}
         {% else %}
-        {{ post.excerpt | remove: '<div class="section section-first">' | remove: '</div>' }}
+        {{ post.excerpt | remove: '<div class="section section-first">' | remove: '<div class="section">' | remove: '</div>' }}
         {% endif %}
 
     </li>

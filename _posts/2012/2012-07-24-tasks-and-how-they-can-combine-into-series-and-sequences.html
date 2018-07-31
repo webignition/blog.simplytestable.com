@@ -4,6 +4,7 @@ title: "Tasks and How They Combine Into Series and Sequences"
 author:
     name: Jon Cram
     url: https://github.com/webignition
+excerpt_separator: <!--more-->
 ---
 
 <div class="section section-first">
@@ -16,9 +17,10 @@ author:
         In writing about the <a href="/architecture-overview/">system architecture</a>,
         I mentioned how we use <em>jobs</em> and <em>tasks</em> to help run collections
         of tests. A job might equate to "Test everything for http://example.com". This
-        is expanded into a collection of tasks, with each task focussed on a specific
+        is expanded into a collection of tasks, with each task focused on a specific
         quality factor for a specific URL, such as "Verify the HTML validity for http://example.com/foo/bar".
     </p>
+    <!--more-->
     <p>
         <strong>Tasks are stateless</strong> in so far as they are unaware of other tasks. This is a good thing.
         If a test job was for verifying the HTML validity of a 100-page web site, the corresponding set of

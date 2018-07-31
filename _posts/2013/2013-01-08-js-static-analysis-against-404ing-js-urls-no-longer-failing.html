@@ -4,6 +4,7 @@ title: "JS Static Analysis Against 404ing JS URLs No Longer Failing"
 author:
     name: Jon Cram
     url: https://github.com/webignition
+excerpt_separator: <!--more-->
 ---
 
 <div class="section">
@@ -15,6 +16,9 @@ author:
         Such tests would fail without completing correctly, leaving the test
         appearing to be stuck in progress and never completing. This was not good.
     </p>
+
+    <!--more-->
+
     <p>
         A quick investigation revealed that such tests were being performed for
         web pages that linked to external JavaScript files which did not exist.

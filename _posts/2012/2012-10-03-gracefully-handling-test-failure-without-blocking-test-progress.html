@@ -5,10 +5,11 @@ date: 2012-10-03 21:00
 author:
     name: Jon Cram
     url: https://github.com/webignition
+excerpt_separator: <!--more-->
 ---
 
 <div class="section">
-    <h2>A Significant Problem Resolved</h2>
+    <h3>A Significant Problem Resolved</h3>
     <p>
         Sitting at the bottom of the list of improvements on the homepage
         at <a href="https://simplytestable.com/">simplytestable.com</a> since
@@ -25,7 +26,9 @@ author:
         the solution was put together.
     </p>
 
-    <h2>A Quick Recap</h2>
+    <!--more-->
+
+    <h3>A Quick Recap</h3>
     <p>
         I'll quickly go over the lifecycle of a full-site test to get you up to speed
         with what comes next.
@@ -52,7 +55,7 @@ author:
         out how complete a test job is. The core application can also figure out that once all tasks have reported
         back the whole test job is complete.
     </p>
-    <h2>A Significant Flaw</h2>
+    <h3>A Significant Flaw</h3>
     <p>
         There's a definite flaw here: if the results of any single task is not
         reported back to the core application, the core application will never
@@ -76,9 +79,9 @@ author:
         about 5000 HTML validation tests per hour, the number of full-site tests
         this was affecting was noticeable.
     </p>
-    <h2>
+    <h3>
         Supporting Failure
-    </h2>
+    </h3>
     <p>
         A test task was originally incapable of failing. Well, that's a lie - as I
         mentioned, test tasks were failing and causing problems as a result.
@@ -101,7 +104,7 @@ author:
          At the time, only content encoding failures were recognised. One down,
          many to go.
     </p>
-    <h2>Redirect Loops and Redirect Limits</h2>
+    <h3>Redirect Loops and Redirect Limits</h3>
     <p>
         Just under two weeks ago in <a href="/redirect-loops-and-long-redirect-chains-detected/"><em>Redirect Loops and Long Redirect Chains Detected</em></a>
         I noted that redirect loops (and reaching redirect limits) were supported.
@@ -111,7 +114,7 @@ author:
         redirect loop or due to reaching a redirect limit, the relevant task
         would be marked as failed. Two more down.
     </p>
-    <h2>Timeout Failures Supported</h2>
+    <h3>Timeout Failures Supported</h3>
     <p>
         I wrote today in <a href="/test-timeouts-now-supported/"><em>Test Timeouts Now Supported</em></a>
         that failures due to timeouts are now taken into account.
@@ -126,9 +129,9 @@ author:
         for any error that cURL can raise. That's about 30 different failure
         causes covered in one go.
     </p>
-    <h2>
+    <h3>
         And That's About It
-    </h2>
+    </h3>
     <p>
         Almost any cause for a test failing is now covered, something I realised
         not too long ago. Test tasks can fail and this does not stop the
