@@ -1,3 +1,9 @@
+{% assign include_newer_older = true %}
+
+{% if page.is_index or page.is_archive %}
+    {% assign include_newer_older = false %}
+{% endif %}
+
 <div class="header">
     <div class="container">
         <div class="row">
@@ -25,6 +31,8 @@
             </div>
         </div>
 
-        {% include header/newer-older.html %}
+        {% if include_newer_older %}
+            {% include header/newer-older.html %}
+        {% endif %}
     </div>
 </div>
