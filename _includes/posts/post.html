@@ -79,7 +79,7 @@
         {% endif %}
     {% endif %}
 
-    {% if content_item.layout == 'newsletter' %}
+    {% if content_item.newsletter %}
         {% include posts/newsletter/content.html %}
     {% else %}
     {{ content_item.content }}
