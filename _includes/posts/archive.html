@@ -8,7 +8,7 @@
         {% if post.newsletter %}
         {% include posts/newsletter/intro.html %}
         {% else %}
-        {{ post | only_first_p }}
+        {{ post.excerpt | remove: '<div class="section section-first">' | remove: '</div>' }}
         {% endif %}
 
     </li>
