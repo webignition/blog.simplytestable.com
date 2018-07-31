@@ -8,25 +8,31 @@ header .name {
   display: block;
   color: #555;
   margin-bottom: 24px;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  padding-left: 100px;
 }
 
 @media (min-width: 992px) {
-  .header-intro {
-    padding-left: calc(100px + 0.5rem);
-    padding-top: 1rem;
+  header .name {
+    font-size: 2.5rem;
+    padding-left: 0;
   }
 }
 
+header .name:before {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: url('/assets/images/logo.png') transparent no-repeat top left;
+  position: absolute;
+  left: 10px;
+  top: 0;
+}
+
 @media (min-width: 992px) {
-  header .name:before {
-    content: '';
-    display: block;
-    width: 100px;
-    height: 100px;
-    background: url('/assets/images/logo.png') transparent no-repeat top left;
-    position: absolute;
-    left: 0;
-    top: 0;
+  header .header-main {
+    padding-left: calc(100px + 0.5rem);
+    padding-top: 1rem;
   }
 }
