@@ -1,43 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>{{ page.title }}</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="{{ site.url }}/feed.xml" rel="alternate" type="application/rss+xml" title="Simply Testable Blog Feed" />
-        {% include assets/css/default.html %}
-        {% include assets/js/default.html %}
-        <script>
-            (function(i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function() {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o),
-                        m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-            ga('create', 'UA-33218043-2', 'simplytestable.com');
-            ga('send', 'pageview');
-
-        </script>
-    </head>
+    {% include element/head.html %}
     <body id="{% include page/id %}">
         {% include header/navigation.html %}
-
         {% include header/introduction.html %}
 
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    {% case page.url %}
-                    {% when '/' %}
-                    {% include posts/latest.html %}
+                    {% if page.is_index %}
+                        {% include posts/latest.html %}
                     {% else %}
-                    {% include posts/post.html %}
-                    {% endcase %}
+                        {% include posts/post.html %}
+                    {% endif %}
                 </div>
                 <div class="col-md-4 sidebar">
                     {% include sidebar/newsletter.html %}
@@ -48,14 +23,6 @@
             </div>
         </div>
 
-        <script>!function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                if (!d.getElementById(id)) {
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = p + "://platform.twitter.com/widgets.js";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }
-            }(document, "script", "twitter-wjs");</script>
+        {% include element/script_twitter.html %}
     </body>
 </html>
