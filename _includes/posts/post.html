@@ -5,21 +5,19 @@
 {% assign content_item = page %}
 {% endif %}
 
-{% if page.url == '/' %}
-{% assign is_index = true %}
+{% if page.is_index %}
+    {% assign heading_start = '<h2>' %}
+    {% assign heading_end = '</h2>' %}
 {% else %}
-{% assign is_index = false %}
+    {% assign heading_start = '<h1 id="main-heading">' %}
+    {% assign heading_end = '</h1>' %}
 {% endif %}
 
 <div class="post">
     {% if content_item.is_archive %}
     {% else %}
     <div class="section section-post-meta post">
-        {% if is_index %}
-        <h2 {% if is_index == false %}id="main-heading"{% endif %}>
-        {% else %}
-        <h1 {% if is_index == false %}id="main-heading"{% endif %}>
-        {% endif %}
+        {{ heading_start }}
 
         <a href="{{ content_item.url }}">
             {% if content_item.icon %}
@@ -31,12 +29,7 @@
             {{ content_item.title }}
         </a>
 
-        {% comment %} Using a falsey comparison first allows for better IDE tag matching {% endcomment %}
-        {% if is_index == false %}
-            </h1>
-        {% else %}
-            </h2>
-        {% endif %}
+        {{ heading_end }}
 
         <p class="meta">
             {{ content_item.date | date: "%B %e, %Y" }}
@@ -82,10 +75,10 @@
     {% if content_item.newsletter %}
         {% include posts/newsletter/content.html %}
     {% else %}
-    {{ content_item.content }}
+        {{ content_item.content }}
     {% endif %}
 
-    {% if page.url == '/' %}
+    {% if page.is_index %}
         {% if content_item.continue_reading != false %}
     <div class="section section-continue-reading">
             <a href="{{ content_item.url }}" class="btn btn-default">Continue reading <i class="fa fa-caret-right"></i></a>
