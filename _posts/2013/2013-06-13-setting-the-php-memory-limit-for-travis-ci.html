@@ -4,6 +4,7 @@ title: "Setting the PHP Memory Limit for Travis CI"
 author:
     name: Jon Cram
     url: https://github.com/webignition
+excerpt_separator: <!--more-->
 ---
 
 <div class="section">
@@ -20,6 +21,9 @@ author:
         I noticed that the <a href="https://travis-ci.org/webignition/app.simplytestable.com/jobs/8047559">PHP 5.3 build failed</a>
         due to it hitting a memory limit running unit tests.
     </p>
+
+    <!--more-->
+
     <p>
         The most straightforward course of action: increase the PHP memory limit
         in the Travis environment.

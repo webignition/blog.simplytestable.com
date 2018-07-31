@@ -238,10 +238,6 @@ div.post h4 {
     margin-top:80px;
 }
 
-#page-archive ol {
-
-}
-
 #page-archive ol li {
     font-size:40px;
     color:#ddd;
@@ -253,13 +249,36 @@ div.post h4 {
     color:#ccc;
 }
 
+#page-archive .linklist {
+    margin-bottom: 16px;
+}
+
+#page-archive .linklist li {
+    margin-bottom: 8px;
+}
+
 #page-archive ol li h2 a {
     display:block;
 }
 
+#page-archive .linklist li,
+#page-archive ol li p,
+#page-archive ol li h3,
+#page-archive ol li blockquote {
+    font-size: 16px;
+    color:#555;
+}
+
 #page-archive ol li p {
     font-size:16px;
-    color:#555;
+}
+
+#page-archive h3 {
+    display: none;
+}
+
+#page-archive ol li blockquote {
+    opacity: 0.8;
 }
 
 .newer-older {

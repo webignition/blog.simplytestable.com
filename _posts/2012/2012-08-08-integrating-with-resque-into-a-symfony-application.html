@@ -4,10 +4,11 @@ title: "Integrating Resque Into A Symfony Application"
 author:
     name: Jon Cram
     url: https://github.com/webignition
+excerpt_separator: <!--more-->
 ---
 
 <div class="section">
-    <h2>Getting Started With Symfony and Resque</h2>
+    <h3>Getting Started With Symfony and Resque</h3>
     <p>
         We use a job system to handle the queuing and running of tasks
         asychronously with respect to the application flow. Actions that could
@@ -19,6 +20,9 @@ author:
         request, expanding a new test job into a set of test tasks or farming out
         test tasks to eager hungry workers.
     </p>
+
+    <!--more-->
+
     <p>
         For this we use a PHP port of <a href="https://github.com/defunkt/resque/">Resque</a>
         describes itself as being:
@@ -36,7 +40,7 @@ author:
     <p>
         Here's what I did to get the two working together.
     </p>
-    <h2>Preparation</h2>
+    <h3>Preparation</h3>
     <p>
         Resque is backed by Redis, and so we need to get this up and running first:
     </p>
@@ -46,7 +50,7 @@ author:
     <p>
         Right, that was easy.
     </p>
-    <h2>Installing ResqueBundle: Resque With Symfony Integration Built In</h2>
+    <h3>Installing ResqueBundle: Resque With Symfony Integration Built In</h3>
     <p>
         We need the Resque library and we need to get this to understand where
         to look within our Symfony application to find the classes defining the
@@ -89,9 +93,9 @@ author:
     <p>
         That's it, you're ready to start using Resque.
     </p>
-    <h2>
+    <h3>
         Resque Fundamentals: Jobs, Queues and Workers
-    </h2>
+    </h3>
     <p>
         Resque lets you place <em>jobs</em> in <em>queues</em> to later be processed
         by <em>workers</em>. Jobs are placed into a queue. Later on a worker comes
@@ -111,7 +115,7 @@ Worker started as daemon.
     <p>
         We now have one worker daemon running, eagerly awaiting jobs to run.
     </p>
-    <h2>Creating a Job</h2>
+    <h3>Creating a Job</h3>
     <p>
         A job, in the world of Resque, is just a class that follows certain patterns.
         Conceptually this is to the processing of work what a unit test is to the
@@ -149,9 +153,9 @@ class JobPrepareJob extends AbstractJob {
         command line command does not return what we expect. Resque fails a job
         if an exception is thrown which is exactly what we want to happen.
     </p>
-    <h2>
+    <h3>
         Queueing a Job
-    </h2>
+    </h3>
     <p>
         So we have a worker busily sitting there processing nothing, we have a job
         class defined. All that is left is to put jobs into the queue to make
