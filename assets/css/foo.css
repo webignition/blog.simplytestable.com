@@ -197,7 +197,7 @@ header .name:before {
   opacity: 0.8;
 }
 
-.post div.highlighter-rouge {
+pre {
   font-size: 14px;
   line-height: 16px;
   padding: 10px 20px;
