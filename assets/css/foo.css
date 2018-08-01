@@ -176,6 +176,10 @@ header .name:before {
   margin-top: 64px;
 }
 
+.post h4 {
+  margin-top: 32px;
+}
+
 .comments {
   margin-top: 80px;
 }
