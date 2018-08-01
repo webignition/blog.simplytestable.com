@@ -129,3 +129,11 @@ header .name:before {
   display: block;
   margin-bottom: 64px;
 }
+
+.post h3 {
+  margin-top: 64px;
+}
+
+.comments {
+  margin-top: 80px;
+}

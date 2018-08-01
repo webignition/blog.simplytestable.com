@@ -1,6 +1,6 @@
 {% assign content_item = page %}
 {% if post %}
-{% assign content_item = post %}
+    {% assign content_item = post %}
 {% endif %}
 
 {% if page.is_index %}
@@ -12,18 +12,16 @@
 {% endif %}
 
 <div class="post {% if page.is_index or content_item.is_archive %}post-listed{% endif %} {% if is_last_post %}post-listed-last{% endif %}">
-    {% if content_item.is_archive %}
-    {% else %}
-        {{ heading_start }}
+    {{ heading_start }}
 
-        <a href="{{ content_item.url }}">
-            {{ content_item.title }}
-        </a>
+    <a href="{{ content_item.url }}">
+        {{ content_item.title }}
+    </a>
 
-        {{ heading_end }}
+    {{ heading_end }}
 
-        {% include posts/post-meta.html %}
-    {% endif %}
+    {% assign include_post_meta_byline = true %}
+    {% include posts/post-meta.html %}
 
     {% if content_item.illustration %}
         {% if content_item.illustration.id %}
@@ -55,18 +53,19 @@
     {% if content_item.newsletter %}
         {% include posts/newsletter/content.html %}
     {% else %}
-        {{ content_item.content }}
+        {% if page.is_index %}
+            {{ content_item.excerpt }}
+
+            {% if content_item.continue_reading != false %}
+                <a href="{{ content_item.url }}" class="btn btn-outline-secondary post-continue-reading">Continue reading <i class="fa fa-caret-right"></i></a>
+            {% endif %}
+        {% else %}
+            {{ content_item }}
+        {% endif %}
     {% endif %}
 
-    {% if page.is_index %}
-        {% if content_item.continue_reading != false %}
-    <div class="section section-continue-reading">
-            <a href="{{ content_item.url }}" class="btn btn-default">Continue reading <i class="fa fa-caret-right"></i></a>
-    </div>
-        {% endif %}
-    {% else %}
-        {% if page.is_archive != true %}
-    <div class="section comments">
+    {% if include_comments %}
+    <div class="comments">
         <i class="comment-icon fa fa-comments-o"></i>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -83,6 +82,5 @@
             })();
         </script>
     </div>
-        {% endif %}
     {% endif %}
 </div>

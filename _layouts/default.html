@@ -11,6 +11,7 @@
                         {% if page.is_index %}
                         {% include posts/latest.html %}
                         {% else %}
+                        {% assign include_comments = true %}
                         {% include posts/post.html %}
                         {% endif %}
                     </div>
