@@ -195,6 +195,12 @@ header .name:before {
   margin: 0 0 20px;
   border-left: 5px solid #ddd;
   opacity: 0.8;
-  /*margin-bottom: 1rem;*/
-  /*font-size: 1.25rem;*/
+}
+
+.post div.highlighter-rouge {
+  font-size: 14px;
+  line-height: 16px;
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  border-left: 5px solid #ddd;
 }
