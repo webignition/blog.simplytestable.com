@@ -1,8 +1,6 @@
-{% assign content_item = false %}
+{% assign content_item = page %}
 {% if post %}
 {% assign content_item = post %}
-{% else %}
-{% assign content_item = page %}
 {% endif %}
 
 {% if content_item.newsletter.highlights %}
@@ -12,18 +10,18 @@
 </p>
 {% else %}
 <p>
-    Highlights from this week: 
+    Highlights from this week:
 </p>
 
 <ul>
 
 {% for highlight in content_item.newsletter.highlights %}
     <li>
-        <p>                 
+        <p>
 {{ highlight }}
         </p>
-    </li>     
-{% endfor %}  
+    </li>
+{% endfor %}
 
 </ul>
 {% endif %}

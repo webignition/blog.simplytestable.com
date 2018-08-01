@@ -1,5 +1,6 @@
 <ol class="archive">
     {% for post in site.posts %}
+
     {% capture reverse_index %}{{forloop.length | minus:forloop.index | plus:1 }}{% endcapture %}
     <li value="{{ reverse_index }}">
         <h2><a href="{{ post.url }}">{{ post.title }} {{ post_index }}</a></h2>
@@ -7,6 +8,7 @@
 
         {% if post.newsletter %}
         {% include posts/newsletter/intro.html %}
+        {% include posts/newsletter/highlights.html %}
         {% else %}
         {{ post.excerpt | remove: '<div class="section section-first">' | remove: '<div class="section">' | remove: '</div>' }}
         {% endif %}

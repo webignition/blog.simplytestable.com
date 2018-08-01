@@ -1,3 +1,7 @@
+a {
+  color: #08c;
+}
+
 header {
   background: #eee;
   margin-bottom: 40px;
@@ -12,10 +16,10 @@ header .name {
   padding-left: 100px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   header .name {
     font-size: 2.5rem;
-    padding-left: 0;
+    /*padding-left: 0;*/
   }
 }
 
@@ -30,9 +34,74 @@ header .name:before {
   top: 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   header .header-main {
-    padding-left: calc(100px + 0.5rem);
     padding-top: 1rem;
   }
 }
+
+.post.post-listed {
+  margin-bottom: 64px;
+}
+
+.post.post-listed-last {
+  /*margin-bottom: 0;*/
+  /*padding-bottom: 0;*/
+}
+
+.post .post-continue-reading {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .post .post-continue-reading {
+    width: auto;
+  }
+}
+
+.posts-all-wrapper {
+  border-top: 1px solid #ddd;
+}
+
+.posts-all {
+  margin: 64px 0;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .posts-all {
+    width: auto;
+  }
+}
+
+/*.post.post-listed:first-of-type {*/
+  /*color:red;*/
+/*}*/
+
+/*.post.post-listed.post-listed-last {*/
+  /*color:blue;*/
+  /*margin-bottom: 64px;*/
+/*}*/
+
+/*.post .section:last-of-type {*/
+  /*margin-bottom: 64px;*/
+/*}*/
+
+/*.post .section-continue-reading a {*/
+  /*width: 100%;*/
+/*}*/
+
+
+.post-meta {
+  opacity: 0.4;
+  margin-bottom: 16px;
+}
+
+.post-meta time {
+
+}
+
+.page-index h2 {
+  font-size: 1.5rem;
+}
+

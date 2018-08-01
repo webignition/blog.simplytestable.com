@@ -1,48 +1,46 @@
-{% assign content_item = false %}
+{% assign content_item = page %}
 {% if post %}
 {% assign content_item = post %}
-{% else %}
-{% assign content_item = page %}
 {% endif %}
 
 {% if page.is_index %}
-    {% assign heading_start = '<h2>' %}
+    {% assign heading_start = '<h2 class="post-heading">' %}
     {% assign heading_end = '</h2>' %}
 {% else %}
-    {% assign heading_start = '<h1 id="main-heading">' %}
+    {% assign heading_start = '<h1 class="post-heading">' %}
     {% assign heading_end = '</h1>' %}
 {% endif %}
 
-<div class="post">
+<div class="post {% if page.is_index or content_item.is_archive %}post-listed{% endif %} {% if is_last_post %}post-listed-last{% endif %}">
     {% if content_item.is_archive %}
     {% else %}
-    <div class="section section-post-meta post">
         {{ heading_start }}
 
         <a href="{{ content_item.url }}">
-            {% if content_item.icon %}
-            <i class="indicator-icon fa {{ content_item.icon }}"></i>
-            {% else %}
-            <i class="indicator-icon fa fa-bullhorn"></i>
-            {% endif %}
-
             {{ content_item.title }}
         </a>
 
         {{ heading_end }}
 
-        <p class="meta">
-            {{ content_item.date | date: "%B %e, %Y" }}
+        <div class="post-meta">
+            <time datetime="{{ content_item.date | date: '%Y-%m-%d' }}">{{ content_item.date | date: "%B %e, %Y" }}</time>
+
             {% if content_item.author %}
                 by
+
+                {% assign author_start = '<span class="author">' %}
+                {% assign author_end = '</span>' %}
+
                 {% if content_item.author.url %}
-                <a href="{{ content_item.author.url }}">{{ content_item.author.name }}</a>
-                {% else %}
-                {{ content_item.author.name }}
+                    {% assign author_start = '<a href="{{ content_item.author.url }}">' %}
+                    {% assign author_end = '</a>' %}
                 {% endif %}
+
+                {{ author_start }}
+                {{ content_item.author.name }}
+                {{ author_end }}
             {% endif %}
-        </p>
-    </div>
+        </div>
     {% endif %}
 
     {% if content_item.illustration %}
