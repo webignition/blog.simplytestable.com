@@ -14,12 +14,16 @@ header .name {
   margin-bottom: 24px;
   font-size: 2rem;
   padding-left: 100px;
+  text-decoration: none;
+}
+
+header .name:hover {
+  color: #333;
 }
 
 @media (min-width: 768px) {
   header .name {
     font-size: 2.5rem;
-    /*padding-left: 0;*/
   }
 }
 
@@ -44,11 +48,6 @@ header .name:before {
   margin-bottom: 64px;
 }
 
-.post.post-listed-last {
-  /*margin-bottom: 0;*/
-  /*padding-bottom: 0;*/
-}
-
 .post .post-continue-reading {
   width: 100%;
 }
@@ -56,6 +55,17 @@ header .name:before {
 @media (min-width: 992px) {
   .post .post-continue-reading {
     width: auto;
+  }
+}
+
+.post-listed .post-heading {
+  font-size: 1.5rem;
+}
+
+
+@media (min-width: 992px) {
+  .post-listed .post-heading {
+    font-size: 2rem;
   }
 }
 
@@ -74,34 +84,43 @@ header .name:before {
   }
 }
 
-/*.post.post-listed:first-of-type {*/
-  /*color:red;*/
-/*}*/
-
-/*.post.post-listed.post-listed-last {*/
-  /*color:blue;*/
-  /*margin-bottom: 64px;*/
-/*}*/
-
-/*.post .section:last-of-type {*/
-  /*margin-bottom: 64px;*/
-/*}*/
-
-/*.post .section-continue-reading a {*/
-  /*width: 100%;*/
-/*}*/
-
-
 .post-meta {
   opacity: 0.4;
   margin-bottom: 16px;
 }
 
-.post-meta time {
+.archive-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 3rem;
+}
+
+.archive-list .post-meta {
+  opacity: 1;
+  color: #555;
+}
+
+.archive-item {
 
 }
 
-.page-index h2 {
-  font-size: 1.5rem;
+.archive-item:before {
+  content: attr(value);
+  color: #ddd;
+  width: 3rem;
+  position: absolute;
+  left: 0;
+  text-align: right;
+  font-size: 1.25rem;
 }
 
+.newsletter-highlights {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1rem;
+  border-left: 3px solid #ddd;
+}
+
+.newsletter-highlight {
+
+}

@@ -2,24 +2,7 @@
 <html lang="en">
     {% include element/head.html %}
     <body class="{% include page/id %}">
-        <header>
-            <div class="container">
-                <div class="row">
-                    <div class="col header-main">
-                        <a href="/" class="name">Simply Testable Blog</a>
-
-                        <p class="lead intro">
-                            Figuring out how to automate away the pain of routine front-end web testing; the
-                            story behind <a href="https://simplytestable.com">SimplyTestable.com</a>.
-                        </p>
-                        <p class="lead purpose">
-                            {{ site.posts.size }} posts covering the initial idea, growth of the service, features, advances,
-                            failures and successes.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </header>
+        {% include element/header.html %}
 
         <main>
             <div class="container">

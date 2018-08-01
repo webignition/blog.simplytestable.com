@@ -4,19 +4,18 @@
 {% endif %}
 
 {% if content_item.newsletter.highlights %}
-{% if content_item.newsletter.highlights.size == 1 %}
-<p>
-    {{ content_item.newsletter.highlights }}
-</p>
-{% else %}
+
 <p>
     Highlights from this week:
 </p>
-
-<ul>
-
+{% if content_item.newsletter.highlights.size == 1 %}
+<p class="newsletter-highlights">
+    {{ content_item.newsletter.highlights }}
+</p>
+{% else %}
+<ul class="newsletter-highlights">
 {% for highlight in content_item.newsletter.highlights %}
-    <li>
+    <li class="newsletter-highlight">
         <p>
 {{ highlight }}
         </p>
