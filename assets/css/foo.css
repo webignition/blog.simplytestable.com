@@ -130,6 +130,48 @@ header .name:before {
   margin-bottom: 64px;
 }
 
+.post .illustration {
+  width: 100%;
+  height: 300px;
+  display: block;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+}
+
+.post .illustration .illustration-image {
+  display:block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.post .illustration .illustration-icon {
+  position: absolute;
+  width: auto;
+  height: auto;
+  font-size: 100px;
+  line-height: 100px;
+  color: white;
+  opacity: 0.4;
+  top: calc(50% - 40px);
+  left: calc(50% - 45px);
+}
+
+/*@media (min-width: 768px) {
+  .post .illustration .illustration-icon {
+    margin-top: 15%;
+  }
+}*/
+
+.post .illustration:hover {
+  text-decoration: none;
+}
+
+.post .illustration:hover .illustration-icon {
+  opacity:0.8;
+}
+
 .post h3 {
   margin-top: 64px;
 }

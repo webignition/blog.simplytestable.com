@@ -36,16 +36,15 @@
 
                 <div class="illustration illustration-{{ content_item.illustration.id }}">
                     <a href="/illustrations/{{ content_item.illustration.id }}"
-                       style="background-image: url('{{ content_item.illustration.url }}');{{ illustration_style }}">
-                        <i class="fa fa-search-plus"></i>
+                       style="background-image: url('{{ content_item.illustration.url }}');{{ illustration_style }}"
+                       class="illustration-image">
+                        <i class="fa fa-search-plus illustration-icon"></i>
                     </a>
                 </div>
             </div>
         {% else %}
-            <div class="section">
-                <div class="illustration illustration-{{ content_item.illustration.id }}" style="{% if content_item.illustration.height %} height: {{content_item.illustration.height}} {% endif %}">
-                    <span style="background-image: url('{{ content_item.illustration.url }}'); {% if content_item.illustration.offset-x %}background-position-x: {{content_item.illustration.offset-x}};{% endif %}"></span>
-                </div>
+            <div class="illustration illustration-{{ content_item.illustration.id }}" style="{% if content_item.illustration.height %} height: {{content_item.illustration.height}} {% endif %}">
+                <span style="background-image: url('{{ content_item.illustration.url }}'); {% if content_item.illustration.offset-x %}background-position-x: {{content_item.illustration.offset-x}};{% endif %}"></span>
             </div>
         {% endif %}
     {% endif %}
