@@ -24,28 +24,22 @@
     {% include posts/post-meta.html %}
 
     {% if content_item.illustration %}
+        {% assign illustration_style = "background-image: url('" | append: content_item.illustration.url | append: "'); " %}
+
+        {% if content_item.illustration.style %}
+            {% for style in content_item.illustration.style %}
+                {% capture illustration_style %}{{illustration_style}}{{style[0]}}: {{style[1]}};{% endcapture %}
+            {% endfor %}
+        {% endif %}
+
         {% if content_item.illustration.id %}
-            <div class="section">
-                {% if content_item.illustration.style %}
-                    {% capture illustration_style %}{% endcapture %}
-
-                    {% for style in content_item.illustration.style %}
-                        {% capture illustration_style %}{{illustration_style}}{{style[0]}}: {{style[1]}};{% endcapture %}
-                    {% endfor %}
-                {% endif %}
-
-                <div class="illustration illustration-{{ content_item.illustration.id }}">
-                    <a href="/illustrations/{{ content_item.illustration.id }}"
-                       style="background-image: url('{{ content_item.illustration.url }}');{{ illustration_style }}"
-                       class="illustration-image">
-                        <i class="fa fa-search-plus illustration-icon"></i>
-                    </a>
-                </div>
-            </div>
+            <a href="/illustrations/{{ content_item.illustration.id }}"
+               style="{{ illustration_style }}"
+               class="illustration">
+                <i class="fa fa-search-plus illustration-icon"></i>
+            </a>
         {% else %}
-            <div class="illustration illustration-{{ content_item.illustration.id }}" style="{% if content_item.illustration.height %} height: {{content_item.illustration.height}} {% endif %}">
-                <span style="background-image: url('{{ content_item.illustration.url }}'); {% if content_item.illustration.offset-x %}background-position-x: {{content_item.illustration.offset-x}};{% endif %}"></span>
-            </div>
+            <span class="illustration" style="{{ illustration_style }}"></span>
         {% endif %}
     {% endif %}
 
