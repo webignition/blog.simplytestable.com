@@ -206,3 +206,8 @@ pre {
   box-shadow: 0px 0px 5px 0px #444;
   text-align: center;
 }
+
+.accented-character-comparison em {
+  font-size:60px;
+  font-style: normal;
+}
