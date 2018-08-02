@@ -47,33 +47,29 @@ jobs to be run.
     
 Just update your dependency configuration:
 
-```JavaScript
-{
-    "require": {
-        "glit/resque-bundle":"*"
+    {
+        "require": {
+            "glit/resque-bundle":"*"
+        }
     }
-}
-```
     
 And update your dependencies: `php composer.phar update`
     
 And then register the bundle in `app/AppKernel.php`:
     
-```php      
-$bundles = array(
-    // ...
-    new Glit\ResqueBundle\GlitResqueBundle(),
-);
-```
+{: .language-php}
+   
+    $bundles = array(
+        // ...
+        new Glit\ResqueBundle\GlitResqueBundle(),
+    );
     
 And then add an prefix configuration value, either directly in
 `app/config/parameters.yml` or in your application bundle's
-`Resources/config/parameters.yml`:
-    
-```  
-glit_resque:
-  prefix: "prefix_value"
-```
+`Resources/config/parameters.yml`:    
+
+    glit_resque:
+      prefix: "prefix_value"
 
 The prefix can be anything you like. It's a namespace prefix used by Redis
 to differentiate between different applications that may be using the same
@@ -93,10 +89,9 @@ Let's start by getting a worker process running. To begin with it will be
 processing queues containing no jobs, but that doesn't matter. We'll add
 jobs later.
 
-```bash
-$ php app/console resque:worker --daemon
-Worker started as daemon.
-```
+    $ php app/console resque:worker --daemon
+    Worker started as daemon.
+
 
 We now have one worker daemon running, eagerly awaiting jobs to run.
     
@@ -112,28 +107,26 @@ respectively, before and after the `perform()` method is called.
 
 Here's one I literally made a few minutes ago:
 
-```php
-<?php
+{: .language-php}    
 
-namespace SimplyTestable\ApiBundle\Resque\Job;
-
-use SimplyTestable\ApiBundle\Exception\JobPrepareException;
-
-class JobPrepareJob extends AbstractJob {
-
-    public function perform() {
-        $output = array();
-        $returnValue = null;
-        $command = 'php app/console simplytestable:job:prepare ' . $this->args['id'];
-
-        exec($command, $output, $returnValue);
-
-        if ($returnValue !== 0) {
-            throw new JobPrepareException(implode("\n", $output), $returnValue);
+    namespace SimplyTestable\ApiBundle\Resque\Job;
+    
+    use SimplyTestable\ApiBundle\Exception\JobPrepareException;
+    
+    class JobPrepareJob extends AbstractJob {
+    
+        public function perform() {
+            $output = array();
+            $returnValue = null;
+            $command = 'php app/console simplytestable:job:prepare ' . $this->args['id'];
+    
+            exec($command, $output, $returnValue);
+    
+            if ($returnValue !== 0) {
+                throw new JobPrepareException(implode("\n", $output), $returnValue);
+            }
         }
     }
-}
-```
 
 You'll notice that a `JobPreparationException` is thrown if the
 command line command does not return what we expect. Resque fails a job
@@ -154,32 +147,30 @@ handles the request to start or examine test jobs. This is where we need to
 add a new job to the Resque queue to later have that new test job
 expanded into a collection of test tasks to be passed to workers.
 
-```php
-<?php
+{: .language-php}
+
     $this->container->get('glit_resque.queue_manager')->add(
-    'SimplyTestable\ApiBundle\Resque\Job\JobPrepareJob',
-    'job-prepare',
-    array(
-        'id' => $job->getId()
-    )
-);
-```
+        'SimplyTestable\ApiBundle\Resque\Job\JobPrepareJob',
+        'job-prepare',
+        array(
+            'id' => $job->getId()
+        )
+    );
+
     
 If I now request `http://dev.app.simplytestable.com/tests/https://github.com/webignition/start`
 to start a new test job and then examine the Resque logs:
 
-```
-** [23:37:48 2012-08-08] Checking job-prepare
-** [23:37:48 2012-08-08] Sleeping for 5
-** [23:37:58 2012-08-08] Checking job-prepare
-** [23:37:58 2012-08-08] Found job on job-prepare
-** [23:37:58 2012-08-08] got (Job{job-prepare} | ID: 650b7e7a5ee6a21cbc3f1e1de750e1ab | SimplyTestable\ApiBundle\Resque\Job\JobPrepareJob | [{"id":10}])
-** [23:37:58 2012-08-08] Forked 4477 at 2012-08-08 23:37:58
-** [23:37:58 2012-08-08] Processing job-prepare since 2012-08-08 23:37:58
-** [23:37:59 2012-08-08] done (Job{job-prepare} | ID: 650b7e7a5ee6a21cbc3f1e1de750e1ab | SimplyTestable\ApiBundle\Resque\Job\JobPrepareJob | [{"id":10}])
-** [23:37:59 2012-08-08] Checking job-prepare
-** [23:37:59 2012-08-08] Sleeping for 5
-```
+    ** [23:37:48 2012-08-08] Checking job-prepare
+    ** [23:37:48 2012-08-08] Sleeping for 5
+    ** [23:37:58 2012-08-08] Checking job-prepare
+    ** [23:37:58 2012-08-08] Found job on job-prepare
+    ** [23:37:58 2012-08-08] got (Job{job-prepare} | ID: 650b7e7a5ee6a21cbc3f1e1de750e1ab | SimplyTestable\ApiBundle\Resque\Job\JobPrepareJob | [{"id":10}])
+    ** [23:37:58 2012-08-08] Forked 4477 at 2012-08-08 23:37:58
+    ** [23:37:58 2012-08-08] Processing job-prepare since 2012-08-08 23:37:58
+    ** [23:37:59 2012-08-08] done (Job{job-prepare} | ID: 650b7e7a5ee6a21cbc3f1e1de750e1ab | SimplyTestable\ApiBundle\Resque\Job\JobPrepareJob | [{"id":10}])
+    ** [23:37:59 2012-08-08] Checking job-prepare
+    ** [23:37:59 2012-08-08] Sleeping for 5
     
 The Resque job to prepare the test job is processed by the worker we set
 going. The test job has been expanded into a set of test tasks and this

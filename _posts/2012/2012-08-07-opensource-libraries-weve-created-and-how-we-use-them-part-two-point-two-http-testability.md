@@ -68,39 +68,39 @@ encounters consistent HTTP failure conditions.
 The mock HTTP client is isolated from everything and is aware of nothing
 unless told about it. It's not aware of the Internet and, by default,
 is unable to find any resource requested of it.
+
+{: .language-php}
+
+    use webignition\Http\Mock\Client\Client as HttpClient;
     
-```php
-<?php
-use webignition\Http\Mock\Client\Client as HttpClient;
+    $request = new \HttpRequest('https://blog.simplytestable.com/');
+    
+    $httpClient = new HttpClient();
+    
+    $response = $httpClient->getResponse($request);
+    print $response->getResponseCode(); // 404
 
-$request = new \HttpRequest('https://blog.simplytestable.com/');
-
-$httpClient = new HttpClient();
-
-$response = $httpClient->getResponse($request);
-print $response->getResponseCode(); // 404
-```
     
 If you need a `200 OK` accompanied by some meaningful
 content, you need to tell the HTTP client in advance the response you
 want back for a request:
     
-```php
-<?php
-use webignition\Http\Mock\Client\Client as HttpClient;
+{: .language-php}
 
-$request = new \HttpRequest('https://blog.simplytestable.com/');
+    use webignition\Http\Mock\Client\Client as HttpClient;
+    
+    $request = new \HttpRequest('https://blog.simplytestable.com/');
+    
+    $httpClient = new HttpClient();
+    $httpClient->getRequestReponseList()->set(
+        $request,
+        new \HttpMessage("HTTP/1.1 200 Ok\n\nHello World!")
+    );
+    
+    $response = $httpClient->getResponse($request);
+    print $response->getResponseCode(); // 200
+    print $response->getBody(); // Hello World!
 
-$httpClient = new HttpClient();
-$httpClient->getRequestReponseList()->set(
-    $request,
-    new \HttpMessage("HTTP/1.1 200 Ok\n\nHello World!")
-);
-
-$response = $httpClient->getResponse($request);
-print $response->getResponseCode(); // 200
-print $response->getBody(); // Hello World!
-```
     
 This is great if you have a request object to hand and a response object
 to match. If you're expecting a chain of `301` responses to be followed,
@@ -110,27 +110,27 @@ such redirects.
 If you know the essence of the request that will be made, you can tie in a
 response to a known HTTP command:
     
-```php
-<?php
-use webignition\Http\Mock\Client\Client as HttpClient;
+{: .language-php}
 
-$request = new \HttpRequest('https://blog.simplytestable.com/gets-301-response');
+    use webignition\Http\Mock\Client\Client as HttpClient;
+    
+    $request = new \HttpRequest('https://blog.simplytestable.com/gets-301-response');
+    
+    $httpClient = new HttpClient();
+    $httpClient->getCommandReponseList()->set(
+        $request,
+        new \HttpMessage("HTTP/1.1 301 Moved Permanently
+                          Location: https://blog.simplytestable.com/destination")
+    );
+    $httpClient->getCommandResponseList()->set(
+        "GET https://blog.simplytestable.com/destination",
+        new \HttpMessage("HTTP/1.1 200 Ok\n\nHello Again!")
+    );
+    
+    $response = $httpClient->getResponse($request);
+    print $response->getResponseCode(); // 200
+    print $response->getBody(); // Hello Again!
 
-$httpClient = new HttpClient();
-$httpClient->getCommandReponseList()->set(
-    $request,
-    new \HttpMessage("HTTP/1.1 301 Moved Permanently
-                      Location: https://blog.simplytestable.com/destination")
-);
-$httpClient->getCommandResponseList()->set(
-    "GET https://blog.simplytestable.com/destination",
-    new \HttpMessage("HTTP/1.1 200 Ok\n\nHello Again!")
-);
-
-$response = $httpClient->getResponse($request);
-print $response->getResponseCode(); // 200
-print $response->getBody(); // Hello Again!
-```
     
 The [RequestResponseList](https://github.com/webignition/http-client/blob/master/src/webignition/Http/Mock/ResponseList/RequestResponseList.php)
 lets you specify directly responses for `\HttpRequest` objects
@@ -156,46 +156,43 @@ file named the same as the corresponding request's hash.
 The request's what? The hash. It's a hash of a request, unique to a request and something
 that fits comfortably into a filename.
     
-```php
-<?php
-use webignition\Http\Mock\Client\Client as HttpClient;
+{: .language-php}
 
-$request = new \HttpRequest('https://blog.simplytestable.com/');
-
-$httpClient = new HttpClient();
-$httpClient->getStoredResponseList()->setFixturesPath(
-    '/home/example/fixtures/cda711beab03b2677abd1b15ed4d1114'
-);
-
-$response = $httpClient->getResponse($request);
-print $response->getResponseCode(); // 200
-print $response->getBody(); // Hello World!
-```
+    use webignition\Http\Mock\Client\Client as HttpClient;
     
+    $request = new \HttpRequest('https://blog.simplytestable.com/');
+    
+    $httpClient = new HttpClient();
+    $httpClient->getStoredResponseList()->setFixturesPath(
+        '/home/example/fixtures/cda711beab03b2677abd1b15ed4d1114'
+    );
+    
+    $response = $httpClient->getResponse($request);
+    print $response->getResponseCode(); // 200
+    print $response->getBody(); // Hello World!    
+        
 The file `/home/example/fixtures/cda711beab03b2677abd1b15ed4d1114`
 contains:
-    
-```
-HTTP/1.1 200 Ok
 
-Hello World!
-```
+    HTTP/1.1 200 Ok
+    
+    Hello World!
     
 Guessing the right hash is tricky. When developing your tests you will
 know the HTTP requests that will issued and can ask the mock client
 to tell you where to store your fixtures:
     
-```php
-<?php
-use webignition\Http\Mock\Client\Client as HttpClient;
+{: .language-php}    
+    
+    use webignition\Http\Mock\Client\Client as HttpClient;
+    
+    $request = new \HttpRequest('https://blog.simplytestable.com/');
+    
+    $httpClient = new HttpClient();
+    $httpClient->getStoredResponseList()->setFixturePath('/home/example/HttpResponses');
+    print $httpClient->getStoredResponseList()->getRequestFixturePath($request);
+    // /home/example/HttpResponses/cda711beab03b2677abd1b15ed4d1114
 
-$request = new \HttpRequest('https://blog.simplytestable.com/');
-
-$httpClient = new HttpClient();
-$httpClient->getStoredResponseList()->setFixturePath('/home/example/HttpResponses');
-print $httpClient->getStoredResponseList()->getRequestFixturePath($request);
-// /home/example/HttpResponses/cda711beab03b2677abd1b15ed4d1114
-```
 
 ### Mocking Failure Conditions
     
@@ -222,22 +219,21 @@ in DNS lookup failure exceptions for all requests. Or, slightly more
 usefully, you can tell the client which hosts it knows, causing DNS lookup
 failure exceptions to occur for all other hosts.
     
-```php
-<?php
-use webignition\Http\Mock\Client\Client as HttpClient;
+{: .language-php}
 
-$request = new \HttpRequest('https://blog.simplytestable.com/');
-
-$httpClient = new HttpClient();
-$httpClient->setKnowsSpecifiedHostsOnly();
-$httpClient->setKnownHost('example.com');
-
-try {
-    $response = $httpClient->getResponse($request);
-} catch (CurlException $curlException) {
-    // We'll end up here as the client can't lookup blog.simplytestable.com
-}
-```
+    use webignition\Http\Mock\Client\Client as HttpClient;
+    
+    $request = new \HttpRequest('https://blog.simplytestable.com/');
+    
+    $httpClient = new HttpClient();
+    $httpClient->setKnowsSpecifiedHostsOnly();
+    $httpClient->setKnownHost('example.com');
+    
+    try {
+        $response = $httpClient->getResponse($request);
+    } catch (CurlException $curlException) {
+        // We'll end up here as the client can't lookup blog.simplytestable.com
+    }
 
 ### Tying This Into Testable HTTP Applications And Test Environments
     

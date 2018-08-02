@@ -70,25 +70,25 @@ what PHP provides as standard doesn't quite hold up.
     
 Our URL library handles this for us:
     
-```php
-<?php
-use webignition\Url\Url;
+{: .language-php}
 
-$url = new Url('https://github.com/webignition/url/');
-$url->getScheme(); // returns 'https'
-$url->getHost();   // returns 'github'
-$url->getPath();   // returns '/webignition/url/'
+    use webignition\Url\Url;
+    
+    $url = new Url('https://github.com/webignition/url/');
+    $url->getScheme(); // returns 'https'
+    $url->getHost();   // returns 'github'
+    $url->getPath();   // returns '/webignition/url/'
+    
+    $url = new Url('/webignition/url/');
+    $url->hasScheme(); // returns FALSE
+    $url->hasHost();   // returns FALSE
+    $url->getPath();   // returns '/webignition/url/'
+    
+    $url = new Url();
+    $url->setHost('github.com');
+    $url->setPath('/webignition/url/');
+    (string)$url;      // returns '//github.com/webignition/url'
 
-$url = new Url('/webignition/url/');
-$url->hasScheme(); // returns FALSE
-$url->hasHost();   // returns FALSE
-$url->getPath();   // returns '/webignition/url/'
-
-$url = new Url();
-$url->setHost('github.com');
-$url->setPath('/webignition/url/');
-(string)$url;      // returns '//github.com/webignition/url'
-```
 
 ### Normalisation
    
@@ -104,19 +104,19 @@ Other aspects of normalisation, such as decoding characters that don't need
 to be encoded and collapsing dot segments (`/../` and `/./`),
 ensure that string-based URL comparison is as accurate as possible.
     
-```php
-<?php
-use webignition\NormalisedUrl\NormalisedUrl;
+{: .language-php}
 
-$url = new NormalisedUrl('https://githUB.com/webignition/../webignition/./url/');
-(string)$url; // returns 'https://github.com/webignition/url/'
+    use webignition\NormalisedUrl\NormalisedUrl;
+    
+    $url = new NormalisedUrl('https://githUB.com/webignition/../webignition/./url/');
+    (string)$url; // returns 'https://github.com/webignition/url/'
+    
+    $url = new NormalisedUrl('http://example.com:80');
+    (string)$url; // returns 'http://example.com/'
+    
+    $url = new NormalisedUrl('http://example.com/?a=1&amp;c=3&amp;b=2');
+    (string)$url;  // returns 'http://example.com/?a=1&amp;b=2&amp;c=3';
 
-$url = new NormalisedUrl('http://example.com:80');
-(string)$url; // returns 'http://example.com/'
-
-$url = new NormalisedUrl('http://example.com/?a=1&amp;c=3&amp;b=2');
-(string)$url;  // returns 'http://example.com/?a=1&amp;b=2&amp;c=3';
-```
 
 ### Absolute URL Deriving
     
@@ -148,20 +148,20 @@ URLs.
 
 Our simple [absolute URL deriving](https://github.com/webignition/absolute-url-deriver) library handles these tasks:
     
-```php
-<?php
-use webignition\AbsoluteUrlDeriver\AbsoluteUrlDeriver;
+{: .language-php}
 
-$deriver = new AbsoluteUrlDeriver(
-    '/index.html',
-    'http://example.com'
-);
-(string)$deriver->getAbsoluteUrl(); // returns 'http://example.com/index.html'
+    use webignition\AbsoluteUrlDeriver\AbsoluteUrlDeriver;
+    
+    $deriver = new AbsoluteUrlDeriver(
+        '/index.html',
+        'http://example.com'
+    );
+    (string)$deriver->getAbsoluteUrl(); // returns 'http://example.com/index.html'
+    
+    
+    $deriver = new AbsoluteUrlDeriver(
+        '/server.php?param1=value1',
+        'http://www.example.com/pathOne/pathTwo'
+    );
+    (string)$deriver->getAbsoluteUrl(); // returns 'http://www.example.com/server.php?param1=value1'
 
-
-$deriver = new AbsoluteUrlDeriver(
-    '/server.php?param1=value1',
-    'http://www.example.com/pathOne/pathTwo'
-);
-(string)$deriver->getAbsoluteUrl(); // returns 'http://www.example.com/server.php?param1=value1'
-```
