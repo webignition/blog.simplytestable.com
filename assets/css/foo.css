@@ -167,6 +167,10 @@ header .name:before {
   margin-top: 32px;
 }
 
+.post ol li {
+  margin-bottom: 8px;
+}
+
 .comments {
   margin-top: 80px;
 }
