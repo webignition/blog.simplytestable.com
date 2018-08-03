@@ -61,26 +61,25 @@ can be later addressed.
 
 This blog is part of the marketing strategy. It's a real-time journal documenting
 development and progress. It's a two-way medium. Leave comments, or send tweets
-to <a href="https://twitter.com/simplytestable">@simplytestable</a>. Your
+to [@simplytestable](https://twitter.com/simplytestable). Your
 thoughts are very valid.
 
 I will reach out to developers and testers I know personally, insisting they follow
-<a href="https://twitter.com/simplytestable">@simplytestable</a>, that they take
+[@simplytestable](https://twitter.com/simplytestable), that they take
 part in beta testing.
 
 I will provide here an interesting account of development and will post stories
-to <a href="http://news.ycombinator.com">Hacker News</a> and take part in interesting
-discussions at the <a href="http://www.softwaretestingclub.com/forum">software testing
-club forum</a>
+to [Hacker News](http://news.ycombinator.com)<a href=""></a> and take part in interesting
+discussions at the [software testing club forum](http://www.softwaretestingclub.com/forum).
 
-I will attend local developer and tester meetups, specifically Cardiff's <a href="http://unifieddiff.co.uk/">Unified Diff</a>
-and the software testing club <a href="http://www.meetup.com/SoftwareTestingClub/events/62127712/">Cardiff Meetup #2</a>.
+I will attend local developer and tester meetups, specifically Cardiff's [Unified Diff](http://unifieddiff.co.uk/)
+and the software testing club [Cardiff Meetup #2](http://www.meetup.com/SoftwareTestingClub/events/62127712/).
 
 ### Initial development
 
 Ultimately I need to kick off significant development.
 
-I need to build <a href="http://app.simlytestable.com">app.simplytestable.com</a>,
+I need to build [app.simplytestable.com](http://app.simlytestable.com),
 a RESTful API for accepting site test jobs, reporting on the progress of jobs and providing
 access to the results of jobs.
 

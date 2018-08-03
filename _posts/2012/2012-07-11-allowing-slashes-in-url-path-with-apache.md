@@ -11,13 +11,13 @@ Ever found yourself needing to allow slashes in a URL path?
     http://app.simplytestable.com/job/<strong>https://simplytestable.com</strong>/start
 </code>
 
-Even if you correctly encode slashes as <code>%2F</code>, Apache will decode them and treat them as normal
+Even if you correctly encode slashes as `%2F`, Apache will decode them and treat them as normal
 path part separators, just as if you had used a slash as it is most commonly used.
 
 This is a little daft. If you want to separate path parts, use a slash. If you want to literally include a slash,
 encode it.
 
-Nonetheless, you can configure Apache to allow encoded slashes with <code>AllowEncodedSlashes On</code> in the relevant
+Nonetheless, you can configure Apache to allow encoded slashes with `AllowEncodedSlashes On` in the relevant
 vhost:
 
 <pre>
