@@ -6,6 +6,13 @@ header {
   background: #eee;
   margin-bottom: 40px;
   border-bottom:  1px solid #ddd;
+  padding-top: 16px;
+}
+
+@media (min-width: 992px) {
+  header {
+    padding-top: 40px;
+  }
 }
 
 header .name {
@@ -48,6 +55,66 @@ header .name:before {
 
 .header-main .lead.intro {
   margin-top: 42px;
+}
+
+.sidebar {
+
+}
+
+.header-sidebar {
+  margin-top: 20px;
+}
+
+.header-icon {
+  color: #08C;
+}
+
+.header-sidebar h2 {
+  font-size: 1rem;
+}
+
+.header-sidebar .start-new-test-form,
+.header-sidebar .start-new-test-form .btn,
+.header-sidebar p,
+.header-sidebar .areas {
+  font-size: 0.9rem;
+}
+
+header .areas {
+  list-style: none;
+  margin: 8px 0;
+  padding: 0;
+}
+
+header .areas li {
+  display: inline-block;
+  padding: 0 8px;
+  border-right: 1px solid #ddd;
+}
+
+header .areas li:first-of-type {
+  padding-left: 0;
+}
+
+header .areas li:last-of-type {
+  border-right: 0;
+}
+
+.start-new-test-form .btn {
+  text-align: left;
+  position: relative;
+  padding-right: 40px;
+}
+
+.start-new-test-form .byline {
+  display: block;
+}
+
+.start-new-test-form .fa {
+  position: absolute;
+  right: 10px;
+  font-size: 2rem;
+  top: 11px;
 }
 
 .post.post-listed {

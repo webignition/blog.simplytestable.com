@@ -7,7 +7,7 @@
 <header>
     <div class="container">
         <div class="row">
-            <div class="col header-main">
+            <div class="col-lg-8 header-main">
                 <a href="/" class="name">{{ site.name }}</a>
 
                 <p class="lead intro">
@@ -18,6 +18,11 @@
                     {{ site.posts.size }} posts covering the initial idea, growth of the service, features, advances,
                     failures and successes.
                 </p>
+            </div>
+            <div class="d-none d-lg-block col-lg-4 sidebar header-sidebar">
+                {% include sidebar/about.html %}
+                {% include sidebar/start-new-test-form.html %}
+                {% include sidebar/areas.html %}
             </div>
         </div>
 
