@@ -1,21 +1,15 @@
 {% if page.url contains '/illustrations/' %}
-<div class="row newer-older">
-    <div class="col-md-12">
     {% for post in site.posts %}
         {% if post.illustration %}
             {% if post.illustration.id == page.illustration.id or page.source and post.title == page.source %}
-            <a href="{{ post.url }}" class="newer col-md-6">
-                <i class="fa fa-caret-left"></i>
+            <a href="{{ post.url }}" class="newer-older-control newer-control col-md-6">
+                <i class="fa fa-caret-left newer-older-icon"></i>
                 <span class="content">Back to &ldquo;{{ post.title }}&rdquo;</span>
             </a>
             {% endif %}
         {% endif %}
     {% endfor %}
-    </div>
-</div>
 {% else %}
-<div class="row newer-older">
-    <div class="col-md-12">
     {% assign content_item = page %}
 
     {% assign newer = false %}
@@ -38,34 +32,29 @@
 
     {% endfor %}
 
-    {% if newer == false %}
-    <span class="newer col-md-6"></span>
-    {% else %}
-    <a href="{{ newer.url}}" class="newer col-md-6"><i class="fa fa-caret-left"></i>
-        <span class="content">
-        {% if newer.short_title %}
-        {{ newer.short_title }} &hellip;
-        {% else %}
-        {{ newer.title }}
-        {% endif  %}
-        </span>
+    {% if newer %}
+        <a href="{{ newer.url}}" class="newer-older-control newer-control col-6"><i class="fa fa-caret-left newer-older-icon"></i>
+            <span class="content">
+            {% if newer.short_title %}
+            {{ newer.short_title }} &hellip;
+            {% else %}
+            {{ newer.title }}
+            {% endif  %}
+            </span>
 
-    </a>
+        </a>
     {% endif %}
 
-    {% if older == false %}
-    <span class="older col-md-6"></span>
-    {% else %}
-    <a href="{{ older.url}}" class="older col-md-6"><i class="fa fa-caret-right"></i>
-        <span class="content">
-        {% if older.short_title %}
-        {{ older.short_title }} &hellip;
-        {% else %}
-        {{ older.title }}
-        {% endif  %}
-        </span>
-    </a>
+    {% if older %}
+        <a href="{{ older.url}}" class="newer-older-control older-control col-6">
+            <span class="content">
+            {% if older.short_title %}
+            {{ older.short_title }} &hellip;
+            {% else %}
+            {{ older.title }}
+            {% endif  %}
+            </span>
+            <i class="fa fa-caret-right newer-older-icon"></i>
+        </a>
     {% endif %}
-    </div>
-</div>
 {% endif %}

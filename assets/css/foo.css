@@ -273,3 +273,36 @@ blockquote  .avatar-tom-batey {
   margin-bottom: 8px;
 }
 
+.newer-older-control {
+  display: block;
+  margin: 0 0 16px 0;
+  opacity: 0.6;
+  position: relative;
+}
+
+.newer-older-control:hover {
+  opacity: 1;
+}
+
+.newer-older-icon {
+  position: absolute;
+  top: 4px;
+}
+
+.newer-control {
+  text-align: left;
+  padding-left: 31px;
+}
+
+.newer-control .newer-older-icon {
+  left: 15px;
+}
+
+.older-control {
+  text-align: right;
+  padding-right: 31px;
+}
+
+.older-control .newer-older-icon {
+  right: 15px;
+}
