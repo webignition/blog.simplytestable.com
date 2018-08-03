@@ -3,11 +3,11 @@ layout: default
 title: "Working Prototype In Action (Video)"
 author: joncram
 ---
-
-<iframe class="video" width="640" height="480" src="https://www.youtube-nocookie.com/embed/qDEWyXXZsdY?rel=0" style="border: none"></iframe>
     
 A quick demonstration of the latest working prototype running a site-wide
 HTML validation test.
+
+<iframe class="video" width="640" height="480" src="https://www.youtube-nocookie.com/embed/qDEWyXXZsdY?rel=0" style="border: none"></iframe>
 
 You can see the test progress bar in the middle of the page and below
 that, not very clearly, you can see the changing test task queues.

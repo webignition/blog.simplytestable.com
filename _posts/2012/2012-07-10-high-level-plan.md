@@ -4,8 +4,6 @@ title: "High Level Plan"
 author: joncram
 ---
 
-### Grand Plan
-
 Simply Testable is launching publicly October 2012, about 12 weeks from now.
 It will allow users to perform a range of quality-related technical and
 non-technical tests across a given web site.

@@ -5,7 +5,7 @@ date: 2012-08-23 15:00:00
 author: joncram
 ---
 
-<iframe class="video" width="640" height="480" src="https://www.youtube-nocookie.com/embed/mfu0P_zd_EE?rel=0" style="border: none"></iframe>
-
-An update to the <a href="/working-prototype-in-action/">first prototype demonstration</a>;
+An update to the [first prototype demonstration](/working-prototype-in-action/);
 the list of URLs being tested against is dynamically updated as they are discovered and tests against them are performed.
+
+<iframe class="video" width="640" height="480" src="https://www.youtube-nocookie.com/embed/mfu0P_zd_EE?rel=0" style="border: none"></iframe>

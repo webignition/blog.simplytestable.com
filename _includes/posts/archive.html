@@ -13,7 +13,7 @@
         {% include posts/newsletter/intro.html %}
         {% include posts/newsletter/highlights.html %}
         {% else %}
-        {{ post.excerpt | remove: '<div class="section section-first">' | remove: '<div class="section">' | remove: '</div>' }}
+        {{ post.excerpt }}
         {% endif %}
 
     </li>

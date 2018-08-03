@@ -2,7 +2,6 @@
 layout: default
 title: "The Beginning"
 author: joncram
-excerpt_separator: <!--more-->
 ---
   
 This is a story of how I came to be sitting here writing about developing
@@ -13,8 +12,6 @@ I'm a software developer focusing on making software for the web.
 As a developer, I test web sites. Testers (test engineers, quality assurance
 people) certainly test more thoroughly and more effectively than I do, but
 there's still a level of testing in which I get involved.
-
-<!--more-->
 
 I'll sometimes need to verify the validity of a given page's HTML as I'll
 sometimes encounter bugs related to how a browser compensates for non-obviously

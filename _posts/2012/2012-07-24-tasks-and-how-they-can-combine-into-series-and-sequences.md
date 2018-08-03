@@ -2,7 +2,6 @@
 layout: default
 title: "Tasks and How They Combine Into Series and Sequences"
 author: joncram
-excerpt_separator: <!--more-->
 ---
     
 **Tasks** are where all the fun is. Tasks (ultimately) give you the insight
@@ -14,8 +13,6 @@ I mentioned how we use *jobs* and *tasks* to help run collections
 of tests. A job might equate to "Test everything for http://example.com". This
 is expanded into a collection of tasks, with each task focused on a specific
 quality factor for a specific URL, such as "Verify the HTML validity for http://example.com/foo/bar".
-
-<!--more-->
 
 **Tasks are stateless** in so far as they are unaware of other tasks. This is a good thing.
 If a test job was for verifying the HTML validity of a 100-page web site, the corresponding set of
