@@ -1,0 +1,174 @@
+- section: null
+  questions_and_answers:
+    - question: "Are you primarily a developer who carries out testing while developing, or a dedicated tester?"
+      answer: "I am a dedicated tester and have some development knowledge but not
+               really enough to actually develop anything. I've been in the industry
+               for over 15 years, mostly working in different roles in digital
+               agencies throughout that time from Account Manager, Project Manager
+               and even Account Director plus I ran my own small agency for a few years."
+    - question: "What size team do you work in? How many other developers, testers and so on do you interact with on a daily basis?"
+      answer:
+        - "At WebDepend there are 2 of us full time and then we bring in further
+           freelance testers as we need them."
+
+        - "We generally interact with project managers, developers and other QA
+           staff but, depending on the client, can sometimes also work with business
+           owners, Marketing or IT teams."
+
+        - "For most of the projects we work on there are no other testers involved
+           and so we are working alongside project managers and reporting issues
+           to developers."
+- section: "Items To Test"
+  questions_and_answers:
+    - question:
+        - "When carrying out functional testing, and aside from checking whether a specific
+           functional area works as required, what do you check for?"
+
+        - "In other words, do you have something akin to a checklist of items that you look to test?"
+      answer:
+        - "For each project I will put together a test plan or a checklist of the areas that I need
+           to cover. I also add to that further standard items that pretty much every web project
+           should have, which will be a mixture of web standards, best practice and items that I
+           believe mean a better quality website."
+
+        - "I then run through that checklist on each browser and mobile device that we are including
+           as part of the scope of the testing. So aside from testing whether something actually works
+           correctly I am checking that the layout of items on the page, the styling of elements and
+           the ability to use those elements is first of all correct and second is consistent across
+           all the browsers I am testing."
+
+        - "With responsive websites I am also checking that the website provides the correct layout
+           depending on the device, screen size and orientation that I am testing on. Plus I check
+           that any responsive elements, such as a swipeable image gallery, can be used correctly."
+
+        - "As I test across each browser and each mobile device I'll also pick up areas that are
+           confusing or difficult to use plus navigation items, headings or button labels that don't
+           make sense or other areas that might frustrate the user. Some of these issues might not be
+           bugs as such but I'll report anything that I believe could improve the website and make
+           it better for the user."
+
+        - "I will also spend some time carrying out exploratory testing and not referring to the
+           checklist that I've prepared. I'll try and put myself in the mind of the user and carry
+           out journeys that I think they will take, perform actions that they might perform and
+           build in 'uncertainty' around the journey I'm performing. This imagines a user is not
+           certain of the action they need to carry out, so they might click the back button or
+           want to go back to the homepage or look for a sitemap or not fill in a form correctly or
+           make a mistake. For example, on a travel website, if you search for hotel room availability
+           between certain dates, can you start to proceed with a booking then backtrack and choose
+           different dates? Some websites 'lose' their ability to remember what you searched for
+           if you use the back button or do something unexpected."
+
+        - "The amount of testing that we can do for each project will depend on the budget we've
+           agreed with our client and I need to estimate this budget correctly and agree with the
+           client how much testing will be carried out and what that testing will be made up of."
+
+    - question: "Assuming you have a checklist of items that you look to test (this seems quite
+                 common), which would you consider the highest priority such that it would block
+                  a site from being related live (or which you'd advise should be fixed as soon
+                  as possible if already live)?"
+      answer:
+        - "First of all, I need to make sure I can test an entire website and run through the full
+           checklist of items. If I get halfway through the checklist and there is an issue that
+           prevents me from completing the testing then that becomes a blocker and is the highest
+           priority to fix at that point."
+
+        - "Next on the list of priorities would be areas that are fundamental to the website. For
+           an ecommerce site those fundamental areas would be to find a product, add it to the shopping
+           basket and go through the checkout process. So can that fundamental user journey be carried
+           out across all the browsers and mobile devices? I've found issues before where the layout
+           breaks in a particular browser that means the Add to basket button doesn't work or the
+           checkout process might be really frustrating to use on an iPhone for example. Those would
+           be high priority issues to fix."
+
+        - "Anything that cuts off a large amount of users from being able to carry out a fundamental
+           task would be high priority. If something functionally works but is impossible on a particular
+           device or in a specific browser then that could affect a large percentage of the traffic
+           coming to the site. If there are big accessibility issues then those would also be high
+           priority."
+
+- section: "Tools Used"
+  questions_and_answers:
+    - question: "What tools do you use to examine the quality factors against which you're testing?
+                 What tools are used for what tests?"
+      answer:
+        - "In terms of functional testing, I am pretty much entirely manual although I'm planning to
+           use tools for some repeatable test cases where we might have an ongoing testing schedule
+           for a client. For example, we're planning on using Selenium for a particular project to
+           test a range of enquiry forms to make sure those forms can always be submitted every time
+           the developers deploy a new release. We will still perform some manual tests but Selenium
+           can repeat the same tests across a number of different web browsers so we don't have to
+           carry out as many tests manually."
+
+        - "Similarly, we have used an automated tool called Nimsoft Cloud User Experience Monitor
+           (used to be Watchmouse) to test that specific user journeys are always working and also
+           monitor the performance of those user journeys. So if the user journey was to find a product,
+           add it to a basket and go to the checkout, we would use Nimsoft to run that every 15 minutes
+           and continually monitor the performance of it. Nimsoft will send us alerts if one of the steps
+           goes over a certain threshold and an investigation can then take place as to what is happening
+           that might cause that step to suffer from poor performance or stop working altogether. It is a
+           great early warning system for live websites."
+
+        - "Another area I'm interested in is testing a website's SEO and I use tools from a company called
+           Moz to scan a site and give me results showing me missing or duplicate title tags, meta descriptions
+           and potential duplicate content problems, which are important for SEO but can also affect a user's
+           experience of the site. For example, if every title tag is the same then that is not really helpful
+           for users or for search engines."
+
+        - "Then obviously I use Simply Testable to enable me to gain an appreciation of code quality and
+           adherence to HTML and CSS standards."
+
+    - question:
+        - "Are there any aspects for which there are no tools to support you?"
+        - "For example, you might check that a site has a custom 404 page instead of the default Apache 404 page,
+           and you find you always have to check this by hand."
+      answer:
+        - "For me, the majority of what I test is manual and in my view should be manual. I want to use
+           the website as a user would in order to understand the main issues and problems that a user
+           would face, as well as test that functions are working in the way that they are supposed to
+           work."
+
+        - "I like to use automated tools that enable me to cover more of the website, especially large
+           websites, and give me insight into areas that I've not been able to get to manually. This is
+           not really functionality but a spell check of an entire website would be a good automated tool.
+           There are some existing tools that check the spelling and grammar for a website already but
+           none that I regularly use in my standard checklist yet."
+
+        - "In terms of the 404 page example, I'll always want to manually check that a custom 404 page
+           is in place because I also want to check how good it is. It isn't enough for there to be a
+           custom 404 page, it should be helpful to the user and enable them to find what they were
+           looking for or go back to the home page or contact someone who can help them."
+
+- section: "Pain Points and One-Click Magic"
+  questions_and_answers:
+    - question:
+        - "Are there any tests, relative to the project as a whole, that are a pain to carry out?"
+
+        - "For example, an accessibility related test might concern checking that all images have sensible
+           alt text and whilst a tool can tell you if image alt text is outright missing you find you still
+           spend (far too much) time having to manually verify that alt text is not nonsense."
+      answer:
+        - "That is a key aspect between using automated tools and manual testing. On the whole, the tool
+           will tell you if alt text is there or not but if the tool tells you that alt text is present it
+           doesn't mean that the alt text is correct. Automated tools allow you to cover more ground and get
+           further into the testing but you still need to go and look at the alt text, as you say, to make
+           sure it makes sense and correctly describes the image."
+
+        - "Another example is title tags, there are tools that tell you a title tag is missing and you can also
+           get tools that tell you if a title tag is very short or is very long. But you still need to review
+           the title tag and see if it makes sense and correctly describes the page."
+
+        - "Generally, it is not possible to review all the title tags, meta descriptions, alt tags, etc.
+           that there might be in a website so we have to prioritise our time and only review the most
+           important pages whilst using tools such as Simply Testable to cover the whole site finding
+           all the missing items or the broken links."
+
+    - question: "&ldquo;I wish I had a button I could click that would do this for me automatically&rdquo; - what first
+                 springs to mind, or what is the most significant thing that springs to mind, when reading that?"
+      answer:
+        - "Well, you've already built some of the features I requested for Simply Testable, which is great."
+
+        - "Something we're doing more is to carry out basic tests to measure the performance of websites and
+           being able to test items at a code level for a whole website would be great. So an automated test
+           to check whether all images have been optimised as much as they can be or whether CSS and JS files
+           have been minified and combined plus any other aspects of the code or images that could indicate
+           potential performance improvements."

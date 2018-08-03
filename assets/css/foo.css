@@ -211,3 +211,65 @@ pre {
   font-size:60px;
   font-style: normal;
 }
+
+.post .avatar-container {
+  position: relative;
+  padding-top: 40px;
+}
+
+@media (min-width: 992px) {
+  .post .avatar-container {
+    padding-top: 10px;
+  }
+}
+
+blockquote  .avatar {
+  margin-top: 16px;
+  display: block;
+  width:24px;
+  height:24px;
+  position:absolute;
+  top: -16px;
+}
+
+@media (min-width: 992px) {
+  blockquote  .avatar {
+    top: 16px;
+    left: -44px;
+    margin: 0;
+  }
+}
+
+blockquote  .avatar-tom-batey {
+  background-color: transparent;
+  background-image: url(https://pbs.twimg.com/profile_images/642579437/Picture_8_mini.png);
+}
+
+.question-answer-question {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 26px;
+}
+
+.question-answer-icon {
+  color: #08c;
+  font-size: 1.6rem;
+  position: absolute;
+  left: -10px;
+  top: -3px;
+}
+
+@media (min-width: 992px) {
+  .question-answer-icon {
+    left: -40px;
+    top: 0;
+  }
+}
+
+.question-answer-question-section {
+  display: block;
+  margin-bottom: 8px;
+}
+
