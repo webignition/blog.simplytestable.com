@@ -12,9 +12,10 @@ header .name {
   display: block;
   color: #555;
   margin-bottom: 24px;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding-left: 100px;
   text-decoration: none;
+  margin-top: 24px;
 }
 
 header .name:hover {
@@ -24,6 +25,7 @@ header .name:hover {
 @media (min-width: 768px) {
   header .name {
     font-size: 2.5rem;
+    margin-top: 0;
   }
 }
 
@@ -42,6 +44,10 @@ header .name:before {
   header .header-main {
     padding-top: 1rem;
   }
+}
+
+.header-main .lead.intro {
+  margin-top: 42px;
 }
 
 .post.post-listed {
