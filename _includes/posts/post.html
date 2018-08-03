@@ -48,10 +48,7 @@
     {% else %}
         {% if page.is_index %}
             {{ content_item.excerpt }}
-
-            {% if content_item.continue_reading != false %}
-                <a href="{{ content_item.url }}" class="btn btn-outline-secondary post-continue-reading">Continue reading <i class="fa fa-caret-right"></i></a>
-            {% endif %}
+            <a href="{{ content_item.url }}" class="btn btn-outline-secondary post-continue-reading">Continue reading <i class="fa fa-caret-right"></i></a>
         {% else %}
             {{ content_item }}
         {% endif %}
