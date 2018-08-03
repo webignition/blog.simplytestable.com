@@ -3,9 +3,7 @@ layout: default
 title: "Simply Testable Updates September 2012 #3: Performance++, RSS Feed Support, Test Failure Support"
 short_title: "Simply Testable Updates Sept #3: Performance++, RSS Feed Support"
 date: 2012-09-19 13:00:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: ninth
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=5c86a943e3

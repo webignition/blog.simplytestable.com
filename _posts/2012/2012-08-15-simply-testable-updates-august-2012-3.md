@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates August 2012 #3: Progress, Integration Automation, First Real Tests"
 short_title: "Simply Testable Updates Aug #3: Progress, Integration Automation"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: fourth
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=7741c7a1fa

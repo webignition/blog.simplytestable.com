@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Setting the PHP Memory Limit for Travis CI"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 excerpt_separator: <!--more-->
 ---
 

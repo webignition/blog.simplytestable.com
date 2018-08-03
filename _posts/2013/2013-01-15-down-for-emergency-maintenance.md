@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Down For Emergency Maintenance"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 ### Update 9 January 16 22:00 GMT

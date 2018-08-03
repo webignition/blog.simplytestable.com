@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #68: HTML Validator Improvements"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 68th

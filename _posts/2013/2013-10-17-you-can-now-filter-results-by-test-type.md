@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "You Can Now Filter Results By Test Type"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 illustration:
     url: https://i.imgur.com/rU0tiTX.png
     style:

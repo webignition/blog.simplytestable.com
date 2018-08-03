@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates September 2012 #1: Epic-scale Performance Improvements, Private Alpha One Week Away"
 short_title: "Simply Testable Updates Sept #1: Epic-scale Performance Improvements"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: seventh
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=c51eea7964

@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Hello Postmark, More Reliable Mail Delivery"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 illustration:
     url: https://i.imgur.com/dWwJmHF.png
     style:

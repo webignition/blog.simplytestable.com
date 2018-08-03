@@ -2,9 +2,7 @@
 layout: default
 title: "365 Day Free Trial Offer"
 date: 2013-07-15 12:20
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
     
 I wrote recently about the newly-launched [premium plans](premium-plans-launched-and-why-they-exist/).

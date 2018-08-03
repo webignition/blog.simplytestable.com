@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #116: Scheduled Test Development, How To Make Broken Link Checking Slow"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 116th

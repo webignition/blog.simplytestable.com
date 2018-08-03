@@ -2,9 +2,7 @@
 layout: default
 title: "Data Recovery Strategy"
 date: 2013-03-06 13:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 excerpt_separator: <!--more-->
 ---
 

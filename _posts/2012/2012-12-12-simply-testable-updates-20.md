@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates 20: CSS Test Option Refinement"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 20th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=aa249db2ca

@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Post-Launch Post-Mortem"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 illustration:
     id: google-analytics-post-launch
     url: https://i.imgur.com/q5WLK.png

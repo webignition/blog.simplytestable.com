@@ -2,9 +2,7 @@
 layout: default
 title: "Finding the Top HTML Validation Errors"
 date: 2013-07-24 12:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 ### Introduction

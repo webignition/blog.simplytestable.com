@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates October 2012 #1: MVP In One Week, Timeouts Handled, Better Sitemap Handling, Error Pages"
 short_title: "Simply Testable Updates Oct #1: MVP In 1 Week, Timeouts Handled"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: eleventh
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=f640ebc4a3

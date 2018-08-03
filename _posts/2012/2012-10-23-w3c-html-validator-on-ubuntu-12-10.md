@@ -2,9 +2,7 @@
 layout: default
 title: "W3C HTML Validator On Ubuntu 12.10"
 date: 2012-10-17 16:30
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 excerpt_separator: <!--more-->
 ---
 I recently upgraded all local development and CI systems from Ubuntu 12.04

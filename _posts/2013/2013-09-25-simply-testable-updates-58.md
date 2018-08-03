@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #58: Simplifying Test Start, Progress and Results Pages; New Test Types Planned"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 58th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=459a3168bf

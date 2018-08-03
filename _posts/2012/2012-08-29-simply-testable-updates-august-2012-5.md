@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates August 2012 #5: Working Prototype Progress"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: sixth
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=a8469ac004

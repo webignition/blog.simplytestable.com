@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Allowing Public Access To Private Test Results"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 ### The Need To Share Test Results

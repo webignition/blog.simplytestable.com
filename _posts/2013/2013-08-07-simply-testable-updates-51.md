@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #51: 200 More Help Pages, Origins Of The &quot;Variable&quot; Element, Crawler Plans"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 51st
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=7570430a4c

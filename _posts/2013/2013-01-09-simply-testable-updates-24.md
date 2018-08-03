@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates 24: Talk @UnifiedDiff Today, CSS Validator Improvements, JS Static Analysis Improvements"
 short_title: "Simply Testable Updates 24: Talk @UnifiedDiff Today"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 24th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=853f95f91f

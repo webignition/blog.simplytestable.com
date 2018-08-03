@@ -2,9 +2,7 @@
 layout: default
 title: "Choose HTML Validation, CSS Validation or Both"
 date: 2012-11-28 14:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 Since the introduction of CSS validation two weeks ago, any new full-site

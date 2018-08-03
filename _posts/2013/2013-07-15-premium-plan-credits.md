@@ -2,9 +2,7 @@
 layout: default
 title: "Premium Plan Credits"
 date: 2013-07-15 12:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 ### Premium Plans Have a Monthly Credit Quota

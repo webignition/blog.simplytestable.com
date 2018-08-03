@@ -2,9 +2,7 @@
 layout: default
 title: "How To Test A Local Site"
 date: 2012-10-31 13:30
-author:
-name: Jon Cram
-url: https://github.com/webignition
+author: joncram
 ---
 
 I've been asked a few times if it's possible to test a local website. You can. Here's how.

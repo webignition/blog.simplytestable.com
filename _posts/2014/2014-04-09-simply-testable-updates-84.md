@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #84: Filtering Test History, Joining The Dots Between Tests"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 84th

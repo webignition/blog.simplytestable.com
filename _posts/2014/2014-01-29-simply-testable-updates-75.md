@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #75: JavaScript Static Analysis For Password Protected Sites Nearly Ready"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 75th

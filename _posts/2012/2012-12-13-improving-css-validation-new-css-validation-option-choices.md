@@ -2,9 +2,7 @@
 layout: default
 title: "Improving CSS Validation: New CSS Validation Option Choices"
 date: 2012-12-14 14:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 illustration:
     id: css-validation-options
     url: https://i.imgur.com/K4TB7.png

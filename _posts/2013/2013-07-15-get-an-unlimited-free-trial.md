@@ -2,9 +2,7 @@
 layout: default
 title: "Get an Unlimited Free Trial"
 date: 2013-07-15 13:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 excerpt_separator: <!--more-->
 ---
 

@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #117: Scheduled Test Development Update"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 117th

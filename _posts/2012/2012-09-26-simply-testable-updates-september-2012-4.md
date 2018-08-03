@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates September 2012 #4: Public Alpha, More Performance++"
 short_title: "Simply Testable Updates Sept #4: Public Alpha, More Performance++"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: tenth
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=ce39648694

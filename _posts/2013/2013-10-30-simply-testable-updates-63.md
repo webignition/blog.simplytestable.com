@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #63: Link Integrity Improvements, Interview with Web Tester Tom Batey"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 63rd

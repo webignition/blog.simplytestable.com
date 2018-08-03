@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Our Technology Stack"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
     
 I've been asked a few times, most recently by the guys at [Matcha Labs](http://www.matchalabs.com/),

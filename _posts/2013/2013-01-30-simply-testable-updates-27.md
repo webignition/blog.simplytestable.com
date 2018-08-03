@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates 27: Backupable Progress - Restorable Data, Reduced Backup Size"
 short_title: "Simply Testable Updates 27: Backupable Progress"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 27th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=7eecb3b6dc

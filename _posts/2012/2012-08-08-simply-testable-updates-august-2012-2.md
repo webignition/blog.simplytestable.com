@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates August 2012 #2: Progress, HTTP Testability, Roadmap"
 short_title: "Simply Testable Updates Aug #2: Progress, HTTP Testability, Roadmap"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: third
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=6b96d0e5e1

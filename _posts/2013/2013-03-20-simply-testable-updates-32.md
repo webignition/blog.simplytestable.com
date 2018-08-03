@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates 32: Bugfixes, Robustness++"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 32nd
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=3956968029

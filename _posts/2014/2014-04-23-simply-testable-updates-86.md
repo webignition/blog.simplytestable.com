@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #86: Use Malformed Content Types If You Like; Product Info Being Built"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 86th

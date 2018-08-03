@@ -2,9 +2,7 @@
 layout: default
 title: "Improving CSS Validation: The Need for Control Over The CSS Validator"
 date: 2012-12-14 11:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 excerpt_separator: <!--more-->
 ---
 

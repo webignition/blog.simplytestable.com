@@ -3,9 +3,7 @@ layout: default
 title: "Simply Testable Updates #40: Your Account, Faster Single-URL Tests, Free Demo Limits, CSS Validation Bug Fixed"
 short_title: "Simply Testable Updates #40: Your Account, Faster Single-URL Tests"
 date: 2013-05-22 16:30
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 40th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=e550c94573

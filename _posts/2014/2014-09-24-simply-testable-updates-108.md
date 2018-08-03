@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #108: Job Performance++, System Stability++"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 108th

@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Installing The W3C HTML Validator With HTML5 Support (On Ubuntu)"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 excerpt_separator: <!--more-->
 ---
 

@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "HTML Validation For Password-Protected Sites"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
     
 I've been working for the past two or so weeks on adding the ability to

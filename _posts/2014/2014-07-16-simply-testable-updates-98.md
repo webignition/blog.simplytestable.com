@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #98: Team Features, Account Page Changes"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 98th

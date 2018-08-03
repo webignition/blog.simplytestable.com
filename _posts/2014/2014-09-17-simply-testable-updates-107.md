@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #107: Improvements to: Broken Link Checking, URL Discovery, Background Process Management"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 107th

@@ -2,10 +2,7 @@
 layout: default
 title: "The Switch to Guzzle is Complete"
 date: 2013-04-24 14:30
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
-
+author: joncram
 ---
     
 I've spent the past 4 weeks (or so) switching from our [own HTTP client library](https://github.com/webignition/http-client) 

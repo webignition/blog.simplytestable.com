@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "CSS Validation Options Explained"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 illustration:
     id: css-validation-options
     url: https://i.imgur.com/K4TB7.png

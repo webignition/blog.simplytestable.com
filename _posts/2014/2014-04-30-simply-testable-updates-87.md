@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #87: Mobile-Friendly, (And Cacheable!) Sign Up, Sign In, Reset Password"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 87th

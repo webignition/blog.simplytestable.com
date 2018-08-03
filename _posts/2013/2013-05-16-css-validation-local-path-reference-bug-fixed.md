@@ -2,9 +2,7 @@
 layout: default
 title: "CSS Validation Local Path Reference Bug Fixed"
 date: 2013-05-16 12:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 illustration:
     url: https://i.imgur.com/8JiYDAl.png
     style:

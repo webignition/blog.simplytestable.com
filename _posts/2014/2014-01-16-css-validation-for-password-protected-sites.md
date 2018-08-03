@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "CSS Validation For Password-Protected Sites (With Bonus CSS Retrieval Reliability)"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
     
 I've been working for the past few weeks on adding the ability to

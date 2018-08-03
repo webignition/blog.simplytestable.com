@@ -2,9 +2,7 @@
 layout: default
 title: "Service Restored"
 date: 2013-01-16 21:55
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
     
 The recent [emergency maintenance](/down-for-emergency-maintenance) is now all complete.

@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates #55: Crawler Improvements, JSLint Config Options Coming, Product Announcements Newsletter"
 short_title: "Simply Testable Updates #55: Crawler Improvements, JSLint Config Options"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 55th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=4a5a9d7bf1

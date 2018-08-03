@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates #54: Crawler Improvements Coming, Introductory Email Course"
 short_title: "Simply Testable Updates #53: Crawler Improvements Coming"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 54th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=d53ff06e02

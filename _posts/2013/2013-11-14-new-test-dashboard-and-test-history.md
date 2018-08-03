@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "New Test Dashboard and Test History"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 excerpt_separator: <!--more-->
 ---
 

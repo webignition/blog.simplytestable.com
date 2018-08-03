@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #70: Password Protected Sites Progress; Bugfix For URLs Returning Internal Server Error"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 70th

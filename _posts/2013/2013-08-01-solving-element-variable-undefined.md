@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Solving 'Element &quot;Variable&quot;' Undefined'"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 When preparing a documentation page to cover the generic

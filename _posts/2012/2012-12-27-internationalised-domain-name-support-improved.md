@@ -2,9 +2,7 @@
 layout: default
 title: "Internationalised Domain Name (IDN) Support Improved"
 date: 2012-12-27 15:30
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 Thanks to the feedback from [@igll](https://twitter.com/igll),

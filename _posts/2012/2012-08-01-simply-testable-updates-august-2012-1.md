@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates August 2012 #1: Progress, Opensource HTTP Client Library, Unit Test Improvements"
 short_title: "Simply Testable Updates Aug #1: Progress, Opensource HTTP Client"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncramn
 newsletter:
     issue_number: second
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=0dfa713ed6

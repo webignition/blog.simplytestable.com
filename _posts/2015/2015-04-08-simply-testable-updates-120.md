@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #120: Scheduled Tests Coming Soon (Hopefully)"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 120th

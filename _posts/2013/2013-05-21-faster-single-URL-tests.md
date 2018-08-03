@@ -2,9 +2,7 @@
 layout: default
 title: "Faster Single-URL Tests"
 date: 2013-05-21 11:45
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 Running a single-URL test just got faster!

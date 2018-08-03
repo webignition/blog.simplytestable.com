@@ -2,9 +2,7 @@
 layout: default
 title: "Your Account Page Now Available"
 date: 2013-05-16 11:40
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 illustration:
     url: https://i.imgur.com/cMZcuOO.png
     style:

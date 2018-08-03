@@ -2,9 +2,7 @@
 layout: default
 title: "Ignoring False CSS Background Image Data Url Errors"
 date: 2013-03-27 10:40
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 excerpt_separator: <!--more-->
 ---
     

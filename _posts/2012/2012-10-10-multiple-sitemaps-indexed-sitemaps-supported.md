@@ -2,9 +2,7 @@
 layout: default
 title: "Multiple Sitemaps, Indexed Sitemaps Supported"
 date: 2012-10-10 10:30
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
     
 The URLs to be tested when running a full-site test are gathered from a website's

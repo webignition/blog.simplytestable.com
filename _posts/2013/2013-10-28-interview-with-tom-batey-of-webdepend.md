@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Interview With Tom Batey of WebDepend"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 {% assign avatar_blockquote_avatar_name = "tom-batey" %}

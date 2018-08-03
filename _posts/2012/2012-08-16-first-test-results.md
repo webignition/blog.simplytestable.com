@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "First Test Results"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 illustration:
     id: first-test-results
     url: https://i.imgur.com/OztTE.png

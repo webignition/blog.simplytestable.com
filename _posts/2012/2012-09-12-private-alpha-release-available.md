@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Private alpha release available"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 illustration:
     id: private-alpha
     url: https://i.imgur.com/viz6l.png

@@ -2,9 +2,7 @@
 layout: default
 title: "Limits on Free Full-Site and Single-URL Tests"
 date: 2013-05-21 11:40
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
     
 Limits are starting to be applied for totally free full-site and single-URL

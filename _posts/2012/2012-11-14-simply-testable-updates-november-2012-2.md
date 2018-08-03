@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates November 2012 #2: CSS Validation Is Live"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 17th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=f3a7fbed4a

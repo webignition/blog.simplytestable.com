@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #46: No Progress, Moving House, Cat With Broken Leg"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 46th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=74e190b1bc

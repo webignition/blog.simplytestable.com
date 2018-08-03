@@ -1,12 +1,10 @@
 ---
 layout: default
 title: "The Beginning"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 excerpt_separator: <!--more-->
 ---
-    
+  
 This is a story of how I came to be sitting here writing about developing
 a brand new professional automated web front-end testing service.
 

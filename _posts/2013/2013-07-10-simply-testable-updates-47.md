@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #47: Premium Plans Coming Next Week"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 47th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=c6fc33f37e

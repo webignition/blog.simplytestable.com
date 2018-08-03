@@ -2,9 +2,7 @@
 layout: default
 title: "Opensource Libraries We've Created and How We Use Them (Part One: URL Handling)"
 short_title: "Opensource Libs We've Created and How We Use Them (URL Handling)"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
     
 I created some libraries for dealing with certain matters that would be common

@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Integrating Resque Into A Symfony Application"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 excerpt_separator: <!--more-->
 ---
 

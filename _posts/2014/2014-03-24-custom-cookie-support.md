@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Custom Cookie Support (Testing User-Specific Content and Features)"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
     
 You can now specify cookies to be set on all HTTP requests made whilst

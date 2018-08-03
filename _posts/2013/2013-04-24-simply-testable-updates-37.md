@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates #37: HTTP library switching done, Revenue Plans"
 date: 2013-04-24 16:10
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 37th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=9425573fb8

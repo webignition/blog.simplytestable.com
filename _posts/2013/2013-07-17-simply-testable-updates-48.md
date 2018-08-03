@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates #48: Premium Plan 365 Day Trial Offer Until July 31, Infinite Free Trial Hack, Bug fixes"
 short_title: "Simply Testable Updates #48: Premium Plan 365 Day Trial Offer Until July 31"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 48th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=e7c06db4a8

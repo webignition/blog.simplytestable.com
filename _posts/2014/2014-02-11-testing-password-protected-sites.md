@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Testing Password-Protected Sites"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
     
 I've been working for the past few weeks on adding the ability to

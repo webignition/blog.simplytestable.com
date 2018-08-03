@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Much Improved Doctype Support"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
     
 I today expanded the range of [doctypes](https://en.wikipedia.org/wiki/Document_type_declaration#Example)

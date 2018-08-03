@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Redirect Loops and Long Redirect Chains Detected"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 illustration:
     id: redirect-loops-detected
     url: https://i.imgur.com/oQj0c.png

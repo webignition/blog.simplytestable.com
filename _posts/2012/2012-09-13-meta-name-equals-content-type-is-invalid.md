@@ -2,9 +2,7 @@
 layout: default
 title: "&lt;meta name=&quot;Content-Type&quot; ... &gt; is invalid"
 date: 2012-09-12 14:00:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
     
 In investigating [production bug #001](/production-bug-001-fixed/)

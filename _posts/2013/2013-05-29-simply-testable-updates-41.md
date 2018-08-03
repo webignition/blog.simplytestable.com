@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates #41: Plans Page Mostly Done, New Documentation Site, Also CSS Validator Bug Fix"
 short_title: "Simply Testable Updates #41: Plans Page Mostly Done, New Documentation"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 41st
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=4dc68861e2

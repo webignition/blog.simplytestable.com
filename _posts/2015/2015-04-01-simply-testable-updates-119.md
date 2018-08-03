@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #119: Fixed Faulty Crawling, Scheduled Tests On-Target"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 119th

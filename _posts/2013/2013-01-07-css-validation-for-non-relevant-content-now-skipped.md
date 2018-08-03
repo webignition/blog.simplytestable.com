@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "CSS Validation For Non-Relevant Content Now Skipped"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 If you have non-HTML URLs in your sitemap, such as URLs for PDFs, HTML

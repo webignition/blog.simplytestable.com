@@ -1,10 +1,8 @@
 ---
 layout: default
 title: "Awesome Link Integrity Testing Now Available (If You Have An Account)"
-author:
-    date: 2013-10-16 11:00
-    name: Jon Cram
-    url: https://github.com/webignition
+date: 2013-10-16 11:00
+author: joncram
 ---
 
 ### Link Integrity Testing Now Available

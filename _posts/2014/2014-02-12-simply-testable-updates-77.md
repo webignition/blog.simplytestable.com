@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #77: Testing Password-Protected Everything, Graceful Handling of Sites That Don't Respond"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 77th

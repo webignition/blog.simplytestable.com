@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates #49: Hunting Down Common HTML Validation Errors"
 date: 2013-07-24 15:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 49th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=616710d839

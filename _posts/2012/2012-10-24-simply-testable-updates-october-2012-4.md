@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates October 2012 #4: Database Performance++, Account Creation Underway"
 short_title: "Simply Testable Updates Oct #4: DB Performance++, Account Creation"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: fourteenth
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=4c829243f5

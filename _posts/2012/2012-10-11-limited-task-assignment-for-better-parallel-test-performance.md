@@ -2,9 +2,7 @@
 layout: default
 title: "Limited Task Assignment For Better Parallel Test Performance"
 date: 2012-10-11 14:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
     
 A problem of which I've been aware for a while and which was the root of

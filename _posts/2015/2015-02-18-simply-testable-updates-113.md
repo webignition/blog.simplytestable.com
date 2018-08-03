@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #113: We're Profitable(!), Pre-Beta New Test Results, Currency In Transactional Emails"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 113th

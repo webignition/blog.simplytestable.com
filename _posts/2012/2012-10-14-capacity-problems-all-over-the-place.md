@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Capacity Problems All Over The Place"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
     
 Friday saw us [mentioned by WebResources depot](http://www.webresourcesdepot.com/simply-testable-free-automated-site-wide-html-markup-validation/)

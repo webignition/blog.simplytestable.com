@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Creating and Using a Github OAuth Token With Travis And Composer"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 ### Introduction

@@ -2,9 +2,7 @@
 layout: default
 title: "Premium Plans Launched (and Why They Exist)"
 date: 2013-07-15 11:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 illustration:
     url: https://i.imgur.com/exRDdhS.png
     style:

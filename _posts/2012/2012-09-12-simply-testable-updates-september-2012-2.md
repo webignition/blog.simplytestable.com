@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates September 2012 #2: Private Alpha Released, Things to Fix, Things to Improve"
 short_title: "Simply Testable Updates Sept #2: Private Alpha, Things to Fix/Improve"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: eighth
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=75a283896c

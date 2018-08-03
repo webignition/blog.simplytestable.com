@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Guide To Reliable HTTP Resource Retrieval In Applications"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
     
 You might think that coding up the *reliable* retrieval of a

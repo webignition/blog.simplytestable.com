@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Architecture Overview"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 illustration:
     id: architecture-overview
     url: https://i.imgur.com/uAvfm.jpg

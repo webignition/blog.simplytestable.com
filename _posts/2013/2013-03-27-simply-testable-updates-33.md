@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates #33: More Robustness++, More Bug Fixes"
 date: 2013-03-27 16:30
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 33rd
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=a5384303b9

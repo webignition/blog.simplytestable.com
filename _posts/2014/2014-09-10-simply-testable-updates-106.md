@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #106: Unsendable Emails, UnChimpable Emails, Broken Link Checking Improvements "
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 106th

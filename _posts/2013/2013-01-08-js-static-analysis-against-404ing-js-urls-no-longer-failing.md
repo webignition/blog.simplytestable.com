@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "JS Static Analysis Against 404ing JS URLs No Longer Failing"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 excerpt_separator: <!--more-->
 ---
 

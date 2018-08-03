@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #72: CSS Validation Of Password-Protected Sites Underway"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 72nd

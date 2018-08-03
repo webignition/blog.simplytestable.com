@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates 19: JavaScript Static Analysis, Test Option Refinement"
 short_title: "Simply Testable Updates 19: JS Analysis, Test Option Refinement"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 19th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=84708929e5

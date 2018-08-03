@@ -2,10 +2,7 @@
 layout: default
 title: "Simply Testable Updates #42: Plans and Pricing Released Unfinished, HTTPS Enabled"
 short_title: "Simply Testable Updates #42: Plans and Pricing, HTTPS Enabled"
-
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 42nd
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=f17f1f3e47

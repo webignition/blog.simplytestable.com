@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Estimated Time Remaining Now Available"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 illustration:
     url: https://i.imgur.com/p6YmFp8.png
     style:

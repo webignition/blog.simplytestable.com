@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "JSLint Config Options Available"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 illustration:
     url: https://i.imgur.com/Doiq5uA.png
     style:

@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "From a Service to a Product (Product Specs For Developers)"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 illustration:
     id: product-spec
     url: https://i.imgur.com/HgeIf14.png

@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates July 2012: Architecture Overview, Opensource Libraries, Task Sequences and Progress"
 short_title: "Simply Testable Updates July: Architecture Overview, Opensource Libs"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: first
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=188b5a0dda

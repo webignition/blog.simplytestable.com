@@ -2,9 +2,7 @@
 layout: default
 title: "Production Bug #001 Fixed"
 date: 2012-09-12 13:00:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
     
 Following yesterday's private alpha release, I was trying to figure out

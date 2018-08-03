@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Staying Signed In"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 illustration:
     url: https://i.imgur.com/fhqWU0i.png
     height: 280px

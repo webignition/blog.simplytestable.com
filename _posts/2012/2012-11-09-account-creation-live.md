@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Account Creation Live"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 Account creation is now live! You can now [sign up for your free account](https://gears.simplytestable.com/signup/).

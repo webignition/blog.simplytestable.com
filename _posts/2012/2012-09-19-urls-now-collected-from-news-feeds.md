@@ -2,9 +2,7 @@
 layout: default
 title: "URLs Now Collected From News Feeds"
 date: 2012-09-19 13:15:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
     
 A full-site test that aims to carry out a set of tests against every URL

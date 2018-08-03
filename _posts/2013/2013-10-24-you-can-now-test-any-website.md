@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "You Can Now Test Any Website"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 The goal all along of Simply Testable has been to let you easily

@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #66: New Dashboard Was Released, HTML Validator Improvements On The Way"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 66th

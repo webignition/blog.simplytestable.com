@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #85: Filtered Test History Released, Going Mobile-First"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 85th

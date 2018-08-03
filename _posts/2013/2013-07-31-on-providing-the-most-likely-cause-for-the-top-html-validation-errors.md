@@ -2,9 +2,7 @@
 layout: default
 title: "On Providing the Most Likely Cause For the Top HTML Validation Errors"
 date: 2013-07-31 12:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 ### Introduction

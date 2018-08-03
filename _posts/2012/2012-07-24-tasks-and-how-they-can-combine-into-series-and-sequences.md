@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Tasks and How They Combine Into Series and Sequences"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 excerpt_separator: <!--more-->
 ---
     

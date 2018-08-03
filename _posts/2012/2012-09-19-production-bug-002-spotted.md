@@ -2,9 +2,7 @@
 layout: default
 title: "Production Bug #002 Spotted - Redirect Loops"
 date: 2012-09-19 10:30:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
     
 Today I spotted a second case where an HTML validation test doesn't

@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #62: Share Private Test Results, Filter Results By Test Type, Towards Testing Absolutely Any Site"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 62nd

@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #56: JSLint Config Options Released, JSLint Bug Fixes"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 56th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=ea4815ac64

@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Site Crawler Released (And The Story Behind It)"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 The Simply Testable service lets you run a set of frontend web testing

@@ -2,9 +2,7 @@
 layout: default
 title: "Working Prototype In Action #002 (Video)"
 date: 2012-08-23 15:00:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 <iframe class="video" width="640" height="480" src="https://www.youtube-nocookie.com/embed/mfu0P_zd_EE?rel=0" style="border: none"></iframe>

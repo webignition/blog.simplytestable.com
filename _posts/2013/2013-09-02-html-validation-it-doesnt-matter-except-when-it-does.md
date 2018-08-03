@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "HTML Validation - It Doesn't Matter (Except When It Does)"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 ### Preamble

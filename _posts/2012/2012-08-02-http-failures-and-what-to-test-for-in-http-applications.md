@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "HTTP Failures And What To Test For In HTTP Applications"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 excerpt_separator: <!--more-->
 ---
     

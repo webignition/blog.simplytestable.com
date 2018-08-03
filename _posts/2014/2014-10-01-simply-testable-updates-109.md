@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #109: Ignoring resource:// URLs, Performance Changes Underway"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 109th

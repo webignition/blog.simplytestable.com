@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Team Collaboration Features"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
    
 We all work in teams to achieve more than we can as individuals.

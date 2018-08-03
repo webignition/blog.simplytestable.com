@@ -2,9 +2,7 @@
 layout: default
 title: "Test Timeouts Now Supported"
 date: 2012-10-03 17:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 illustration:
     id: test-timeouts-now-supported
     url: https://i.imgur.com/Y4KE3.png

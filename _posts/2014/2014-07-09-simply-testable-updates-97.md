@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #97: Guest Blog, Cold Emailing Results, Team Features"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 97th

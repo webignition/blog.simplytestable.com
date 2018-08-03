@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Performance Boost By Turning Things Inside Out"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 Last Friday I deployed some changes to how test tasks are farmed out to workers. This has resulted in

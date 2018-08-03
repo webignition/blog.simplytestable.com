@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #105: Handling Unsendable Emails, More Podcast Ad Prep"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 105th

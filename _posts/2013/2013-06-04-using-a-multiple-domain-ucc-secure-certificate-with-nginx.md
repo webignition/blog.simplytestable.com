@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Using a Multiple-Domain (UCC) Secure Certificate With Nginx"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 ### Introduction

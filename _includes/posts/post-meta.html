@@ -1,4 +1,4 @@
-{% assign display_author = include_post_meta_byline and content_item.author %}
+{% assign display_author = include_post_meta_byline and include.author and include.authors[include.author] %}
 
 <div class="post-meta">
     <time datetime="{{ content_item.date | date: '%Y-%m-%d' }}">{{ content_item.date | date: "%B %e, %Y" }}</time>
@@ -9,13 +9,13 @@
     {% assign author_start = '<span class="author">' %}
     {% assign author_end = '</span>' %}
 
-    {% if content_item.author.url %}
-    {% assign author_start = '<a href="{{ content_item.author.url }}">' %}
+    {% if include.authors[include.author].url %}
+    {% assign author_start = '<a href="' | append: include.authors[include.author].url | append: '">' %}
     {% assign author_end = '</a>' %}
     {% endif %}
 
     {{ author_start }}
-    {{ content_item.author.name }}
+    {{ include.authors[include.author].name }}
     {{ author_end }}
     {% endif %}
 </div>

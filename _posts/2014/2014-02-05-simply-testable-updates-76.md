@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #76: @Passwords Fixed, URLs Resolved Before Test Starts, JS Tests For Password-Protected Sites Is Live"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 76th

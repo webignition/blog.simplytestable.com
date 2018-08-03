@@ -2,9 +2,7 @@
 layout: default
 title: "Compressed Sitemaps Now Supported"
 date: 2012-09-21 15:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 The URLs against which to run a full-site test are ideally collected from

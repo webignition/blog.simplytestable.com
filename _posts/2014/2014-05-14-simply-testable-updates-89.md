@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #89: Clearer Test Rejection/Failure Reasons, Mobile-Ready Account and Test History Pages"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 89th

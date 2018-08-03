@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Showing Us Some Love"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 icon: fa fa-heart
 ---
     

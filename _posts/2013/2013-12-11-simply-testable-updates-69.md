@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #69: Progress On Testing Password-Protected Sites"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 69th

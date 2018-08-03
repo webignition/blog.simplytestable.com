@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Batch of Content-Retrieval Bugs Fixed"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 excerpt_separator: <!--more-->
 ---
     

@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "High Level Plan"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 ### Grand Plan

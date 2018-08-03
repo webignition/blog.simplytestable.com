@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates #53: Site Crawler Is Here, Announcements List, Newsletter Subscribe/Unsubscribe Features"
 short_title: "Simply Testable Updates #53: Site Crawler Is Here"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 53rd
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=65dfcad195

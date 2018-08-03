@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #110: Broken Link Checking Fixes; Performance++ Nearly Ready"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 110th

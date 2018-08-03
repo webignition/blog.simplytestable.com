@@ -2,9 +2,7 @@
 layout: default
 title: "Switching From Apache To Nginx on Ubuntu Server"
 date: 2012-10-17 15:30
-author:
-name: Jon Cram
-url: https://github.com/webignition
+author: joncram
 illustration:
     url: https://i.imgur.com/25IpV.png
     style:

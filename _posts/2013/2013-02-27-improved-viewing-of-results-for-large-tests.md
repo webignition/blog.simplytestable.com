@@ -2,9 +2,7 @@
 layout: default
 title: "Improved Viewing of Results For Large Tests"
 date: 2013-02-27 13:40
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 excerpt_separator: <!--more-->
 ---
     

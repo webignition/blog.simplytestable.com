@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #65: New Dashboard and Test History Being Released Today"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 65th

@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "November 20th Downtime Post-Mortem"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 ### It broke for 6 days.

@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Choosing Data To Exclude From An Application Backup"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 excerpt_separator: <!--more-->
 ---
 

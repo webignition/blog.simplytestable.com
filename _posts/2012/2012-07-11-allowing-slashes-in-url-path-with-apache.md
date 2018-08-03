@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Allowing Slashes in the URL Path With Apache"
-author:
-name: Jon Cram
-url: https://github.com/webignition
+author: joncram
 ---
  
 Ever found yourself needing to allow slashes in a URL path?

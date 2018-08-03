@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #104: On Hiding The Free Plan"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 104th

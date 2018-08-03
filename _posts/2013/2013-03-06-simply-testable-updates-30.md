@@ -2,9 +2,7 @@
 layout: default
 title: "Simply Testable Updates 30: Recovery Strategy, Backups Mostly There"
 date: 2013-03-06 16:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 newsletter:
     issue_number: 30th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=12f3a8584f

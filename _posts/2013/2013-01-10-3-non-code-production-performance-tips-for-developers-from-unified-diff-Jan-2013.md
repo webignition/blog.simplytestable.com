@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "3 Non-Code Production Performance Improvements For Developers"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 excerpt_separator: <!--more-->
 ---
 

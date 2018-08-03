@@ -2,9 +2,7 @@
 layout: default
 title: "Opensource Libraries We've Created and How We Use Them (Part Two Point Two: HTTP Testability)"
 short_title: "Opensource Libraries We've Created and How We Use Them (Part 2.2)"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 excerpt_separator: <!--more-->
 ---
     

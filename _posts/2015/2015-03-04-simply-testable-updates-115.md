@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Simply Testable Updates #115: Ignoring file:// URLs For JS analysis, Scheduled Test Development"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 continue_reading: false
 newsletter:
     issue_number: 115th

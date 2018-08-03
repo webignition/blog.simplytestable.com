@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Test Failures Now Supported"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 illustration:
     id: test-failures-now-supported
     url: https://i.imgur.com/d2Lui.png

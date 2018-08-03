@@ -2,9 +2,7 @@
 layout: default
 title: "Free Demo Test URL Limits"
 date: 2013-05-22 12:00
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 ---
 
 I've finished putting in place limits on free demo tests.  I'd like to

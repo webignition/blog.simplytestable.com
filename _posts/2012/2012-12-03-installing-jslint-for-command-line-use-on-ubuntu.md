@@ -1,9 +1,7 @@
 ---
 layout: default
 title: "Installing JSLint For Command Line Use On Ubuntu"
-author:
-    name: Jon Cram
-    url: https://github.com/webignition
+author: joncram
 excerpt_separator: <!--more-->
 ---
 
