@@ -2,7 +2,6 @@
 layout: default
 title: "Simply Testable Updates #87: Mobile-Friendly, (And Cacheable!) Sign Up, Sign In, Reset Password"
 author: joncram
-continue_reading: false
 newsletter:
     issue_number: 87th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=ec1faa0ef3

@@ -2,7 +2,6 @@
 layout: default
 title: "Simply Testable Updates #107: Improvements to: Broken Link Checking, URL Discovery, Background Process Management"
 author: joncram
-continue_reading: false
 newsletter:
     issue_number: 107th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=b896935ac5

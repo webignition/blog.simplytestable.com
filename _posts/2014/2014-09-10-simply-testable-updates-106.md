@@ -2,7 +2,6 @@
 layout: default
 title: "Simply Testable Updates #106: Unsendable Emails, UnChimpable Emails, Broken Link Checking Improvements "
 author: joncram
-continue_reading: false
 newsletter:
     issue_number: 106th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=5f34e2860b

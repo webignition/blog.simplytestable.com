@@ -2,7 +2,6 @@
 layout: default
 title: "Simply Testable Updates #99: Team Features Coming Soon"
 author: joncram
-continue_reading: false
 newsletter:
     issue_number: 99th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=321f5d2e87

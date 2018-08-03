@@ -2,7 +2,6 @@
 layout: default
 title: "Simply Testable Updates #85: Filtered Test History Released, Going Mobile-First"
 author: joncram
-continue_reading: false
 newsletter:
     issue_number: 85th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=d236e71cae

@@ -3,7 +3,6 @@ layout: default
 title: "Simply Testable Updates #103: Oh My Goodness, Ready To Run Ads!!1!"
 date: 2014-08-20 14:00:00
 author: joncram
-continue_reading: false
 newsletter:
     issue_number: 103rd
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=b3b0144821

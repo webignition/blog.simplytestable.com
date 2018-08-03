@@ -2,7 +2,6 @@
 layout: default
 title: "Simply Testable Updates #104: On Hiding The Free Plan"
 author: joncram
-continue_reading: false
 newsletter:
     issue_number: 104th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=bf8ed53c66

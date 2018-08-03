@@ -2,7 +2,6 @@
 layout: default
 title: "Simply Testable Updates #82: Custom Cookie Support, Better Long URL Support"
 author: joncram
-continue_reading: false
 newsletter:
     issue_number: 82nd
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=a2cf606a76

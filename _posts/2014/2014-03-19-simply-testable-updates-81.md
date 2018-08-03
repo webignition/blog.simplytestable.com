@@ -2,7 +2,6 @@
 layout: default
 title: "Simply Testable Updates #81: Custom Cookie Support Almost Complete"
 author: joncram
-continue_reading: false
 newsletter:
     issue_number: 81st
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=bde3c3bfc6

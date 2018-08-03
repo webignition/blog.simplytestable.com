@@ -2,7 +2,6 @@
 layout: default
 title: "Simply Testable Updates #78: New Production Server, Stripe Integration Continuation, Cookie-Based Auth Planned"
 author: joncram
-continue_reading: false
 newsletter:
     issue_number: 78th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=7bfcbb21b4

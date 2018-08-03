@@ -2,7 +2,6 @@
 layout: default
 title: "Simply Testable Updates #111: Performance++ Released, URL Discovery Encoding Bug Fixed"
 author: joncram
-continue_reading: false
 newsletter:
     issue_number: 111th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=9e9329d258

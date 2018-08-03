@@ -2,7 +2,6 @@
 layout: default
 title: "Simply Testable Updates #67: The Week Where Nothing Happened"
 author: joncram
-continue_reading: false
 newsletter:
     issue_number: 67th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&id=683346632c

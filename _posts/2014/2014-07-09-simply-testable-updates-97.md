@@ -2,7 +2,6 @@
 layout: default
 title: "Simply Testable Updates #97: Guest Blog, Cold Emailing Results, Team Features"
 author: joncram
-continue_reading: false
 newsletter:
     issue_number: 97th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=143f8da3db

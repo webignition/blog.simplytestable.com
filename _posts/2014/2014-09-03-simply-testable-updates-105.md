@@ -2,7 +2,6 @@
 layout: default
 title: "Simply Testable Updates #105: Handling Unsendable Emails, More Podcast Ad Prep"
 author: joncram
-continue_reading: false
 newsletter:
     issue_number: 105th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=4f2aa39e26

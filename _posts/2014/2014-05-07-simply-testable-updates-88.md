@@ -2,7 +2,6 @@
 layout: default
 title: "Simply Testable Updates #88: In-Account Newsletter Management Fixed"
 author: joncram
-continue_reading: false
 newsletter:
     issue_number: 88th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=5f0251e5f5

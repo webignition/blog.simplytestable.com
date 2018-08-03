@@ -2,7 +2,6 @@
 layout: default
 title: "Simply Testable Updates #63: Link Integrity Improvements, Interview with Web Tester Tom Batey"
 author: joncram
-continue_reading: false
 newsletter:
     issue_number: 63rd
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=545c6bbbbe
