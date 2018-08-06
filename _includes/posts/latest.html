@@ -1,6 +1,5 @@
 {% for post in site.posts offset: 0 limit: 5 %}
     {% assign is_last_post = forloop.last %}
-    {% assign include_comments = false %}
 
     {% include posts/post.html display_post_meta_byline=include.display_post_meta_byline %}
 {% endfor %}
