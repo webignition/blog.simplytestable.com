@@ -57,27 +57,8 @@ header .name:before {
   margin-top: 42px;
 }
 
-.sidebar {
-
-}
-
 .header-sidebar {
   margin-top: 20px;
-}
-
-.header-icon {
-  color: #08C;
-}
-
-.header-sidebar h2 {
-  font-size: 1rem;
-}
-
-.header-sidebar .start-new-test-form,
-.header-sidebar .start-new-test-form .btn,
-.header-sidebar p,
-.header-sidebar .areas {
-  font-size: 0.9rem;
 }
 
 header .areas {
@@ -385,3 +366,29 @@ blockquote  .avatar-tom-batey {
 .older-control .newer-older-icon {
   right: 15px;
 }
+
+.sidebar {
+
+}
+
+.sidebar .sidebar-icon {
+  color: #08c;
+}
+
+.sidebar .sidebar-heading {
+  font-size: 1rem;
+}
+
+.sidebar a,
+.sidebar p,
+.sidebar .btn,
+.sidebar li {
+  font-size: 0.9rem;
+}
+
+/*.header-sidebar .start-new-test-form,*/
+/*.header-sidebar .start-new-test-form .btn,*/
+/*.header-sidebar p,*/
+/*.header-sidebar .areas {*/
+  /*font-size: 0.9rem;*/
+/*}*/
