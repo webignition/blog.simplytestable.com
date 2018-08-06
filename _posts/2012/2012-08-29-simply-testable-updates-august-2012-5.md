@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates August 2012 #5: Working Prototype Progress"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: sixth
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=a8469ac004
     closing_sentence: Expect the next in a week from now, September 5 2012.

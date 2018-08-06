@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #83: Improved URL Resolving, Improved Retrieval of Bad SSL Content"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 83rd
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=444e50674a
     highlights:

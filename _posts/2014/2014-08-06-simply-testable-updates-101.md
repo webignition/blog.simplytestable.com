@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #101: Better Homepage and Features Page"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 101st
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=db4df47865
     highlights:

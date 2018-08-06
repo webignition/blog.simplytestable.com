@@ -2,7 +2,7 @@
 title: "Simply Testable Updates #49: Hunting Down Common HTML Validation Errors"
 date: 2013-07-24 15:00
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 49th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=616710d839
     closing_sentence: Expect the next newsletter a week from now on July 31.

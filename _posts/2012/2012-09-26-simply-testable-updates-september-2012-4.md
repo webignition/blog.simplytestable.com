@@ -2,7 +2,7 @@
 title: "Simply Testable Updates September 2012 #4: Public Alpha, More Performance++"
 short_title: "Simply Testable Updates Sept #4: Public Alpha, More Performance++"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: tenth
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=ce39648694
     closing_sentence: Expect the next in a week from now, September 26 2012.

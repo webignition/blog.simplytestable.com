@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #71: You Can Now Test Password-Protected Sites"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 71st
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=35d8278746
     highlights:

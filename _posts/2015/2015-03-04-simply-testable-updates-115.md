@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #115: Ignoring file:// URLs For JS analysis, Scheduled Test Development"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 115th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=e271de6890
     highlights:

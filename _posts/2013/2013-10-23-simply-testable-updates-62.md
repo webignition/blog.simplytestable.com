@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #62: Share Private Test Results, Filter Results By Test Type, Towards Testing Absolutely Any Site"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 62nd
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=7cec00734e
     highlights:

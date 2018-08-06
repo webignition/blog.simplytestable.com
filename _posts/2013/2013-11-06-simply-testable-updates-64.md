@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #64: New Test Dashboard Preview"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 64th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=87b5806808
     highlights:

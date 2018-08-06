@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #91: Mobile-Ready Test Results Underway"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 91st
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=1fc24c221b
     highlights:

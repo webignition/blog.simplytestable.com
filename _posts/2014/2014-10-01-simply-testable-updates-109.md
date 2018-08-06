@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #109: Ignoring resource:// URLs, Performance Changes Underway"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 109th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=68adc8bcbb
     highlights:

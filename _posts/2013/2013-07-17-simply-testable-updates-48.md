@@ -2,7 +2,7 @@
 title: "Simply Testable Updates #48: Premium Plan 365 Day Trial Offer Until July 31, Infinite Free Trial Hack, Bug fixes"
 short_title: "Simply Testable Updates #48: Premium Plan 365 Day Trial Offer Until July 31"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 48th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=e7c06db4a8
     closing_sentence: Expect the next newsletter a week from now on July 24.

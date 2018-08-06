@@ -43,7 +43,7 @@
         {% endif %}
     {% endif %}
 
-    {% if content_item.newsletter %}
+    {% if content_item.newsletter_meta %}
         {% include posts/newsletter/content.html newsletter=content_item %}
     {% else %}
         {% if page.is_index %}

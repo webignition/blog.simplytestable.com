@@ -1,14 +1,14 @@
-{% if include.newsletter.newsletter.highlights %}
+{% if include.newsletter.newsletter_meta.highlights %}
 <p>
     Highlights from this week:
 </p>
-{% if include.newsletter.newsletter.highlights.size == 1 %}
+{% if include.newsletter.newsletter_meta.highlights.size == 1 %}
 <p class="newsletter-highlights">
-    {{ include.newsletter.newsletter.highlights }}
+    {{ include.newsletter.newsletter_meta.highlights }}
 </p>
 {% else %}
 <ul class="newsletter-highlights">
-{% for highlight in include.newsletter.newsletter.highlights %}
+{% for highlight in include.newsletter.newsletter_meta.highlights %}
     <li class="newsletter-highlight">
         <p>
 {{ highlight }}

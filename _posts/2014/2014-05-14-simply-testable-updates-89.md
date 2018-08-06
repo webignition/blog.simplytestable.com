@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #89: Clearer Test Rejection/Failure Reasons, Mobile-Ready Account and Test History Pages"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 89th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=dbeac56579
     highlights:

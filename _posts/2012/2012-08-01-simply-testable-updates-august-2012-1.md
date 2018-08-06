@@ -2,7 +2,7 @@
 title: "Simply Testable Updates August 2012 #1: Progress, Opensource HTTP Client Library, Unit Test Improvements"
 short_title: "Simply Testable Updates Aug #1: Progress, Opensource HTTP Client"
 author: joncramn
-newsletter:
+newsletter_meta:
     issue_number: second
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=0dfa713ed6
     closing_sentence: Expect the next in a week from now, August 8 2012.

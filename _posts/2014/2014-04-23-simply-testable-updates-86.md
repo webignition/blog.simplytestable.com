@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #86: Use Malformed Content Types If You Like; Product Info Being Built"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 86th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=e6d618b389
     highlights:

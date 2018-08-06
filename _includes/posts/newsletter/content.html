@@ -1,14 +1,14 @@
 {% include posts/newsletter/intro.html newsletter=include.newsletter %}
 {% include posts/newsletter/highlights.html newsletter=include.newsletter %}
 
-{% if include.newsletter.newsletter.pre_closing_sentence %}
+{% if include.newsletter.newsletter_meta.pre_closing_sentence %}
 <p>
-    {{ include.newsletter.newsletter.pre_closing_sentence }}
+    {{ include.newsletter.newsletter_meta.pre_closing_sentence }}
 </p>
 {% endif %}
 
 <p>
-    {{ include.newsletter.newsletter.closing_sentence }}
+    {{ include.newsletter.newsletter_meta.closing_sentence }}
 </p>
 
-<a href="{{ include.newsletter.newsletter.url }}" class="btn btn-outline-secondary post-continue-reading">Read full newsletter <i class="fa fa-caret-right"></i></a>
+<a href="{{ include.newsletter.newsletter_meta.url }}" class="btn btn-outline-secondary post-continue-reading">Read full newsletter <i class="fa fa-caret-right"></i></a>

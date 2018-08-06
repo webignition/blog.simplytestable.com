@@ -2,7 +2,7 @@
 title: "Simply Testable Updates 24: Talk @UnifiedDiff Today, CSS Validator Improvements, JS Static Analysis Improvements"
 short_title: "Simply Testable Updates 24: Talk @UnifiedDiff Today"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 24th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=853f95f91f
     closing_sentence: Expect the next in a week from now, January 16 2013.

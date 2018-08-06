@@ -3,7 +3,7 @@ title: "Simply Testable Updates October 2012 #5: Hello Capacity, Testing Local S
 short_title: "Simply Testable Updates Oct #5: Hello Capacity, Testing Local Sites"
 date: 2012-10-31 16:00
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 15th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=0cb60c52d2
     closing_sentence: Expect the next in a week from now, November 7 2012.

@@ -2,7 +2,7 @@
 title: "Simply Testable Updates October 2012 #1: MVP In One Week, Timeouts Handled, Better Sitemap Handling, Error Pages"
 short_title: "Simply Testable Updates Oct #1: MVP In 1 Week, Timeouts Handled"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: eleventh
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=f640ebc4a3
     closing_sentence: Expect the next in a week from now, October 10 2012.
