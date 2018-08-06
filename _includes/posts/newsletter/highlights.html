@@ -1,29 +1,26 @@
-{% assign content_item = false %}
+{% assign content_item = page %}
 {% if post %}
 {% assign content_item = post %}
-{% else %}
-{% assign content_item = page %}
 {% endif %}
 
 {% if content_item.newsletter.highlights %}
-{% if content_item.newsletter.highlights.size == 1 %}
+
 <p>
+    Highlights from this week:
+</p>
+{% if content_item.newsletter.highlights.size == 1 %}
+<p class="newsletter-highlights">
     {{ content_item.newsletter.highlights }}
 </p>
 {% else %}
-<p>
-    Highlights from this week: 
-</p>
-
-<ul>
-
+<ul class="newsletter-highlights">
 {% for highlight in content_item.newsletter.highlights %}
-    <li>
-        <p>                 
+    <li class="newsletter-highlight">
+        <p>
 {{ highlight }}
         </p>
-    </li>     
-{% endfor %}  
+    </li>
+{% endfor %}
 
 </ul>
 {% endif %}

@@ -1,0 +1,35 @@
+{% assign include_newer_older = true %}
+
+{% if page.is_index or page.is_archive %}
+    {% assign include_newer_older = false %}
+{% endif %}
+
+<header>
+    <div class="container">
+        <div class="row header-lead">
+            <div class="col-lg-8 header-main">
+                <a href="/" class="name">{{ site.name }}</a>
+
+                <p class="lead intro">
+                    Figuring out how to automate away the pain of routine front-end web testing; the
+                    story behind <a href="https://simplytestable.com">SimplyTestable.com</a>.
+                </p>
+                <p class="lead purpose">
+                    {{ site.posts.size }} posts covering the initial idea, growth of the service, features, advances,
+                    failures and successes.
+                </p>
+            </div>
+            <div class="d-none d-lg-block col-lg-4 sidebar header-sidebar">
+                {% include sidebar/about.html %}
+                {% include sidebar/start-new-test-form.html %}
+                {% include sidebar/areas.html %}
+            </div>
+        </div>
+
+        {% if include_newer_older %}
+        <div class="row header-newer-older">
+            {% include component/newer-older.html %}
+        </div>
+        {% endif %}
+    </div>
+</header>

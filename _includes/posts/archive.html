@@ -1,14 +1,19 @@
-<ol class="archive">
+{% assign include_post_meta_byline = false %}
+
+<ol class="archive-list">
     {% for post in site.posts %}
+    {% assign content_item = post %}
+
     {% capture reverse_index %}{{forloop.length | minus:forloop.index | plus:1 }}{% endcapture %}
-    <li value="{{ reverse_index }}">
-        <h2><a href="{{ post.url }}">{{ post.title }} {{ post_index }}</a></h2>
-        <p class="post-date">{{ post.date | date: "%B %e, %Y" }}</p>
+    <li class="post post-listed archive-item" value="{{ reverse_index }}">
+        <h2 class="post-heading"><a href="{{ post.url }}">{{ post.title }} {{ post_index }}</a></h2>
+        {% include posts/post-meta.html %}
 
         {% if post.newsletter %}
         {% include posts/newsletter/intro.html %}
+        {% include posts/newsletter/highlights.html %}
         {% else %}
-        {{ post.excerpt | remove: '<div class="section section-first">' | remove: '<div class="section">' | remove: '</div>' }}
+        {{ post.excerpt }}
         {% endif %}
 
     </li>

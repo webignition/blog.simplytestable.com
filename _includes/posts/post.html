@@ -1,92 +1,61 @@
-{% assign content_item = false %}
-{% if post %}
-{% assign content_item = post %}
-{% else %}
 {% assign content_item = page %}
+{% if post %}
+    {% assign content_item = post %}
 {% endif %}
 
 {% if page.is_index %}
-    {% assign heading_start = '<h2>' %}
+    {% assign heading_start = '<h2 class="post-heading">' %}
     {% assign heading_end = '</h2>' %}
 {% else %}
-    {% assign heading_start = '<h1 id="main-heading">' %}
+    {% assign heading_start = '<h1 class="post-heading">' %}
     {% assign heading_end = '</h1>' %}
 {% endif %}
 
-<div class="post">
-    {% if content_item.is_archive %}
-    {% else %}
-    <div class="section section-post-meta post">
-        {{ heading_start }}
+<div class="post {% if page.is_index or content_item.is_archive %}post-listed{% endif %} {% if is_last_post %}post-listed-last{% endif %}">
+    {{ heading_start }}
 
-        <a href="{{ content_item.url }}">
-            {% if content_item.icon %}
-            <i class="indicator-icon fa {{ content_item.icon }}"></i>
-            {% else %}
-            <i class="indicator-icon fa fa-bullhorn"></i>
-            {% endif %}
+    <a href="{{ content_item.url }}">
+        {{ content_item.title }}
+    </a>
 
-            {{ content_item.title }}
-        </a>
+    {{ heading_end }}
 
-        {{ heading_end }}
-
-        <p class="meta">
-            {{ content_item.date | date: "%B %e, %Y" }}
-            {% if content_item.author %}
-                by
-                {% if content_item.author.url %}
-                <a href="{{ content_item.author.url }}">{{ content_item.author.name }}</a>
-                {% else %}
-                {{ content_item.author.name }}
-                {% endif %}
-            {% endif %}
-        </p>
-    </div>
-    {% endif %}
+    {% assign include_post_meta_byline = true %}
+    {% include posts/post-meta.html authors=site.data.authors author=content_item.author %}
 
     {% if content_item.illustration %}
+        {% assign illustration_style = "background-image: url('" | append: content_item.illustration.url | append: "'); " %}
+
+        {% if content_item.illustration.style %}
+            {% for style in content_item.illustration.style %}
+                {% capture illustration_style %}{{illustration_style}}{{style[0]}}: {{style[1]}};{% endcapture %}
+            {% endfor %}
+        {% endif %}
+
         {% if content_item.illustration.id %}
-            <div class="section">
-                {% if content_item.illustration.style %}
-                    {% capture illustration_style %}{% endcapture %}
-
-                    {% for style in content_item.illustration.style %}
-                        {% capture illustration_style %}{{illustration_style}}{{style[0]}}: {{style[1]}};{% endcapture %}
-                    {% endfor %}
-                {% endif %}
-
-                <div class="illustration illustration-{{ content_item.illustration.id }}">
-                    <a href="/illustrations/{{ content_item.illustration.id }}"
-                       style="background-image: url('{{ content_item.illustration.url }}');{{ illustration_style }}">
-                        <i class="fa fa-search-plus"></i>
-                    </a>
-                </div>
-            </div>
+            <a href="/illustrations/{{ content_item.illustration.id }}"
+               style="{{ illustration_style }}"
+               class="illustration">
+                <i class="fa fa-search-plus illustration-icon"></i>
+            </a>
         {% else %}
-            <div class="section">
-                <div class="illustration illustration-{{ content_item.illustration.id }}" style="{% if content_item.illustration.height %} height: {{content_item.illustration.height}} {% endif %}">
-                    <span style="background-image: url('{{ content_item.illustration.url }}'); {% if content_item.illustration.offset-x %}background-position-x: {{content_item.illustration.offset-x}};{% endif %}"></span>
-                </div>
-            </div>
+            <span class="illustration" style="{{ illustration_style }}"></span>
         {% endif %}
     {% endif %}
 
     {% if content_item.newsletter %}
         {% include posts/newsletter/content.html %}
     {% else %}
-        {{ content_item.content }}
+        {% if page.is_index %}
+            {{ content_item.excerpt }}
+            <a href="{{ content_item.url }}" class="btn btn-outline-secondary post-continue-reading">Continue reading <i class="fa fa-caret-right"></i></a>
+        {% else %}
+            {{ content_item }}
+        {% endif %}
     {% endif %}
 
-    {% if page.is_index %}
-        {% if content_item.continue_reading != false %}
-    <div class="section section-continue-reading">
-            <a href="{{ content_item.url }}" class="btn btn-default">Continue reading <i class="fa fa-caret-right"></i></a>
-    </div>
-        {% endif %}
-    {% else %}
-        {% if page.is_archive != true %}
-    <div class="section comments">
+    {% if include_comments %}
+    <div class="comments">
         <i class="comment-icon fa fa-comments-o"></i>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -103,6 +72,5 @@
             })();
         </script>
     </div>
-        {% endif %}
     {% endif %}
 </div>

@@ -1,0 +1,12 @@
+<h4 class="question-answer-question">
+    <i class="fa fa-question-circle question-answer-icon"></i>
+{% if include.question.first %}
+    {% for paragraph in include.question %}
+    <span class="question-answer-question-section">{{ paragraph }}</span>
+    {% endfor %}
+{% else %}
+    {{ include.question }}
+{% endif %}
+</h4>
+
+{% include component/avatar-blockquote.html quote=include.answer name=include.quote_name %}

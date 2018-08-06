@@ -1,7 +1,11 @@
 {% for post in site.posts offset: 0 limit: 5 %}
+    {% assign is_last_post = forloop.last %}
+    {% assign include_post_meta_byline = true %}
+    {% assign include_comments = false %}
+
     {% include posts/post.html %}
 {% endfor %}
 
-<div id="all-posts">
-    <a href="/archive" class="btn btn-primary">All posts <i class="fa fa-caret-right"></i></a>
+<div class="posts-all-wrapper">
+    <a href="/archive" class="btn btn-primary posts-all">All posts <i class="fa fa-caret-right"></i></a>
 </div>
