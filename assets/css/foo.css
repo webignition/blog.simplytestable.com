@@ -136,6 +136,10 @@ header .areas li:last-of-type {
   .posts-all {
     width: auto;
   }
+
+  .sidebar .posts-all {
+    margin: 24px 0 0 0;
+  }
 }
 
 .post-meta {
