@@ -353,6 +353,12 @@ blockquote  .avatar-tom-batey {
   position: relative;
 }
 
+@media (min-width: 992px) {
+  .newer-older-control {
+    margin: 24px 0;
+  }
+}
+
 .newer-older-control:hover {
   opacity: 1;
 }
