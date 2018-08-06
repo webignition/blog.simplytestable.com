@@ -376,7 +376,12 @@ blockquote  .avatar-tom-batey {
 }
 
 .sidebar .sidebar-heading {
+  margin-top: 42px;
   font-size: 1rem;
+}
+
+.sidebar .sidebar-heading:first-child {
+  margin-top: 0;
 }
 
 .sidebar a,
@@ -385,4 +390,8 @@ blockquote  .avatar-tom-batey {
 .sidebar li,
 .sidebar input {
   font-size: 0.9rem;
+}
+
+.recent-post {
+  margin-bottom: 16px;
 }
