@@ -1,0 +1,10 @@
+{
+  "license": "MIT",
+  "devDependencies": {
+    "stylelint": "^9.4.0",
+    "stylelint-config-standard": "^18.2.0"
+  },
+  "scripts": {
+    "stylelint": "./node_modules/stylelint/bin/stylelint.js --config .stylelintrc _scss"
+  }
+}
