@@ -3,8 +3,8 @@ rvm:
   - 2.4
 
 install:
-  yarn install
-  bundle install
+  - yarn install
+  - bundle install
 
 script:
   - yarn run stylelint && bundle exec jekyll build
