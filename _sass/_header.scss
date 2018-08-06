@@ -1,0 +1,100 @@
+@import "colors";
+
+header {
+  background: $color-grey-background;
+  margin-bottom: 40px;
+  border-bottom: 1px solid $color-border;
+
+  .name {
+    display: block;
+    color: #555;
+    margin-bottom: 24px;
+    font-size: 1.6rem;
+    padding-left: 100px;
+    text-decoration: none;
+    margin-top: 24px;
+
+    &:hover {
+      color: #333;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+      margin-top: 0;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 100px;
+      background: url('/assets/images/logo.png') transparent no-repeat top left;
+      position: absolute;
+      left: 10px;
+      top: 0;
+    }
+  }
+
+  .header-main {
+    @media (min-width: 768px) {
+      padding-top: 1rem;
+    }
+  }
+
+  .header-lead {
+    padding: 16px 0;
+
+    @media (min-width: 992px) {
+      padding: 42px 0;
+    }
+
+    .lead {
+      &.intro {
+        margin-top: 42px;
+      }
+    }
+  }
+
+  .header-sidebar {
+    margin-top: 20px;
+  }
+
+  .areas {
+    list-style: none;
+    margin: 8px 0;
+    padding: 0;
+
+    .area {
+      display: inline-block;
+      padding: 0 8px;
+      border-right: 1px solid $color-border;
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-of-type {
+        border-right: 0;
+      }
+    }
+  }
+}
+
+.start-test {
+  &-byline {
+    display: block;
+  }
+
+  &-button {
+    text-align: left;
+    position: relative;
+    padding-right: 40px;
+  }
+
+  &-icon {
+    position: absolute;
+    right: 10px;
+    font-size: 2rem;
+    top: 11px;
+  }
+}

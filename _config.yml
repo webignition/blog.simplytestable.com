@@ -8,9 +8,6 @@ description: Figuring out how to automate away the pain of routine front-end web
 
 markdown: kramdown
 
-sass:
-  sass_dir: _scss
-
 defaults:
   -
     scope:

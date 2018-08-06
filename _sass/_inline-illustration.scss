@@ -1,0 +1,12 @@
+@import "colors";
+
+.inline-illustration {
+  background-color: $color-grey-background;
+  text-align: center;
+  border: 1px solid $color-border;
+
+  @media (min-width: 992px) {
+    float: left;
+    margin-right: 24px;
+  }
+}

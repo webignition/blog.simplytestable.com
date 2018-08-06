@@ -1,0 +1,14 @@
+@import "colors";
+
+.posts-all {
+  margin: 64px 0;
+  width: 100%;
+
+  &-wrapper {
+    border-top: 1px solid $color-border;
+  }
+
+  @media (min-width: 992px) {
+    width: auto;
+  }
+}

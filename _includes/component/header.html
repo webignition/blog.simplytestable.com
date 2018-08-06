@@ -21,18 +21,18 @@
             </div>
             <div class="d-none d-lg-block col-lg-4 sidebar header-sidebar">
                 {% include sidebar/about.html %}
-                {% include sidebar/start-new-test-form.html %}
+                {% include sidebar/start-test.html %}
                 {% include sidebar/areas.html %}
             </div>
         </div>
 
         {% if page.is_illustration %}
-            <div class="row header-newer-older">
+            <div class="row">
                 {% include component/illustration-backlink.html %}
             </div>
         {% else %}
             {% if include_newer_older %}
-            <div class="row header-newer-older">
+            <div class="row">
                 {% include component/newer-older.html %}
             </div>
             {% endif %}
