@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Account Creation Live"
 author: joncram
 ---

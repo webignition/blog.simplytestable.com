@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates 29: Large Full Site Tests Working"
 author: joncram
 newsletter:

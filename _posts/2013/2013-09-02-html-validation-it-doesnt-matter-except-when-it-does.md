@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "HTML Validation - It Doesn't Matter (Except When It Does)"
 author: joncram
 ---

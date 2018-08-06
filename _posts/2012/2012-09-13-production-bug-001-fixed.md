@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Production Bug #001 Fixed"
 date: 2012-09-12 13:00:00
 author: joncram

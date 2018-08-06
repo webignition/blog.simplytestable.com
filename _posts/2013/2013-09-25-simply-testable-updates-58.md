@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #58: Simplifying Test Start, Progress and Results Pages; New Test Types Planned"
 author: joncram
 newsletter:

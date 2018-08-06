@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #44: Payment Handling Nearly Done"
 author: joncram
 newsletter:

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #66: New Dashboard Was Released, HTML Validator Improvements On The Way"
 author: joncram
 newsletter:

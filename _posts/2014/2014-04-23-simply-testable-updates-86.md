@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #86: Use Malformed Content Types If You Like; Product Info Being Built"
 author: joncram
 newsletter:

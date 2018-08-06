@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #57: Simplifying Test Results Page, Test History Plans, Many Bug Fixes"
 author: joncram
 newsletter:

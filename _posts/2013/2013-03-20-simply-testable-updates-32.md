@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates 32: Bugfixes, Robustness++"
 author: joncram
 newsletter:

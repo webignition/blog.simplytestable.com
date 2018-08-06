@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #90: Mobile-Ready (And Improved) Task Results"
 author: joncram
 newsletter:

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Test Timeouts Now Supported"
 date: 2012-10-03 17:00
 author: joncram

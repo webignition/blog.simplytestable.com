@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #67: The Week Where Nothing Happened"
 author: joncram
 newsletter:

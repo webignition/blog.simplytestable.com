@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Allowing Slashes in the URL Path With Apache"
 author: joncram
 ---

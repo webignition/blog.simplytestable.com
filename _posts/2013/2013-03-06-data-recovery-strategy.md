@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Data Recovery Strategy"
 date: 2013-03-06 13:00
 author: joncram

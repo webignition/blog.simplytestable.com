@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #82: Custom Cookie Support, Better Long URL Support"
 author: joncram
 newsletter:

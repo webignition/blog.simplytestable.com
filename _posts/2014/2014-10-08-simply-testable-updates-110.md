@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #110: Broken Link Checking Fixes; Performance++ Nearly Ready"
 author: joncram
 newsletter:

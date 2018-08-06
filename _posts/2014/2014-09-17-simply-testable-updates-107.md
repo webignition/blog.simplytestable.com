@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #107: Improvements to: Broken Link Checking, URL Discovery, Background Process Management"
 author: joncram
 newsletter:

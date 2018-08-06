@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Staying Signed In"
 author: joncram
 illustration:

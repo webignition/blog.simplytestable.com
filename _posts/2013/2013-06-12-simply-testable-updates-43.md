@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #43: Premium Plans Well Underway"
 author: joncram
 newsletter:

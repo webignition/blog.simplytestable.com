@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Creating and Using a Github OAuth Token With Travis And Composer"
 author: joncram
 ---

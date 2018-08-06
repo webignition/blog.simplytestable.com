@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates 20: CSS Test Option Refinement"
 author: joncram
 newsletter:

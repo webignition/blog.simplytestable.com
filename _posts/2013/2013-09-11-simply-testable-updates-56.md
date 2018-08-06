@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #56: JSLint Config Options Released, JSLint Bug Fixes"
 author: joncram
 newsletter:

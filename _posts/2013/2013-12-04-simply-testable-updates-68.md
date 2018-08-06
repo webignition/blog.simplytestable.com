@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #68: HTML Validator Improvements"
 author: joncram
 newsletter:

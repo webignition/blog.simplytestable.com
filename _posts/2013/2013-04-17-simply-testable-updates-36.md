@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #36: HTTP library switching progress"
 author: joncram
 newsletter:

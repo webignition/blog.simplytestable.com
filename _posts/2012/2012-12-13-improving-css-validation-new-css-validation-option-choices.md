@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Improving CSS Validation: New CSS Validation Option Choices"
 date: 2012-12-14 14:00
 author: joncram

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Capacity Problems All Over The Place"
 author: joncram
 ---

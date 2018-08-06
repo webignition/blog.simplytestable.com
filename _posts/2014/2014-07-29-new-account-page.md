@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "New Account Page"
 author: joncram
 excerpt_separator: <!--more-->

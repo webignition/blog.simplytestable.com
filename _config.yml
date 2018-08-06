@@ -7,3 +7,16 @@ name: Simply Testable Blog
 description: Figuring out how to automate away the pain of routine front-end web testing; the story behind simplytestable.com.
 
 markdown: kramdown
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+
+  -
+    scope:
+      path: "illustrations"
+    values:
+      layout: "illustration"

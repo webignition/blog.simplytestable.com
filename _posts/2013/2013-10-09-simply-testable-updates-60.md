@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #60: Link Integrity Tests Really Nearly Done"
 author: joncram
 newsletter:

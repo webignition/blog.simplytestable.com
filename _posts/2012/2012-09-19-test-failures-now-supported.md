@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Test Failures Now Supported"
 author: joncram
 illustration:

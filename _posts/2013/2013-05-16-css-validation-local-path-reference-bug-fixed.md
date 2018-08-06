@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "CSS Validation Local Path Reference Bug Fixed"
 date: 2013-05-16 12:00
 author: joncram

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "W3C HTML Validator On Ubuntu 12.10"
 date: 2012-10-17 16:30
 author: joncram

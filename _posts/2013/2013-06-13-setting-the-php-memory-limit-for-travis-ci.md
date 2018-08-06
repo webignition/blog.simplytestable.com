@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Setting the PHP Memory Limit for Travis CI"
 author: joncram
 excerpt_separator: <!--more-->

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Tasks and How They Combine Into Series and Sequences"
 author: joncram
 ---

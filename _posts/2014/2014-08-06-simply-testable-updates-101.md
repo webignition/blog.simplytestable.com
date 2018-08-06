@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #101: Better Homepage and Features Page"
 author: joncram
 newsletter:

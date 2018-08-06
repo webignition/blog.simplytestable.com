@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #77: Testing Password-Protected Everything, Graceful Handling of Sites That Don't Respond"
 author: joncram
 newsletter:

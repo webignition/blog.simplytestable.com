@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Using a Multiple-Domain (UCC) Secure Certificate With Nginx"
 author: joncram
 ---

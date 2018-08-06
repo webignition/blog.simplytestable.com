@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Integrating Resque Into A Symfony Application"
 author: joncram
 excerpt_separator: <!--more-->

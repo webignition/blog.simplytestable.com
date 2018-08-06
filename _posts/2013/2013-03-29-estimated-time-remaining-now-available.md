@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Estimated Time Remaining Now Available"
 author: joncram
 illustration:

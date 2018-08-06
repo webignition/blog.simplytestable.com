@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Awesome Link Integrity Testing Now Available (If You Have An Account)"
 date: 2013-10-16 11:00
 author: joncram

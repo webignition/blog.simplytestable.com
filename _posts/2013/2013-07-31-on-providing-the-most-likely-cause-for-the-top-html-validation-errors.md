@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "On Providing the Most Likely Cause For the Top HTML Validation Errors"
 date: 2013-07-31 12:00
 author: joncram

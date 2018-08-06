@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "First Test Results"
 author: joncram
 illustration:

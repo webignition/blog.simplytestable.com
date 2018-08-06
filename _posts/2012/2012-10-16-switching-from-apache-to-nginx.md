@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Switching From Apache To Nginx on Ubuntu Server"
 date: 2012-10-17 15:30
 author: joncram

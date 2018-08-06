@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Batch of Content-Retrieval Bugs Fixed"
 author: joncram
 excerpt_separator: <!--more-->

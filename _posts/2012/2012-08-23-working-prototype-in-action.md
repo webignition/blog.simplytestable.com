@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Working Prototype In Action (Video)"
 author: joncram
 ---

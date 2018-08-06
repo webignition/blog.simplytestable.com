@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #113: We're Profitable(!), Pre-Beta New Test Results, Currency In Transactional Emails"
 author: joncram
 newsletter:

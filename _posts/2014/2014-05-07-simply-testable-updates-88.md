@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #88: In-Account Newsletter Management Fixed"
 author: joncram
 newsletter:

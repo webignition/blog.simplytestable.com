@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #104: On Hiding The Free Plan"
 author: joncram
 newsletter:

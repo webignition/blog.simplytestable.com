@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Compressed Sitemaps Now Supported"
 date: 2012-09-21 15:00
 author: joncram

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #109: Ignoring resource:// URLs, Performance Changes Underway"
 author: joncram
 newsletter:

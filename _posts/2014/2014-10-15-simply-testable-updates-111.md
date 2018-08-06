@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #111: Performance++ Released, URL Discovery Encoding Bug Fixed"
 author: joncram
 newsletter:

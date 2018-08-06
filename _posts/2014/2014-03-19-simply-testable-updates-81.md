@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #81: Custom Cookie Support Almost Complete"
 author: joncram
 newsletter:

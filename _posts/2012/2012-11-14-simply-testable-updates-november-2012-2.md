@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates November 2012 #2: CSS Validation Is Live"
 author: joncram
 newsletter:

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #54: Crawler Improvements Coming, Introductory Email Course"
 short_title: "Simply Testable Updates #53: Crawler Improvements Coming"
 author: joncram

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #120: Scheduled Tests Coming Soon (Hopefully)"
 author: joncram
 newsletter:

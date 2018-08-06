@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #41: Plans Page Mostly Done, New Documentation Site, Also CSS Validator Bug Fix"
 short_title: "Simply Testable Updates #41: Plans Page Mostly Done, New Documentation"
 author: joncram

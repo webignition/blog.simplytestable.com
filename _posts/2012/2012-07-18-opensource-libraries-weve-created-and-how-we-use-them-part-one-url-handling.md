@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Opensource Libraries We've Created and How We Use Them (Part One: URL Handling)"
 short_title: "Opensource Libs We've Created and How We Use Them (URL Handling)"
 author: joncram

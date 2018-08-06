@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #71: You Can Now Test Password-Protected Sites"
 author: joncram
 newsletter:

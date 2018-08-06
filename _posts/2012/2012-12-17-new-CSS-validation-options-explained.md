@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "CSS Validation Options Explained"
 author: joncram
 illustration:

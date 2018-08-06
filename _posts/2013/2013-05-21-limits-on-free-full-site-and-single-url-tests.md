@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Limits on Free Full-Site and Single-URL Tests"
 date: 2013-05-21 11:40
 author: joncram

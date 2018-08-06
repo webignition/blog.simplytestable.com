@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #108: Job Performance++, System Stability++"
 author: joncram
 newsletter:

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Your Account Page Now Available"
 date: 2013-05-16 11:40
 author: joncram

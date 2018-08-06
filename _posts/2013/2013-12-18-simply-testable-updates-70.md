@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #70: Password Protected Sites Progress; Bugfix For URLs Returning Internal Server Error"
 author: joncram
 newsletter:

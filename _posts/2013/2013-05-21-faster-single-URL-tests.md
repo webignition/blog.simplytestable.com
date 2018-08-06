@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Faster Single-URL Tests"
 date: 2013-05-21 11:45
 author: joncram

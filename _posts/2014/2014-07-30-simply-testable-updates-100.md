@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #100: Teams, New Account Page"
 date: 2014-07-30 14:00:00
 author: joncram

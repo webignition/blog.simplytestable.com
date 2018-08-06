@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #38: Stripe Integration Investigation, Account Plans, Your Account Page"
 short_title: "Simply Testable Updates #38: Stripe Integration, Accounts, Your Account"
 author: joncram

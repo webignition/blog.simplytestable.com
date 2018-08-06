@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #84: Filtering Test History, Joining The Dots Between Tests"
 author: joncram
 newsletter:

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Private alpha release available"
 author: joncram
 illustration:

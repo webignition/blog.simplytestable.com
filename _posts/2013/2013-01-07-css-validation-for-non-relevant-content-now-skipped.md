@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "CSS Validation For Non-Relevant Content Now Skipped"
 author: joncram
 ---

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #89: Clearer Test Rejection/Failure Reasons, Mobile-Ready Account and Test History Pages"
 author: joncram
 newsletter:

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates 22: Improved IDN support, Missing/Invalid Doctype Support"
 short_title: "Simply Testable Updates 22: IDN support, Invalid Doctype Support"
 date: 2012-12-27 15:00

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Choose HTML Validation, CSS Validation or Both"
 date: 2012-11-28 14:00
 author: joncram

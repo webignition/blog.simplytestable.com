@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates November 2012 #1: Evil People Steal My Bike, Account Creation Mostly Done"
 short_title: "Simply Testable Updates Nov #1: Account Creation Mostly Done"
 author: joncram

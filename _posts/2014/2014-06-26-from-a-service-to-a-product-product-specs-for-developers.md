@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "From a Service to a Product (Product Specs For Developers)"
 author: joncram
 illustration:

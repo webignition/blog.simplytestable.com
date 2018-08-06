@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Site Crawler Released (And The Story Behind It)"
 author: joncram
 ---

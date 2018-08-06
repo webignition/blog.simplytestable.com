@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #33: More Robustness++, More Bug Fixes"
 date: 2013-03-27 16:30
 author: joncram

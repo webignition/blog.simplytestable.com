@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Finding the Top HTML Validation Errors"
 date: 2013-07-24 12:00
 author: joncram

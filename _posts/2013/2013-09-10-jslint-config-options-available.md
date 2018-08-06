@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "JSLint Config Options Available"
 author: joncram
 illustration:

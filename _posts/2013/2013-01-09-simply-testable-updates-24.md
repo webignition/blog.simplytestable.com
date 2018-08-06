@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates 24: Talk @UnifiedDiff Today, CSS Validator Improvements, JS Static Analysis Improvements"
 short_title: "Simply Testable Updates 24: Talk @UnifiedDiff Today"
 author: joncram

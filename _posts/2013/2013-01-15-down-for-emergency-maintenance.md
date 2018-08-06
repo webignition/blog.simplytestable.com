@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Down For Emergency Maintenance"
 author: joncram
 ---

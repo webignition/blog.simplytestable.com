@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #72: CSS Validation Of Password-Protected Sites Underway"
 author: joncram
 newsletter:

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "365 Day Free Trial Offer"
 date: 2013-07-15 12:20
 author: joncram

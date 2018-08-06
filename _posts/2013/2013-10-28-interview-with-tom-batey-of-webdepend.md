@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Interview With Tom Batey of WebDepend"
 author: joncram
 ---

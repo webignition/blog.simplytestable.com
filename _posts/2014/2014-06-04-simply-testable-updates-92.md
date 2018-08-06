@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #92: Mobile-Ready Test Results"
 author: joncram
 newsletter:

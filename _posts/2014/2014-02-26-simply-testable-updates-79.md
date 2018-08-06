@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #79: Postmark HTTP API Integration, Stripe Integration Continuation"
 author: joncram
 newsletter:

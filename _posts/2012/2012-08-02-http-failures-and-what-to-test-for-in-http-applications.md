@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "HTTP Failures And What To Test For In HTTP Applications"
 author: joncram
 excerpt_separator: <!--more-->

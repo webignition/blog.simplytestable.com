@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Service Restored"
 date: 2013-01-16 21:55
 author: joncram

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #80: Stripe Integration Complete (Phew!)"
 author: joncram
 newsletter:

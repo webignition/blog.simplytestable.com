@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates October 2012 #4: Database Performance++, Account Creation Underway"
 short_title: "Simply Testable Updates Oct #4: DB Performance++, Account Creation"
 author: joncram

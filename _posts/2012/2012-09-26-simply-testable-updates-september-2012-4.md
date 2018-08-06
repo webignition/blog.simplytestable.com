@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates September 2012 #4: Public Alpha, More Performance++"
 short_title: "Simply Testable Updates Sept #4: Public Alpha, More Performance++"
 author: joncram

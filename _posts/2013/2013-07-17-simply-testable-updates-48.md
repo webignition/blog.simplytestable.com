@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #48: Premium Plan 365 Day Trial Offer Until July 31, Infinite Free Trial Hack, Bug fixes"
 short_title: "Simply Testable Updates #48: Premium Plan 365 Day Trial Offer Until July 31"
 author: joncram

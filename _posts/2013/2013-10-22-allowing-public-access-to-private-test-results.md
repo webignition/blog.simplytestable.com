@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Allowing Public Access To Private Test Results"
 author: joncram
 ---

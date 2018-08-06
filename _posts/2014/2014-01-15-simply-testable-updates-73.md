@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #73: Password-Protected CSS Validation, Full Unicode Support, Many Bugs Fixed"
 author: joncram
 newsletter:

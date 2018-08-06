@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #102: Podcast Ad Preparation"
 author: joncram
 newsletter:

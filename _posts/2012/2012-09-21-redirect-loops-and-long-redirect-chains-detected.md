@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Redirect Loops and Long Redirect Chains Detected"
 author: joncram
 illustration:

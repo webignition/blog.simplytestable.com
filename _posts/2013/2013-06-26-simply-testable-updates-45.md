@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #45: Subscription Handling, Startup Engineering, Moving House"
 author: joncram
 newsletter:

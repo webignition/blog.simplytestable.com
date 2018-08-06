@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #61: Link Integrity Tests Launched, Testing Password-Protected Sites, Sharing Private Test Results"
 date: 2013-10-16 16:00
 author: joncram

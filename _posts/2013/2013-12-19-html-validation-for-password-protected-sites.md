@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "HTML Validation For Password-Protected Sites"
 author: joncram
 ---

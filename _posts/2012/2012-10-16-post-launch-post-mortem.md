@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Post-Launch Post-Mortem"
 author: joncram
 illustration:

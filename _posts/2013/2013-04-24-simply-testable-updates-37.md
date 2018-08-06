@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #37: HTTP library switching done, Revenue Plans"
 date: 2013-04-24 16:10
 author: joncram

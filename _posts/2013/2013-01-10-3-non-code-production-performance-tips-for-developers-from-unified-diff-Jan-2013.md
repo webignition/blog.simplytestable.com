@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "3 Non-Code Production Performance Improvements For Developers"
 author: joncram
 excerpt_separator: <!--more-->

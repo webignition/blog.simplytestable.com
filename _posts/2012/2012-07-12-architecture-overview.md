@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Architecture Overview"
 author: joncram
 illustration:

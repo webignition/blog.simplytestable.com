@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates 27: Backupable Progress - Restorable Data, Reduced Backup Size"
 short_title: "Simply Testable Updates 27: Backupable Progress"
 author: joncram

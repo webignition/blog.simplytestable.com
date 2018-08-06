@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates 23: Missing/Invalid Doctype Support Live, CSS validator Improvements, Unified Diff Talk"
 short_title: "Simply Testable Updates 23: Missing/Invalid Doctype Support Live"
 date: 2013-01-02 16:00

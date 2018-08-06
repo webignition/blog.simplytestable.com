@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Improving CSS Validation: The Need for Control Over The CSS Validator"
 date: 2012-12-14 11:00
 author: joncram

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates August 2012 #1: Progress, Opensource HTTP Client Library, Unit Test Improvements"
 short_title: "Simply Testable Updates Aug #1: Progress, Opensource HTTP Client"
 author: joncramn

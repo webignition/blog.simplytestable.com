@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #114: Ignoring Links For Broken Link Checking"
 author: joncram
 newsletter:

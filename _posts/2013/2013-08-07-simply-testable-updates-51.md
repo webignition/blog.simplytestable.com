@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #51: 200 More Help Pages, Origins Of The &quot;Variable&quot; Element, Crawler Plans"
 author: joncram
 newsletter:

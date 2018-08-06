@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "New Test Dashboard and Test History"
 author: joncram
 excerpt_separator: <!--more-->

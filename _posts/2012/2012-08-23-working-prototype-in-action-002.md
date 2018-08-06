@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Working Prototype In Action #002 (Video)"
 date: 2012-08-23 15:00:00
 author: joncram

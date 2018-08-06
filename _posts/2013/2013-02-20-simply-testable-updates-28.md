@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates 28: Still Moving Towards a Backupable Restorable System"
 short_title: "Simply Testable Updates 28: Still Moving Towards a Restorable System"
 author: joncram

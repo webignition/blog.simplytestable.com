@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates August 2012 #5: Working Prototype Progress"
 author: joncram
 newsletter:

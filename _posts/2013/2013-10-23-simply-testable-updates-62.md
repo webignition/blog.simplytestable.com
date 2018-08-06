@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #62: Share Private Test Results, Filter Results By Test Type, Towards Testing Absolutely Any Site"
 author: joncram
 newsletter:

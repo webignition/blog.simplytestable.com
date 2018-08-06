@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #103: Oh My Goodness, Ready To Run Ads!!1!"
 date: 2014-08-20 14:00:00
 author: joncram

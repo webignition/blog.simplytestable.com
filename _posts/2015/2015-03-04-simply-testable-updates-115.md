@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #115: Ignoring file:// URLs For JS analysis, Scheduled Test Development"
 author: joncram
 newsletter:

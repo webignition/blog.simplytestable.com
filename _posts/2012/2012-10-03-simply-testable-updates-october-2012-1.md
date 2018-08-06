@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates October 2012 #1: MVP In One Week, Timeouts Handled, Better Sitemap Handling, Error Pages"
 short_title: "Simply Testable Updates Oct #1: MVP In 1 Week, Timeouts Handled"
 author: joncram

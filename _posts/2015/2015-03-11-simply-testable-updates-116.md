@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #116: Scheduled Test Development, How To Make Broken Link Checking Slow"
 author: joncram
 newsletter:

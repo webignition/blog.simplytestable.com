@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #34: Estimated Time Remaining Available, Switching HTTP client libraries,  HTML Validator Updated, More Worker Testing"
 short_title: "Simply Testable Updates #34: Estimated Time Remaining Available"
 author: joncram

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "You Can Now Test Any Website"
 author: joncram
 ---

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #35: HTTP Response Caching, Robustness++/Performance++, More Switching Http Libraries"
 short_title: "Simply Testable Updates #35: HTTP Response Caching, Robustness++"
 author: joncram

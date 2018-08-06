@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #39: Your Account Page Mostly Complete"
 author: joncram
 newsletter:

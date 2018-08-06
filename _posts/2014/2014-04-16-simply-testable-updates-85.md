@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #85: Filtered Test History Released, Going Mobile-First"
 author: joncram
 newsletter:

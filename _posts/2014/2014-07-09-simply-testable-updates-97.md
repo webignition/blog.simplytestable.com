@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #97: Guest Blog, Cold Emailing Results, Team Features"
 author: joncram
 newsletter:

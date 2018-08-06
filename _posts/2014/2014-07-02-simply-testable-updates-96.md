@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #96: Cold Emailing, Guest Blogging and Advertising Plans"
 author: joncram
 newsletter:

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #52: Site Crawler Progress"
 author: joncram
 newsletter:

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Custom Cookie Support (Testing User-Specific Content and Features)"
 author: joncram
 ---

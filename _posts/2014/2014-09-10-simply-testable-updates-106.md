@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #106: Unsendable Emails, UnChimpable Emails, Broken Link Checking Improvements "
 author: joncram
 newsletter:

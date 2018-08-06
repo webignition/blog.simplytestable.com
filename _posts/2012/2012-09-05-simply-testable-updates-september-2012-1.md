@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates September 2012 #1: Epic-scale Performance Improvements, Private Alpha One Week Away"
 short_title: "Simply Testable Updates Sept #1: Epic-scale Performance Improvements"
 author: joncram

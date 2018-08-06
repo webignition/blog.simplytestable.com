@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #59: Link Checker Mostly Done, Improved Test Start/Progress/Results Pages"
 author: joncram
 newsletter:

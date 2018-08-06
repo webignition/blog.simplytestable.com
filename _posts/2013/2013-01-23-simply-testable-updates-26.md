@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates 26: Back From The Dead, Single URL Tests, Backup Strategy"
 short_title: "Simply Testable Updates 26: Back From The Dead, Single URL Tests"
 author: joncram

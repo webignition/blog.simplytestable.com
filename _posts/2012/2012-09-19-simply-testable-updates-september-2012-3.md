@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates September 2012 #3: Performance++, RSS Feed Support, Test Failure Support"
 short_title: "Simply Testable Updates Sept #3: Performance++, RSS Feed Support"
 date: 2012-09-19 13:00:00

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Premium Plan Credits"
 date: 2013-07-15 12:00
 author: joncram

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Choosing Data To Exclude From An Application Backup"
 author: joncram
 excerpt_separator: <!--more-->

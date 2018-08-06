@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Multiple Sitemaps, Indexed Sitemaps Supported"
 date: 2012-10-10 10:30
 author: joncram

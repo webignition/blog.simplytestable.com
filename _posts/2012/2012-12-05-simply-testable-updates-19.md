@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates 19: JavaScript Static Analysis, Test Option Refinement"
 short_title: "Simply Testable Updates 19: JS Analysis, Test Option Refinement"
 author: joncram

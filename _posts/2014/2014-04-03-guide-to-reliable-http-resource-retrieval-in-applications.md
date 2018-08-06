@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Guide To Reliable HTTP Resource Retrieval In Applications"
 author: joncram
 ---

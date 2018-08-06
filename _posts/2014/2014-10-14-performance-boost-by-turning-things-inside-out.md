@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Performance Boost By Turning Things Inside Out"
 author: joncram
 ---

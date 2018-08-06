@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #83: Improved URL Resolving, Improved Retrieval of Bad SSL Content"
 author: joncram
 newsletter:

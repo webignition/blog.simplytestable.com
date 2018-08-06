@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates July 2012: Architecture Overview, Opensource Libraries, Task Sequences and Progress"
 short_title: "Simply Testable Updates July: Architecture Overview, Opensource Libs"
 author: joncram

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Improved Viewing of Results For Large Tests"
 date: 2013-02-27 13:40
 author: joncram

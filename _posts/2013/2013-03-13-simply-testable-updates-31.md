@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates 31: Staying Signed In, Backups In Place"
 author: joncram
 newsletter:

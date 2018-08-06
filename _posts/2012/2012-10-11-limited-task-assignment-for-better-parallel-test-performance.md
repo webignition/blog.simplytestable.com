@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Limited Task Assignment For Better Parallel Test Performance"
 date: 2012-10-11 14:00
 author: joncram

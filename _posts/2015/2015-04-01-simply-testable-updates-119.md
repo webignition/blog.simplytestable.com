@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #119: Fixed Faulty Crawling, Scheduled Tests On-Target"
 author: joncram
 newsletter:

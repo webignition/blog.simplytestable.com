@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates August 2012 #2: Progress, HTTP Testability, Roadmap"
 short_title: "Simply Testable Updates Aug #2: Progress, HTTP Testability, Roadmap"
 author: joncram

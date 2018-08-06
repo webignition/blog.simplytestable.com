@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #40: Your Account, Faster Single-URL Tests, Free Demo Limits, CSS Validation Bug Fixed"
 short_title: "Simply Testable Updates #40: Your Account, Faster Single-URL Tests"
 date: 2013-05-22 16:30

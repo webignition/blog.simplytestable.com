@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "How To Test A Local Site"
 date: 2012-10-31 13:30
 author: joncram

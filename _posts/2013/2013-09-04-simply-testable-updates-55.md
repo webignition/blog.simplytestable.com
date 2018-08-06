@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #55: Crawler Improvements, JSLint Config Options Coming, Product Announcements Newsletter"
 short_title: "Simply Testable Updates #55: Crawler Improvements, JSLint Config Options"
 author: joncram

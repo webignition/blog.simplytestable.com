@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #78: New Production Server, Stripe Integration Continuation, Cookie-Based Auth Planned"
 author: joncram
 newsletter:

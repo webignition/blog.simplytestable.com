@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Installing JSLint For Command Line Use On Ubuntu"
 author: joncram
 excerpt_separator: <!--more-->

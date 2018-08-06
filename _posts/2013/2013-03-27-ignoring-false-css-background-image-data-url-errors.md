@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Ignoring False CSS Background Image Data Url Errors"
 date: 2013-03-27 10:40
 author: joncram

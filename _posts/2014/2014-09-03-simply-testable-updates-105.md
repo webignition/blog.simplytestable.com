@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #105: Handling Unsendable Emails, More Podcast Ad Prep"
 author: joncram
 newsletter:

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Free Demo Test URL Limits"
 date: 2013-05-22 12:00
 author: joncram

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #87: Mobile-Friendly, (And Cacheable!) Sign Up, Sign In, Reset Password"
 author: joncram
 newsletter:

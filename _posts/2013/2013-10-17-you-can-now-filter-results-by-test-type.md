@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "You Can Now Filter Results By Test Type"
 author: joncram
 illustration:

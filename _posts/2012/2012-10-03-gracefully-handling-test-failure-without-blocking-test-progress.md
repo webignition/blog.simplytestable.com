@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Gracefully Handling Test Failure Without Blocking Test Progress"
 date: 2012-10-03 21:00
 author: joncram

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #112: Test Result Improvements Underway"
 author: joncram
 newsletter:

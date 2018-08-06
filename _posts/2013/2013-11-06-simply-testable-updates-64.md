@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #64: New Test Dashboard Preview"
 author: joncram
 newsletter:

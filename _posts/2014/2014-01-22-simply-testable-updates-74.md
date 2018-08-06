@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #74: Doctype Support Madness"
 author: joncram
 newsletter:

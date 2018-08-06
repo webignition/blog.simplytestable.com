@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #49: Hunting Down Common HTML Validation Errors"
 date: 2013-07-24 15:00
 author: joncram

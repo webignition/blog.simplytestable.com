@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Solving 'Element &quot;Variable&quot;' Undefined'"
 author: joncram
 ---

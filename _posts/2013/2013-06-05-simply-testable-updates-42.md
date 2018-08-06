@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #42: Plans and Pricing Released Unfinished, HTTPS Enabled"
 short_title: "Simply Testable Updates #42: Plans and Pricing, HTTPS Enabled"
 author: joncram

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "The Switch to Guzzle is Complete"
 date: 2013-04-24 14:30
 author: joncram

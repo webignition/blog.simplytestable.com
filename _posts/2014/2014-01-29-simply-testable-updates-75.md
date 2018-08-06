@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #75: JavaScript Static Analysis For Password Protected Sites Nearly Ready"
 author: joncram
 newsletter:

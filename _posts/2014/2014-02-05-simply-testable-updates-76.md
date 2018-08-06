@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #76: @Passwords Fixed, URLs Resolved Before Test Starts, JS Tests For Password-Protected Sites Is Live"
 author: joncram
 newsletter:

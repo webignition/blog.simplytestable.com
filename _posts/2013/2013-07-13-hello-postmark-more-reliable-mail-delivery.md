@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Hello Postmark, More Reliable Mail Delivery"
 author: joncram
 illustration:

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "CSS Validation For Password-Protected Sites (With Bonus CSS Retrieval Reliability)"
 author: joncram
 ---

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Premium Plans Launched (and Why They Exist)"
 date: 2013-07-15 11:00
 author: joncram

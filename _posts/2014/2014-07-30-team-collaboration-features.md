@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Team Collaboration Features"
 author: joncram
 ---

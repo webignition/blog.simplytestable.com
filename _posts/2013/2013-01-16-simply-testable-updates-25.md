@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates 25: Massive Service Failure, JSLint Improvements on the Way"
 short_title: "Simply Testable Updates 25: Massive Service Failure, JSLint Advances"
 date: 2013-01-16 15:00

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates August 2012 #3: Progress, Integration Automation, First Real Tests"
 short_title: "Simply Testable Updates Aug #3: Progress, Integration Automation"
 author: joncram

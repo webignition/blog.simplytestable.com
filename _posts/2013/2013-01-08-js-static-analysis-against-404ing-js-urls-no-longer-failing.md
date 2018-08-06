@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "JS Static Analysis Against 404ing JS URLs No Longer Failing"
 author: joncram
 excerpt_separator: <!--more-->

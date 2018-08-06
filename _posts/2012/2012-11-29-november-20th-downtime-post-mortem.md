@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "November 20th Downtime Post-Mortem"
 author: joncram
 ---

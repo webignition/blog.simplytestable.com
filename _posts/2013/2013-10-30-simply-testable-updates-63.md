@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #63: Link Integrity Improvements, Interview with Web Tester Tom Batey"
 author: joncram
 newsletter:

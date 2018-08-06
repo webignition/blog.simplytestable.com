@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #99: Team Features Coming Soon"
 author: joncram
 newsletter:

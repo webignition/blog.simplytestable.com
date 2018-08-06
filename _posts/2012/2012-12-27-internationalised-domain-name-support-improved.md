@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Internationalised Domain Name (IDN) Support Improved"
 date: 2012-12-27 15:30
 author: joncram

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates 21: JavaScript Linting, CSS Validation Options"
 author: joncram
 newsletter:

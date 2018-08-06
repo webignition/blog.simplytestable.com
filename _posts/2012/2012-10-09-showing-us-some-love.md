@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Showing Us Some Love"
 author: joncram
 icon: fa fa-heart

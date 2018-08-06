@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Simply Testable Updates #98: Team Features, Account Page Changes"
 author: joncram
 newsletter:
