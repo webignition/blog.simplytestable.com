@@ -382,13 +382,7 @@ blockquote  .avatar-tom-batey {
 .sidebar a,
 .sidebar p,
 .sidebar .btn,
-.sidebar li {
+.sidebar li,
+.sidebar input {
   font-size: 0.9rem;
 }
-
-/*.header-sidebar .start-new-test-form,*/
-/*.header-sidebar .start-new-test-form .btn,*/
-/*.header-sidebar p,*/
-/*.header-sidebar .areas {*/
-  /*font-size: 0.9rem;*/
-/*}*/
