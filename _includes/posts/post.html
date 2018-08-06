@@ -20,8 +20,7 @@
 
     {{ heading_end }}
 
-    {% assign include_post_meta_byline = true %}
-    {% include posts/post-meta.html authors=site.data.authors author=content_item.author %}
+    {% include posts/post-meta.html authors=site.data.authors author=content_item.author display_post_meta_byline=include.display_post_meta_byline %}
 
     {% if content_item.illustration %}
         {% assign illustration_style = "background-image: url('" | append: content_item.illustration.url | append: "'); " %}

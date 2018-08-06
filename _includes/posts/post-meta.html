@@ -1,4 +1,4 @@
-{% assign display_author = include_post_meta_byline and include.author and include.authors[include.author] %}
+{% assign display_author = include.display_post_meta_byline and include.author and include.authors[include.author] %}
 
 <div class="post-meta">
     <time datetime="{{ content_item.date | date: '%Y-%m-%d' }}">{{ content_item.date | date: "%B %e, %Y" }}</time>

@@ -9,13 +9,13 @@
                 <div class="row">
                     <div class="col-sm-12 col-lg-8">
                         {% if page.is_index %}
-                        {% include posts/latest.html %}
+                        {% include posts/latest.html display_post_meta_byline=true %}
                         {% else %}
                             {% if page.is_archive %}
                                 {% include posts/archive.html %}
                             {% else %}
                                 {% assign include_comments = true %}
-                                {% include posts/post.html %}
+                                {% include posts/post.html display_post_meta_byline=true %}
                             {% endif %}
                         {% endif %}
                     </div>
