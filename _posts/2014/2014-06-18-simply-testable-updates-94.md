@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #94: Mobile-Ready Dashboard (And Everything Else Too)"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 94th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=9c421cb9c0
     highlights:

@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #52: Site Crawler Progress"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 52nd
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=746490d582
     closing_sentence: Expect the next newsletter a week from now on August 21.

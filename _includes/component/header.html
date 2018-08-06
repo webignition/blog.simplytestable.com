@@ -26,10 +26,16 @@
             </div>
         </div>
 
-        {% if include_newer_older %}
-        <div class="row header-newer-older">
-            {% include component/newer-older.html %}
-        </div>
+        {% if page.is_illustration %}
+            <div class="row header-newer-older">
+                {% include component/illustration-backlink.html %}
+            </div>
+        {% else %}
+            {% if include_newer_older %}
+            <div class="row header-newer-older">
+                {% include component/newer-older.html %}
+            </div>
+            {% endif %}
         {% endif %}
     </div>
 </header>

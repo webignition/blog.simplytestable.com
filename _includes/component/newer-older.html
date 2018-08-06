@@ -1,62 +1,49 @@
-{% if page.url contains '/illustrations/' %}
-    {% for post in site.posts %}
-        {% if post.illustration %}
-            {% if post.illustration.id == page.illustration.id or page.source and post.title == page.source %}
-            <a href="{{ post.url }}" class="newer-older-control newer-control col-md-6">
-                <i class="fa fa-caret-left newer-older-icon"></i>
-                <span class="content">Back to &ldquo;{{ post.title }}&rdquo;</span>
-            </a>
-            {% endif %}
-        {% endif %}
-    {% endfor %}
+{% assign content_item = page %}
+
+{% assign newer = false %}
+{% assign older = false %}
+{% assign has_found_current = false %}
+{% assign has_found_older = false %}
+{% for post in site.posts %}
+{% if post.url == content_item.url %}
+{% assign has_found_current = true %}
+{% endif %}
+
+{% if has_found_current == false %}
+{% assign newer = post %}
+{% endif %}
+
+{% if has_found_current == true and has_found_older == false and post.url != content_item.url %}
+{% assign older = post %}
+{% assign has_found_older = true %}
+{% endif %}
+
+{% endfor %}
+
+{% if newer %}
+    <a href="{{ newer.url}}" class="newer-older-control newer-control col-lg-6"><i class="fa fa-caret-left newer-older-icon"></i>
+        <span class="content">
+        {% if newer.short_title %}
+        {{ newer.short_title }} &hellip;
+        {% else %}
+        {{ newer.title }}
+        {% endif  %}
+        </span>
+
+    </a>
 {% else %}
-    {% assign content_item = page %}
+    <span class="col-lg-6"></span>
+{% endif %}
 
-    {% assign newer = false %}
-    {% assign older = false %}
-    {% assign has_found_current = false %}
-    {% assign has_found_older = false %}
-    {% for post in site.posts %}
-    {% if post.url == content_item.url %}
-    {% assign has_found_current = true %}
-    {% endif %}
-
-    {% if has_found_current == false %}
-    {% assign newer = post %}
-    {% endif %}
-
-    {% if has_found_current == true and has_found_older == false and post.url != content_item.url %}
-    {% assign older = post %}
-    {% assign has_found_older = true %}
-    {% endif %}
-
-    {% endfor %}
-
-    {% if newer %}
-        <a href="{{ newer.url}}" class="newer-older-control newer-control col-lg-6"><i class="fa fa-caret-left newer-older-icon"></i>
-            <span class="content">
-            {% if newer.short_title %}
-            {{ newer.short_title }} &hellip;
-            {% else %}
-            {{ newer.title }}
-            {% endif  %}
-            </span>
-
-        </a>
-    {% else %}
-        <span class="col-lg-6"></span>
-    {% endif %}
-
-    {% if older %}
-        <a href="{{ older.url}}" class="newer-older-control older-control col-lg-6">
-            <span class="content">
-            {% if older.short_title %}
-            {{ older.short_title }} &hellip;
-            {% else %}
-            {{ older.title }}
-            {% endif  %}
-            </span>
-            <i class="fa fa-caret-right newer-older-icon"></i>
-        </a>
-    {% endif %}
+{% if older %}
+    <a href="{{ older.url}}" class="newer-older-control older-control col-lg-6">
+        <span class="content">
+        {% if older.short_title %}
+        {{ older.short_title }} &hellip;
+        {% else %}
+        {{ older.title }}
+        {% endif  %}
+        </span>
+        <i class="fa fa-caret-right newer-older-icon"></i>
+    </a>
 {% endif %}

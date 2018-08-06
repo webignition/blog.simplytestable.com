@@ -2,7 +2,7 @@
 title: "Simply Testable Updates 28: Still Moving Towards a Backupable Restorable System"
 short_title: "Simply Testable Updates 28: Still Moving Towards a Restorable System"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 28th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=158bc344cc
     closing_sentence: Expect the next newsletter in a week from now on February 27.

@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #69: Progress On Testing Password-Protected Sites"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 69th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&id=7377c6c343
     highlights:

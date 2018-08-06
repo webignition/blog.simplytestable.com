@@ -3,7 +3,7 @@ title: "Simply Testable Updates September 2012 #3: Performance++, RSS Feed Suppo
 short_title: "Simply Testable Updates Sept #3: Performance++, RSS Feed Support"
 date: 2012-09-19 13:00:00
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: ninth
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=5c86a943e3
     closing_sentence: Expect the next in a week from now, September 26 2012.

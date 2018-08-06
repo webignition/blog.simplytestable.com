@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #73: Password-Protected CSS Validation, Full Unicode Support, Many Bugs Fixed"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 73rd
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=4d66e6f2f6
     highlights:

@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #70: Password Protected Sites Progress; Bugfix For URLs Returning Internal Server Error"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 70th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=5cb49eccbf
     highlights:

@@ -1,19 +1,14 @@
-{% assign content_item = page %}
-{% if post %}
-    {% assign content_item = post %}
-{% endif %}
+{% include posts/newsletter/intro.html newsletter=include.newsletter %}
+{% include posts/newsletter/highlights.html newsletter=include.newsletter %}
 
-{% include posts/newsletter/intro.html %}
-{% include posts/newsletter/highlights.html %}
-
-{% if content_item.newsletter.pre_closing_sentence %}
+{% if include.newsletter.newsletter_meta.pre_closing_sentence %}
 <p>
-    {{ content_item.newsletter.pre_closing_sentence }}
+    {{ include.newsletter.newsletter_meta.pre_closing_sentence }}
 </p>
 {% endif %}
 
 <p>
-    {{ content_item.newsletter.closing_sentence }}
+    {{ include.newsletter.newsletter_meta.closing_sentence }}
 </p>
 
-<a href="{{ content_item.newsletter.url }}" class="btn btn-outline-secondary post-continue-reading">Read full newsletter <i class="fa fa-caret-right"></i></a>
+<a href="{{ include.newsletter.newsletter_meta.url }}" class="btn btn-outline-secondary post-continue-reading">Read full newsletter <i class="fa fa-caret-right"></i></a>

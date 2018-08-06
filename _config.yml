@@ -20,3 +20,4 @@ defaults:
       path: "illustrations"
     values:
       layout: "illustration"
+      is_illustration: true

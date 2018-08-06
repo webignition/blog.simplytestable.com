@@ -2,7 +2,7 @@
 title: "Simply Testable Updates #61: Link Integrity Tests Launched, Testing Password-Protected Sites, Sharing Private Test Results"
 date: 2013-10-16 16:00
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 61st
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=dae0d3a0ab
     highlights:

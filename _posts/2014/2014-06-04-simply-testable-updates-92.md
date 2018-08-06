@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #92: Mobile-Ready Test Results"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 92nd
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=4349e8a10f
     highlights:

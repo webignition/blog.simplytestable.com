@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #98: Team Features, Account Page Changes"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 98th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=89e97e4907
     highlights:

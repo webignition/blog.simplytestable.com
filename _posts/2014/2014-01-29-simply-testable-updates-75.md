@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #75: JavaScript Static Analysis For Password Protected Sites Nearly Ready"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 75th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=84e051ce2c
     highlights:

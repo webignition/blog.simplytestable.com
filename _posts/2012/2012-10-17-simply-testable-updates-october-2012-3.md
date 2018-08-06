@@ -3,7 +3,7 @@ title: "Simply Testable Updates October 2012 #3: Large Interest, Post Launch Pro
 short_title: "Simply Testable Updates Oct #3: Post Launch Problems"
 date: 2012-10-17 16:30
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: thirteenth
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=ade3a6e363
     closing_sentence: Expect the next in a week from now, October 24 2012.

@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates 20: CSS Test Option Refinement"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 20th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=aa249db2ca
     closing_sentence: Expect the next in a week from now, December 19 2012.

@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #90: Mobile-Ready (And Improved) Task Results"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 90th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=17ddebefd6
     highlights:

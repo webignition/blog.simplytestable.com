@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #120: Scheduled Tests Coming Soon (Hopefully)"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 120th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=50af84b0f6
     highlights:

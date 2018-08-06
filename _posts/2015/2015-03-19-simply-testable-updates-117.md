@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #117: Scheduled Test Development Update"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 117th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=870630a828
     highlights:

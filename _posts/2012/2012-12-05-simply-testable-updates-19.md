@@ -2,7 +2,7 @@
 title: "Simply Testable Updates 19: JavaScript Static Analysis, Test Option Refinement"
 short_title: "Simply Testable Updates 19: JS Analysis, Test Option Refinement"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 19th
     url: https://us5.campaign-archive2.com/?u=ac75e33d993d2b502e333ddd0&amp;id=84708929e5
     closing_sentence: Expect the next in a week from now, December 12 2012.

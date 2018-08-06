@@ -1,5 +1,3 @@
-{% assign include_post_meta_byline = false %}
-
 <ol class="archive-list">
     {% for post in site.posts %}
     {% assign content_item = post %}
@@ -7,11 +5,11 @@
     {% capture reverse_index %}{{forloop.length | minus:forloop.index | plus:1 }}{% endcapture %}
     <li class="post post-listed archive-item" value="{{ reverse_index }}">
         <h2 class="post-heading"><a href="{{ post.url }}">{{ post.title }} {{ post_index }}</a></h2>
-        {% include posts/post-meta.html %}
+        {% include posts/post-meta.html display_post_meta_byline=false %}
 
-        {% if post.newsletter %}
-        {% include posts/newsletter/intro.html %}
-        {% include posts/newsletter/highlights.html %}
+        {% if post.newsletter_meta %}
+        {% include posts/newsletter/intro.html newsletter=content_item %}
+        {% include posts/newsletter/highlights.html newsletter=content_item %}
         {% else %}
         {{ post.excerpt }}
         {% endif %}

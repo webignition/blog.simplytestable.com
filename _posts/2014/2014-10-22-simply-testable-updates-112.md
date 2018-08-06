@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #112: Test Result Improvements Underway"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 112th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=3bcd611f16
     highlights:

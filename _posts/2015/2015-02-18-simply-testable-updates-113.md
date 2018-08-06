@@ -1,7 +1,7 @@
 ---
 title: "Simply Testable Updates #113: We're Profitable(!), Pre-Beta New Test Results, Currency In Transactional Emails"
 author: joncram
-newsletter:
+newsletter_meta:
     issue_number: 113th
     url: https://us5.campaign-archive1.com/?u=ac75e33d993d2b502e333ddd0&amp;id=ad14f767fd
     highlights:

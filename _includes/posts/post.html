@@ -20,8 +20,7 @@
 
     {{ heading_end }}
 
-    {% assign include_post_meta_byline = true %}
-    {% include posts/post-meta.html authors=site.data.authors author=content_item.author %}
+    {% include posts/post-meta.html authors=site.data.authors author=content_item.author display_post_meta_byline=include.display_post_meta_byline %}
 
     {% if content_item.illustration %}
         {% assign illustration_style = "background-image: url('" | append: content_item.illustration.url | append: "'); " %}
@@ -43,8 +42,8 @@
         {% endif %}
     {% endif %}
 
-    {% if content_item.newsletter %}
-        {% include posts/newsletter/content.html %}
+    {% if content_item.newsletter_meta %}
+        {% include posts/newsletter/content.html newsletter=content_item %}
     {% else %}
         {% if page.is_index %}
             {{ content_item.excerpt }}
@@ -54,7 +53,7 @@
         {% endif %}
     {% endif %}
 
-    {% if include_comments %}
+    {% if include.display_comments %}
     <div class="comments">
         <i class="comment-icon fa fa-comments-o"></i>
         <div id="disqus_thread"></div>
