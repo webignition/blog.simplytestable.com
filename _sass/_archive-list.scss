@@ -1,0 +1,24 @@
+@import "colors";
+
+.archive-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 3rem;
+
+  &-item {
+    &::before {
+      content: attr(value);
+      color: $color-archive-number;
+      width: 3rem;
+      position: absolute;
+      left: 0;
+      text-align: right;
+      font-size: 1.25rem;
+    }
+  }
+
+  .post-meta {
+    opacity: 1;
+    color: #555;
+  }
+}

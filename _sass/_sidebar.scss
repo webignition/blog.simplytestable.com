@@ -1,0 +1,37 @@
+@import "colors";
+
+.sidebar {
+  a,
+  p,
+  .btn,
+  li,
+  input {
+    font-size: 0.9rem;
+  }
+
+  .posts-all {
+    @media (min-width: 992px) {
+      margin: 24px 0 0 0;
+    }
+  }
+
+  &-icon {
+    color: $color-brand;
+  }
+
+  &-heading {
+    border-top: 1px solid $color-border;
+    margin-top: 64px;
+    padding-top: 64px;
+    font-size: 1rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    @media (min-width: 992px) {
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+}

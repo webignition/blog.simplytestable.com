@@ -1,0 +1,67 @@
+@import "colors";
+
+.post {
+  h3 {
+    margin-top: 64px;
+  }
+
+  h4 {
+    margin-top: 32px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  &.post-listed {
+    margin-bottom: 64px;
+
+    .post-heading {
+      font-size: 1.5rem;
+
+      @media (min-width: 992px) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &-continue-reading {
+    width: 100%;
+
+    @media (min-width: 992px) {
+      width: auto;
+    }
+  }
+
+  &-meta {
+    opacity: 0.4;
+    margin-bottom: 16px;
+  }
+
+  .illustration {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    background: no-repeat 50% 50%;
+
+    &-icon {
+      position: absolute;
+      width: auto;
+      height: auto;
+      font-size: 100px;
+      line-height: 100px;
+      color: white;
+      opacity: 0.4;
+      top: calc(50% - 40px);
+      left: calc(50% - 45px);
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      .illustration-icon {
+        opacity: 0.8;
+      }
+    }
+  }
+}

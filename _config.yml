@@ -1,5 +1,5 @@
 # Jekyll
-exclude: [README.md, manifest.yml, rakefile.rb, _drafts, Gemfile, GemFile.lock]
+exclude: [README.md, manifest.yml, rakefile.rb, _drafts, Gemfile, GemFile.lock, node_modules]
 permalink: /:title/
 url: https://blog.simplytestable.com
 

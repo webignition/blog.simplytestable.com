@@ -1,0 +1,9 @@
+@import "colors";
+
+pre {
+  font-size: 14px;
+  line-height: 16px;
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  border-left: 5px solid $color-border;
+}

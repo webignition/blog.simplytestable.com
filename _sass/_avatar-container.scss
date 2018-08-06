@@ -1,0 +1,10 @@
+@import "colors";
+
+.avatar-container {
+  position: relative;
+  padding-top: 40px;
+
+  @media (min-width: 992px) {
+    padding-top: 10px;
+  }
+}

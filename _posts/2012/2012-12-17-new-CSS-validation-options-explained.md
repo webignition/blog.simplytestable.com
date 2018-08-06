@@ -28,8 +28,8 @@ four new CSS validation options:
 
 ### Ignoring Warnings
 
-{: .illustration-small}
-![](https://i.imgur.com/PhSZ3.png)
+{: .inline-illustration}
+<img src="https://i.imgur.com/PhSZ3.png" class="inline-illustration-image img-fluid" title="foo" />
 
 The CSS validator can report not only errors relating to invalid CSS but
 also warnings regarding CSS that is not invalid but which may indicate
@@ -47,7 +47,7 @@ Choosing to ignore warnings can help you focus on more important matters.
 
 ### Handling vendor extension issues
 
-{: .illustration-small}
+{: .inline-illustration}
 ![](https://i.imgur.com/sT6eS.png)
 
 CSS specifications define a collection of properties (such as *background-color*
@@ -81,7 +81,7 @@ on errors and warnings that are likely much more relevant to you.
 
 ### Ignoring common CDN domains
 
-{: .illustration-small}
+{: .inline-illustration}
 ![](https://i.imgur.com/5FpQq.png)
 
 If you link to Twitter Bootstrap or jQuery UI CSS resources, among other
@@ -98,7 +98,7 @@ errors present in your own CSS.
 
 ### Ignoring CSS from custom linked domains
 
-{: .illustration-small}
+{: .inline-illustration}
 ![](https://i.imgur.com/ETI9w.png)
 
 This option works in partnership with ignoring CSS from common CDNs.
