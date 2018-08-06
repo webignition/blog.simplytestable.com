@@ -367,17 +367,22 @@ blockquote  .avatar-tom-batey {
   right: 15px;
 }
 
-.sidebar {
-
-}
-
 .sidebar .sidebar-icon {
   color: #08c;
 }
 
 .sidebar .sidebar-heading {
-  margin-top: 42px;
+  border-top: 1px solid #ddd;
+  margin-top: 64px;
+  padding-top: 64px;
   font-size: 1rem;
+}
+
+@media (min-width: 992px) {
+  .sidebar .sidebar-heading {
+    border-top: none;
+    padding-top: 0;
+  }
 }
 
 .sidebar .sidebar-heading:first-child {
