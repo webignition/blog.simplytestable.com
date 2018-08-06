@@ -1,20 +1,14 @@
-{% assign content_item = page %}
-{% if post %}
-{% assign content_item = post %}
-{% endif %}
-
-{% if content_item.newsletter.highlights %}
-
+{% if include.newsletter.newsletter.highlights %}
 <p>
     Highlights from this week:
 </p>
-{% if content_item.newsletter.highlights.size == 1 %}
+{% if include.newsletter.newsletter.highlights.size == 1 %}
 <p class="newsletter-highlights">
-    {{ content_item.newsletter.highlights }}
+    {{ include.newsletter.newsletter.highlights }}
 </p>
 {% else %}
 <ul class="newsletter-highlights">
-{% for highlight in content_item.newsletter.highlights %}
+{% for highlight in include.newsletter.newsletter.highlights %}
     <li class="newsletter-highlight">
         <p>
 {{ highlight }}

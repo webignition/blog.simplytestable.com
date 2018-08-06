@@ -10,8 +10,8 @@
         {% include posts/post-meta.html %}
 
         {% if post.newsletter %}
-        {% include posts/newsletter/intro.html %}
-        {% include posts/newsletter/highlights.html %}
+        {% include posts/newsletter/intro.html newsletter=content_item %}
+        {% include posts/newsletter/highlights.html newsletter=content_item %}
         {% else %}
         {{ post.excerpt }}
         {% endif %}

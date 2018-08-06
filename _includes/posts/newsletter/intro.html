@@ -1,8 +1,3 @@
-{% assign content_item = page %}
-{% if post %}
-    {% assign content_item = post %}
-{% endif %}
-
 <p>
-    Our <a href="{{ content_item.newsletter.url }}">{{ content_item.newsletter.issue_number }} updates newsletter</a> went out today.
+    Our <a href="{{ include.newsletter.newsletter.url }}">{{ include.newsletter.newsletter.issue_number }} updates newsletter</a> went out today.
 </p>
