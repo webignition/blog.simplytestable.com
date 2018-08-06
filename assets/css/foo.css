@@ -6,13 +6,6 @@ header {
   background: #eee;
   margin-bottom: 40px;
   border-bottom:  1px solid #ddd;
-  padding-top: 16px;
-}
-
-@media (min-width: 992px) {
-  header {
-    padding-top: 40px;
-  }
 }
 
 header .name {
@@ -50,6 +43,16 @@ header .name:before {
 @media (min-width: 768px) {
   header .header-main {
     padding-top: 1rem;
+  }
+}
+
+.header-lead {
+  padding: 16px 0;
+}
+
+@media (min-width: 992px) {
+  .header-lead {
+    padding: 42px 0;
   }
 }
 
