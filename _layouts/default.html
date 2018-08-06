@@ -11,8 +11,12 @@
                         {% if page.is_index %}
                         {% include posts/latest.html %}
                         {% else %}
-                        {% assign include_comments = true %}
-                        {% include posts/post.html %}
+                            {% if page.is_archive %}
+                                {% include posts/archive.html %}
+                            {% else %}
+                                {% assign include_comments = true %}
+                                {% include posts/post.html %}
+                            {% endif %}
                         {% endif %}
                     </div>
                     <div class="col-lg-4 sidebar">
@@ -23,8 +27,6 @@
                 </div>
             </div>
         </main>
-
-
 
         {% include component/script_twitter.html %}
     </body>
