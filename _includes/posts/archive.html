@@ -9,7 +9,7 @@
         <h2 class="post-heading"><a href="{{ post.url }}">{{ post.title }} {{ post_index }}</a></h2>
         {% include posts/post-meta.html %}
 
-        {% if post.newsletter %}
+        {% if post.newsletter_meta %}
         {% include posts/newsletter/intro.html newsletter=content_item %}
         {% include posts/newsletter/highlights.html newsletter=content_item %}
         {% else %}
