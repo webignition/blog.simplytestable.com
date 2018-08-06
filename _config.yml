@@ -1,5 +1,5 @@
 # Jekyll
-exclude: [README.md, manifest.yml, rakefile.rb, _drafts, Gemfile, GemFile.lock]
+exclude: [README.md, manifest.yml, rakefile.rb, _drafts, Gemfile, GemFile.lock, node_modules]
 permalink: /:title/
 url: https://blog.simplytestable.com
 
@@ -7,6 +7,9 @@ name: Simply Testable Blog
 description: Figuring out how to automate away the pain of routine front-end web testing; the story behind simplytestable.com.
 
 markdown: kramdown
+
+sass:
+  sass_dir: _scss
 
 defaults:
   -
