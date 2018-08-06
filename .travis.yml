@@ -3,10 +3,11 @@ rvm:
   - 2.4
 
 install:
+  yarn install
   bundle install
 
 script:
-  bundle exec jekyll build
+  - yarn run stylelint && bundle exec jekyll build
 
 deploy:
   provider: pages
