@@ -7,10 +7,44 @@
 
   h4 {
     margin-top: 32px;
+    font-size: 1.25rem;
   }
 
   li {
     margin-bottom: 8px;
+  }
+
+  .table-data {
+    &-numeric {
+      text-align: right;
+    }
+
+    &-align-right {
+      text-align: right;
+    }
+
+    &-boolean-mark {
+      &::before {
+        display: inline-block;
+        width: 1rem;
+        margin-right: 0.25rem;
+      }
+    }
+
+    &-true-mark {
+      &::before {
+        content: '✔';
+        color: #1c6a1c;
+      }
+    }
+
+    &-false-mark {
+      &::before {
+        content: '❌';
+        //color: #df000f;
+        color: #e63703;
+      }
+    }
   }
 
   &.post-listed {
