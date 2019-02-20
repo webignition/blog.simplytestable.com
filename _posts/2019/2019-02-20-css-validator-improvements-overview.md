@@ -6,9 +6,9 @@ excerpt_separator: <!--more-->
 
 Today I finished deploying to production some excellent CSS validation improvements:
 
-- [updated to the latest W3C CSS validator](#updated-to-the-latest-w3c-css-validator)
-- [validation of stylesheets in IE conditional comments](#validation-of-stylesheets-in-ie-conditional-comments)
-- [improved CSS validation robustness](#improved-css-validation-robustness)
+- [updated to the latest W3C CSS validator](/css-validator-improvements-overview/#updated-to-the-latest-w3c-css-validator)
+- [validation of stylesheets in IE conditional comments](/css-validator-improvements-overview/#validation-of-stylesheets-in-ie-conditional-comments)
+- [improved CSS validation robustness](/css-validator-improvements-overview/#improved-css-validation-robustness)
 
 <!--more-->
 
