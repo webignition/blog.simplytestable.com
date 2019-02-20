@@ -1,6 +1,7 @@
 ---
 title: "CSS Validator Improvements Overview"
 author: joncram
+date: 2019-02-20 16:00
 excerpt_separator: <!--more-->
 ---
 
@@ -31,7 +32,7 @@ the W3C CSS validator.
 Comments are comments and they should be ignored by anything that reads HTML. Unless you consider IE conditional 
 comments and the ways in which they're used to conditionally serve additional stylesheets to specific versions of IE.
 
-We now check a page for IE conditional comments and locate within the conditional comments any stylesheet links
+We now check a page for IE conditional comments and [locate within the conditional comments any stylesheet links](/validating-stylesheets-within-ie-conditional-comments/)
 and pass those over to the CSS validator to ensure all linked CSS is checked.
 
 ### Improved CSS Validation Robustness
