@@ -1,0 +1,171 @@
+---
+layout: default
+title: "Reasons For Carrying Out Full Site Testing"
+author:
+    name: Jon Cram
+    url: https://github.com/webignition
+---
+
+<div class="section section-first">
+    <p>
+        <a href="https://simplytestable.com">Simply Testable</a> offers one-click full site HTML validation,
+        CSS validtion, JavaScript static analysis and broken link checking.
+    </p>
+
+    <p>
+        I sometimes get asked, both by users of the service and people I talk to about my work,
+        some common questions regarding the need to run tests against the entirety of a site.
+    </p>
+
+    <p>
+        Why do I have to test the whole site, can't I just &hellip;
+    </p>
+
+    <ul>
+        <li>
+            <p>test the homepage</p>
+        </li>
+        <li>
+            <p>test just the first few pages</p>
+        </li>
+        <li>
+            <p>test only those pages that I've recently changed</p>
+        </li>
+    </ul>
+
+    <p>
+        &hellip; surely that'll highlight some common issues?
+    </p>
+
+    <p>
+        I'll point out that Simply Testable lets you test either just a specific single page
+        or your entire site and nowhere in-between for a very good reason.
+    </p>
+
+    <p>
+        The single reason: you don't know what is wrong until you've checked what is wrong.
+    </p>
+
+    <p>
+        I'll explain that now in a little more detail.
+    </p>
+</div>
+
+<div class="section">
+    <h2>A comparison to unit testing</h2>
+
+    <p>
+        I have a background in software development, am very familiar with <a href="https://en.wikipedia.org/wiki/Unit_testing">unit testing</a>
+        and run unit tests against code on an almost daily basis.
+
+        People who professionally build or test websites are either very familiar with unit testing
+        or have a good understanding of the concept.
+    </p>
+
+    <p>
+        It therefore seems fitting to make a comparison to unit testing.
+    </p>
+
+    <p>
+        Let's go with a real example. You develop an application that, for the <a href="https://travis-ci.org/webignition/app.simplytestable.com/jobs/31155065">current public CI build</a>,
+        has a set of 1048 unit tests.
+    </p>
+
+    <p>
+        It takes about 5 minutes to run these tests on your local development machine. A five-minute feedback loop
+        for the code, test, code, test cycle really impedes productivity such that you get nowhere quickly.
+    </p>
+
+    <p>
+        You instead go for a cycle of code, run specific test, code, run specific test. The specific test takes
+        48ms to run, adding effectively no overhead and no impediment and you get things done a lot more quickly.
+    </p>
+
+    <p>
+        When you're done fixing a bug or adding a feature you run your specific test again, see that it
+        passes, commit, push and make a coffee.
+        You were working on a very specific area of the codebase, totally unrelated to anything else, so all should be fine.
+    </p>
+
+    <p>
+        And you think all is fine until the <a href="https://travis-ci.org/webignition/app.simplytestable.com/jobs/20268734">CI build fails</a>.
+    </p>
+
+    <p>
+        Only then do you run the full set of local tests, fix the issue and vow to never ever push changes without
+        running the full test suite. This is by no means the first time you've done this and, you tell yourself,
+        this is certainly going to be the last time you push code without first running the full test suite.
+    </p>
+
+    <p>
+        This is the reason you want to run a full-site test when testing your website. If you don't test everything,
+        you're not identifying all the possible faults.
+    </p>
+
+    <p>
+        Or, to put it another way, if you are able to run only a subset of tests, you will miss something.
+    </p>
+
+</div>
+
+<div class="section">
+    <h2>Frameworks: one change here fixes (or breaks) things everywhere</h2>
+
+    <p>
+        Web frameworks are great, providing a solution to known problems such as creating and authenticating
+        users or preventing XSRF attacks in forms and letting you focus on your application-specific matters.
+    </p>
+
+    <p>
+        Somewhere in your web framework is a templating engine; a means to squidge together a set of raw data
+        and a view into a lovely chunk of meaningful HTML.
+    </p>
+
+    <p>
+        Your lovely templating engine will have some means of letting you form web pages from a set of
+        bare templates and a collection of various common bits and pieces that often show up on many pages.
+    </p>
+
+    <p>
+        The common bits and pieces are great - you have to write each just the once and then it's correct and
+        working across your whole site.
+    </p>
+
+    <p>
+        Found a bug in your common navigation widget? Fix the widget, save the world.
+    </p>
+
+    <p>
+        Found a bug in your date picker widget? Fix the widget, save the world.
+    </p>
+
+    <p>
+        Your navigation widget can be found on every single page and so you know from
+        testing just one page that your fix has worked everywhere. Easy work.
+    </p>
+
+    <p>
+        Your date picker widget is available on some, but not all, pages. You'd tested the page where someone can
+        pick their vacation dates to check availability on your campsite. You tested the page where someone makes
+        their booking. The bug you had with the date picker, you confirm, is definitely fixed.
+    </p>
+
+    <p>
+        You didn't know that the same date picker widget is used to book visits to the campsite's on-site zoo (two
+        goats, a zebra and a giraffe).
+    </p>
+
+    <p>
+        But you've never worked on the admin site of things so you didn't know to check that the
+        date picker used to modify a booking date on behalf of someone else is working. Which it isn't, which
+        is causing frustration for Sarah when she tries to update the booking for a trip from the local school.
+    </p>
+
+    <p>
+        A change in one place can fix an issue in many places or might cause an issue in many places.
+    </p>
+
+    <p>
+        If you don't test everything, you might miss something.
+    </p>
+</div>

@@ -1,0 +1,11 @@
+<blockquote class="avatar-container">
+{% if include.quote.first %}
+    {% for paragraph in include.quote %}
+        <p>{{ paragraph }}</p>
+    {% endfor %}
+{% else %}
+    {{ include.quote }}
+{% endif %}
+
+    <span class="avatar avatar-{{ include.name }}"></span>
+</blockquote>

@@ -1,0 +1,27 @@
+@import "colors";
+
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  border-left: 5px solid $color-border;
+  opacity: 0.8;
+
+  .avatar {
+    margin-top: 16px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: -16px;
+
+    @media (min-width: 992px) {
+      top: 16px;
+      left: -44px;
+      margin: 0;
+    }
+
+    &-tom-batey {
+      background: url(https://pbs.twimg.com/profile_images/642579437/Picture_8_mini.png);
+    }
+  }
+}

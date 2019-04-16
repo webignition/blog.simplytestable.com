@@ -1,0 +1,19 @@
+language: ruby
+rvm:
+  - 2.4
+
+install:
+  - yarn install
+  - bundle install
+
+script:
+  - yarn run stylelint && bundle exec jekyll build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_API_KEY
+  target-branch: gh-pages
+  verbose: true
+  on:
+    branch: master

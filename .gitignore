@@ -1,0 +1,5 @@
+/_site
+/.idea
+/is_production
+/_plugins/
+node_modules

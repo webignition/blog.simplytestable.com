@@ -1,0 +1,9 @@
+{% for question_and_answer_section in include.questions_and_answers %}
+    {% if question_and_answer_section.section %}
+<h3>{{ question_and_answer_section.section }}</h3>
+    {% endif %}
+
+    {% for questions_and_answer in question_and_answer_section.questions_and_answers %}
+{% include component/question-answer.html question=questions_and_answer.question answer=questions_and_answer.answer quote_name=include.quote_name %}
+    {% endfor %}
+{% endfor %}
